@@ -1,3 +1,8 @@
+---
+title: Getting started
+layout: page
+permalink: /getting-started/
+---
 # Getting started
 
 ## Step 1. Create a basic website
