@@ -1,8 +1,8 @@
 ---
 layout: add-on
 title: Google Analytics
-image: 
-url:
+image: ''
+url: test
 tags:
   - 3rd-party
   - gh-pages
