@@ -14,15 +14,23 @@ This is going to be a collection of Liquid snippets and Jekyll plugins, similar 
 - Simple Jekyll Search (Plugin)
 - Algolia (External/Liquid)
 
+<br />
+
 ### Comments
 - Disqus (External/Liquid)
 - Google Comments (External/Liquid)
 
+<br />
+
 ### Analytics
 - Google Analytics (External/Liquid)
 
+<br />
+
 ### Hierarchical menu
 - Page walker (Liquid)
+
+<br />
 
 ### SEO
 - Description tag (Liquid)
