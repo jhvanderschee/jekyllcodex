@@ -27,4 +27,4 @@ defaults:
 collections:
   addons
     output: true
-    permalink: /add-on/:path.html
+    permalink: /addon/:path.html
