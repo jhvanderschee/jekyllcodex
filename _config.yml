@@ -30,4 +30,3 @@ defaults:
 collections:
   - add-ons
       output: true
-      permalink: "/add-ons/:path/"
