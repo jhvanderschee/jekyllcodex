@@ -20,7 +20,7 @@ markdown: kramdown
 defaults:
   - scope:
       path: ""
-      type: add-ons
+      type: addons
     values:
       layout: add-on
 
