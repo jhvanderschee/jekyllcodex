@@ -1,17 +1,33 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<img src="/img/logo-2x.png" alt="Jekyll logo" />
+  {% include head.html %}
 
-<article class="post">
+  <body>
+    <div class="main">
+	    {% include header.html %}
+		<div class="container">
+			<div class="row">
+                <div class="col-md-8">
+                    <img src="/img/logo-2x.png" alt="Jekyll logo" />
+                    <article class="post">
+                      <header class="post-header">
+                        <h1 class="post-title">{{ page.title }}</h1>
+                      </header>
+                      <div class="post-content">
+                        {{ content }}
+                      </div>
+                    </article>
+                </div>
+		    	<div class="col-md-4">{% include sidebar.html %}</div>
+		    </div>
+		</div>
+	</div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+    {% include footer.html %}
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+  </body>
 
-</article>
+</html>
+
+
