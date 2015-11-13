@@ -29,4 +29,3 @@ defaults:
 
 collections:
   - add-ons
-      output: true
