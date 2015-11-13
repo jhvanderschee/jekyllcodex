@@ -37,3 +37,4 @@ This is going to be a collection of Liquid snippets and Jekyll plugins, similar 
 - Canonical link (Liquid)
 - Sitemap XML (Liquid)
 - Sitemap XML (plugin)
+- Atom feed (Liquid)
