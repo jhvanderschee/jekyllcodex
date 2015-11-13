@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: Jekyll, the website framework that is super fast and super simple.
 ---
 
