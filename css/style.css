@@ -1,3 +1,4 @@
+html {overflow-y: scroll;}
 body {background: #333;}
 .download {float: right; margin-top: 4px;}
 .site-footer {background: #333; min-height: 100px; padding: 20px 0;}
