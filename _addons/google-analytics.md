@@ -1,5 +1,6 @@
 ---
 layout: add-on
+title: Google Analytics
 image: 
 url:
 tags:
