@@ -4,47 +4,47 @@ layout: page
 permalink: /features/
 ---
 
-# Layout
+## Layout
 
-## Different templates
-
-...
-
-## Using Sass
+### Different templates
 
 ...
 
+### Using Sass
 
-# Blogging
+...
 
-## Setup
+
+## Blogging
+
+### Setup
 
 This is where things get a little more complicated.
 
 
-# Extra features
+## Extra features
 
 
-## Pretty URL's
+### Pretty URL's
 
 When you want your URL's to be pretty, simply use the 'old-school' approach. Create an 'index.html' in the root for the homepage and a folder called 'about' with another 'index.html' file inside for your 'about' page... and so on. You will take advantage of this on a later moment when you need to build a menu, based on the page hierarchy.
 
-## Menu/Page hierarchy
+### Menu/Page hierarchy
 
 ...
 
-## Contact forms
+### Contact forms
 
 ...
 
-## Search
+### Search
 
 ...
 
-## Responsive images
+### Responsive images
 
 https://www.netlify.com/blog/2015/08/20/simple-responsive-images-with-jekyll
 
-## Minify everything
+### Minify everything
 
 ...
