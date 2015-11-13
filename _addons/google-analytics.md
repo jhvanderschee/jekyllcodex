@@ -3,7 +3,7 @@ layout: add-on
 title: Google Analytics
 image: ''
 link: test
-feature
+feature: 
 tags:
   - 3rd-party
   - gh-pages
