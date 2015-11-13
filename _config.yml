@@ -17,13 +17,6 @@ url: "http://jekyllcodex.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
-defaults:
-  - scope:
-      path: ""
-      type: addons
-    values:
-      layout: addon
-
 collections:
   addons
     output: true
