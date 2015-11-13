@@ -20,5 +20,12 @@ github_username:  jhvanderschee
 # Build settings
 markdown: kramdown
 
+defaults:
+  - scope:
+      path: ""
+      type: add-ons
+    values:
+      layout: add-on
+
 collections:
 - add-ons
