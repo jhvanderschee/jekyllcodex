@@ -20,3 +20,4 @@ markdown: kramdown
 collections:
   addons:
     output: true
+    permalink: /add-ons/:path/
