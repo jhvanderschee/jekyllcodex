@@ -17,6 +17,7 @@ url: "http://jekyllcodex.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
+# Collections
 collections:
   addons:
     output: true
@@ -24,7 +25,8 @@ collections:
   themes:
     output: true
     permalink: /themes/:path/
-    
+
+# Category for Add-ons
 features:
 - search
 - contact forms
