@@ -14,3 +14,4 @@ h1.post-title {padding-top: 10px;}
     bottom: 7px;
 }
 article.page {padding-top: 30px;}
+img {display: block; max-width: 100%;}
