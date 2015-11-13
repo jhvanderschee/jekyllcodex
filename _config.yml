@@ -21,8 +21,11 @@ collections:
   addons:
     output: true
     permalink: /add-ons/:path/
-  features:
-    output: false
   themes:
     output: true
     permalink: /themes/:path/
+    
+features:
+- search
+- contact forms
+  
