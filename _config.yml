@@ -19,3 +19,6 @@ github_username:  jhvanderschee
 
 # Build settings
 markdown: kramdown
+
+collections:
+- add-ons
