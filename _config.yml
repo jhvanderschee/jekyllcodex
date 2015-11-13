@@ -22,7 +22,7 @@ defaults:
       path: ""
       type: addons
     values:
-      layout: add-on
+      layout: addon
 
 collections:
   addons
