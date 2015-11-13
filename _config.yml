@@ -21,3 +21,5 @@ collections:
   addons:
     output: true
     permalink: /add-ons/:path/
+  themes:
+    output: false
