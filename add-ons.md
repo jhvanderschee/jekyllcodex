@@ -7,3 +7,7 @@ title: Add-ons
 -----
 
 This is going to be a collection of Liquid snippets and Jekyll plugins, similar to the WordPress Plugin directory.
+
+### Search
+- simple search
+- argola
