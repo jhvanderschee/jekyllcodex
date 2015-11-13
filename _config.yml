@@ -18,6 +18,5 @@ url: "http://jekyllcodex.com" # the base hostname & protocol for your site
 markdown: kramdown
 
 collections:
--
   addons
     output: true
