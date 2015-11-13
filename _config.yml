@@ -28,6 +28,6 @@ defaults:
       layout: add-on
 
 collections:
-  add-ons
-    output: true
-    permalink: /add-ons/:path/
+  - add-ons
+      output: true
+      permalink: /add-ons/:path/
