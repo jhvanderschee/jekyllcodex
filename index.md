@@ -8,4 +8,4 @@ title: Jekyll, the website framework that is super fast and super simple.
 <hr />
 
 <h3>Powered by</h3>
-<img src="/img/cloud-cannon.png" class="poweredby" /><img src="/img/github.png" class="poweredby" />
+<img src="/img/cloud_cannon.png" class="poweredby" /><img src="/img/github.png" class="poweredby" />
