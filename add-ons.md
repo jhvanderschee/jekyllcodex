@@ -6,7 +6,7 @@ title: Add-ons
 ### The best archive for Liquid snippets and Jekyll plugins
 -----
 
-This is going to be a collection of Liquid snippets and Jekyll plugins, similar to the WordPress Plugin directory.
+This is going to be a collection of Liquid snippets and Jekyll plugins, similar to the WordPress Plugin directory, containing at least the following references:
 
 <br />
 
