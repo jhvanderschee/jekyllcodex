@@ -38,3 +38,9 @@ This is going to be a collection of Liquid snippets and Jekyll plugins, similar 
 - Sitemap XML (Liquid)
 - Sitemap XML (plugin)
 - Atom feed (Liquid)
+
+<br />
+
+### Responsive
+ 
+- Responsive images (plugin)
