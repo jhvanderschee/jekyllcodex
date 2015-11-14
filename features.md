@@ -28,14 +28,14 @@ Jekyll supports Sass out of the box. This means you can use 'style.scss' anywher
 
 Go to your 'Collections' in CloudCannon and see if you already have support for posts. If not, create a '_posts' directory in the root of your project and look again. Blogs have a default URL like this: YYYY/MM/DD/title-of-the-blog.html. Listing your blog items requires the following Liquid code:
 
-<pre><h3>Posts</h3>
-<ul>
+<pre>&lt;h3&gt;Posts&lt;/h3&gt;
+&lt;ul&gt;
   {% for post in site.posts %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
-</ul></pre>
+&lt;/ul&gt;</pre>
 
 ## Extra features
 
