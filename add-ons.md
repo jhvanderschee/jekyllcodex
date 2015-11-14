@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: full-width
 permalink: /add-ons/
 title: Add-ons
 ---
