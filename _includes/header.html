@@ -13,11 +13,11 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li {% if '/getting-started/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/getting-started/">Getting started</a></li>
-              <li><a href="/features/">Features</a></li>
-              <li><a href="/add-ons/">Add-ons</a></li>
-              <li><a href="/themes/">Themes</a></li>
-              <li><a href="/about/">About</a></li>
-              <li><a href="/2015/11/09/introduction.html">Blog</a></li>
+              <li {% if '/features/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/features/">Features</a></li>
+              <li {% if '/add-ons/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/add-ons/">Add-ons</a></li>
+              <li {% if '/themes/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/themes/">Themes</a></li>
+              <li {% if '/about/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/about/">About</a></li>
+              <li {% if '/blog/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/2015/11/09/introduction.html">Blog</a></li>
             </ul>
             <div class="download">
               <a href="http://jekyllrb.com/" class="btn btn-primary btn-sm" target="_blank">Official Jekyll Docs</a></li>
