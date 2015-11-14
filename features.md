@@ -8,7 +8,7 @@ permalink: /features/
 
 ### Different templates
 
-If you need different templates, for posts and pages for example, you can create them in the directory '_layouts'. Your template is alsmost the same as your 'index.html' file, you created in the 'Getting started'. The only difference is that you should name it something like 'post.html', 'page.html' or 'default.html' and that you should replace the content with 
+If you need different templates, for posts and pages for example, you can create them in the directory '_layouts'. Your template is alsmost the same as your 'index.html' file, you created in the 'Getting started'. The only difference is that you should name it something like 'post.html', 'page.html' or 'default.html' and replace the content with: 
 
 <pre>&lcub;&lcub; content &rcub;&rcub;</pre>
 
