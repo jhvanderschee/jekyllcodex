@@ -48,8 +48,11 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 
 List children is relatively simple, like this:
 
-<pre>&lcub;% assign rm = url_parts | last %&rcub;
+<pre>&lcub;% assign url_parts = page.url | split: '/' %&rcub;
+&lcub;% assign url_parts_size = url_parts | size %&rcub;
+&lcub;% assign rm = url_parts | last %&rcub;
 &lcub;% assign base_url = page.url | replace: rm %&rcub;
+
 &lt;ul&gt;
     &lcub;% for node in site.pages %&rcub;
       &lcub;% if node.url contains base_url %&rcub;
