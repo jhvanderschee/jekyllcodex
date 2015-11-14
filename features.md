@@ -30,11 +30,11 @@ Go to your 'Collections' in CloudCannon and see if you already have support for 
 
 <pre>&lt;h3&gt;Posts&lt;/h3&gt;
 &lt;ul&gt;
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
+  &lcub;% for post in site.posts %&rcub;
+  &lt;li&gt;
+    &lt;a href="&lcub;&lcub; post.url &rcub;&rcub;">&lcub;&lcub; post.title &rcub;&rcub;&lt;/a&gt;
+  &lt;/li&gt;
+  &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
 ## Extra features
