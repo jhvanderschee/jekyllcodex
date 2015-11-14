@@ -25,8 +25,9 @@ collections:
   themes:
     output: true
     permalink: /themes/:path/
-  posts:
-    permalink: /blog/:year/:month/:day/:title/
+
+posts:
+  permalink: /blog/:year/:month/:day/:title/
 
 # Category for Add-ons
 features:
