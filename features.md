@@ -46,7 +46,22 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 
 ### Menu/Page hierarchy
 
-...
+List children is relatively simple, like this:
+
+<pre>&lcub;% assign rm = url_parts | last %&rcub;
+&lcub;% assign base_url = page.url | replace: rm %&rcub;
+&lt;ul&gt;
+    &lcub;% for node in site.pages %&rcub;
+      &lcub;% if node.url contains base_url %&rcub;
+        &lcub;% assign node_url_parts = node.url | split: '/' %&rcub;
+        &lcub;% assign node_url_parts_size = node_url_parts | size %&rcub;
+        &lcub;% assign filename = node_url_parts | last %&rcub;
+        &lcub;% if url_parts_size == node_url_parts_size and filename != 'index.html' %&rcub;
+          &lt;li&gt;&lt;a href='&lcub;&lcub;node.url&rcub;&rcub;'>&lcub;&lcub;node.title&rcub;&rcub;&lt;/a&gt;&lt;/li&gt;
+        &lcub;% endif %&rcub;
+      &lcub;% endif %&rcub;
+    &lcub;% endfor %&rcub;
+&lt;/ul&gt;</pre>
 
 ### Contact forms
 
