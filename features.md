@@ -68,4 +68,4 @@ List children is relatively simple, like this:
 
 ### Need more?
 
-Look at the add-ons for other solutions. 
+Look at the add-ons for more solutions. 
