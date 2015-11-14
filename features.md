@@ -18,7 +18,7 @@ Furthermore you have to add three extra lines at the top of your 'index.html' fi
 
 ### Using Sass
 
-Jekyll supports Sass out of the box. This means you can use 'style.scss' anywhere in your project and refer to it as 'style.css'. Simple, right? Want to compress the outputted CSS? Just add the following two lines to your '_config.yml' file.
+Jekyll supports Sass out of the box. This means you can use 'style.scss' anywhere in your project and refer to it as 'style.css'. You will have no excuse for using CSS anymore. Want to compress the outputted CSS? Just add the following two lines to your '_config.yml' file.
 
 <pre>sass:<br />&nbsp;&nbsp;style: compressed</pre>
 
