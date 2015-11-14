@@ -12,7 +12,7 @@ If you need different templates, for posts and pages for example, you can create
 
 <pre>&lcub;&lcub; content &rcub;&rcub;</pre>
 
-Furthermore you add to your 'index.html' file a three extra lines at the top.
+Furthermore you have to add three extra lines at the top of your 'index.html' file.
 
 <pre>---<br />layout: page<br />---</pre>
 
