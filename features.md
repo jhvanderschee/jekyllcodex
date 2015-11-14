@@ -18,7 +18,7 @@ Furthermore you add to your 'index.html' file a three extra lines at the top.
 
 ### Using Sass
 
-...
+Jekyll supports Sass out of the box. This means you can use 'style.scss' in your project and refer to it as 'style.css'.
 
 
 ## Blogging
