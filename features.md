@@ -18,15 +18,15 @@ Furthermore you have to add three extra lines at the top of your 'index.html' fi
 
 ### Using Sass
 
-Jekyll supports Sass out of the box. This means you can use 'style.scss' in your project and refer to it as 'style.css'.
+Jekyll supports Sass out of the box. This means you can use 'style.scss' anywhere in your project and refer to it as 'style.css'. Simple, right? Want to compress the outputted CSS? Just add the following two lines to your '_config.yml' file.
 
+<pre>sass:<br />&nbsp;&nbsp;style: compressed</pre>
 
 ## Blogging
 
 ### Setup
 
-This is where things get a little more complicated.
-
+To support blogging you need a '_posts' directory in the root of your project. 
 
 ## Extra features
 
