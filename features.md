@@ -65,16 +65,8 @@ List children is relatively simple, like this:
 
 ### Contact forms
 
-...
+Look at the add-ons for contact form solutions.
 
 ### Search
 
-...
-
-### Responsive images
-
-https://www.netlify.com/blog/2015/08/20/simple-responsive-images-with-jekyll
-
-### Minify everything
-
-...
+Look at the add-ons for search solutions. 
