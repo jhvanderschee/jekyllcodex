@@ -26,7 +26,7 @@ Jekyll supports Sass out of the box. This means you can use 'style.scss' anywher
 
 ### Setup
 
-To support blogging you need a '_posts' directory in the root of your project. 
+Go to your 'Collections' in CloudCannon and see if you already have support for posts. If not, create a '_posts' directory in the root of your project and look again.
 
 ## Extra features
 
