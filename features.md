@@ -63,10 +63,6 @@ List children is relatively simple, like this:
     &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
-### Contact forms
+### Need more?
 
-Look at the add-ons for contact form solutions.
-
-### Search
-
-Look at the add-ons for search solutions. 
+Look at the add-ons for other solutions. 
