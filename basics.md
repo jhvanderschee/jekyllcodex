@@ -76,7 +76,7 @@ Creating a sitemap for a page that is hosted on GitHub pages is [easy](https://h
 
 Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/master/feed.xml) to the root of your project. This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add this line to the head of your HTML:
 
-<pre>&lt;link rel="alternate" type="application/rss+xml" title="&lcub;&lcub; site.title &rcub;&rcub;" href="http://yourdomainname.com/feed.xml"&gt;</pre>
+<pre>&lt;link rel="alternate" type="application/rss+xml" title="Your sites title" href="http://yourdomainname.com/feed.xml"&gt;</pre>
 
 ## Menu's
 
