@@ -64,7 +64,7 @@ Add the following lines to the top of your document if you require a manual desc
 
 ### Canonical link
 
-Making sure Google indexes the right page (and not the url with 'index.html' behind it), simply add the following line to the head of your HTML:
+Making sure Google indexes the right page (and not the url with 'index.html'), simply add the following line to the head of your HTML:
 
 <pre>&lt;link rel="canonical" href="&lcub;&lcub; page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url &rcub;&rcub;"&gt;</pre>
 
