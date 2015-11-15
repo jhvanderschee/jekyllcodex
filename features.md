@@ -50,6 +50,10 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 
 Setting the active class on a li that is used for navigation goes like this:
 
+<pre>&lt;li &lcub;% if '/getting-started/' == page.url %&rcub;&gt; ... &lt;/li&gt;</pre>
+
+If you want this to work for 'getting-started/' and 'getting-started/index.html' you have to use this:
+
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
 
 ## List children
