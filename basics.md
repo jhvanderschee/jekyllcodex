@@ -84,7 +84,7 @@ If you want this to work for 'getting-started/' and 'getting-started/index.html'
 
 ### Dynamic menu
 
-Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found on [GitHub](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
+Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
 
 <pre>&lcub;% include menulevel url='' %&rcub;</pre>
 
