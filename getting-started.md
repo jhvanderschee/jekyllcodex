@@ -70,4 +70,4 @@ Your website now has a WYSIWYG editor in CloudCannon for easy content manipulati
 
 ## Step 4. Host your website
 
-Oh, how I hate shared hosting accounts... untill Jekyll. Shared hosting accounts are cheap but unreliable. However, Jekyll provides us with a back-up (actually the source code), which makes me feel a whole lot safer. CloudCannon/Jekyll exports the static version of your site to an FTP account on every update, enabling you to use the hosting environment of your choice. Just connect your FTP account through the CloudCannon options.
+Oh, how I hate shared hosting accounts... untill Jekyll. Shared hosting accounts are cheap but unreliable. However, Jekyll provides us with a back-up (actually the source code), which makes me feel a whole lot safer. CloudCannon exports the static version of your site to an FTP account on every update, enabling you to use the hosting environment of your choice. Just connect your FTP account through the CloudCannon options.
