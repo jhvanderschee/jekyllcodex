@@ -10,7 +10,6 @@ This is going to be a collection of Liquid snippets and Jekyll plugins, similar 
 <br />
 
 ### Search
-- Simple Jekyll Search (Plugin)
 - Algolia (External/Liquid)
 
 <br />
@@ -23,23 +22,3 @@ This is going to be a collection of Liquid snippets and Jekyll plugins, similar 
 
 ### Analytics
 - Google Analytics (External/Liquid)
-
-<br />
-
-### Hierarchical menu
-- Page walker (Liquid)
-
-<br />
-
-### SEO
-- Description tag (Liquid)
-- Canonical link (Liquid)
-- Sitemap XML (Liquid)
-- Sitemap XML (plugin)
-- Atom feed (Liquid)
-
-<br />
-
-### Responsive
- 
-- Responsive images (plugin)
