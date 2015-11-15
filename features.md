@@ -37,6 +37,12 @@ Go to your 'Collections' in CloudCannon and see if you already have support for 
   &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
+### Custom permalinks
+
+To change the permalinks of your blog articles, simply add this single line to your '_config.yml':
+
+<pre>permalink: /blog/:year/:month/:day/:title/</pre>
+
 
 ## SEO
 
