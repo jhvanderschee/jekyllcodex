@@ -58,6 +58,10 @@ If you want to manually add a page description, simply add the following line to
 
 <pre>&lcub;% if page.description %&rcub;&lt;meta name="description" content="&lcub;&lcub; page.description &rcub;&rcub;" /&gt;&lcub;% endif %&rcub;</pre>
 
+For each page you want to add a manual description, use this:
+
+<pre>---<br />description: your description<br />---</pre>
+
 ### Canonical link
 
 Making sure Google indexes the right page (and not the url with 'index.html' behind it), simply add the following line to the head of your HTML:
