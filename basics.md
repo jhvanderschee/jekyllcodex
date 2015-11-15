@@ -28,7 +28,7 @@ Jekyll supports Sass out of the box. This means you can use ‘style.scss’ any
 
 ~~~
 sass:
-&nbsp; style: compressed
+  style: compressed
 ~~~
 
 ## Blogging
