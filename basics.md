@@ -51,14 +51,22 @@ To change the permalinks of your blog articles, simply add this single line to y
 When you want your URL's to be pretty, simply use the 'old-school' approach. Create an 'index.html' in the root for the homepage and a folder called 'about' with another 'index.html' file inside for your 'about' page... and so on. You will take advantage of this on a later moment when you need to build a menu, based on the page hierarchy.
 
 ### Description tag
+
+
+
 ### Canonical link
 
-Making sure Google indexes the right page (and not the url with 'index.html' behind it), simply add the following line to the head of your HTML.
+Making sure Google indexes the right page (and not the url with 'index.html' behind it), simply add the following line to the head of your HTML:
 
 <pre>&lt;link rel="canonical" href="&lcub;&lcub; page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url &rcub;&rcub;"&gt;</pre>
 
 ### Sitemap XML
+
+Creating a sitemap for a page that is hosted on GitHub pages is [easy](https://help.github.com/articles/sitemaps-for-github-pages/). If you do not want to use a plugin, just place [this](https://github.com/CloudCannon/Jekyll-Tips/blob/master/sitemap.xml) code in a file called 'sitemap.xml' in the root of your website. Do not forget to submit your sitemap to Google (or any other search engine).
+
 ### Atom feed
+
+Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/master/feed.xml) to the root of your project. This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add this line to the head of your HTML:
 
 <pre>&lt;link rel="alternate" type="application/rss+xml" title="&lcub;&lcub; site.title &rcub;&rcub;" href="&lcub;&lcub; "/feed.xml" | prepend: site.baseurl | prepend: site.url &rcub;&rcub;"&gt;</pre>
 
