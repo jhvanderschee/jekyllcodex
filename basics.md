@@ -89,7 +89,7 @@ description: my-description
 Making sure Google indexes the right page (and not the url with ‘index.html’), simply add the following line to the head of your HTML:
 
 ~~~
-<link rel="canonical" href="{{ page.url | replace: &amp;amp;quot;index.html&amp;amp;quot;,&amp;amp;quot;&amp;amp;quot; | prepend: &amp;amp;quot;http://yourdomainname.com&amp;amp;quot; }}">
+<link rel="canonical" href="{{ page.url | replace: &amp;amp;amp;quot;index.html&amp;amp;amp;quot;,&amp;amp;amp;quot;&amp;amp;amp;quot; | prepend: &amp;amp;amp;quot;http://yourdomainname.com&amp;amp;amp;quot; }}">
 ~~~
 
 ### Sitemap XML
@@ -111,14 +111,14 @@ Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/maste
 Setting the active class on a li that contains a link to the current page URL goes like this:
 
 ~~~
-<li {% if &amp;amp;amp;amp;#39;/getting-started/&amp;amp;amp;amp;#39; == page.url %}class="active"{% endif %}> ... </li>
+<li {% if &amp;amp;amp;amp;amp;#39;/getting-started/&amp;amp;amp;amp;amp;#39; == page.url %}class="active"{% endif %}> ... </li>
 ~~~
 
 Or if you want to check that the first part of the URL equals the menu item:
 
 ~~~
-{% assign url_parts = page.url | split:&amp;amp;amp;amp;#39;/&amp;amp;amp;amp;#39; %}
-<li {% if &amp;amp;amp;amp;#39;getting-started&amp;amp;amp;amp;#39; == url_parts[1] %}class="active"{% endif %}> ... </li>
+{% assign url_parts = page.url | split:&amp;amp;amp;amp;amp;#39;/&amp;amp;amp;amp;amp;#39; %}
+<li {% if &amp;amp;amp;amp;amp;#39;getting-started&amp;amp;amp;amp;amp;#39; == url_parts[1] %}class="active"{% endif %}> ... </li>
 ~~~
 
 ### Dynamic menu
@@ -126,7 +126,7 @@ Or if you want to check that the first part of the URL equals the menu item:
 Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files (‘menulevel’ and ‘menushow’) in your ‘_includes’ folder you can generate a dynamic menu with the following command:
 
 ~~~
-{% include menulevel url=&#39;/subdir/&#39; %}
+{% include menulevel.html url=&amp;#39;/subdir/&amp;#39; %}
 ~~~
 
 ## Need more?
