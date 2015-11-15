@@ -76,19 +76,21 @@ Creating a sitemap for a page that is hosted on GitHub pages is [easy](https://h
 
 Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/master/feed.xml) to the root of your project. This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add this line to the head of your HTML:
 
-<pre>&lt;link rel="alternate" type="application/rss+xml" title="&lcub;&lcub; site.title &rcub;&rcub;" href="http://yourdomainname.com/feed.xml"&gt;</pre>
+<pre>&lt;link rel="alternate" type="application/rss+xml" title="Your sites title" href="http://yourdomainname.com/feed.xml"&gt;</pre>
 
 ## Menu's
 
 ### Set active class
 
-Setting the active class on a li that is used for navigation goes like this:
+Setting the active class on a li that contains a link to the current page URL goes like this:
 
-<pre>&lt;li &lcub;% if '/getting-started/' == page.url %&rcub;&gt; ... &lt;/li&gt;</pre>
+<pre>&lt;li &lcub;% if '/getting-started/' == page.url %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;</pre>
 
-If you want this to work for 'getting-started/' and 'getting-started/index.html' you have to use this:
+Or if you want to check that the first part of the URL equals the menu item:
 
-<pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
+<pre>&lcub;% assign url_parts = page.url | split:'/' %&rcub;
+&lt;li &lcub;% if 'getting-started' == url_parts[1] %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;</pre>
+
 
 ### Dynamic menu
 

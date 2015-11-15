@@ -3,22 +3,29 @@ layout: add-ons
 permalink: /add-ons/
 title: Add-ons
 ---
-### The best archive for Liquid snippets and Jekyll plugins
+### The best archive for your Jekyll add-ons
 
-This is going to be a collection of external services that can be easily added to your Jekyll site. It will be similar to the WordPress Plugin directory, containing at least the following references:
+This is going to be a collection of curated external services that can be easily added to your Jekyll site. They must be free or freemium, as the majority of the Jekyll sites are expected to be small in size and budget. This list will containing at least the following references and their implementation:
 
 <br />
 
 ### Search
-- Algolia (External/Liquid)
+- Algolia
 
 <br />
 
 ### Comments
-- Disqus (External/Liquid)
-- Google Comments (External/Liquid)
+- Disqus
+- Google Comments
+- Facebook Comments
 
 <br />
 
 ### Analytics
-- Google Analytics (External/Liquid)
+- Google Analytics
+
+<br />
+
+### Forms
+- Formspree
+- Jotform
