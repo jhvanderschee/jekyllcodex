@@ -52,6 +52,11 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 
 ### Description tag
 ### Canonical link
+
+Making sure Google indexes the right page (and not the url with 'index.html' behind it), simply add the following line to the head of your HTML.
+
+<pre>&lt;link rel="canonical" href="&lcub;&lcub; page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url &rcub;&rcub;"&gt;</pre>
+
 ### Sitemap XML
 ### Atom feed
 
