@@ -48,7 +48,7 @@ To change the permalinks of your blog articles, simply add this single line to y
 
 ### Pretty URL's
 
-When you want your URL's to be pretty, simply use the 'old-school' approach. Create an 'index.html' in the root for the homepage and a folder called 'about' with another 'index.html' file inside for your 'about' page... and so on. The Jekyll way is to add the permalink to the top of your document.
+When you want your URL's to be pretty, simply use the 'old-school' approach. Create an 'index.html' in the root for the homepage and a folder called 'about' with another 'index.html' file inside for your 'about' page... and so on. The Jekyll way is to add the permalink to the top of your document, like this:
 
 <pre>---<br />permalink: /your/complex/permalink/<br />---</pre>
 
