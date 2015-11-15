@@ -86,6 +86,10 @@ Setting the active class on a li that is used for navigation goes like this:
 
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url %&rcub;&gt; ... &lt;/li&gt;</pre>
 
+Or if you want to check that the first part of the URL equals the menu item:
+
+<pre>&lcub;% assign url_parts = page.url | split:'/' %&rcub;&lcub;% if url_parts[1] == '/getting-started/' %&rcub;...&lcub;% endif %&rcub;</pre>
+
 If you want this to work for 'getting-started/' and 'getting-started/index.html' you have to use this:
 
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
