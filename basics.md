@@ -89,7 +89,7 @@ description: my-description
 Making sure Google indexes the right page (and not the url with ‘index.html’), simply add the following line to the head of your HTML:
 
 ~~~
-<link rel="canonical" href="{{ page.url | replace: &#39;index.html&#39;,&#39;&#39; | prepend: &#39;http://yourdomainname.com&#39; }}">
+<link rel="canonical" href="{{ page.url | replace: &quot;index.html&quot;,&quot;&quot; | prepend: &quot;http://yourdomainname.com&quot; }}">
 ~~~
 
 ### Sitemap XML
@@ -111,14 +111,14 @@ Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/maste
 Setting the active class on a li that contains a link to the current page URL goes like this:
 
 ~~~
-<li {% if &amp;#39;/getting-started/&amp;#39; == page.url %}class="active"{% endif %}> ... </li>
+<li {% if &amp;amp;#39;/getting-started/&amp;amp;#39; == page.url %}class="active"{% endif %}> ... </li>
 ~~~
 
 Or if you want to check that the first part of the URL equals the menu item:
 
 ~~~
-{% assign url_parts = page.url | split:&amp;#39;/&amp;#39; %}
-<li {% if &amp;#39;getting-started&amp;#39; == url_parts[1] %}class="active"{% endif %}> ... </li>
+{% assign url_parts = page.url | split:&amp;amp;#39;/&amp;amp;#39; %}
+<li {% if &amp;amp;#39;getting-started&amp;amp;#39; == url_parts[1] %}class="active"{% endif %}> ... </li>
 ~~~
 
 ### Dynamic menu
@@ -126,7 +126,7 @@ Or if you want to check that the first part of the URL equals the menu item:
 Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files (‘menulevel’ and ‘menushow’) in your ‘_includes’ folder you can generate a dynamic menu with the following command:
 
 ~~~
-{% include menulevel url=&#39;&#39; %}
+{% include menulevel url=&quot;&quot; %}
 ~~~
 
 ## Need more?
