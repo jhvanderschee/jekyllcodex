@@ -89,7 +89,7 @@ description: my-description
 Making sure Google indexes the right page (and not the url with ‘index.html’), simply add the following line to the head of your HTML:
 
 ~~~
-<link rel="canonical" href="{{ page.url | replace:&#39;index.html&#39;,&#39;&#39; | prepend: &#39;http://yourdomainname.com&#39; }}">
+<link rel="canonical" href="{{ page.url | replace: &#39;index.html&#39;,&#39;&#39; | prepend: &#39;http://yourdomainname.com&#39; }}">
 ~~~
 
 ### Sitemap XML
@@ -111,14 +111,14 @@ Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/maste
 Setting the active class on a li that contains a link to the current page URL goes like this:
 
 ~~~
-<li {% if &#39;/getting-started/&#39; == page.url %}class="active"{% endif %}> ... </li>
+<li {% if &amp;#39;/getting-started/&amp;#39; == page.url %}class="active"{% endif %}> ... </li>
 ~~~
 
 Or if you want to check that the first part of the URL equals the menu item:
 
 ~~~
-{% assign url_parts = page.url | split:&#39;/&#39; %}
-<li {% if &#39;getting-started&#39; == url_parts[1] %}class="active"{% endif %}> ... </li>
+{% assign url_parts = page.url | split:&amp;#39;/&amp;#39; %}
+<li {% if &amp;#39;getting-started&amp;#39; == url_parts[1] %}class="active"{% endif %}> ... </li>
 ~~~
 
 ### Dynamic menu
