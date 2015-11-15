@@ -84,9 +84,9 @@ List children is relatively simple, like this:
     &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
-Putting this in an include file named 'listchildren' makes it really easy to use:
+Putting this in an include file named 'listchildren.html' and placing this in '_includes' makes it really easy to use:
 
-<pre>&lcub;% include listchildren %&rcub;</pre>
+<pre>&lcub;% include listchildren.html %&rcub;</pre>
 
 ## Need more?
 
