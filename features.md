@@ -40,11 +40,19 @@ Go to your 'Collections' in CloudCannon and see if you already have support for 
 ## Extra features
 
 
-### Pretty URL's
+### SEO
+
+## Pretty URL's
 
 When you want your URL's to be pretty, simply use the 'old-school' approach. Create an 'index.html' in the root for the homepage and a folder called 'about' with another 'index.html' file inside for your 'about' page... and so on. You will take advantage of this on a later moment when you need to build a menu, based on the page hierarchy.
 
-### Menu/Page hierarchy
+### Menu's
+
+## Set active class
+
+<pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
+
+## List children
 
 List children is relatively simple, like this:
 
