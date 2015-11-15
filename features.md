@@ -90,7 +90,7 @@ Putting this in an include file named 'listchildren.html' and placing this in '_
 
 ### Dynamic menu
 
-Creating a dynamic menu is also possible, with only two includes. More info and a demo can be found here: https://github.com/jnvsor/jekyll-dynamic-menu. When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
+Creating a dynamic menu is also possible, with only two includes. More info and a demo can be found on [GitHub](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
 
 <pre>&lcub;% include menulevel url='' %&rcub;</pre>
 
