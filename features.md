@@ -37,8 +37,6 @@ Go to your 'Collections' in CloudCannon and see if you already have support for 
   &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
-## Extra features
-
 
 ### SEO
 
@@ -49,6 +47,8 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 ### Menu's
 
 ## Set active class
+
+Setting the active class on a li that is used for navigation goes like this:
 
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
 
