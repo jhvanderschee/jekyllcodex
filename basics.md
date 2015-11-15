@@ -89,7 +89,8 @@ Setting the active class on a li that contains a link to the current page URL go
 Or if you want to check that the first part of the URL equals the menu item:
 
 <pre>&lcub;% assign url_parts = page.url | split:'/' %&rcub;
-&lt;li &lcub;% if '/getting-started/' == url_parts[1] %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;</pre>
+&lt;li &lcub;% if 'getting-started' == url_parts[1] %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;</pre>
+
 
 ### Dynamic menu
 
