@@ -82,7 +82,7 @@ Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/maste
 
 ### Set active class
 
-Setting the active class on a li that is used for navigation goes like this:
+Setting the active class on a li that contains a link to the current page URL goes like this:
 
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;</pre>
 
@@ -95,7 +95,7 @@ Or if you want to check that the first part of the URL equals the menu item:
 
 Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
 
-<pre>&lcub;% include menulevel url='' %&rcub;</pre> 
+<pre>&lcub;% include menulevel url='' %&rcub;</pre>
 
 ## Need more?
 
