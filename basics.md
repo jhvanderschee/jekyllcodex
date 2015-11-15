@@ -58,7 +58,7 @@ If you want to manually add a page description, simply add the following line to
 
 <pre>&lcub;% if page.description %&rcub;&lt;meta name="description" content="&lcub;&lcub; page.description &rcub;&rcub;" /&gt;&lcub;% endif %&rcub;</pre>
 
-For each page you want to add a manual description, add the following lines to the top of your document. Updating them is a piece of cake in CloudCannon.
+Add the following lines to the top of your document if you require a manual description. Updating them is a piece of cake in CloudCannon.
 
 <pre>---<br />description: my-description<br />---</pre>
 
