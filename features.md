@@ -78,6 +78,6 @@ List children is relatively simple, like this:
     &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
-### Need more?
+## Need more?
 
 Look at the add-ons for more solutions. 
