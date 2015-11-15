@@ -91,15 +91,11 @@ Or if you want to check that the first part of the URL equals the menu item:
 <pre>&lcub;% assign url_parts = page.url | split:'/' %&rcub;
 &lt;li &lcub;% if '/getting-started/' == url_parts[1] %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;</pre>
 
-If you want this to work for 'getting-started/' and 'getting-started/index.html' you have to use this:
-
-<pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
-
 ### Dynamic menu
 
 Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
 
-<pre>&lcub;% include menulevel url='' %&rcub;</pre>
+<pre>&lcub;% include menulevel url='' %&rcub;</pre> 
 
 ## Need more?
 
