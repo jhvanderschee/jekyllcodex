@@ -12,4 +12,4 @@ This is going to be a place for curated Jekyll themes. We have not reviewed any 
 ## More themes
 
 - [http://jekyll.tips](http://jekyll.tips/)
-- [http://jekyllthemes.org/](http://jekyllthemes.org/)
+- [http://jekyllthemes.org/](http://jekyllthemes.org/) 
