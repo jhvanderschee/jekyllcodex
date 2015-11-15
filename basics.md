@@ -66,7 +66,7 @@ Add the following lines to the top of your document if you require a manual desc
 
 Making sure Google indexes the right page (and not the url with 'index.html'), simply add the following line to the head of your HTML:
 
-<pre>&lt;link rel="canonical" href="&lcub;&lcub; page.url | replace:'index.html','' | prepend: site.url &rcub;&rcub;"&gt;</pre>
+<pre>&lt;link rel="canonical" href="&lcub;&lcub; page.url | replace:'index.html','' | prepend: 'http://yourdomainname.com' &rcub;&rcub;"&gt;</pre>
 
 ### Sitemap XML
 
@@ -76,7 +76,7 @@ Creating a sitemap for a page that is hosted on GitHub pages is [easy](https://h
 
 Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/master/feed.xml) to the root of your project. This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add this line to the head of your HTML:
 
-<pre>&lt;link rel="alternate" type="application/rss+xml" title="&lcub;&lcub; site.title &rcub;&rcub;" href="&lcub;&lcub; "/feed.xml" | prepend: site.url &rcub;&rcub;"&gt;</pre>
+<pre>&lt;link rel="alternate" type="application/rss+xml" title="&lcub;&lcub; site.title &rcub;&rcub;" href="http://yourdomainname.com/feed.xml"&gt;</pre>
 
 ## Menu's
 
