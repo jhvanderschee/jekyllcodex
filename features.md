@@ -84,6 +84,10 @@ List children is relatively simple, like this:
     &lcub;% endfor %&rcub;
 &lt;/ul&gt;</pre>
 
+Putting this in an include file named 'listchildren' makes it really easy to use:
+
+<pre>&lcub;% include listchildren %&rcub;</pre>
+
 ## Need more?
 
 Look at the add-ons for more solutions. 
