@@ -1,5 +1,5 @@
 ---
-title: Features
+title: Basics
 layout: page
 permalink: /basics/
 ---
@@ -52,7 +52,7 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 
 ### Description tag
 
-
+<pre>&lcub;% if page.description %&rcub;&lt;meta name="description" content="&lcub;&lcub; page.description &rcub;&rcub;" /&gt;&lcub;% endif %&rcub;</pre>
 
 ### Canonical link
 
