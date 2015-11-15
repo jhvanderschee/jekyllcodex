@@ -54,6 +54,8 @@ When you want your URL's to be pretty, simply use the 'old-school' approach. Cre
 
 ### Description tag
 
+If you want to manually add a page description, simply add the following line to the head of your HTML:
+
 <pre>&lcub;% if page.description %&rcub;&lt;meta name="description" content="&lcub;&lcub; page.description &rcub;&rcub;" /&gt;&lcub;% endif %&rcub;</pre>
 
 ### Canonical link
