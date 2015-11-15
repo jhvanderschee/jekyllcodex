@@ -60,6 +60,8 @@ Making sure Google indexes the right page (and not the url with 'index.html' beh
 ### Sitemap XML
 ### Atom feed
 
+<pre>&lt;link rel="alternate" type="application/rss+xml" title="&lcub;&lcub; site.title &rcub;&rcub;" href="&lcub;&lcub; "/feed.xml" | prepend: site.baseurl | prepend: site.url &rcub;&rcub;"&gt;</pre>
+
 ## Menu's
 
 ### Set active class
