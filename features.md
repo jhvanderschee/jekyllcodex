@@ -38,15 +38,15 @@ Go to your 'Collections' in CloudCannon and see if you already have support for 
 &lt;/ul&gt;</pre>
 
 
-### SEO
+## SEO
 
-## Pretty URL's
+### Pretty URL's
 
 When you want your URL's to be pretty, simply use the 'old-school' approach. Create an 'index.html' in the root for the homepage and a folder called 'about' with another 'index.html' file inside for your 'about' page... and so on. You will take advantage of this on a later moment when you need to build a menu, based on the page hierarchy.
 
-### Menu's
+## Menu's
 
-## Set active class
+### Set active class
 
 Setting the active class on a li that is used for navigation goes like this:
 
@@ -56,7 +56,7 @@ If you want this to work for 'getting-started/' and 'getting-started/index.html'
 
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
 
-## List children
+### List children
 
 List children is relatively simple, like this:
 
