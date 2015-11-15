@@ -62,32 +62,6 @@ If you want this to work for 'getting-started/' and 'getting-started/index.html'
 
 <pre>&lt;li &lcub;% if '/getting-started/' == page.url|remove:'index.html' %&rcub;&gt; ... &lt;/li&gt;</pre>
 
-### List children
-
-List children is relatively simple, like this:
-
-<pre>&lcub;% assign url_parts = page.url | split: '/' %&rcub;
-&lcub;% assign url_parts_size = url_parts | size %&rcub;
-&lcub;% assign rm = url_parts | last %&rcub;
-&lcub;% assign base_url = page.url | replace: rm %&rcub;
-
-&lt;ul&gt;
-    &lcub;% for node in site.pages %&rcub;
-      &lcub;% if node.url contains base_url %&rcub;
-        &lcub;% assign node_url_parts = node.url | split: '/' %&rcub;
-        &lcub;% assign node_url_parts_size = node_url_parts | size %&rcub;
-        &lcub;% assign filename = node_url_parts | last %&rcub;
-        &lcub;% if url_parts_size == node_url_parts_size and filename != 'index.html' %&rcub;
-          &lt;li&gt;&lt;a href='&lcub;&lcub;node.url&rcub;&rcub;'>&lcub;&lcub;node.title&rcub;&rcub;&lt;/a&gt;&lt;/li&gt;
-        &lcub;% endif %&rcub;
-      &lcub;% endif %&rcub;
-    &lcub;% endfor %&rcub;
-&lt;/ul&gt;</pre>
-
-Putting this in an include file named 'listchildren.html' and placing this in '_includes' makes it really easy to use:
-
-<pre>&lcub;% include listchildren.html %&rcub;</pre>
-
 ### Dynamic menu
 
 Creating a dynamic menu is also possible, with only two includes. More info and a demo can be found on [GitHub](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files ('menulevel' and 'menushow') in your '_includes' folder you can generate a dynamic menu with the following command:
