@@ -1,7 +1,7 @@
 ---
 title: Features
 layout: page
-permalink: /features/
+permalink: /basics/
 ---
 
 ## Layout
