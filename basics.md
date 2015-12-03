@@ -129,6 +129,13 @@ Creating a menu that automagically discovers and adds new pages is also possible
 &lcub;% include menulevel url='' %&rcub;
 </pre>
 
+
+### Auto-resize images
+
+If you upload a huge image in CloudCannon, you would love it to be rendered small or cropped. This is super easy if you use https://images.weserv.nl/. Just create a image tag like this:
+
+<pre>http://images.weserv.nl/?url=www.yourdomain.nl&lcub&lcub page.image &rcub&rcub&w=200&q=65</pre>
+
 ## Need more?
 
 Look at the add-ons for more solutions.
