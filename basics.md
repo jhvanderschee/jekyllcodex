@@ -132,9 +132,11 @@ Creating a menu that automagically discovers and adds new pages is also possible
 
 ## Auto-resize images
 
-If you upload a huge image in CloudCannon, you would love it to be rendered small or cropped. This is super easy if you use https://images.weserv.nl/. Just create a image tag like this:
+If you upload a huge image in CloudCannon, you would love it to be displayed small or cropped. This is super easy if you use https://images.weserv.nl/. Just create a image tag like this:
 
 <pre>&lt;img src="http://images.weserv.nl/?url=www.yourdomain.com&lcub;&lcub; page.image &rcub;&rcub;&w=200&q=65" /&gt;</pre>
+
+More info about this service can be found at images.weserv.nl.
 
 ## Need more?
 
