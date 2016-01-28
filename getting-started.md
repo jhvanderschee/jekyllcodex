@@ -25,10 +25,10 @@ Now you create an 'index.html' file and you replace your PHP tags with Liquid ta
 <pre>&lt;html&gt;
 &lt;head&gt;&lt;/head&gt;
 &lt;body&gt;
-&lcub;% include 'header.html' %&rcub;
+&lcub;% include header.html %&rcub;
 content
-&lcub;% include 'sidebar.html' %&rcub;
-&lcub;% include 'footer.html' %&rcub;
+&lcub;% include sidebar.html %&rcub;
+&lcub;% include footer.html %&rcub;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
