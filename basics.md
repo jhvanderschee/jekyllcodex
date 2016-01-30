@@ -136,7 +136,24 @@ Creating a menu that automagically discovers and adds new pages is also possible
 </pre>
 
 
-## Auto-resize images
+## Images
+
+### Gallery
+
+Listing the jpg files in the current directory in Jekyll can be done like this:
+
+<pre>
+&lcub;% for file in site.static_files %&rcub;
+  &lcub;% assign pageurl = page.url | replace: 'index.html', '' %&rcub;
+  &lcub;% if file.path contains pageurl %&rcub;
+    &lcub;% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %&rcub;
+      <img src="&lcub;&lcub; file.path &rcub;&rcub;" />
+    &lcub;% endif %&rcub;
+  &lcub;% endif %&rcub;
+&lcub;% endfor %&rcub;
+</pre>
+
+### Auto-resize images
 
 If you upload a huge image in CloudCannon, you would love it to be displayed small or cropped. This is super easy if you use https://images.weserv.nl/. Just create a image tag like this:
 
