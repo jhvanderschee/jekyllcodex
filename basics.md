@@ -147,7 +147,7 @@ Listing the jpg files in the current directory in Jekyll can be done like this:
   &lcub;% assign pageurl = page.url | replace: 'index.html', '' %&rcub;
   &lcub;% if file.path contains pageurl %&rcub;
     &lcub;% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %&rcub;
-      <img src="&lcub;&lcub; file.path &rcub;&rcub;" />
+      &lt;img src="&lcub;&lcub; file.path &rcub;&rcub;" /&gt;
     &lcub;% endif %&rcub;
   &lcub;% endif %&rcub;
 &lcub;% endfor %&rcub;
