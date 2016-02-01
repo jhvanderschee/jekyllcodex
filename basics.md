@@ -11,25 +11,25 @@ permalink: /basics/
 If you need different templates, for posts and pages for example, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.html’ file, you created in the ‘Getting started’. The only difference is that you should name it something like ‘page.html’ and replace the content with:
 
 ```
-&lcub;&lcub; content &rcub;&rcub;
+{{ content }}
 ```
 
 Furthermore you have to add three extra lines at the top of your ‘index.html’ file.
 
-<pre>
+```
 ---
 layout: page
 ---
-</pre>
+```
 
 ### Using Sass
 
 Jekyll supports Sass out of the box. This means you can use ‘style.scss’ anywhere in your project and refer to it as ‘style.css’. You will have no excuse for using CSS anymore. Want to compress the outputted CSS? Just add the following two lines to your ‘_config.yml’ file.
 
-<pre>
+```
 sass:
-&nbsp; style: compressed
-</pre>
+  style: compressed
+```
 
 ## Blogging
 
