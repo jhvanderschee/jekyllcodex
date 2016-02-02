@@ -11,7 +11,7 @@ permalink: /basics/
 If you need different templates, for posts and pages for example, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.html’ file, you created in the ‘Getting started’. The only difference is that you should name it something like ‘page.html’ and replace the content with:
 
 ```
-{{ content }}
+\{\{ content \}\}
 ```
 
 Furthermore you have to add three extra lines at the top of your ‘index.html’ file.
