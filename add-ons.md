@@ -23,11 +23,10 @@ This is going to be a collection of curated external services that can be easily
 <br />
 
 ### Analytics
-- Google Analytics
+- [Google Analytics](https://www.google.com/analytics)
 
 <br />
 
 ### Forms
-- Formsubmit
-- Formspree
-- Jotform
+- [Formsubmit](https://formsubmit.io/)
+- [Formspree](https://formspree.io/)
