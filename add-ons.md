@@ -28,5 +28,6 @@ This is going to be a collection of curated external services that can be easily
 <br />
 
 ### Forms
+- Formsubmit
 - Formspree
 - Jotform
