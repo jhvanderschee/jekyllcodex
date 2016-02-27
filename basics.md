@@ -46,7 +46,7 @@ Go to your ‘Collections’ in CloudCannon and see if you already have support 
     <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
-</ul>
+</ul>.
 ```
 {% endraw %}
 
