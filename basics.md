@@ -39,16 +39,14 @@ Go to your ‘Collections’ in CloudCannon and see if you already have support 
 
 {% raw %}
 ```
-<pre>
-&lt;h3&gt;Posts&lt;/h3&gt;
-&lt;ul&gt;
-  &lcub;% for post in site.posts %&rcub;
-  &lt;li&gt;
-    &lt;a href="&lcub;&lcub; post.url &rcub;&rcub;"&gt;&lcub;&lcub; post.title &rcub;&rcub;&lt;/a&gt;
-  &lt;/li&gt;
-  &lcub;% endfor %&rcub;
+<h3>Posts</h3>
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
 </ul>
-</pre>
 ```
 {% endraw %}
 
