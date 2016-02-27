@@ -37,6 +37,8 @@ sass:
 
 Go to your ‘Collections’ in CloudCannon and see if you already have support for posts. If not, create a ‘_posts’ directory in the root of your project and look again. Listing your blog items requires the following Liquid code:
 
+{% raw %}
+```
 <pre>
 &lt;h3&gt;Posts&lt;/h3&gt;
 &lt;ul&gt;
@@ -45,8 +47,10 @@ Go to your ‘Collections’ in CloudCannon and see if you already have support 
     &lt;a href="&lcub;&lcub; post.url &rcub;&rcub;"&gt;&lcub;&lcub; post.title &rcub;&rcub;&lt;/a&gt;
   &lt;/li&gt;
   &lcub;% endfor %&rcub;
-&lt;/ul&gt;
+</ul>
 </pre>
+```
+{% endraw %}
 
 ### Custom permalinks
 
