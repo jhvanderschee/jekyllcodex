@@ -2,5 +2,6 @@
 title: Blog
 layout: page
 ---
-<h3>These are our latest posts</h3>
+<h3>These are our latest posts</h3><br />
+
 {% for post in site.posts %}{{ post.date | date: "%d/%m/%Y" }} - <a href="{{ post.url }}">{{ post.title }}</a><br />{% endfor %}
