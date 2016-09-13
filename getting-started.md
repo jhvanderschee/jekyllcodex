@@ -44,7 +44,7 @@ content
 
 ## Step 2. Preview your website
 
-Opening the 'index.html' file in your browser does not work, so you need to upload it to a Jekyll environment. You can install Jekyll through command-line on your own machine. If this is your cup of tea, please go to [jekyllrb.com](http://jekyllrb.com/). Otherwise, follow these simple instructions:
+Opening the 'index.md' file in your browser does not work, so you need to upload it to a Jekyll environment. You can install Jekyll through command-line on your own machine. If this is your cup of tea, please go to [jekyllrb.com](http://jekyllrb.com/). Otherwise, follow these simple instructions:
 
 - Create a free account at [cloudcannon.com](http://cloudcannon.com)
 - Create a website and name it
