@@ -8,18 +8,20 @@ permalink: /basics/
 
 ### Different templates
 
-If you need different templates, for posts and pages for example, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.html’ file, you created in the ‘Getting started’. The only difference is that you should name it something like ‘page.html’ and replace the content with:
+If you need different templates, for posts and pages for example, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.md’ file, you created in the ‘Getting started’. The only difference is that you should name it something like ‘page.html’, remove the dotted lines at the start, and replace the content with:
 
 <pre>
 &lcub;&lcub; content &rcub;&rcub;
 </pre>
 
-Furthermore you have to add three extra lines at the top of your ‘index.html’ file.
+Furthermore you should change your ‘index.md’ file to this:
 
 <pre>
 ---
 layout: page
 ---
+
+content
 </pre>
 
 ### Using Sass
@@ -37,18 +39,16 @@ sass:
 
 Go to your ‘Collections’ in CloudCannon and see if you already have support for posts. If not, create a ‘_posts’ directory in the root of your project and look again. Listing your blog items requires the following Liquid code:
 
-{% raw %}
-```
-<h3>Posts</h3>
-<ul>
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
-```
-{% endraw %}
+<pre>
+&lt;h3&gt;Posts&lt;/h3&gt;
+&lt;ul&gt;
+  &lcub;% for post in site.posts %&rcub;
+  &lt;li&gt;
+    &lt;a href="&lcub;&lcub; post.url &rcub;&rcub;"&gt;&lcub;&lcub; post.title &rcub;&rcub;&lt;/a&gt;
+  &lt;/li&gt;
+  &lcub;% endfor %&rcub;
+&lt;/ul&gt;
+</pre>
 
 ### Custom permalinks
 
