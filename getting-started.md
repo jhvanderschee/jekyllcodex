@@ -20,27 +20,21 @@ content
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-Now you create an 'default.html' file and you replace your PHP tags with Liquid tags, like so:
+Now you create an 'index.md' file and you replace your PHP tags with Liquid tags, like so:
 
-<pre>&lt;html&gt;
+<pre>---
+---
+&lt;html&gt;
 &lt;head&gt;&lt;/head&gt;
 &lt;body&gt;
 &lcub;% include header.html %&rcub;
-&lcub;&lcub; content &rcub;&rcub;
+content
 &lcub;% include sidebar.html %&rcub;
 &lcub;% include footer.html %&rcub;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-You need to place this file in a folder in the root, named: '_layouts'. You need to place the files you want to include in a folder in the root named: '_includes'. Finally you need to add an 'index.md' file to your root, that looks like this:
-
-<pre>---
-title: Homepage
-layout: default
----
-
-content
-</pre>
+You need to place the html files you want to include in a folder in the root named: '_includes'.
 
 ## Step 2. Preview your website
 
