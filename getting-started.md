@@ -34,7 +34,7 @@ content
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-You need to place the html files you want to include in a folder in the root named: '_includes'.
+You need to place the html files you want to include in a folder in the root named: '_includes'. You can find the code [here](https://github.com/jhvanderschee/jekyllinclude).
 
 ## Step 2. Preview your website
 
