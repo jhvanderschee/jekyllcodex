@@ -6,9 +6,9 @@ permalink: /basics/
 
 ## Layout
 
-### Different templates
+### Templates
 
-If you need different templates, for posts and pages for example, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.md’ file, you created in the ‘Getting started’. The only difference is that you should name it something like ‘page.html’, remove the dotted lines at the start, and replace the content with:
+If you need templates, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.md’ file, you created in the ‘Getting started’. The only difference is that you should name it something like ‘page.html’, remove the dotted lines at the start, and replace the word content with:
 
 <pre>
 &lcub;&lcub; content &rcub;&rcub;
