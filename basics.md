@@ -12,17 +12,17 @@ permalink: /basics/
 If you need templates, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.md’ file, you created in the ‘Getting started’. The only difference is that you should name it ‘templatename.html’, remove the dotted lines at the start, and replace the word content with:
 
 ```
-{{ content }}
+{% raw %}{{ content }}{% endraw %}
 ```
 
 Furthermore you should change your ‘index.md’ file to this:
 
 ```
----
+{% raw %}---
 layout: templatename
 ---
 
-content
+content{% endraw %}
 ```
 
 ### Using Sass
@@ -30,8 +30,8 @@ content
 Jekyll supports Sass out of the box. This means you can use ‘style.scss’ anywhere in your project and refer to it as ‘style.css’. You will have no excuse for using CSS anymore. Want to compress the outputted CSS? Just add the following two lines to your ‘_config.yml’ file.
 
 ```
-sass:
-  style: compressed
+{% raw %}sass:
+  style: compressed{% endraw %}
 ```
 
 ## Blogging
@@ -41,14 +41,14 @@ sass:
 Go to your ‘Collections’ in CloudCannon and see if you already have support for posts. If not, create a ‘_posts’ directory in the root of your project and look again. Listing your blog items requires the following Liquid code:
 
 ```
-<h3>Posts</h3>
+{% raw %}<h3>Posts</h3>
 <ul>
   {% for post in site.posts %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
-</ul>
+</ul>{% endraw %}
 ```
 
 ### Custom permalinks
@@ -56,7 +56,8 @@ Go to your ‘Collections’ in CloudCannon and see if you already have support 
 To change the permalinks of your blog articles, simply add this single line to your ‘_config.yml’:
 
 ```
-permalink: /blog/:year/:month/:day/:title/
+{% raw %}permalink: /blog/:year/:month/:day/:title/
+{% endraw %}
 ```
 
 ### Reading time
@@ -64,12 +65,13 @@ permalink: /blog/:year/:month/:day/:title/
 To display the reading time of an article, just use the following code:
 
 ```
-{% capture words %}
+{% raw %}{% capture words %}
 {{ content | number_of_words | minus: 180 }}
 {% endcapture %}
 {% unless words contains '-' %}
 {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
 {% endunless %}
+{% endraw %}
 ```
 
 ## SEO
@@ -79,9 +81,9 @@ To display the reading time of an article, just use the following code:
 When you want your URL’s to be pretty, simply use the ‘old-school’ approach. Create an ‘index.html’ in the root for the homepage and a folder called ‘about’ with another ‘index.html’ file inside for your ‘about’ page… and so on. The Jekyll way is to add the permalink to the top of your document, like this:
 
 ```
----
+{% raw %}---
 permalink: /your/complex/permalink/
----
+---{% endraw %}
 ```
 
 ### Description tag
@@ -89,15 +91,15 @@ permalink: /your/complex/permalink/
 If you want to manually add a page description, simply add the following line to the head of your HTML:
 
 ```
-{% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+{% raw %}{% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}{% endraw %}
 ```
 
 Add the following lines to the top of your document if you require a manual description. Updating them is a piece of cake in CloudCannon.
 
 ```
----
+{% raw %}---
 description: my-description
----
+---{% endraw %}
 ```
 
 ### Canonical link
@@ -105,7 +107,7 @@ description: my-description
 Making sure Google indexes the right page (and not the url with ‘index.html’), simply add the following line to the head of your HTML:
 
 ```
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: 'http://yourdomainname.com' }}">
+{% raw %}<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: 'http://yourdomainname.com' }}">{% endraw %}
 ```
 
 ### Sitemap XML
@@ -117,7 +119,7 @@ Creating a sitemap for a page that is hosted on GitHub pages is [easy](https://h
 Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/master/feed.xml) to the root of your project. This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add this line to the head of your HTML:
 
 ```
-<link rel="alternate" type="application/rss+xml" title="Your sites title" href="http://yourdomainname.com/feed.xml">
+{% raw %}<link rel="alternate" type="application/rss+xml" title="Your sites title" href="http://yourdomainname.com/feed.xml">{% endraw %}
 ```
 
 ## Menu’s
@@ -127,20 +129,20 @@ Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/maste
 Setting the active class on a li that contains a link to the current page URL goes like this:
 
 ```
-<li {% if page.url == '/getting-started/' %}class="active"{% endif %}> ... </li>
+{% raw %}<li {% if page.url == '/getting-started/' %}class="active"{% endif %}> ... </li>{% endraw %}
 ```
 
 Or if you want to check that the first part of the URL equals the menu item:
 
 ```
-{% assign url_parts = page.url | split: '/' %}
-<li {% if url_parts[1] == 'getting-started' %}class="active"{% endif %}> ... </li>
+{% raw %}{% assign url_parts = page.url | split: '/' %}
+<li {% if url_parts[1] == 'getting-started' %}class="active"{% endif %}> ... </li>{% endraw %}
 ```
 
 Or you can use the more generic but shorter:
 
 ```
-<li {% if page.url contains 'getting-started' %}class="active"{% endif %}> ... </li>
+{% raw %}<li {% if page.url contains 'getting-started' %}class="active"{% endif %}> ... </li>{% endraw %}
 ```
 
 ### Dynamic menu
@@ -158,7 +160,7 @@ Creating a menu that automagically discovers and adds new pages is also possible
 Listing the jpg files in the current directory in Jekyll can be done like this:
 
 ```
-{% for file in site.static_files %}
+{% raw %}{% for file in site.static_files %}
   {% assign pageurl = page.url | replace: 'index.html', '' %}
   {% if file.path contains pageurl %}
     {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
@@ -166,6 +168,7 @@ Listing the jpg files in the current directory in Jekyll can be done like this:
     {% endif %}
   {% endif %}
 {% endfor %}
+{% endraw %}
 ```
 
 ### Auto-resize images
@@ -173,7 +176,7 @@ Listing the jpg files in the current directory in Jekyll can be done like this:
 If you upload a huge image in CloudCannon, you would love it to be displayed small or cropped. This is super easy if you use https://images.weserv.nl/. Just create a image tag like this:
 
 ```
-<img src="http://images.weserv.nl/?url=www.yourdomain.com{{ page.image }}&w=200&q=65" />
+{% raw %}<img src="http://images.weserv.nl/?url=www.yourdomain.com{{ page.image }}&w=200&q=65" />{% endraw %}
 ```
 
 More info about this service can be found at images.weserv.nl.
