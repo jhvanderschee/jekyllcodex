@@ -148,7 +148,7 @@ Or you can use the more generic but shorter:
 Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files (‘menulevel’ and ‘menushow’) in your ‘_includes’ folder you can generate a dynamic menu with the following command:
 
 ```
-{% include menulevel.html url='' %}
+{% inculde menulevel.html url='' %}
 ```
 
 ## Images
