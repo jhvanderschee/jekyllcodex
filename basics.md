@@ -56,8 +56,7 @@ Go to your ‘Collections’ in CloudCannon and see if you already have support 
 To change the permalinks of your blog articles, simply add this single line to your ‘_config.yml’:
 
 ```
-{% raw %}permalink: /blog/:year/:month/:day/:title/
-{% endraw %}
+{% raw %}permalink: /blog/:year/:month/:day/:title/{% endraw %}
 ```
 
 ### Reading time
@@ -70,8 +69,7 @@ To display the reading time of an article, just use the following code:
 {% endcapture %}
 {% unless words contains '-' %}
 {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
-{% endunless %}
-{% endraw %}
+{% endunless %}{% endraw %}
 ```
 
 ## SEO
@@ -167,8 +165,7 @@ Listing the jpg files in the current directory in Jekyll can be done like this:
       <img src="{{ file.path }}" />
     {% endif %}
   {% endif %}
-{% endfor %}
-{% endraw %}
+{% endfor %}{% endraw %}
 ```
 
 ### Auto-resize images
