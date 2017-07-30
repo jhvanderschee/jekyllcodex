@@ -63,17 +63,14 @@ permalink: /blog/:year/:month/:day/:title/
 
 To display the reading time of an article, just use the following code:
 
+```
 {% capture words %}
-
 {{ content | number_of_words | minus: 180 }}
-
 {% endcapture %}
-
 {% unless words contains &ldquo;-&rdquo; %}
-
 {{ words | plus: 180 | divided_by: 180 | append: &ldquo; minutes to read&rdquo; }}
-
 {% endunless %}
+```
 
 ## SEO
 
