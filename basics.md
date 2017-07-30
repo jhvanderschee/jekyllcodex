@@ -4,34 +4,35 @@ layout: page
 permalink: /basics/
 ---
 
+
 ## Layout
 
 ### Templates
 
 If you need templates, you can create them in the directory ‘_layouts’. Your template is alsmost the same as your ‘index.md’ file, you created in the ‘Getting started’. The only difference is that you should name it ‘templatename.html’, remove the dotted lines at the start, and replace the word content with:
 
-<pre>
-&lcub;&lcub; content &rcub;&rcub;
-</pre>
+```
+{{ content }}
+```
 
 Furthermore you should change your ‘index.md’ file to this:
 
-<pre>
+```
 ---
 layout: templatename
 ---
 
 content
-</pre>
+```
 
 ### Using Sass
 
 Jekyll supports Sass out of the box. This means you can use ‘style.scss’ anywhere in your project and refer to it as ‘style.css’. You will have no excuse for using CSS anymore. Want to compress the outputted CSS? Just add the following two lines to your ‘_config.yml’ file.
 
-<pre>
+```
 sass:
-&nbsp; style: compressed
-</pre>
+  style: compressed
+```
 
 ## Blogging
 
@@ -39,24 +40,40 @@ sass:
 
 Go to your ‘Collections’ in CloudCannon and see if you already have support for posts. If not, create a ‘_posts’ directory in the root of your project and look again. Listing your blog items requires the following Liquid code:
 
-<pre>
-&lt;h3&gt;Posts&lt;/h3&gt;
-&lt;ul&gt;
-  &lcub;% for post in site.posts %&rcub;
-  &lt;li&gt;
-    &lt;a href="&lcub;&lcub; post.url &rcub;&rcub;"&gt;&lcub;&lcub; post.title &rcub;&rcub;&lt;/a&gt;
-  &lt;/li&gt;
-  &lcub;% endfor %&rcub;
-&lt;/ul&gt;
-</pre>
+```
+<h3>Posts</h3>
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+```
 
 ### Custom permalinks
 
 To change the permalinks of your blog articles, simply add this single line to your ‘_config.yml’:
 
-<pre>
+```
 permalink: /blog/:year/:month/:day/:title/
-</pre>
+```
+
+### Reading time
+
+To display the reading time of an article, just use the following code:
+
+{% capture words %}
+
+{{ content | number_of_words | minus: 180 }}
+
+{% endcapture %}
+
+{% unless words contains &ldquo;-&rdquo; %}
+
+{{ words | plus: 180 | divided_by: 180 | append: &ldquo; minutes to read&rdquo; }}
+
+{% endunless %}
 
 ## SEO
 
@@ -64,35 +81,35 @@ permalink: /blog/:year/:month/:day/:title/
 
 When you want your URL’s to be pretty, simply use the ‘old-school’ approach. Create an ‘index.html’ in the root for the homepage and a folder called ‘about’ with another ‘index.html’ file inside for your ‘about’ page… and so on. The Jekyll way is to add the permalink to the top of your document, like this:
 
-<pre>
+```
 ---
 permalink: /your/complex/permalink/
 ---
-</pre>
+```
 
 ### Description tag
 
 If you want to manually add a page description, simply add the following line to the head of your HTML:
 
-<pre>
-&lcub;% if page.description %&rcub;&lt;meta name="description" content="&lcub;&lcub; page.description &rcub;&rcub;" /&gt;&lcub;% endif %&rcub;
-</pre>
+```
+{% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+```
 
 Add the following lines to the top of your document if you require a manual description. Updating them is a piece of cake in CloudCannon.
 
-<pre>
+```
 ---
 description: my-description
 ---
-</pre>
+```
 
 ### Canonical link
 
 Making sure Google indexes the right page (and not the url with ‘index.html’), simply add the following line to the head of your HTML:
 
-<pre>
-&lt;link rel="canonical" href="&lcub;&lcub; page.url | replace:&#39;index.html&#39;,&#39;&#39; | prepend: &#39;http://yourdomainname.com&#39; &rcub;&rcub;"&gt;
-</pre>
+```
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: 'http://yourdomainname.com' }}">
+```
 
 ### Sitemap XML
 
@@ -102,9 +119,9 @@ Creating a sitemap for a page that is hosted on GitHub pages is [easy](https://h
 
 Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/master/feed.xml) to the root of your project. This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add this line to the head of your HTML:
 
-<pre>
-&lt;link rel="alternate" type="application/rss+xml" title="Your sites title" href="http://yourdomainname.com/feed.xml"&gt;
-</pre>
+```
+<link rel="alternate" type="application/rss+xml" title="Your sites title" href="http://yourdomainname.com/feed.xml">
+```
 
 ## Menu’s
 
@@ -112,31 +129,30 @@ Add the file [feed.xml](https://github.com/jnvsor/jekyll-dynamic-menu/blob/maste
 
 Setting the active class on a li that contains a link to the current page URL goes like this:
 
-<pre>
-&lt;li &lcub;% if page.url == '/getting-started/' %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;
-</pre>
+```
+<li {% if page.url == '/getting-started/' %}class="active"{% endif %}> ... </li>
+```
 
 Or if you want to check that the first part of the URL equals the menu item:
 
-<pre>
-&lcub;% assign url_parts = page.url | split: '/' %&rcub;
-&lt;li &lcub;% if url_parts[1] == 'getting-started' %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;
-</pre>
+```
+{% assign url_parts = page.url | split: '/' %}
+<li {% if url_parts[1] == 'getting-started' %}class="active"{% endif %}> ... </li>
+```
 
 Or you can use the more generic but shorter:
 
-<pre>
-&lt;li &lcub;% if page.url contains 'getting-started' %&rcub;class="active"&lcub;% endif %&rcub;&gt; ... &lt;/li&gt;
-</pre>
+```
+<li {% if page.url contains 'getting-started' %}class="active"{% endif %}> ... </li>
+```
 
 ### Dynamic menu
 
 Creating a menu that automagically discovers and adds new pages is also possible with plain Liquid. More info and a demo can be found [here](https://github.com/jnvsor/jekyll-dynamic-menu). When you put the two files (‘menulevel’ and ‘menushow’) in your ‘_includes’ folder you can generate a dynamic menu with the following command:
 
-<pre>
-&lcub;% include menulevel url='' %&rcub;
-</pre>
-
+```
+{% include menulevel url='' %}
+```
 
 ## Images
 
@@ -144,22 +160,24 @@ Creating a menu that automagically discovers and adds new pages is also possible
 
 Listing the jpg files in the current directory in Jekyll can be done like this:
 
-<pre>
-&lcub;% for file in site.static_files %&rcub;
-  &lcub;% assign pageurl = page.url | replace: 'index.html', '' %&rcub;
-  &lcub;% if file.path contains pageurl %&rcub;
-    &lcub;% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %&rcub;
-      &lt;img src="&lcub;&lcub; file.path &rcub;&rcub;" /&gt;
-    &lcub;% endif %&rcub;
-  &lcub;% endif %&rcub;
-&lcub;% endfor %&rcub;
-</pre>
+```
+{% for file in site.static_files %}
+  {% assign pageurl = page.url | replace: 'index.html', '' %}
+  {% if file.path contains pageurl %}
+    {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+      <img src="{{ file.path }}" />
+    {% endif %}
+  {% endif %}
+{% endfor %}
+```
 
 ### Auto-resize images
 
 If you upload a huge image in CloudCannon, you would love it to be displayed small or cropped. This is super easy if you use https://images.weserv.nl/. Just create a image tag like this:
 
-<pre>&lt;img src="http://images.weserv.nl/?url=www.yourdomain.com&lcub;&lcub; page.image &rcub;&rcub;&w=200&q=65" /&gt;</pre>
+```
+<img src="http://images.weserv.nl/?url=www.yourdomain.com{{ page.image }}&w=200&q=65" />
+```
 
 More info about this service can be found at images.weserv.nl.
 
