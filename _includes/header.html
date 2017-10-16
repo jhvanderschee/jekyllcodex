@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
               {% assign url_parts = page.url | split:'/' %}
               <li {% if '/getting-started/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/getting-started/">Getting started</a></li>
-              <li {% if page.url contains '/without-plugin/' %}class="active"{% endif %}><a href="/without-plugin/">Without plugin</a></li>
+              <li {% if page.url contains '/without-plugin/' %}class="active"{% endif %}><a href="/without-plugin/">Without plugins</a></li>
               <li {% if '/about/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/about/">About</a></li>
               <li {% if 'blog' == url_parts[1] %}class="active"{% endif %}><a href="/blog/">Blog</a></li>
             </ul>

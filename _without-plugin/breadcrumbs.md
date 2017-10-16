@@ -8,6 +8,8 @@ Breadcrumbs: one line of text shows a page's location in the site hierarchy. Use
 
 ### How it works
 
+The following code looks at the permalink and translates it into a breadcrumb/path:
+
 ```
 {% raw %}{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 <a href="/">Home</a>

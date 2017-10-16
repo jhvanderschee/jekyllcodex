@@ -11,8 +11,7 @@ One of the irritating things about Markdown is that you cannot specify 'target="
 The following code should be added to the footer:
 
 ```
-{% raw %}
-<script>
+{% raw %}<script>
 //open external links in a new window
 function externalLinks() {
   for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
@@ -37,4 +36,17 @@ function PDF2new_window ()
 PDF2new_window()
 externalLinks();
 </script>{% endraw %}
+```
+
+### Installation
+
+Step 1. Download the file [new-window-fix.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/reading-time.html)
+<br />Step 2. Save the file in the '_includes' directory of your project
+<br />Step 3. Make sure the bottom of your layout document looks like this:
+
+```
+{% raw %}...
+{% include new-window-fix.html %}
+</body>
+</html>{% endraw %}
 ```
