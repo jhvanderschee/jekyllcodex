@@ -1,7 +1,5 @@
 ---
 title: Getting started
-layout: page
-permalink: /getting-started/
 ---
 
 

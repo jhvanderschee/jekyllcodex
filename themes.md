@@ -1,6 +1,4 @@
 ---
-layout: page
-permalink: /themes/
 title: Themes
 ---
 ### Only the best of the best Jekyll themes

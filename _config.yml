@@ -15,23 +15,24 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jekyllcodex.com" # the base hostname & protocol for your site
 permalink: /blog/:year/:month/:day/:title/
 
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "without-plugin" # a collection in your site, in plural form
+    values:
+      layout: "without-plugin-item"
 
-# Build settings
-markdown: kramdown
 
 # Collections
 collections:
-  addons:
+  without-plugin:
     output: true
-    permalink: /add-ons/:path/
-  themes:
-    output: true
-    permalink: /themes/:path/
-
-
-# Category for Add-ons
-features:
-- search
-- contact forms
-- analytics
-  
+    permalink: /without-plugin/:path/  

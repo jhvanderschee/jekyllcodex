@@ -1,7 +1,5 @@
 ---
 title: Basics
-layout: page
-permalink: /basics/
 ---
 
 

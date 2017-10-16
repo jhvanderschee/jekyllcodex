@@ -4,6 +4,8 @@ body {background: #333;}
 .site-footer {background: #333; min-height: 100px; padding: 20px 0;}
 .main {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 60px 0 80px;}
 h1 {font-size: 33px; margin-top: 0; padding-top: 50px;}
+.post-header h1 {padding-top: 0;}
+.post-header {padding-top: 50px;}
 h2 {font-size: 25px; margin-top: 0; padding-top: 50px;}
 h3 {font-size: 17px; margin: 0; padding: 20px 0 3px;}
 h3.post-meta {padding: 0;}
@@ -17,3 +19,4 @@ article.page {padding-top: 0px;}
 img {display: block; max-width: 100%;}
 img.poweredby {cursor: pointer; display: inline-block; height: 100px; margin-right: 10px; margin-left: -8px; opacity: 0.35;}
 .site-footer h3 {color: silver;}
+#breadcrumbs, #breadcrumbs a {color: silver;}
