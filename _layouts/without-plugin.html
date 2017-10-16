@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include jekyll-head.html %}
 
-  <body>
+  <body class="{{ page.layout }}">
     <div class="main">
 	    {% include header.html %}
 		<div class="container">
@@ -18,13 +18,13 @@
                     
                       <div class="post-content">
                         {{ content }}
-                        
+                        <br />
                         <ul>
                         {% for item in site.without-plugin %}
                           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                         {% endfor %}
                         </ul>
-
+                        <br />
                         <h3>Why no plugins?</h3>
                         
                         Plugins add extra complexity and add a security risk. Therefore plugin-free solutions are easier and cheaper to host. If you use no plugins, you can simply choose to host your Jekyll project on GitHub Pages. GitHub Pages allows you to deploy your site for free on GitHub, with a custom domain name and all.

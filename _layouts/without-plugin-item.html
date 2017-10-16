@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include jekyll-head.html %}
 
-  <body>
+  <body class="{{ page.layout }}">
     <div class="main">
 	    {% include header.html %}
 		<div class="container">
@@ -19,7 +19,7 @@
                       <div class="post-content">
                         {{ content }}
                         
-                        <p><a href="/without-plugin">&larr; Back</a></p>
+                        <p><br /><a href="/without-plugin">&larr; Back</a></p>
                       </div>
                       
                       <!--list all add-ons per feature-->

@@ -4,7 +4,7 @@ title: Breadcrumbs
 
 ### Introduction
 
-...
+Breadcrumbs: one line of text shows a page's location in the site hierarchy. User testing shows many benefits and no downsides to breadcrumbs for secondary navigation.
 
 ### How it works
 
@@ -22,9 +22,9 @@ title: Breadcrumbs
 
 ### Installation
 
-Step 1. Download the file [breadcrumbs.html]()
-Step 2. Save the file in the ‘_includes’ directory of your project
-Step 3. Add the following line to your layout on the place where you want the breadcrumbs to appear:
+Step 1. Download the file [breadcrumbs.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/breadcrumbs.html)
+<br />Step 2. Save the file in the ‘_includes’ directory of your project
+<br />Step 3. Add the following line to your layout on the place where you want the breadcrumbs to appear:
 
 ```
 {% raw %}{% include breadcrumbs.html %}{% endraw %}
