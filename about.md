@@ -4,7 +4,7 @@ title: About Jekyll Codex
 
 ### For front-end developers
 
-Jekyll Codex is created by J.H. van der Schee (twitter: @jhvanderschee) to help fellow front-end developers and designers utilise static web technology in their work, without touching the command-line. 
+Jekyll Codex is created by J.H. van der Schee (twitter: [@jhvanderschee](https://twitter.com/jhvanderschee)) to help fellow front-end developers and designers utilise static web technology in their work, without touching the command-line. 
 
 
 ### Why Jekyll?
