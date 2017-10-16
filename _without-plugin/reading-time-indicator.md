@@ -21,7 +21,7 @@ To display the reading time of an article, just use the following code:
 
 ### Installation
 
-Step 1. Download the file <a href="">reading-time.html</a>
+Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/breadcrumbs.html">reading-time.html</a>
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want the reading time indicator to appear:
 

@@ -22,7 +22,9 @@ title: Breadcrumbs
 
 ### Installation
 
-Just add the following line to your layout on the place where you want the breadcrumbs to appear:
+Step 1. Download the file [breadcrumbs.html]()
+Step 2. Save the file in the ‘_includes’ directory of your project
+Step 3. Add the following line to your layout on the place where you want the breadcrumbs to appear:
 
 ```
 {% raw %}{% include breadcrumbs.html %}{% endraw %}
