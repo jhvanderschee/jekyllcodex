@@ -1,17 +1,4 @@
 ---
-title: Sitemap
----
-
-### Introduction
-
-A sitemap makes it easier for search engines to discover new content on a website. Sitemaps can be submitted to the search-engine (for Google, use Google Webmaster Tools).
-
-### How it works
-
-Create a sitemap by adding a file called 'sitemap.xml' in the root of your website, containing this code:
-
-```
-{% raw %}---
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -32,10 +19,4 @@ layout: null
         <priority>1.0</priority>
        </url>
   {% endfor %}
-</urlset>{% endraw %}
-```
-
-### Installation
-
-Step 1. Download the file [sitemap.xml](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/sitemap.xml)
-<br />Step 2. Save the file in the root of your Jekyll project
+</urlset>

@@ -1,6 +1,5 @@
 ---
 title: GitHub Pages now faster and simpler
-layout: post
 ---
 GitHub Pages is now running the latest major version of Jekyll, Jekyll 3.0, and with it, many of the complexities associated with publishing have been further simplified, meaning it's now easier and faster to publish beautiful sites for you and your projects.
 

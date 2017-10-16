@@ -1,6 +1,5 @@
 ---
 title: Getting started with Jekyll
-layout: post
 ---
 
 I have written a three step&nbsp;[Getting Started manual for Jekyll](http://jekyllcodex.org/getting-started/). The manual can be followed by anyone (no command line needed). Everything you need to do, can be done in a browser and a text editor.

@@ -23,6 +23,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
       type: "without-plugin" # a collection in your site, in plural form
     values:
       layout: "without-plugin-item"

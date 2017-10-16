@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "Jekyll against the rest of the world"
-date:   2015-11-09 21:09:57 +0100
 ---
 Heavy with confidence, I would deposit my lumbering frame in the middle of the room. My choice to go all static had been a good one. It was quite a serene scenery—nothing could touch me.
 
@@ -13,6 +11,14 @@ From the corner of my eye I could make out a woman who was frantically flailing 
 
 Static publishing, oh blissful serenity. Why do I like you so much?
 
-<br />
+### Dynamic is evil
 
-*This is the first part of an article from Tobias Horvath, posted at [tobyx.com](http://tobyx.com/2015/jekyll-vs-world).*
+It’s not, really. But bear with me for a moment.
+
+Imagine you’re publishing a new post on your site. How often does that content change? Is it really necessary to recreate the final HTML output you deliver to your users every single time someone accesses your site? Query the database, run it through the templating engine, run it through plugins, render HTML, deliver. That’s a lot of work.
+
+Most likely, you won’t notice this immediately. But if your site suddenly becomes popular, chances are, it won’t scale very well. It could go down. Of course there’s options for you if you wish to stay dynamic and have that flexibility. You could use caching plugins or even full-fledged web accelerators like Varnish. To me, this is just throwing huge piles of code and applications at the problem.
+
+[...]
+
+*This is the first part of an article from Tobias Horvath, posted at [tobyx.com](https://tobyx.com/2015/jekyll-vs-world).*

@@ -2,16 +2,17 @@
 title: SEO
 ---
 
-### How it works
+### Introduction
 
-This code takes care of the following things in the head:
+WordPress is famous for its SEO plugin. But what does it exactly do? Little that cannot be achieved by some HTML and liquid. This script takes care of the following things in the head:
 
 - title
 - meta description
 - shortcut icons
-- canonical link
 - open graph tags
-- atom feed (optional)
+- canonical link
+
+### How it works
 
 The following code adds all these items to your head:
 
@@ -23,16 +24,23 @@ The following code adds all these items to your head:
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncate: 160 }}">
-  
+
   <link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
   <link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
   <link rel="apple-touch-icon" href="/img/icon-196x196.png">
 
-  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+  <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content="{{ page.title }}"/>
+  {% if page.image %}<meta property="og:image" content="{{ page.image }}"/>{% endif %}
+  <meta property="og:url" content="{{ page.url }}"/>
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:description" content="{{ page.content | strip_html | strip_newlines | truncate: 160 }}"/>
+  <meta name="twitter:title" content="{{ page.title }}" />
+  {% if page.image %}<meta name="twitter:image" content="{{ page.image }}" />{% endif %}
+  <meta name="twitter:url" content="{{ page.url }}" />
+  <meta name="twitter:card" content="{{ page.content | strip_html | strip_newlines | truncate: 160 }}" />
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  
-  {% include ga.html %}
 </head>{% endraw %}
 ```
 

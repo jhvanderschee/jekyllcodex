@@ -1,20 +1,7 @@
----
-title: Open embed (Youtube)
----
-
-### Introduction
-
-One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code.
-
-### How it works
-
-To get this functionality in your Jekyll site, add this code to your footer:
-
-```
-{% raw %}<style>
+<style>
 .videoWrapper {
 	position: relative;
-	padding-bottom: 51.6%; /* custom */
+	padding-bottom: 53%; /* custom */
 	padding-top: 25px;
 	height: 0;
 	margin-top: 2em;
@@ -52,18 +39,4 @@ function yt_url2embed() {
 yt_url2embed();
 PDF2new_window()
 externalLinks();
-</script>{% endraw %}
-```
-
-### Installation
-
-Step 1. Download the file [open-embed.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/open-embed.html)
-<br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure the bottom of your layout document looks like this:
-
-```
-{% raw %}...
-{% include open-embed.html %}
-</body>
-</html>{% endraw %}
-```
+</script>
