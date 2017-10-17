@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
+  <head>
+    {% include head.html %}
+    
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    
+  </head>
   <body class="{{ page.layout }}">
     <div class="main">
 	    {% include header.html %}
