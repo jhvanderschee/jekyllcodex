@@ -39,3 +39,11 @@ layout: null
 
 Step 1. Download the file [sitemap.xml](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/sitemap.xml)
 <br />Step 2. Save the file in the root of your Jekyll project
+<br />Step 3. Make sure the structure of your documents head looks like this:
+
+```
+{% raw %}<head>
+...
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+</head>{% endraw %}
+```

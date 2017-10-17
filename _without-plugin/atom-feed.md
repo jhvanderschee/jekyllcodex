@@ -54,7 +54,7 @@ This will create a XML feed with the 10 latest posts in it. To tell the browsers
 
 Step 1. Download the file [feed.xml](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/feed.xml)
 <br />Step 2. Save the file in the root of your Jekyll project
-<br />Step 3. Add the following line to your head/the 'jekyll-head.html' include:
+<br />Step 3. Add the following line to your head/the 'head.html' include:
 
 ```
 {% raw %}<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">{% endraw %}

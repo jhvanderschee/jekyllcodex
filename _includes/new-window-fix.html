@@ -1,12 +1,13 @@
 <script>
 //open external links in a new window
-function externalLinks() {
+function external_new_window() {
     for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
     var b = c[a];
     b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
     }
 }
-function PDF2new_window ()
+//open PDF links in a new window
+function pdf_new_window ()
 {
     if (!document.getElementsByTagName) return false;
     var links = document.getElementsByTagName("a");
@@ -20,6 +21,6 @@ function PDF2new_window ()
     }
     }
 } 
-PDF2new_window()
-externalLinks();
+pdf_new_window()
+external_new_window();
 </script>

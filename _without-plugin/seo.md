@@ -22,7 +22,7 @@ The following code adds all these items to your head:
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncate: 160 }}">
 
   <link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
@@ -48,14 +48,14 @@ Note: Ofcourse you can also set manual page descriptions, using 'page.descriptio
 
 ### Installation
 
-Step 1. Download the file [jekyll-head.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/reading-time.html)
+Step 1. Download the file [head.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/reading-time.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Make sure the structure of your layout document looks like this:
 
 ```
 {% raw %}<!DOCTYPE html>
 <html>
-{% include jekyll-head.html %}
+{% include head.html %}
 <body>
 ...
 </body>
