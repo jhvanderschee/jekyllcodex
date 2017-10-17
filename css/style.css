@@ -22,4 +22,4 @@ img.poweredby {cursor: pointer; display: inline-block; height: 100px; margin-rig
 .site-footer h3 {color: silver;}
 #breadcrumbs, #breadcrumbs a {color: silver;}
 ul, ol {margin-bottom: 18px;}
-p {margin: 0 0 18px;}
+pre, p {margin: 0 0 18px;}
