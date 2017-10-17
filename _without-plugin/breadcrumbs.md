@@ -11,7 +11,8 @@ Breadcrumbs: one line of text shows a page's location in the site hierarchy. Use
 The following code looks at the permalink and translates it into a breadcrumb/path:
 
 ```
-{% raw %}{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+{% raw %}<div id="breadcrumbs">
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 <a href="/">Home</a>
 {% for crumb in crumbs offset: 1 %}
   {% if forloop.last %}
@@ -19,7 +20,8 @@ The following code looks at the permalink and translates it into a breadcrumb/pa
   {% else %}
     / <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
   {% endif %}
-{% endfor %}{% endraw %}
+{% endfor %}
+</div>{% endraw %}
 ```
 
 ### Installation
