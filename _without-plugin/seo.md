@@ -41,7 +41,9 @@ The following code adds all these items to your head:
 <meta name="twitter:url" content="{{ page.url }}" />
 <meta name="twitter:card" content="{{ page.content | strip_html | strip_newlines | truncate: 160 }}" />
 
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{% endraw %}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />{% endraw %}
 ```
 
 Note: Ofcourse you can also set manual page descriptions, using 'page.description' and a matching YML variable in your page. 
