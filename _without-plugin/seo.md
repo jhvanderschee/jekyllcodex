@@ -57,7 +57,9 @@ Step 1. Download the file [head.html](https://raw.githubusercontent.com/jhvander
 ```
 {% raw %}<!DOCTYPE html>
 <html>
+<head>
 {% include head.html %}
+</head>
 <body>
 ...
 </body>
