@@ -11,6 +11,8 @@ WordPress is famous for its SEO plugin. But what does it exactly do? Little that
 - shortcut icons
 - open graph tags
 - canonical link
+- [atom feed](/without-plugin/atom-feed)
+- [sitemap](/without-plugin/sitemap)
 
 ### How it works
 
