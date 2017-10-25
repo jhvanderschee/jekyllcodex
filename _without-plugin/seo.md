@@ -61,8 +61,6 @@ Step 1. Download the file [head.html](https://raw.githubusercontent.com/jhvander
 {% include head.html %}
 </head>
 <body>
-...
-</body>
-</html>{% endraw %}
+...{% endraw %}
 ```
 
