@@ -4,7 +4,7 @@ title: Lightbox
 
 ### Introduction
 
-Lightbox is a solution that loads your <a href="/img/logo-2x.png">image links</a>, your <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&showinfo=0&rel=0">Youtube links</a> and your <a href="https://vimeo.com/132888648">Vimeo links</a> automatically in a minimalistic and responsive pseudo window/overlay. No adjustment to your links is required, just follow the installation instructions below.
+Lightbox is a solution that loads your <a href="/img/logo-2x.png" style="color: #777777; text-decoration: underline;">image links</a>, your <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&showinfo=0&rel=0" style="color: #777777; text-decoration: underline;">Youtube links</a> and your <a href="https://vimeo.com/132888648" style="color: #777777; text-decoration: underline;">Vimeo links</a> automatically in a minimalistic and responsive pseudo window/overlay. No adjustment to your links is required, just follow the installation instructions below.
 
 ### How it works
 
