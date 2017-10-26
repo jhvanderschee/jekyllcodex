@@ -322,7 +322,7 @@ MagnificPopup.prototype = {
                 var s = mfp._getScrollbarSize();
                 if(s) {
                     //next line is disabled on desktop to prevent jumping
-                    windowStyles.marginRight = s;
+                    if(isMobile) windowStyles.marginRight = s;
                 }
             }
         }
@@ -330,7 +330,7 @@ MagnificPopup.prototype = {
 		if(mfp.fixedContentPos) {
 			if(!mfp.isIE7) {
         //next line is disabled on desktop to prevent jumping
-				windowStyles.overflow = 'hidden';
+				if(isMobile) windowStyles.overflow = 'hidden';
 			} else {
 				// ie7 double-scroll bug
 				$('body, html').css('overflow', 'hidden');
