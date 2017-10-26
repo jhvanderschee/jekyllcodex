@@ -8,7 +8,7 @@ The reading time indicator is a simple script which helps to create a reading in
 
 ### How it works
 
-To display the reading time of an article, the code below is used. This script assumes the reader reads 180 words per minute.
+To display the reading time of an article, the code below is used.
 
 [expand]
 
