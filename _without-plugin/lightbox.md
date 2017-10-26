@@ -8,11 +8,15 @@ Lightbox is a solution that loads your <a href="/img/logo-2x.png">image links</a
 
 ### How it works
 
-Links that point to images, Youtube and Vimeo video's are automagically recognized and provided with an additional class by jQuery. Video's get an additional data-id in case of a video. A listener adds the lightboxes to the body on a click on the link. The lightboxes is removed when you click on the background/overlay. You can prevent links from turning into lightboxes, by adding the 'no-lightbox' class. To achieve this in Markdown, simply write:
+Links that point to images, Youtube and Vimeo video's are automagically recognized and provided with an additional class by jQuery. Video's get an additional data-id in case of a video. A listener adds the lightboxes to the body on a click on the link. The lightboxes is removed when you click on the background/overlay. You can prevent links from turning into lightboxes, by adding the 'no-lightbox' class. To achieve this in Markdown, simply use the code below.
+
+[expand]
 
 ```
 {% raw %}[video link](https://youtu.be/iWowJBRMtpc?t=90s){:.no-lightbox}{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 

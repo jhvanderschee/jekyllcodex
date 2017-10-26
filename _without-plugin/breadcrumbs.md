@@ -4,11 +4,13 @@ title: Breadcrumbs
 
 ### Introduction
 
-Breadcrumbs: one line of text shows a page's location in the site hierarchy. User testing shows many benefits and no downsides to breadcrumbs for secondary navigation.
+Breadcrumb paths are a single line of links (often placed above the title) that show a page's location in the site hierarchy. Every website should have breadcrumbs, as it benefits SEO as well as the users understanding of the sites structure.
 
 ### How it works
 
-The following code looks at the permalink and translates it into a breadcrumb/path:
+This code looks at the path of the current page to destill the breadcrumb path. This approach has a small footprint, as only the current page has to be consulted during the build of the breadcrumbs. Additionally, this code does not require the breadcrumbs to be explicitly defined in the front matter / YML. This means the path can be defined by your file and folder structure or by your (native Jekyll) path variables. The following code looks at the permalink and translates it into a breadcrumb/path.
+
+[expand]
 
 ```
 {% raw %}<div id="breadcrumbs">
@@ -23,6 +25,8 @@ The following code looks at the permalink and translates it into a breadcrumb/pa
 {% endfor %}
 </div>{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 

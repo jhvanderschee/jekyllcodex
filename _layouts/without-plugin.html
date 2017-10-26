@@ -21,7 +21,8 @@
                         {{ content }}
                         <br />
                         <ul>
-                        {% for item in site.without-plugin %}
+                        {% assign site-without-plugin = site.without-plugin | sort: 'title' %}
+                        {% for item in site-without-plugin %}
                           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                         {% endfor %}
                         </ul>

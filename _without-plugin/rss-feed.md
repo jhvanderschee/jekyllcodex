@@ -1,14 +1,16 @@
 ---
-title: Atom feed
+title: Atom/RSS feed
 ---
 
 ### Introduction
 
-The name Atom applies to a pair of related Web standards. The Atom Syndication Format is an XML language used for web feeds. On the World Wide Web, a web feed (or news feed) is a data format used for providing users with frequently updated content. Content distributors syndicate a web feed, thereby allowing users to subscribe a channel to it. Making a collection of web feeds accessible in one spot is known as aggregation, which is performed by a news aggregator. A web feed is also sometimes referred to as a syndicated feed. A typical scenario of web-feed use might involve the following: a content provider publishes a feed link on its site which end users can register with an aggregator program (also called a feed reader or a news reader) running on their own machines.
+The Atom Syndication Format is an XML language used for web feeds. A web feed (also called 'news feed' or 'RSS feed') is a data format used for providing users with frequently updated content. Content distributors syndicate a web feed, thereby allowing users to subscribe a channel to it. A typical scenario of web-feed use might involve the following: a content provider publishes a feed link on its site which end users can register with an aggregator program (also called a feed reader or a news reader) running on their own machines.
 
 ### How it works
 
-The atom feed, in the 'feed.xml' file uses Liquid to build the XML. The file contains the following code:
+The atom feed, in the 'feed.xml' file uses Liquid to build the XML. The file contains the following code.
+
+[expand]
 
 ```
 {% raw %}---
@@ -43,11 +45,13 @@ layout: null
 </rss>{% endraw %}
 ```
 
-This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add a simple line to the head of your HTML:
+This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a web feed, add a simple line to the head of your HTML:
 
 ```
 {% raw %}<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 

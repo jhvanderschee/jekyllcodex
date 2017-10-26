@@ -4,15 +4,19 @@ title: New window fix
 
 ### Introduction
 
-One of the irritating things about Markdown is that you [cannot](https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown) specify 'target="_blank"' in your links. This script fixes that, by automatically adding these targets to external links and PDF links.
+According to many site owners, PDF documents and external links should open in a new window. Markdown makes it relatively hard to specify this. This script automates this for you, so you do not have to worry about this.
 
 ### How it works
 
-The following code should be added to the footer:
+This script detects external links and links to PDF files, using plain javascript. It automagically adds 'target="_blank"' to these links. This is done by the following code.
+
+[expand]
 
 ```
 {% include new-window-fix.html %}
 ```
+
+[/expand]
 
 ### Installation
 
