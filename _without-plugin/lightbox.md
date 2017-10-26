@@ -26,20 +26,8 @@ Step 1. Download the file [lightbox.html](https://raw.githubusercontent.com/jhva
 
 ```
 {% raw %}...
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 {% include lightbox.html %}
 </body>
 </html>{% endraw %}
-```
-
-Step 4. Download the file [jquery-3.2.1.min.js](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/js/jquery-3.2.1.min.js)
-<br />Step 5. Save the file in the '/js/' directory of your project
-<br />Step 6. Make sure jQuery is loaded by adding it to the head like this:
-
-```
-{% raw %}<!DOCTYPE html>
-<html>
-<head>
-<script src="/js/jquery-3.2.1.min.js"></script>
-...
-</head>{% endraw %}
 ```
