@@ -16,7 +16,7 @@ Links that point to images, Youtube and Vimeo video's are automagically recogniz
 {% raw %}[video link](https://youtu.be/iWowJBRMtpc?t=90s){:.no-lightbox}{% endraw %}
 ```
 
-Note that I wrote this lightbox myself and tested it on a minimal amount of devices. It should work on mobile (tested on Android), IE9+ and all modern desktop browsers.
+Note that I wrote this lightbox myself and tested it on a minimal amount of devices. It should work on mobile (tested on Android), IE9+ and all modern desktop browsers (tested on Firefox).
 
 [/expand]
 
