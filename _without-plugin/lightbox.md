@@ -8,11 +8,7 @@ Lightbox: image links that automatically load in a nice pseudo window.
 
 ### How it works
 
-The following code looks at the permalink and translates it into a breadcrumb/path:
-
-```
-{% raw %}...{% endraw %}
-```
+coming soon...
 
 ### Example
 
