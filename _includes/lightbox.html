@@ -314,23 +314,23 @@ MagnificPopup.prototype = {
 		// this triggers recalculation of layout, so we get it once to not to trigger twice
 		var windowHeight = mfp.wH = _window.height();
 
-		
+    var isMobile = (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone/i.test(navigator.userAgent)) ? true : false;
 		var windowStyles = {};
 
 		if( mfp.fixedContentPos ) {
             if(mfp._hasScrollBar(windowHeight)){
                 var s = mfp._getScrollbarSize();
                 if(s) {
-                    //next line is disabled to prevent jumping on desktop
-                    //windowStyles.marginRight = s;
+                    //next line is disabled on desktop to prevent jumping
+                    if(!isMobile) windowStyles.marginRight = s;
                 }
             }
         }
 
 		if(mfp.fixedContentPos) {
 			if(!mfp.isIE7) {
-        //next line is disabled to prevent jumping on desktop
-				//windowStyles.overflow = 'hidden';
+        //next line is disabled on desktop to prevent jumping
+				if(!isMobile) windowStyles.overflow = 'hidden';
 			} else {
 				// ie7 double-scroll bug
 				$('body, html').css('overflow', 'hidden');
