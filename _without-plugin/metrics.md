@@ -8,7 +8,9 @@ Google Analytics is a freemium web analytics service offered by Google that trac
 
 ### How it works
 
-Add this code to your footer:
+A javascript is added your footer to instruct google to track the page load. Additionally SSL is forced during this tracking and the IP address is anonymized, making this the most decent use of Google Analytics possible. However, using server side metrics is faster, more responsible and maybe even more reliable.
+
+[expand]
 
 ```
 {% raw %}<script type="text/javascript">
@@ -25,6 +27,8 @@ Add this code to your footer:
   })();
 </script>{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 
