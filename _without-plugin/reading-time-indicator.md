@@ -8,7 +8,9 @@ The reading time indicator is a simple script which helps to create a reading in
 
 ### How it works
 
-To display the reading time of an article, just use the following code:
+To display the reading time of an article, the code below is used. This script assumes the reader reads 180 words per minute.
+
+[expand]
 
 ```
 {% raw %}{% capture words %}
@@ -18,6 +20,8 @@ To display the reading time of an article, just use the following code:
 {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
 {% endunless %}{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 

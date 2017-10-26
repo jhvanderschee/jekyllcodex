@@ -45,7 +45,7 @@ layout: null
 </rss>{% endraw %}
 ```
 
-This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a web feed, add a simple line to the head of your HTML:
+The code above will create a XML feed with the 10 latest posts in it. To tell the browsers you have a web feed, add a simple line to the head of your HTML:
 
 ```
 {% raw %}<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">{% endraw %}

@@ -8,7 +8,9 @@ A sitemap makes it easier for search engines to discover new content on a websit
 
 ### How it works
 
-Create a sitemap by adding a file called 'sitemap.xml' in the root of your website, containing this code:
+The 'sitemap.xml' file should reside in the root of your website and contain roughly the following code. When you add collections, you should also manually(!) add them to this sitemap.
+
+[expand]
 
 ```
 {% raw %}---
@@ -34,6 +36,8 @@ layout: null
   {% endfor %}
 </urlset>{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 

@@ -8,7 +8,9 @@ One of the nicer features of WordPres is that you can just paste a Youtube URL i
 
 ### How it works
 
-To get this functionality in your Jekyll site, add this code to your footer:
+This script adds the code below to your footer.
+
+[expand]
 
 ```
 {% raw %}<style>
@@ -51,6 +53,8 @@ PDF2new_window()
 externalLinks();
 </script>{% endraw %}
 ```
+
+[/expand]
 
 ### Installation
 

@@ -11,12 +11,14 @@ WordPress is famous for its SEO plugin. But what does it exactly do? Little that
 - shortcut icons
 - open graph tags
 - canonical link
-- [atom feed](/without-plugin/atom-feed)
+- [atom/rss feed](/without-plugin/rss-feed)
 - [sitemap](/without-plugin/sitemap)
 
 ### How it works
 
-The following code adds all these items to your head:
+The script adds the items below to your head.
+
+[expand]
 
 ```
 {% raw %}<meta charset="utf-8">
@@ -46,7 +48,9 @@ The following code adds all these items to your head:
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />{% endraw %}
 ```
 
-Note: Ofcourse you can also set manual page descriptions, using 'page.description' and a matching YML variable in your page. 
+Note: With just some minor tweaks you can add a manual page descriptions, using 'page.description' and a matching front matter / YML variable in your page. 
+
+[/expand]
 
 ### Installation
 
