@@ -8,7 +8,7 @@ A sitemap makes it easier for search engines to discover new content on a websit
 
 ### How it works
 
-The 'sitemap.xml' file should reside in the root of your website and contain roughly the following code. When you add collections, you should also manually(!) add them to this sitemap.
+The 'sitemap.xml' file should reside in the root of your website and contain roughly the following code. When you add collections, you should not forget to add them to this sitemap.
 
 [expand]
 
