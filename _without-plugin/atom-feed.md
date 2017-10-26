@@ -8,7 +8,7 @@ The name Atom applies to a pair of related Web standards. The Atom Syndication F
 
 ### How it works
 
-If you want an atom feed, add this code in a 'feed.xml' file to the root of your project:
+The atom feed, in the 'feed.xml' file uses Liquid to build the XML. The file contains the following code:
 
 ```
 {% raw %}---
@@ -42,7 +42,6 @@ layout: null
   </channel>
 </rss>{% endraw %}
 ```
-
 
 This will create a XML feed with the 10 latest posts in it. To tell the browsers you have a RSS feed, add a simple line to the head of your HTML:
 
