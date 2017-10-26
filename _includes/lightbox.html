@@ -26,7 +26,7 @@
 	margin: 0;
 	padding: 0;
 	position: relative;
-	padding-bottom: 51.6%; /* custom */
+	padding-bottom: 56.333%; /* custom */
 	background: black;
 } 
 .lightbox .videoWrapper iframe {
@@ -36,6 +36,7 @@
 	width: 100%;
 	height: 100%;
 	border: 0;
+	display: block;
 }   
 </style>
 		
@@ -63,20 +64,17 @@ function is_vimeolink(url,el) {
 }
 
 $(document).ready(function() {
-    
 	//add classes to links to be able to initiate lightboxes
 	$("a").each(function(){
 		var url = $(this).attr('href');
-		if(url.indexOf('vimeo') !== -1) is_vimeolink(url,$(this));
-		if(is_youtubelink(url)) $(this).addClass('lightbox-youtube').attr('data-id',is_youtubelink(url));
-		if(is_imagelink(url)) $(this).addClass('lightbox-image');
+		if(url.indexOf('vimeo') !== -1 && !$(this).hasClass('no-lightbox')) is_vimeolink(url,$(this));
+		if(is_youtubelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-youtube').attr('data-id',is_youtubelink(url));
+		if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-image');
 	});
-	
 	//remove the clicked lightbox
 	$("body").on("click", ".lightbox", function(){
 		$(this).remove();
 	});
-
 	//add the youtube lightbox on click
 	$("a.lightbox-youtube").click(function(event){
 		event.preventDefault();
@@ -89,7 +87,6 @@ $(document).ready(function() {
 	});
 	//add the vimeo lightbox on click
 	$("body").on("click", "a.lightbox-vimeo", function(event){
-		console.log('erhmm');
 		event.preventDefault();
 		$('<div class="lightbox"><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+$(this).attr('data-id')+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>').appendTo('body');
 	});

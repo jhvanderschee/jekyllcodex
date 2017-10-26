@@ -14,11 +14,8 @@ To get this functionality in your Jekyll site, add this code to your footer:
 {% raw %}<style>
 .videoWrapper {
 	position: relative;
-	padding-bottom: 51.6%; /* custom */
-	padding-top: 25px;
+	padding-bottom: 56.333%; /* custom */
 	height: 0;
-	margin-top: 2em;
-      margin-bottom: 2px;
 }
 .videoWrapper iframe {
 	position: absolute;
