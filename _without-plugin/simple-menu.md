@@ -4,7 +4,7 @@ title: Simple menu
 
 ### Introduction
 
-Every website needs a menu with the most important pages. This static single-level menu highlights the right page. The code is independent of the permalink style used by Jekyll.
+This static single-level menu highlights the right page. The code is independent of the permalink style used by Jekyll.
 
 ### How it works
 
