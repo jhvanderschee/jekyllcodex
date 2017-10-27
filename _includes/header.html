@@ -11,13 +11,7 @@
             <a class="navbar-brand" href="/"><img src="/img/favicon.png" />Jekyll Codex</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              {% assign url_parts = page.url | split:'/' %}
-              <li {% if '/getting-started/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/getting-started/">Getting started</a></li>
-              <li {% if page.url contains '/without-plugin/' %}class="active"{% endif %}><a href="/without-plugins/">Without plugins</a></li>
-              <li {% if '/about/' == page.url|remove:'index.html' %}class="active"{% endif %}><a href="/about/">About</a></li>
-              <li {% if 'blog' == url_parts[1] %}class="active"{% endif %}><a href="/blog/">Blog</a></li>
-            </ul>
+            {% include simple-menu.html %}
             <div class="download">
               <a href="http://jekyllrb.com/" class="btn btn-primary btn-sm" target="_blank">Official Jekyll Docs</a></li>
             </div>
