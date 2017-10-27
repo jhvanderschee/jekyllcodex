@@ -4,7 +4,7 @@ title: Open embed (Youtube)
 
 ### Introduction
 
-One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll.
+One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using some Vanilla JS.
 
 ### How it works
 
