@@ -49,8 +49,6 @@ function yt_url2embed() {
     }
 }
 yt_url2embed();
-PDF2new_window()
-externalLinks();
 </script>{% endraw %}
 ```
 
