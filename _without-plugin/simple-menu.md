@@ -8,7 +8,7 @@ Every website needs a menu with the most important pages. This static single-lev
 
 ### How it works
 
-The navigation of your website should be/is an unordered list. To get the list items to lighten up when they are active, the script adds an active class to them. This class should be styled with CSS. To detect which link is active, the script uses 'contains', as you can see in the code bolow. 
+The navigation of your website should be an unordered list. To get the list items to lighten up when they are active, the script adds an active class to them. This class should be styled with CSS. To detect which link is active, the script uses 'contains', as you can see in the code bolow. 
 
 [expand]
 
@@ -21,7 +21,7 @@ The navigation of your website should be/is an unordered list. To get the list i
 </ul>{% endraw %}
 ```
 
-This code is compatible with all permalink styles in Jekyll. The 'contains' statement succesfully highlights the first item at the following URL's: 
+This code is compatible with all permalink styles in Jekyll. The 'contains' statement succesfully highlights the first menu item at the following URL's: 
 
 - getting-started/
 - getting-started.html
