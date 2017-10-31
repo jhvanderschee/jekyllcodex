@@ -37,7 +37,7 @@ content
 </html>{% endraw %}
 ```
 
-You need to place the html files you want to include in a folder in the root named: '_includes'. [Get the code.](https://github.com/jhvanderschee/jekyllinclude)
+You need to place the html files you want to include in a folder in the root named: '_includes'. [Get the code](https://github.com/jhvanderschee/jekyllinclude)
 
 ## Step 2. Preview your website
 
