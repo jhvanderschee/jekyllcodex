@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    {% include head-additions.html %}
+  </head>
+  <body class="{{ page.layout }}">
+    <div class="main">
+	    {% include header.html %}
+		<div class="container">
+			<div class="row">
+		    	<div class="col-md-8">
+		    	    <article class="post page">
+                    
+                      <header class="post-header">
+                        {% include breadcrumbs.html %}
+                        <h1 class="post-title">{{ page.title }}</h1>
+                      </header>
+                    
+                      <div class="post-content">
+                        <article class="post page">
+                        
+                          <div class="post-content">
+                            {{ content }}
+
+                            <div class="row">
+                                <div class="col-xs-8">{% include search-google.html %}</div>
+                                <div class="col-xs-4"><a class="btn btn-primary" style="position: relative; right: 20px;" onclick="$('form[action=\'http://www.google.com/search\']').submit();">Search</a></div>
+                            </div>
+                          </div>
+                        
+                        </article>
+                      </div>
+                    
+                    </article>
+		    	</div>
+		    	<div class="col-md-1"></div>
+		    	<div class="col-md-3"></div>
+		    </div>
+		</div>
+	</div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

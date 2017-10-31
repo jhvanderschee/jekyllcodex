@@ -23,3 +23,5 @@ img.poweredby {cursor: pointer; display: inline-block; height: 100px; margin-rig
 #breadcrumbs, #breadcrumbs a {color: silver;}
 ul, ol {margin-bottom: 18px;}
 pre, p {margin: 0 0 18px;}
+
+.form-control {height: 37px;}
