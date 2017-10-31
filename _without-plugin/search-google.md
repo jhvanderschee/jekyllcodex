@@ -8,6 +8,8 @@ Modern websites have a search bar, searching within the site for specific conten
 
 ### How it works
 
+This search relies on the index from Google. It queries the Google Search engine directly. Results will be shown within the Google interface (on a new page), but will be limited to the site you specified.
+
 [expand]
 
 ```
@@ -18,7 +20,7 @@ Modern websites have a search bar, searching within the site for specific conten
 
 ### Installation
 
-Step 1. Download the file [search-google.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_included/search-google.html) and adjust it
+Step 1. Download the file [search-google.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_included/search-google.html) and change the domain name
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Add the following statement to your layout where you want the menu to appear:
 
