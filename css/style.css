@@ -30,3 +30,9 @@ pre, p {margin: 0 0 18px;}
 .lightbox.gallery #prev, .lightbox.gallery #next {display: block;}
 .lightbox #prev {left: 0;}
 .lightbox #next {right: 0;}
+.lightbox, .lightbox * {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
