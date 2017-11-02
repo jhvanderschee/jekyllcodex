@@ -4,7 +4,7 @@ title: Lightbox
 
 ### Introduction
 
-Lightbox is a solution that loads your <a href="/uploads/grumpycat2.jpg" style="color: #777777; text-decoration: underline;">image</a><a href="/uploads/grumpycat.jpg" style="color: #777777; text-decoration: underline;"> links</a>, your <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&showinfo=0&rel=0" style="color: #777777; text-decoration: underline;">Youtube links</a> and your <a href="https://vimeo.com/132888648" style="color: #777777; text-decoration: underline;">Vimeo links</a> automatically in a minimalistic and responsive pseudo window/overlay. No adjustment to your links is required, just follow the installation instructions below.
+Lightbox is a solution that loads your <a href="/uploads/grumpycat2.jpg" style="color: #777777; text-decoration: underline;">image</a> <a href="/uploads/grumpycat.jpg" style="color: #777777; text-decoration: underline;">links</a>, your <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&showinfo=0&rel=0" style="color: #777777; text-decoration: underline;">Youtube links</a> and your <a href="https://vimeo.com/132888648" style="color: #777777; text-decoration: underline;">Vimeo links</a> automatically in a minimalistic and responsive pseudo window/overlay. No adjustment to your links is required, just follow the installation instructions below.
 
 ### How it works
 
