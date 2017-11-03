@@ -1,8 +1,8 @@
 html {overflow-y: scroll;}
 body {background: #333;}
-.download {float: right; margin-top: 4px;}
+.download {float: right; margin-top: 5px;}
 .site-footer {background: #333; min-height: 100px; padding: 20px 0;}
-.main {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 60px 0 80px;}
+.main {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 60px 0 80px; position: relative;}
 h1 {font-size: 33px; margin-top: 0; padding-top: 50px;}
 .post-header h1 {padding-top: 0;}
 .post-header {padding-top: 50px;}
@@ -23,7 +23,7 @@ img.poweredby {cursor: pointer; display: inline-block; height: 100px; margin-rig
 #breadcrumbs, #breadcrumbs a {color: silver;}
 ul, ol {margin-bottom: 18px;}
 pre, p {margin: 0 0 18px;}
-
+.navbar-default {border-color: #e5e5e5;}
 .form-control {height: 37px;}
 
 .image-gallery a img{
@@ -36,9 +36,18 @@ filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
 transition: all .3s ease;
 }
 .image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%); filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
-
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background: none;}
+.btn-primary, .btn-primary:hover {background: #d60000; border: 1px solid #d60000; font-weight: bold; color: rgba(255,255,255,0.75);}
+.btn-primary:focus, .btn-primary.focus, .btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary.focus:active, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: #ffffff; background: #d60000; border: 1px solid #d60000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-primary:hover {color: rgba(255,255,255,0.9)!important;}
+#searchbutton {border: 0; border-radius: 30px; padding: 0 8px 0 9px; height: 37px;}
+#searchbutton svg {height: 20px; margin-top: 8px; fill: rgba(255,255,255,0.70);}
+#searchbutton:hover svg {fill: rgba(255,255,255,0.80);}
 
 @media (max-width: 767px) {
-    .download {margin-bottom: 15px;}
+    .download {margin-bottom: 12px;}
 }
