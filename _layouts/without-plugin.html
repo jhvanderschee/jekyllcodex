@@ -23,7 +23,7 @@
                         <ul>
                         {% assign site-without-plugin = site.without-plugin | sort: 'title' %}
                         {% for item in site-without-plugin %}
-                          <li><a href="{{ item.url }}" {% if item.inactive %}style="color: #777777;"{% endif %}>{{ item.title }}</a></li>
+                          <li><a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>{{ item.title }}</a></li>
                         {% endfor %}
                         </ul>
                         <br />
