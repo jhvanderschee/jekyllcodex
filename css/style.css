@@ -27,8 +27,8 @@ pre, p {margin: 0 0 18px;}
 .form-control {height: 37px;}
 
 .image-gallery a img{
--webkit-filter: grayscale(100%) brightness(116%) contrast(83%) opacity(90%);
-filter: grayscale(100%) brightness(116%) contrast(83%) opacity(90%);
+-webkit-filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
+filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
 -webkit-transition: all .3s ease;
 -moz-transition: all .3s ease;
 -o-transition: all .3s ease;
