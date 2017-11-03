@@ -1,5 +1,6 @@
 ---
 title: "Social buttons"
+inactive: true
 ---
 
 ### Introduction

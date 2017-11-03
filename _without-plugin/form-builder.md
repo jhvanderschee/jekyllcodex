@@ -1,5 +1,6 @@
 ---
 title: "Form builder"
+inactive: true
 ---
 
 ### Introduction

@@ -1,5 +1,6 @@
 ---
 title: "Buttons"
+inactive: true
 ---
 
 ### Introduction
