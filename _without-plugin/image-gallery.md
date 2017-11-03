@@ -8,7 +8,7 @@ Below you will find a image gallery. This image gallery reads all images from a 
 
 {% include image-gallery.html folder="/uploads/seattle" %}
 
-<p style="position: relative; margin-top: -7px; font-style: italic;">'Seattle' by Sergei Akulich (from <a href="https://unsplash.com" style="color: #777777; text-decoration: underline;">Unsplash.com</a>)</p>
+<p style="position: relative; margin-top: -5px; font-style: italic;">'Seattle' by Sergei Akulich (from <a href="https://unsplash.com" style="color: #777777; text-decoration: none;">Unsplash.com</a>)</p>
 
 ### How it works
 
