@@ -27,12 +27,12 @@ pre, p {margin: 0 0 18px;}
 .form-control {height: 37px;}
 
 .image-gallery a img{
--webkit-filter: grayscale(100%);
-filter: grayscale(100%);
+-webkit-filter: grayscale(100%) brightness(158%) contrast(83%);
+filter: grayscale(100%) brightness(158%) contrast(83%);
 -webkit-transition: all .3s ease;
 -moz-transition: all .3s ease;
 -o-transition: all .3s ease;
 -ms-transition: all .3s ease;
 transition: all .3s ease;
 }
-.image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(200%); filter: grayscale(0%) brightness(200%); }
+.image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(100%) contrast(100%); filter: grayscale(0%) brightness(100%) contrast(100%); }
