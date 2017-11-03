@@ -2,7 +2,7 @@
 $( document ).ready(function() {
 	$( "p:contains([expand])" ).each(function() {
 	  $(this).nextUntil( $("p:contains([/expand])") ).wrapAll("<div class='expand' style='overflow: auto;'></div>");
-      $(this).prev().append('<span>..&nbsp; <a style="cursor: pointer;" onclick="$(this).parent().parent().next().slideToggle(); $(this).parent().hide();">read more &rarr;</a></span>');
+      $(this).prev().append('<span>..&nbsp; <a style="cursor: pointer;" onclick="$(this).parent().parent().next().slideToggle(); $(this).parent().hide();">read&nbsp;more&nbsp;&rarr;</a></span>');
       $(this).remove()
 	});
     $( ".expand").hide();

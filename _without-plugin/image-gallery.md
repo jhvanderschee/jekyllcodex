@@ -4,7 +4,7 @@ title: Image gallery
 
 ### Introduction
 
-Below you will find a image gallery. This image gallery reads all images from a specific (user-defined) folder in Jekyll and automagically crops them to 300px squares, using the [images.weserv.nl](https://images.weserv.nl) image resize proxy service.
+This script creates an image gallery. The script reads all images from a specific (user-defined) folder in Jekyll, automagically crops them to 300px squares, using the [images.weserv.nl](https://images.weserv.nl) image resize proxy service and shows them in rows of five.
 
 {% include image-gallery.html folder="/uploads/album" %}
 
