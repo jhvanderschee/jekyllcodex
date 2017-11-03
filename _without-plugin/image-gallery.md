@@ -48,5 +48,5 @@ Step 1. Download the file [image-gallery.html](https://raw.githubusercontent.com
 <br />Step 3. Add the following line to your layout on the place where you want the image gallery to appear:
 
 ```
-{% raw %}{% include image-gallery.html folder="/uploads" %}{% endraw %}
+{% raw %}{% include image-gallery.html folder="/uploads/seattle" %}{% endraw %}
 ```
