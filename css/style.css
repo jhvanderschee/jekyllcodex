@@ -35,4 +35,4 @@ filter: grayscale(100%);
 -ms-transition: all .3s ease;
 transition: all .3s ease;
 }
-.image-gallery a:hover img{-webkit-filter: grayscale(0%); filter: grayscale(0%);}
+.image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(200%); filter: grayscale(0%) brightness(200%); }
