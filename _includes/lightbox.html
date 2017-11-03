@@ -115,7 +115,7 @@ $(document).ready(function() {
 	});
 
 	$("body").on("click", "a[class^='lightbox-']", function(){
-    	var link_elements = $("a[class^='lightbox-']");
+		var link_elements = $(this).parent().find("a[class^='lightbox-']");
 		$(link_elements).removeClass('current');
 		for (var i=0; i<link_elements.length; i++) {
 			if($(this).attr('href') == $(link_elements[i]).attr('href')) {
