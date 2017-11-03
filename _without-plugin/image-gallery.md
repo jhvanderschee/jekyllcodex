@@ -8,8 +8,6 @@ This script creates an image gallery. The script reads all images from a specifi
 
 {% include image-gallery.html folder="/uploads/album" %}
 
-*Images from <a href="https://unsplash.com" style="color: #777777; text-decoration: none;">Unsplash.com</a>*
-
 ### How it works
 
 The script searches for any file with a path that contains the string given in 'folder' and checks whether it is a 'jpg' file. If so, it creates an image tag for the image. The source is a 300 pixel wide square cropped version of the image. Then the script wraps the image in a link, containing the full path to the image. This will trigger the lightbox if present.
