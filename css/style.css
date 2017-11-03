@@ -36,3 +36,7 @@ filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
 transition: all .3s ease;
 }
 .image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%); filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
+
+@media (max-width: 767px) {
+    .download {margin-bottom: 15px;}
+}
