@@ -48,6 +48,8 @@ transition: all .3s ease;
 #searchbutton svg {height: 20px; margin-top: 8px; fill: rgba(255,255,255,0.70);}
 #searchbutton:hover svg {fill: rgba(255,255,255,0.80);}
 
+.navbar-default svg {position: absolute; height: 40px; margin-top: -11px; fill: #777; border: 10px solid white; border-left: 0;}
+
 @media (max-width: 767px) {
-    .download {margin-bottom: 12px;}
+    .download {margin-bottom: 12px; margin-top: -20px;}
 }
