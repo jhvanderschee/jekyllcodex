@@ -6,9 +6,9 @@ title: Image gallery
 
 Below you will find a image gallery. This image gallery reads all images from a specific (user-defined) folder in Jekyll and automagically crops them to 300px squares, using the [images.weserv.nl](http://images.weserv.nl) image resize proxy service. Then it uses the lightbox functionality.
 
-{% include image-gallery.html folder="/uploads/japan" %}
+{% include image-gallery.html folder="/uploads/seattle" %}
 
-<p style="position: relative; margin-top: -7px; font-style: italic;">'Japan' by Pie Aerts</p>
+<p style="position: relative; margin-top: -7px; font-style: italic;">'Seattle' by Sergei Akulich (from Unsplash)</p>
 
 ### How it works
 
@@ -48,5 +48,5 @@ Step 1. Download the file [image-gallery.html](https://raw.githubusercontent.com
 <br />Step 3. Add the following line to your layout on the place where you want the image gallery to appear:
 
 ```
-{% raw %}{% include image-gallery.html folder="/uploads/japan" %}{% endraw %}
+{% raw %}{% include image-gallery.html folder="/uploads" %}{% endraw %}
 ```
