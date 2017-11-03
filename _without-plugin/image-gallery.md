@@ -4,7 +4,7 @@ title: Image gallery
 
 ### Introduction
 
-Below you will find a image gallery. This image gallery reads all images from a specific (user-defined) folder in Jekyll and automagically crops them to 300px squares, using the [images.weserv.nl](https://images.weserv.nl) image resize proxy service. Then it uses the lightbox functionality.
+Below you will find a image gallery. This image gallery reads all images from a specific (user-defined) folder in Jekyll and automagically crops them to 300px squares, using the [images.weserv.nl](https://images.weserv.nl) image resize proxy service.
 
 {% include image-gallery.html folder="/uploads/album" %}
 
@@ -12,15 +12,15 @@ Below you will find a image gallery. This image gallery reads all images from a 
 
 ### How it works
 
-The script searches for any file with a path that contains the string given in 'folder' and checks whether it is a 'jpg' file. If so, it creates an image tag for the image. The source is a 300 pixel wide square cropped version of the image. Then the script wraps the image in a link, containing the full path to the image. This will trigger the lightbox later on.
+The script searches for any file with a path that contains the string given in 'folder' and checks whether it is a 'jpg' file. If so, it creates an image tag for the image. The source is a 300 pixel wide square cropped version of the image. Then the script wraps the image in a link, containing the full path to the image. This will trigger the lightbox if present.
 
 [expand]
 
 ```
 {% raw %}<style>
-    .image-gallery {overflow: auto; margin-left: -10px;}
-    .image-gallery a {float: left; display: block; margin: 0 0 10px 10px; width: calc(20% - 10px);}
-    .image-gallery a img {width: 100%;}
+  .image-gallery {overflow: auto; margin-left: -1%;}
+  .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+  .image-gallery a img {width: 100%;}
 </style>
 
 <div class="image-gallery">
