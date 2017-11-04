@@ -4,7 +4,7 @@ title: "Follow buttons"
 
 ### Introduction
 
-This content is coming soon...
+You can see them in action on the right side of the screen.
 
 ### How it works
 

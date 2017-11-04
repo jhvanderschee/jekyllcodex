@@ -4,7 +4,7 @@ title: "Share buttons"
 
 ### Introduction
 
-This content is coming soon...
+You can see them in action on the blog.
 
 ### How it works
 
