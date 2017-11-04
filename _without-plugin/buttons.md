@@ -4,7 +4,7 @@ title: "Buttons"
 
 ### Introduction
 
-Allowing people to add buttons to their content is a much requested feature. Although HTML is allowed in Markdown, most people do not know how to write HTML. Others cannot remember the way button links should be created in Markdown or they use a WYSIWYG editor. For them I have written this simple script.
+Allowing people to add buttons to their content is a much requested feature. Although HTML is allowed in Markdown, most people do not know how to write HTML. Others cannot remember the way button classes should be added in Markdown or they use a WYSIWYG editor that does not allow them to do so. This script simplifies the process of adding buttons to Markdown content.
 
 ### How it works
 

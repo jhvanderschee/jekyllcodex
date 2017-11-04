@@ -56,6 +56,7 @@ transition: all .3s ease;
 .navbar-default svg {position: absolute; height: 40px; margin-top: -11px; margin-left: -4px; fill: #777; border: 12px solid white; border-left: 0; border-right: 0;}
 
 code {color: #444444; background-color: #f5f5f5;}
+pre code {white-space: pre;}
 
 @media (max-width: 767px) {
     .download {margin-bottom: 12px; margin-top: -20px;}
