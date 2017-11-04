@@ -33,7 +33,7 @@ This code is compatible with all permalink styles in Jekyll. The 'contains' stat
 
 ### Installation
 
-Step 1. Download the file [simple-menu.html](https://github.com/jhvanderschee/jekyllcodex/blob/gh-pages/_includes/simple-menu.html) and adjust it
+Step 1. Download the file [simple-menu.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/simple-menu.html) and adjust it
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Add the following statement to your layout where you want the menu to appear:
 
