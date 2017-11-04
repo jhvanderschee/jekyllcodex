@@ -1,0 +1,10 @@
+<script>
+    $( document ).ready(function() {
+        $('a').each( function() {
+            if ($(this).text().match("^\\[") && $(this).text().match("\\]$")) {
+                $(this).addClass('btn').addClass('btn-primary');
+                $(this).text($(this).text().substring(1, $(this).text().length-1));
+            }
+        });
+    });
+</script>

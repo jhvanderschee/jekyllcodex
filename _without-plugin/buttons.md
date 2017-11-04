@@ -1,8 +1,35 @@
 ---
 title: "Buttons"
-inactive: true
 ---
 
 ### Introduction
 
-This page is coming soon... Do not want to wait? Send me an email on <a href="mailto:jhvanderschee@gmail.com" style="color: #777777;">jhvanderschee@gmail.com</a>.
+Allowing people to add buttons to their content is a much requested feature. Although HTML is allowed in Markdown, most people do not know how to write HTML. Others cannot remember the way button links should be created in Markdown or they use a WYSIWYG editor. For them I have written this simple script.
+
+### How it works
+
+The script looks for a link where the link text is cotained by square brackets, like this: `[link text]`. It will remove the brackets and add `.btn` and `.btn-primary` classes to the link. If you use Twitter Bootstrap, these buttons will be automagically styled. If not, you will have to add these classes to your CSS.
+
+[expand]
+
+```
+{% include buttons.html %}
+```
+
+Note that the page works perfectly fine when this script does not run. The link just has some brackets around it.
+
+[/expand]
+
+### Installation
+
+Step 1. Download the file [buttons.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/buttons.html)
+<br />Step 2. Save the file in the '_includes' directory of your project
+<br />Step 3. Make sure the bottom of your layout document looks like this:
+
+```
+{% raw %}...
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+{% include buttons.html %}
+</body>
+</html>{% endraw %}
+```
