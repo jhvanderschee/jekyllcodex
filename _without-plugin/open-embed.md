@@ -1,5 +1,5 @@
 ---
-title: Open embed (Youtube)
+title: Open embed
 ---
 
 ### Introduction

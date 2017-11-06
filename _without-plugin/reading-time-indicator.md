@@ -1,5 +1,5 @@
 ---
-title: Reading time indicator
+title: Reading time
 ---
 
 ### Introduction
