@@ -10,7 +10,7 @@ One of the nicer features of WordPres is that you can just paste a Youtube URL i
 
 ### How it works
 
-The following script is being added to your footer. The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&loop=1&controls=0'. This will lead to an autoplaying, looping mp3 that is invisible (has no controls). Default the player will not autoplay, not loop and show controls, as shown in the example above.
+The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&loop=1&controls=0'. This will lead to an autoplaying, looping mp3 that is invisible (has no controls). Default the player will not autoplay, not loop and show controls, as shown in the example above.
 
 [expand]
 
