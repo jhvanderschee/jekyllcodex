@@ -4,13 +4,13 @@ title: Open embed
 
 ### Introduction
 
-One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using some Vanilla JS. It also detects URL's to mp3 files and replaces them with a default HTML5 player. I recommend you to use these links on a new line too. Here is an example (source: <a href="http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song" target="_blank" style="color: #777777;">FMA</a>):
+One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using some Vanilla JS. In the same way it detects URL's that point to mp3 files and replaces them with a default HTML5 player. I recommend you to use these links on a new line too. Here is an example (source: <a href="http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song" target="_blank" style="color: #777777;">FMA</a>):
 
 /uploads/Paper_Navy_-_08_-_Swan_Song.mp3
 
 ### How it works
 
-The following script is being added to your footer.
+The following script is being added to your footer. The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&loop=1&controls=0'. This will lead to an autoplaying, looping mp3 that is invisible (has no controls). Default the player will not autoplay, not loop and show controls.
 
 [expand]
 
@@ -55,9 +55,26 @@ yt_url2embed();
 function mp3_embed() {
     var p = document.getElementsByTagName('p');
     for(var i = 0; i < p.length; i++) {
-        var str = p[i].innerHTML;
-        if (str.lastIndexOf('.mp3', str.length - 4) === str.length - 4) {
-             p[i].innerHTML = '<audio controls><source src="'+str+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+            
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
         }
     }
 }
