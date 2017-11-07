@@ -6,7 +6,7 @@ title: Open embed
 
 One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using some Vanilla JS. It also detects links to mp3 files and replaces them with a nice player. I recommend you to use these links on a new line too. Here is an example:
 
-[Paper Navy - 08 - Swan Song](Paper_Navy_-_08_-_Swan_Song.mp3)
+[Paper Navy - 08 - Swan Song](/uploads/Paper_Navy_-_08_-_Swan_Song.mp3)
 
 ### How it works
 
