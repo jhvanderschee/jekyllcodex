@@ -4,7 +4,7 @@ title: Auto-resize images
 
 ### Introduction
 
-If you upload a huge image in CloudCannon (or any other Jekyll CMS), you would love it to be displayed small or cropped. This is super easy if you use [images.weserv.nl](https://images.weserv.nl/). 
+If you upload a huge image in CloudCannon (or any other Jekyll CMS), you would love it to be displayed small or cropped. This is super easy if you use an image resize proxy, like [images.weserv.nl](https://images.weserv.nl/). 
 
 ### How it works
 
