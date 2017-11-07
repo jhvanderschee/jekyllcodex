@@ -20,7 +20,7 @@ function getId(url) {
     if (match && match[2].length == 11) {
         return match[2];
     } else {
-        return 'error';
+        return false;
     }
 }
 function yt_url2embed() {
@@ -29,7 +29,7 @@ function yt_url2embed() {
         var pattern = /^((http|https):\/\/)/;
         if(pattern.test(p[i].innerHTML)) {
             var myId = getId(p[i].innerHTML);
-            p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + myId + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
+            if(myId) p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + myId + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
         }
     }
 }
