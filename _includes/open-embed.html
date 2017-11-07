@@ -36,12 +36,11 @@ function yt_url2embed() {
 yt_url2embed();
 
 function mp3_embed() {
-    var p = document.getElementsByTagName('a');
+    var p = document.getElementsByTagName('p');
     for(var i = 0; i < p.length; i++) {
-        var str = p[i].href;
+        var str = p[i].innerHTML;
         if (str.lastIndexOf('.mp3', str.length - 4) === str.length - 4) {
-            p[i].href = '#';
-            p[i].innerHTML = '<audio controls title="'+p[i].innerText+'"><source src="'+str+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+             p[i].innerHTML = '<audio controls><source src="'+str+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
         }
     }
 }

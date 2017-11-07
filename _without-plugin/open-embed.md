@@ -4,9 +4,9 @@ title: Open embed
 
 ### Introduction
 
-One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using some Vanilla JS. It also detects links to mp3 files and replaces them with a nice player. I recommend you to use these links on a new line too. Here is an example:
+One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using some Vanilla JS. It also detects URL's to mp3 files and replaces them with a nice player. I recommend you to use these links on a new line too. Here is an example (source: <a href="http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song" target="_blank" style="color: #777777;">FMA</a>):
 
-[Paper Navy - 08 - Swan Song](/uploads/Paper_Navy_-_08_-_Swan_Song.mp3)<br />Source: [FMA](http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song)
+/uploads/Paper_Navy_-_08_-_Swan_Song.mp3
 
 ### How it works
 
@@ -53,12 +53,11 @@ function yt_url2embed() {
 yt_url2embed();
 
 function mp3_embed() {
-    var p = document.getElementsByTagName('a');
+    var p = document.getElementsByTagName('p');
     for(var i = 0; i < p.length; i++) {
-        var str = p[i].href;
+        var str = p[i].innerHTML;
         if (str.lastIndexOf('.mp3', str.length - 4) === str.length - 4) {
-            p[i].href = '#';
-            p[i].innerHTML = '<audio controls><source src="'+str+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+             p[i].innerHTML = '<audio controls><source src="'+str+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
         }
     }
 }
