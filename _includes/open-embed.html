@@ -34,4 +34,16 @@ function yt_url2embed() {
     }
 }
 yt_url2embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('a');
+    for(var i = 0; i < p.length; i++) {
+        var str = p[i].href;
+        if (str.lastIndexOf('.mp3', str.length - 4) === str.length - 4) {
+            p[i].href = '#';
+            p[i].innerHTML = '<audio controls><source src="'+str+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+        }
+    }
+}
+mp3_embed();
 </script>
