@@ -32,7 +32,21 @@ The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&lo
 </style>
 
 <script>
-function getId(url) {
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+      url: 'https://vimeo.com/api/oembed.json?url='+url,
+      async: true,
+      success: function(response) {
+        if(response.video_id) {
+          id = response.video_id;
+          $(el).innerHTML('<div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>');
+        }
+      }
+    });
+}
+
+function get_youtube_id(url) {
     var regExp = /^.\*(youtu.be\\/|v\\/|u\\/\\w\\/|embed\\/|watch\\?v=|\\&v=)([^#\\&\\?]\*).\*/;
     var match = url.match(regExp);
     if (match && match[2].length == 11) {
@@ -48,11 +62,11 @@ function yt_url2embed() {
         //check if this is an external url (that starts with https:// or http://
         if (pInnerHTML.indexOf("http://") == 0 ||
             pInnerHTML.indexOf("https://") == 0) {
-            var myId = getId(p[i].innerHTML);
-            if(myId) p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + myId + '?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
             if(pInnerHTML.indexOf('vimeo.com') !== -1) {
                 //ask vimeo for the id and place the embed
-                p[i].innerHTML = 'vimeo embed';
+                vimeo_embed(p[i].innerHTML,p[i]);
             }
         }
     }
