@@ -40,7 +40,7 @@ function vimeo_embed(url,el) {
       success: function(response) {
         if(response.video_id) {
           id = response.video_id;
-          $(el).innerHTML('<div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>');
+          $(el).innerHTML('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>');
         }
       }
     });
