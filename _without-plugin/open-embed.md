@@ -9,10 +9,6 @@ One of the nicer features of WordPres is that you can just paste a Youtube URL i
 
 /uploads/Paper_Navy_-_08_-_Swan_Song.mp3
 
-https://www.youtube.com/watch?v=2MsN8gpT6jY
-
-https://vimeo.com/240512614
-
 ### How it works
 
 The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&loop=1&controls=0'. This will lead to an autoplaying, looping mp3 that is invisible (has no controls). Default the player will not autoplay, not loop and show controls, as shown in the example above.
@@ -106,6 +102,10 @@ function mp3_embed() {
 mp3_embed();
 </script>{% endraw %}
 ```
+
+https://www.youtube.com/watch?v=2MsN8gpT6jY
+
+https://vimeo.com/240512614
 
 [/expand]
 
