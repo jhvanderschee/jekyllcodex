@@ -2,11 +2,12 @@
 title: Open embed
 ---
 
+
 ### Introduction
 
-One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using vanilla JS. In the same way it also detects URL's that point to mp3 files and replaces them with a default HTML5 player. I recommend you to use these links on a new line too. Here is an example (source: <a href="http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song" target="_blank" style="color: #777777;">FMA</a>):
+One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using vanilla JS. In the same way it also detects URL's that point to mp3 files and replaces them with a default HTML5 player. I recommend you to use these links on a new line too. Here is an example (source: [FMA](http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song)):
 
-/uploads/Paper_Navy_-_08_-_Swan_Song.mp3
+/uploads/Paper_Navy*-_08*-_Swan_Song.mp3
 
 ### How it works
 
@@ -18,7 +19,7 @@ The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&lo
 {% raw %}<style>
 .videoWrapper {
 	position: relative;
-	padding-bottom: 56.333%; /* custom */
+	padding-bottom: 56.333%; /\* custom \*/
 	height: 0;
 }
 .videoWrapper iframe {
@@ -27,12 +28,12 @@ The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&lo
 	left: 0;
 	width: 100%;
 	height: 100%;
-}    
+}
 </style>
 
 <script>
 function getId(url) {
-    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var regExp = /^.\*(youtu.be\\/|v\\/|u\\/\\w\\/|embed\\/|watch\\?v=|\\&v=)([^#\\&\\?]\*).\*/;
     var match = url.match(regExp);
     if (match && match[2].length == 11) {
         return match[2];
@@ -43,10 +44,15 @@ function getId(url) {
 function yt_url2embed() {
     var p = document.getElementsByTagName('p');
     for(var i = 0; i < p.length; i++) {
-        var pattern = /^((http|https):\/\/)/;
-        if(pattern.test(p[i].innerHTML)) {
+        var pInnerHTML = p[i].innerHTML;
+        if (pInnerHTML.indexOf("http://") == 0 ||
+            pInnerHTML.indexOf("https://") == 0) {
             var myId = getId(p[i].innerHTML);
-            if(myId) p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + myId + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
+            if(myId) p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + myId + '?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
+            if(pInnerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                p[i].innerHTML = 'vimeo embed';
+            }
         }
     }
 }
@@ -63,7 +69,7 @@ function mp3_embed() {
             str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
             str1 = str1.replace('loop=1','').replace('loop=0','');
             str1 = str1.replace('controls=0','').replace('controls=1','');
-            
+
             if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
                 if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
                 if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
@@ -86,9 +92,7 @@ mp3_embed();
 
 ### Installation
 
-Step 1. Download the file [open-embed.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/open-embed.html)
-<br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure the bottom of your layout document looks like this:
+Step 1. Download the file [open-embed.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/open-embed.html)<br>Step 2. Save the file in the '_includes' directory of your project<br>Step 3. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
