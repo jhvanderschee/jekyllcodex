@@ -5,13 +5,13 @@ title: Open embed
 
 ### Introduction
 
-One of the nicer features of WordPres is that you can just paste a Youtube URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll, using vanilla JS. In the same way it also detects URL's that point to mp3 files and replaces them with a default HTML5 player. I recommend you to use these links on a new line too. Here is an example (source: [FMA](http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song)):
+One of the nicer features of WordPres is that you can just paste a Youtube or Vimeo URL in the content (on a new line) and WordPress transforms this into an embed code. This script does the same for Jekyll. In the same way it also detects URL's that point to mp3 files and replaces them with a default HTML5 player. Here is an example (source: [FMA](http://freemusicarchive.org/music/Paper_Navy/All_Grown_Up/08_Swan_Song){: .gray}):
 
 /uploads/Paper_Navy_-_08_-_Swan_Song.mp3
 
 ### How it works
 
-The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&loop=1&controls=0'. This will lead to an autoplaying, looping mp3 that is invisible (has no controls). Default the player will not autoplay, not loop and show controls, as shown in the example above.
+The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&loop=1&controls=0'. This will lead to an autoplaying, looping mp3 that is invisible (has no controls). Default the player will not autoplay, not loop and show controls, as shown in the example above. Autoplay and loop will also work (in the same way) on Youtube and Vimeo embeds.
 
 [expand]
 
@@ -19,7 +19,7 @@ The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&lo
 {% raw %}<style>
 .videoWrapper {
 	position: relative;
-	padding-bottom: 56.333%; /\* custom \*/
+	padding-bottom: 56.333%;
 	height: 0;
 }
 .videoWrapper iframe {
@@ -32,6 +32,10 @@ The mp3 embedder can detect a link in this format: 'linktoyour.mp3?autoplay=1&lo
 </style>
 
 <script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
 function vimeo_embed(url,el) {
     var id = false;
     $.ajax({
@@ -40,38 +44,41 @@ function vimeo_embed(url,el) {
       success: function(response) {
         if(response.video_id) {
           id = response.video_id;
-          $(el).innerHTML('<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>');
+          if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+          if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+          var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+          if(autoplay==1) theInnerHTML += '&autoplay=1';
+          if(loop==1) theInnerHTML += '&loop=1';
+          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+          el.innerHTML = theInnerHTML;
         }
       }
     });
 }
-
-function get_youtube_id(url) {
-    var regExp = /^.\*(youtu.be\\/|v\\/|u\\/\\w\\/|embed\\/|watch\\?v=|\\&v=)([^#\\&\\?]\*).\*/;
-    var match = url.match(regExp);
-    if (match && match[2].length == 11) {
-        return match[2];
-    } else {
-        return false;
-    }
-}
-function yt_url2embed() {
+function video_embed() {
     var p = document.getElementsByTagName('p');
     for(var i = 0; i < p.length; i++) {
-        var pInnerHTML = p[i].innerHTML;
         //check if this is an external url (that starts with https:// or http://
-        if (pInnerHTML.indexOf("http://") == 0 ||
-            pInnerHTML.indexOf("https://") == 0) {
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
             var youtube_id = get_youtube_id(p[i].innerHTML);
-            if(youtube_id) p[i].innerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>';
-            if(pInnerHTML.indexOf('vimeo.com') !== -1) {
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
                 //ask vimeo for the id and place the embed
                 vimeo_embed(p[i].innerHTML,p[i]);
             }
         }
     }
 }
-yt_url2embed();
+video_embed();
 
 function mp3_embed() {
     var p = document.getElementsByTagName('p');
@@ -102,10 +109,6 @@ function mp3_embed() {
 mp3_embed();
 </script>{% endraw %}
 ```
-
-https://www.youtube.com/watch?v=2MsN8gpT6jY
-
-https://vimeo.com/240512614
 
 [/expand]
 

@@ -5,7 +5,7 @@ title: Getting started
 
 ## Step 1. Create a basic website
 
-A website typically consists of a few elements. The header with a menu, a sidebar, the content and the footer. Back in the days we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. Not the best idea for a front-end dev without a clue, like you.
+A website typically consists of a few elements. The header with a menu, a sidebar, the content and the footer. Back in the days we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. What if we could prevent that by design? Well... you can with Jekyll.
 
 You used to create an 'index.php' file and do something like this:
 
@@ -37,7 +37,7 @@ content
 </html>{% endraw %}
 ```
 
-You need to place the html files you want to include in a folder in the root named: '_includes'. [Get the code](https://github.com/jhvanderschee/jekyllinclude)
+You need to place html files you want to include in a root folder named: '_includes'. [Get the code &rarr;](https://github.com/jhvanderschee/jekyllinclude)
 
 ## Step 2. Preview your website
 
