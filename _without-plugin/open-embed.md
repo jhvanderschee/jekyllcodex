@@ -45,6 +45,7 @@ function yt_url2embed() {
     var p = document.getElementsByTagName('p');
     for(var i = 0; i < p.length; i++) {
         var pInnerHTML = p[i].innerHTML;
+        //check if this is an external url (that starts with https:// or http://
         if (pInnerHTML.indexOf("http://") == 0 ||
             pInnerHTML.indexOf("https://") == 0) {
             var myId = getId(p[i].innerHTML);
