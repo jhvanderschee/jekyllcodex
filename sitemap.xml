@@ -4,7 +4,7 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
-  {% if page.url contains '.xml' or 'assets' %}{% else %}
+  {% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         <changefreq>monthly</changefreq>
