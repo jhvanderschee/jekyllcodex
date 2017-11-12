@@ -1,5 +1,5 @@
 ---
-title: "Future date"
+title: "Future dates"
 ---
 
 ### Introduction
@@ -44,7 +44,7 @@ $('[future-date]').each(function() {
 ### Installation
 
 Step 1. Make sure your elements look like this: `<div future-date="YYYYMMDD">...</div>`<br>
-Step 2. Download the file [future-date.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/future-date.html)<br>
+Step 2. Download the file [future-dates.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/future-dates.html)<br>
 Step 3. Save the file in the '_includes' directory of your project<br>
 Step 4. Make sure the bottom of your layout document looks like this:
 
