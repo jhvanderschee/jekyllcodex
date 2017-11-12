@@ -1,6 +1,5 @@
 ---
 title: "Future date"
-inactive: true
 ---
 
 ### Introduction
