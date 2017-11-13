@@ -11,4 +11,16 @@
     $('[future-date]').each(function() {
         if($(this).attr('future-date') < getCompareDate()) $(this).hide();
     });
+
+    var firstfuturedate = $("[first-future-date]").sort(sortbydate);
+    function sortbydate(a, b) {
+        return ($(b).attr('first-future-date')) < ($(a).attr('first-future-date')) ? 1 : -1;
+    }
+    $(firstfuturedate).each(function() {
+        $('[first-future-date]').hide();
+        if($(this).attr('first-future-date') > getCompareDate()) {
+            $(this).show();
+            return false;
+        }
+    });
 </script>
