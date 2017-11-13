@@ -8,7 +8,7 @@ In case of an event listing, you want to show only future dates. This is hard, b
 
 ### How it works
 
-Normal dates are hard to compare, but dates written as integers in the `YYYYMMDD` format are not. We let javascript get the current date in this format to compare with. We call this the 'CompareDate'. We write the events date as a custom attribute to the containing HTML element with Jekyll/Liquid, like this: `<div future-date="20161225">...</div>`. Note that this can be any type of element, a `<li>` or an `<a>` will work too.
+Normal dates are hard to compare, but dates written as integers in the YYYYMMDD format are not. We let javascript get the current date in this format to compare with. We call this the 'CompareDate'. We write the events date as a custom attribute to the containing HTML element with Jekyll/Liquid. Note that this can be any type of element, a list item or a link will work too.
 
 [expand]
 
