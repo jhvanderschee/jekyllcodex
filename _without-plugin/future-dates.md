@@ -8,7 +8,7 @@ In case of an event listing, you want to show only future dates. This is hard, b
 
 ### How it works
 
-Normal dates are hard to compare, but dates written as integers in the YYYYMMDD format are not. We let javascript get the current date in this format to compare with. We call this the 'CompareDate'. We write the events date as a custom attribute to the containing HTML element with Jekyll/Liquid. Note that this can be any type of element, a list item or a link will work too. In the same way you can add the custom attribute 'first-future-date' to your elements. This will only show the first upcoming one.
+Normal dates are hard to compare, but dates written as integers in the YYYYMMDD format are not. We let javascript get the current date in this format to compare with. We call this the 'CompareDate'. We write the events date as a custom attribute to the containing HTML element with Jekyll/Liquid. Note that this can be any type of element, a list item or a link will work too. In the same way you can add the custom attribute 'first-future-date' to your elements. This will instruct the javascript to hide all but the first upcoming date.
 
 [expand]
 
