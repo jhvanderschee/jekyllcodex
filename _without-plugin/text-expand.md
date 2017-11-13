@@ -8,7 +8,7 @@ Sometimes when you want to create a 'read more' link, it is overkill to create a
 
 ### How it works
 
-The script looks for an '[expand]' tag on a single line and then looks for the '[/expand]' tag (again on a single line, thus being the only content of its paragraph). When it finds these it will add some classes and hide everything in between. It will show a 'read more &rarr;' link, indicating the text can be expanded.
+The script looks for an `[expand]` tag on a single line and then looks for the `[/expand]` tag (again on a single line, thus being the only content of its paragraph). When it finds these it will add some classes and hide everything in between. It will show a 'read more &rarr;' link, indicating the text can be expanded.
 
 [expand]
 
