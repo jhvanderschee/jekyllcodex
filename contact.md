@@ -4,7 +4,7 @@ form:
   to: jhvanderschee@gmail.com
   subject: New submission!
   redirect: /
-  form_engine: cloudcannon
+  form_engine: formspree
   fields: 
     - name: name
       input_type: text
