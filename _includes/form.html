@@ -1,0 +1,88 @@
+<style>
+    .radio, .checkbox {position: relative; bottom: 8px;}
+    .rowradio + .rowradio .radio {margin-top: 0px;}
+</style>
+
+{% if page.form.form_engine == 'cloudcannon' %}
+<form class="form" method="POST" action="{{ page.form.redirect }}">
+    <input type="hidden" name="_to" value="{{ page.form.to }}">
+{% elsif page.form.form_engine == 'formspree' %}
+<form class="form" method="POST" action="http://formspree.io/{{ page.form.to }}">
+    <input type="hidden" name="_next" value="{{ site.url }}{{ page.form.redirect }}" />
+{% endif %}
+
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="hidden" name="_subject" value="{{ page.form.subject }}" />
+
+    {% for item in page.form.fields %}
+    {% if item.required %}{% assign requiredstar = '*' %}{% else %}{% assign requiredstar = '' %}{% endif %}
+    {% if item.required %}{% assign requiredtext = 'required' %}{% else %}{% assign requiredtext = '' %}{% endif %}
+
+    {% if item.input_type == 'text' %}
+    <div class="row form-group">
+        <div class="col-md-12">
+            <label class="sr-only" for="{{ item.name }}">{{ item.name }}</label>
+            {% if requiredtext == 'required' %}<input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}" required>{% else %}<input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}">{% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if item.input_type == 'date' %}
+    <div class="row form-group">
+        <div class="col-md-12">
+            <label class="sr-only" for="{{ item.name }}">{{ item.name }}</label>
+            {% if requiredtext == 'required' %}<input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}" required>{% else %}<input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}">{% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if item.input_type == 'email' %}
+    <div class="row form-group">
+        <div class="col-md-12">
+            <label class="sr-only" for="{{ item.name }}">{{ item.name }}</label>
+            {% if requiredtext == 'required' %}<input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}" required>{% else %}<input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}">{% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if item.input_type == 'textarea' %}
+    <div class="row form-group">
+        <div class="col-md-12">
+            <label class="sr-only" for="{{ item.name }}">{{ item.name }}</label>
+            <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" class="form-control" placeholder="{{ item.placeholder }}{{ requiredstar }}" {{ requiredtext }} ></textarea>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if item.input_type == 'radio' %}
+    <div class="row rowradio">
+        <div class="col-md-12">
+            <div class="radio">
+                    <label>{% if requiredtext == 'required' %}<input type="radio" name="{{ item.name }}" value="{{ item.placeholder }}" required>{% else %}<input type="radio" name="{{ item.name }}" value="{{ item.placeholder }}">{% endif %}{{ item.placeholder }}</label>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if item.input_type == 'checkbox' %}
+    <div class="row rowcheckbox">
+        <div class="col-md-12">
+            <div class="checkbox">
+                    <label>{% if requiredtext == 'required' %}<input type="checkbox" name="{{ item.name }}" value="{{ item.placeholder }}" required>{% else %}<input type="checkbox" name="{{ item.name }}" value="{{ item.placeholder }}">{% endif %}{{ item.placeholder }}</label>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if item.input_type == 'html' %}
+    {{ item.placeholder }}
+    {% endif %}
+
+    {% if item.input_type == 'submit' %}
+    <div class="form-group">
+        <input type="{{ item.input_type }}" value="{{ item.placeholder }}" class="btn btn-primary" />
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</form>

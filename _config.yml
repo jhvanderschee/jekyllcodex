@@ -46,3 +46,17 @@ collections:
   without-plugin:
     output: true
     permalink: /without-plugin/:path/  
+
+input_types:
+  - text
+  - textarea
+  - email
+  - date
+  - checkbox
+  - radio
+  - number
+  - submit
+
+form_engines:
+  - cloudcannon
+  - formspree

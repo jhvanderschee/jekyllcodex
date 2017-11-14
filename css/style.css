@@ -64,6 +64,8 @@ a:hover, a:focus {
     color: #d9230f;
     text-decoration: underline;
 }
+input[type="checkbox"], input[type="radio"] {position: relative; bottom: 1px;}
+textarea {min-width: 100%; max-width: 100%;}
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
     .download {margin-bottom: 12px; margin-top: -20px;}
