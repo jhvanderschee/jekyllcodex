@@ -38,7 +38,7 @@ form:
 
 ## About this page
 
-Although the primary function of this page/form is to illustrate how the [form builder](/without-plugin/form-builder){: .gray} works, it will actually send an email to my inbox. It uses [Formspree](https://formspree.io){: .gray} to do so, as this website is hosted on GitHub (and not on CloudCannon).
+Although the primary function of this page/form is to illustrate how the [form builder](/without-plugin/form-builder){: .gray} works, it will actually send an email to my inbox. It uses [Formspree](https://formspree.io){: .gray} to do so, as this website is hosted on GitHub.
 
 ## Contact form
 
