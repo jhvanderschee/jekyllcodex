@@ -5,8 +5,7 @@ inactive: false
 
 ### Introduction
 
-This page is coming soon... Do not want to wait? Look at the [example form](/contact){: .gray}.
-
+Forms are really important in websites. They serve all kind of goals, ranging from a simple [contact form](/contact){: .gray} to handling complete webshop orders or handling a sign-up for an event. WordPress has the extremely popular 'Contact Form 7' and 'Gravity Forms' plugins, but Jekyll does not have such a plugin (yet). To fill this void I created a basic form builder for Jekyll.
 
 ### How it works
 
@@ -18,7 +17,7 @@ form:
   to: jhvanderschee@gmail.com
   subject: New submission!
   redirect: /
-  form_engine: cloudcannon
+  form_engine: formspree
   fields: 
     - name: name
       input_type: text
@@ -57,7 +56,7 @@ And add this to your layout:
 {% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
 ```
 
-As a CloudCannon user you can add some extra variables to your _config.yml file to make the experience for the content editor even smoother.
+As a CloudCannon user you can add some extra variables to your _config.yml file to make the experience for the content editors even smoother.
 
 [expand]
 
@@ -81,11 +80,11 @@ form_engines:
 
 ### Installation
 
-Step 1. Make sure your pages front matter looks like the example above<br>
+Step 1. Make sure your front matter of your page looks like the example above<br>
 Step 2. Download the file [form.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/form.html)<br>
 Step 3. Save the file in the '_includes' directory of your project<br>
 Step 4. Add the following line to your layout on the place where you want the form to appear:
 
 ```
-{% raw %}{% include form.html %}{% endraw %}
+{% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
 ```
