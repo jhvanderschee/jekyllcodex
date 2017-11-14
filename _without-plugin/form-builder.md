@@ -5,7 +5,7 @@ inactive: false
 
 ### Introduction
 
-Forms are really important in websites. They serve all kind of goals, ranging from a simple [contact form](/contact){: .gray} to handling complete webshop orders or handling a sign-up for an event. WordPress has the extremely popular 'Contact Form 7' and 'Gravity Forms' plugins, but Jekyll does not have such a plugin (yet). To fill this void I created a basic form builder for Jekyll.
+Forms are really important in websites. They come in all shapes and sizes. They range from a simple [contact form](/contact){: .gray} to forms that handle webshop orders or event sign-ups. WordPress has the extremely popular 'Contact Form 7' and 'Gravity Forms' plugins, but Jekyll does not have such a plugin (yet). To fill this void I created a basic form builder for Jekyll.
 
 ### How it works
 
@@ -56,7 +56,7 @@ And add this to your layout:
 {% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
 ```
 
-As a CloudCannon user you can add some extra variables to your _config.yml file to make the experience for the content editors even smoother.
+CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother.
 
 [expand]
 
