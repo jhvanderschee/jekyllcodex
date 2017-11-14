@@ -5,7 +5,7 @@ inactive: false
 
 ### Introduction
 
-Forms are really important in websites. They come in all shapes and sizes and range from simple [contact forms](/contact){: .gray} to forms that handle complete webshop orders or event sign-ups. WordPress has the extremely popular 'Contact Form 7' and 'Gravity Forms' plugins, but Jekyll does not have such a plugin (yet). To fill this void I created a basic form builder for Jekyll.
+Forms are the most important parts of a websites. They range from simple [contact forms](/contact){: .gray} to forms that handle complete webshop orders or event sign-ups. WordPress has extremely popular form solutions, like 'Contact Form 7' and 'Gravity Forms', but Jekyll does not. To fill this void I created a basic form builder for Jekyll.
 
 ### How it works
 
