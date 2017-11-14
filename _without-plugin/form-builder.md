@@ -5,7 +5,7 @@ inactive: false
 
 ### Introduction
 
-This page is coming soon... Do not want to wait? Look at the <a href="/contact/" style="color: #777777; text-decoration: underline;">example form</a>.
+This page is coming soon... Do not want to wait? Look at the [example form](/contact){: .gray}.
 
 
 ### How it works
