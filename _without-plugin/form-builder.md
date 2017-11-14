@@ -9,7 +9,7 @@ Forms are the most important parts of a websites. They range from simple [contac
 
 ### How it works
 
-The form uses Twitter Bootstrap classes, making it look roughly the same in every browser. For validation HTML5 is used. Just use the right input type, define required and you are done. Using the right input type has the advantage that mobile devices show the right on-screen keyboard. A drawback is that HMTL5 validation does not work in IE9 and Opera Mini. HTML5 also shows a native date picker on the date field. That feature, however, has terrible browser support. Although you can enter a date without an HTML5 date picker, the experience will be far from friendly. This screams for a jQuery solution, which unfortunately has not yet been implemented.
+The form uses Twitter Bootstrap classes, making it look roughly the same in every browser. For validation HTML5 is used. Just use the right input type, set required to 'true' or 'false' and you are done. Using the right input type has the advantage that mobile devices show the right on-screen keyboard. A drawback is that HMTL5 validation does not work in IE9 and Opera Mini. HTML5 also shows a native date picker on the date field. That feature, however, has terrible browser support. Although you can enter a date without an HTML5 date picker, the experience will be far from friendly.
 
 To create a form, add the following code to the front matter of your page:
 

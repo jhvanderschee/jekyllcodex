@@ -28,7 +28,7 @@ form:
       required: true
     - name: terms
       input_type: checkbox
-      placeholder: I accept the terms and conditions
+      placeholder: I would accept the terms and conditions (if there were any)
       required: true
     - name: submit
       input_type: submit
