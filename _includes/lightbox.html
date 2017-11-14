@@ -139,8 +139,8 @@ $(document).ready(function() {
 		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+$(this).attr('data-id')+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>').appendTo('body');
 	});
 
-	$("body").on("click", "a[class^='lightbox-']", function(){
-		var link_elements = $(this).parent().find("a[class^='lightbox-']");
+	$("body").on("click", "a[class*='lightbox-']", function(){
+		var link_elements = $(this).parent().find("a[class*='lightbox-']");
 		$(link_elements).removeClass('current');
 		for (var i=0; i<link_elements.length; i++) {
 			if($(this).attr('href') == $(link_elements[i]).attr('href')) {
