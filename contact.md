@@ -36,8 +36,8 @@ form:
       required: true
 ---
 
-## Contactform
+## Contact form
 
-Although the primary function of this form is to illustrate how the [form builder](/without-plugin/form-builder){: .gray} works, it will actually send an email to my inbox. It uses [Formspree](https://formspree.io){: .gray} to do so, as this website is hosted on GitHub (and not on CloudCannon).  Feel free to leave me a nice message and have a nice day!
+Although the primary function of this form is to illustrate how the [form builder](/without-plugin/form-builder){: .gray} works, it will actually send an email to my inbox. It uses [Formspree](https://formspree.io){: .gray} to do so, as this website is hosted on GitHub (and not on CloudCannon). Feel free to leave me a nice message. Have a nice day!
 
 {% if page.form %}{% include form.html %}{% endif %}
