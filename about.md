@@ -8,7 +8,7 @@ title: About Jekyll Codex
 
 ### For front-end developers
 
-Jekyll Codex is created by Joost van der Schee (<a href="https://twitter.com/jhvanderschee" target="_blank" style="color: #777777;">@jhvanderschee</a> or <a href="mailto:jhvanderschee@gmail.com" style="color: #777777;">jhvanderschee@gmail.com</a>) to make it easier for fellow front-end developers to choose for static web technology in their next project. The getting started guide even shows how to do that without touching the command-line. If you want to know more about Jekyll, please visit the official Jekyll documentation. The link can be found in the menu at the top.
+Jekyll Codex is created by Joost van der Schee (<a href="https://twitter.com/jhvanderschee" target="_blank" style="color: #777777;">@jhvanderschee</a> or <a href="mailto:jhvanderschee@gmail.com" style="color: #777777;">jhvanderschee@gmail.com</a>) to make it easier for fellow front-end developers to choose for static web technology in their next project. The [getting started guide](/getting-started){: .gray} even shows how to do that without touching the command-line. If you want to know more about Jekyll, please visit the official Jekyll documentation. The link can be found in the menu at the top.
 
 ### Why Jekyll?
 
@@ -16,4 +16,4 @@ Jekyll is the most popular static site generator. Static sites are better for pe
 
 ### Copyright
 
-Feel free to use all code on this website. That is the purpose of this site. The code of the site itsself may also be used. The code can be found on GitHub.
+Feel free to use all code on this website. The code of the website itsself may also be used, as this website is a demo of the code it presents. However, respect the copyright of the used trademarks and the licenses of the open-source software used, as their rights belong to their respective owners.
