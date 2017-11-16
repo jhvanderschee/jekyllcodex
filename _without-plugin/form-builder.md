@@ -75,7 +75,8 @@ CloudCannon users should add the available options to their '_config.yml' file t
 
 form_engines:
   - cloudcannon
-  - formspree{% endraw %}
+  - formspree
+  - formbucket{% endraw %}
 ```
 
 [/expand]

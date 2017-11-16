@@ -60,3 +60,4 @@ input_types:
 form_engines:
   - cloudcannon
   - formspree
+  - formbucket
