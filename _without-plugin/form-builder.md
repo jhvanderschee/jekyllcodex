@@ -9,7 +9,7 @@ Forms are the most important parts of a websites. They range from simple [contac
 
 ### How it works
 
-The form uses Twitter Bootstrap classes, making it look roughly the same in every browser. For validation HTML5 is used. Just use the right input type, set required to 'true' or 'false' and you are done. Using the right input type has the advantage that mobile devices show the right on-screen keyboard. A drawback is that HMTL5 validation does not work in IE9 and Opera Mini. HTML5 also shows a native date picker on the date field. That feature, however, has terrible browser support. Although you can enter a date without an HTML5 date picker, the experience will be far from friendly.
+The form uses Twitter Bootstrap and HTML5. The form can be submitted by CloudCannon, Formspree and FormBucket. The first only works on CloudCannon hosting. You can choose between showing placeholders in the inputs or labels above it. Two special fields are available: a field named 'name' (type 'text') will show 'first name' and 'last name' input boxes on one line. A field named 'address' (type 'text') will show 'address', 'city' and 'postal code' input boxes.
 
 To create a form, add the following code to the front matter of your page:
 
@@ -59,7 +59,7 @@ And add this to your layout:
 {% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
 ```
 
-CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother.
+CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother. Note that there is no select (dropdown) support (yet). The native HTML5 date picker is not available in every browser. HMTL5 validation does not work in IE9 and Opera Mini. 
 
 [expand]
 
