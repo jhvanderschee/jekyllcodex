@@ -20,14 +20,15 @@ form:
   subject: New submission!
   redirect: /
   form_engine: formspree
+  placeholders: true
   fields: 
     - name: name
       input_type: text
-      placeholder: Your name
+      placeholder: Name
       required: true
     - name: email
       input_type: email
-      placeholder: Your email address
+      placeholder: Email address
       required: true
     - name: sex
       input_type: radio
@@ -39,7 +40,7 @@ form:
       required: true
     - name: message
       input_type: textarea
-      placeholder: Your message
+      placeholder: Message
       required: true
     - name: terms
       input_type: checkbox
@@ -47,7 +48,7 @@ form:
       required: true
     - name: submit
       input_type: submit
-      placeholder: Submit this form
+      placeholder: Submit form
       required: true
 ---{% endraw %}
 ```

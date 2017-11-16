@@ -28,8 +28,8 @@
         {% if item.input_type == 'textarea' %}
         <div class="row form-group">
             <div class="col-sm-12">
-                <label for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
-                <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" class="form-control" {{ requiredtext }}></textarea>
+                <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
+                <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" class="form-control" {% if page.form.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}></textarea>
             </div>
         </div>
         {% elsif item.input_type == 'radio' %}
@@ -59,36 +59,36 @@
             {% if item.name == 'name' %}
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <label for="firstname">First name{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" placeholder="First name{{ requiredstar }}" {{ requiredtext }}>
+                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="firstname">First name{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" {% if page.form.placeholders == true %}placeholder="First name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                     <div class="col-sm-6">
-                        <label for="lastname">Last name{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" placeholder="Last name{{ requiredstar }}" {{ requiredtext }}>
+                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="lastname">Last name{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" {% if page.form.placeholders == true %}placeholder="Last name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
             {% elsif item.name == 'address' %}
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <label for="address">Address{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="address" id="address" class="form-control" placeholder="Address{{ requiredstar }}" {{ requiredtext }}>
+                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="address">Address{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="address" id="address" class="form-control" {% if page.form.placeholders == true %}placeholder="Address{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
                 <div class="row form-group">
                         <div class="col-sm-6">
-                            <label for="city">City{{ requiredstar }}</label>
-                            <input type="{{ item.input_type }}" name="city" id="city" class="form-control" placeholder="City{{ requiredstar }}" {{ requiredtext }}>
+                            <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="city">City{{ requiredstar }}</label>
+                            <input type="{{ item.input_type }}" name="city" id="city" class="form-control" {% if page.form.placeholders == true %}placeholder="City{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                         </div>
                         <div class="col-sm-6">
-                            <label for="postalcode">Postal code{{ requiredstar }}</label>
-                            <input type="{{ item.input_type }}" name="postalcode" id="postalcode" class="form-control" placeholder="Postal code{{ requiredstar }}" {{ requiredtext }}>
+                            <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="postalcode">Postal code{{ requiredstar }}</label>
+                            <input type="{{ item.input_type }}" name="postalcode" id="postalcode" class="form-control" {% if page.form.placeholders == true %}placeholder="Postal code{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                         </div>
                 </div>
             {% else %}
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <label {% if form.placeholders == 'true' %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if form.placeholders == 'true' %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if page.form.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
             {% endif %}
