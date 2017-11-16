@@ -59,7 +59,7 @@ And add this to your layout:
 {% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
 ```
 
-CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother. Note that there is no select (dropdown) support (yet). The native HTML5 date picker is not available in every browser. HMTL5 validation does not work in IE9 and Opera Mini. 
+CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother.
 
 [expand]
 
@@ -79,6 +79,8 @@ form_engines:
   - formspree
   - formbucket{% endraw %}
 ```
+
+Disclaimer: Note that there is no select (dropdown) support (yet). Also note that browser support is not perfect. The native HTML5 date picker is not available in every browser and that HMTL5 validation does not work in IE9 and Opera Mini.
 
 [/expand]
 
