@@ -40,12 +40,17 @@ defaults:
     values:
       layout: "without-plugin-item"
 
-
 # Collections
 collections:
   without-plugin:
     output: true
     permalink: /without-plugin/:path/  
+
+highlighter: none
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
 
 input_types:
   - text

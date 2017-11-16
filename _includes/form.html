@@ -1,4 +1,3 @@
-
 <style>
     .radio, .checkbox {position: relative; bottom: 8px;}
     .rowradio + .rowradio .radio {margin-top: 0px;}
@@ -60,37 +59,36 @@
             {% if item.name == 'name' %}
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <label for="firstname">Voornaam{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" {{ requiredtext }}>
+                        <label for="firstname">First name{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" placeholder="First name{{ requiredstar }}" {{ requiredtext }}>
                     </div>
                     <div class="col-sm-6">
-                        <label for="lastname">Achternaam{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" {{ requiredtext }}>
+                        <label for="lastname">Last name{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" placeholder="Last name{{ requiredstar }}" {{ requiredtext }}>
                     </div>
                 </div>
             {% elsif item.name == 'address' %}
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <label for="{{ item.name }}">Adres{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {{ requiredtext }}>
+                        <label for="address">Address{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="address" id="address" class="form-control" placeholder="Address{{ requiredstar }}" {{ requiredtext }}>
                     </div>
                 </div>
                 <div class="row form-group">
                         <div class="col-sm-6">
-                            <label for="{{ item.name }}">Woonplaats{{ requiredstar }}</label>
-                            <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {{ requiredtext }}>
+                            <label for="city">City{{ requiredstar }}</label>
+                            <input type="{{ item.input_type }}" name="city" id="city" class="form-control" placeholder="City{{ requiredstar }}" {{ requiredtext }}>
                         </div>
                         <div class="col-sm-6">
-                            <label for="{{ item.name }}">Postcode{{ requiredstar }}</label>
-                            <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {{ requiredtext }}>
+                            <label for="postalcode">Postal code{{ requiredstar }}</label>
+                            <input type="{{ item.input_type }}" name="postalcode" id="postalcode" class="form-control" placeholder="Postal code{{ requiredstar }}" {{ requiredtext }}>
                         </div>
                 </div>
-                
             {% else %}
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <label for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {{ requiredtext }}>
+                        <label {% if form.placeholders == 'true' %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if form.placeholders == 'true' %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
             {% endif %}

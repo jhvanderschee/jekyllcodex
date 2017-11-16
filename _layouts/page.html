@@ -22,6 +22,8 @@
                         
                           <div class="post-content">
                             {{ content }}
+
+                            {% if page.form %}{% include form.html %}{% endif %}
                           </div>
                         
                         </article>

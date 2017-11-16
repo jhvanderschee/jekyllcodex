@@ -5,6 +5,7 @@ form:
   subject: New submission!
   redirect: /
   form_engine: formspree
+  placeholders: true
   fields: 
     - name: name
       input_type: text
@@ -43,5 +44,3 @@ Although the primary function of this page/form is to illustrate how the [form b
 ## Contact form
 
 Feel free to leave me a (nice) message. Have a nice day!
-
-{% if page.form %}{% include form.html %}{% endif %}
