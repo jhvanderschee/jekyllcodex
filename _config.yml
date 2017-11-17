@@ -46,7 +46,7 @@ collections:
     output: true
     permalink: /without-plugin/:path/  
 
-highlighter: none
+highlighter: rouge
 markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
