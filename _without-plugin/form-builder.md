@@ -20,7 +20,7 @@ form:
   subject: New submission!
   redirect: /
   form_engine: formspree
-  placeholders: true
+  placeholders: false
   fields: 
     - name: name
       input_type: text

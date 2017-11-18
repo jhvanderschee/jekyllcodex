@@ -1,0 +1,8 @@
+<script>
+function updatevariant(el,productname) {
+    var addtocart = $(el).val().split(' | ');
+    $('#shoppingcartbutton').attr('price',addtocart[1]);
+    $('.price').html("&euro; " + addtocart[1]);
+    $('#shoppingcartbutton').attr('description',productname + ' ' + addtocart[0]);
+}
+</script>

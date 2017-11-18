@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    {% include head-additions.html %}
+  </head>
+  <body class="{{ page.layout }}">
+    <div class="main">
+	    {% include header.html %}
+		<div class="container">
+			<div class="row">
+		    	<article class="post page">
+                <div class="col-md-12">
+
+                    <div class="post-header">
+                    {% include breadcrumbs.html %}
+                    <br />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="product-gallery">
+                    {% for item in page.images %}
+                        <a href="{{ item.image }}" ><img src="{{ item.image }}" /></a>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    
+                    <header>
+                    <h1 class="post-title">{{ page.title }}</h1>
+                    </header>
+                
+                    <div class="post-content">
+                    <article class="post page">
+                    
+                        <div class="post-content">
+
+                        {% assign price_split = page.price | round: 2 | split: "." %}
+                        {% assign integral = price_split[0] %}
+                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+                        <h2 class="price">&euro; {{ integral }}.{{ fractional }}</h2>
+
+                        {{ content }}
+                        
+                        {% if page.variants[0].name != nil and page.variants[0].name != '' %}
+                        <label>Choose a {{ page.variant_name }}: &nbsp; </label>
+                        <select name="variant" class="form-control" onchange="updatevariant(this,'{{ page.title }}');">
+                        {% for item in page.variants %}
+                            {% assign price_split = item.price | round: 2 | split: "." %}
+                            {% assign integral = price_split[0] %}
+                            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                            <option value="{{ item.name }} | {{ integral }}.{{ fractional }}">{{ item.name }}</option>
+                        {% endfor %}
+                        </select>
+                        <br />
+                        {% endif %}
+
+                        {% assign price_split = page.price | round: 2 | split: "." %}
+                        {% assign integral = price_split[0] %}
+                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                        <a href="/donate/cart" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg addtocart">Donate</a>
+
+
+                        </div>
+                    
+                    </article>
+                    </div>
+		    	</div>
+                </article>
+		    </div>
+		</div>
+	</div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

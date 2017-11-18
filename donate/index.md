@@ -1,0 +1,10 @@
+---
+title: Donate
+layout: products
+---
+
+<br />
+
+### About this donation page
+
+Although the primary function of this donation page is to illustrate how the [web shop](/without-plugin/web-shop){: .gray} works, you can actually buy me one of the products below. If you think I saved you a huge amount of time... feel free to enlighten my day. If you do not have any money to spare, please share the love by posting something about this website on social media. I would like that just as much. Thank you, you are the best!

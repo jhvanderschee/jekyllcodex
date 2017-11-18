@@ -20,16 +20,18 @@
                       <div class="post-content">
                         {{ content }}
                         <br />
-                        <ul class="columns">
-                        {% assign items = site.without-plugin | sort: 'title' %}
+                        <ul class="product-grid">
+                        {% assign items = site.products | sort: 'price' %}
                         {% for item in items %}
-                          <li><a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>{{ item.title }}</a></li>
+                        {% assign price_split = item.price | round: 2 | split: "." %}
+                        {% assign integral = price_split[0] %}
+                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+                          <li><a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
+                            <img src="/img/blank.png" style="width: 100%; background: url('{{ item.images[0].image }}') center center no-repeat; background-size: cover;" />  
+                            {{ item.subtitle }}<br />&euro; {{ integral }}.{{ fractional }}</a></li>
                         {% endfor %}
                         </ul>
-                        <br />
-                        <h3>Why no plugins?</h3>
-                        
-                        <p>Plugin-free solutions are easier to 'install' and cheaper to host. If you use no plugins, you can simply choose to host your Jekyll project on GitHub Pages. GitHub Pages allows you to deploy your site for free on GitHub, with a custom domain name!</p>
                       </div>
                       
                       <!--list all add-ons per feature-->
