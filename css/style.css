@@ -8,7 +8,10 @@ h1 {font-size: 33px; margin-top: 0; padding-top: 50px;}
 .post-header {padding-top: 50px;}
 h2 {font-size: 25px; margin-top: 0; padding-top: 50px;}
 h3 {font-size: 17px; margin: 0; padding: 20px 0 3px;}
+h4 {font-size: 14px; margin: 0; padding: 6px 0 3px;}
+h4:before {content: '► '; position: relative; bottom: 1px;}
 h3.post-meta {padding: 0;}
+h3 + h4 {padding-top: 18px;}
 .navbar-brand>img {
     display: inline;
     position: relative;
@@ -85,7 +88,6 @@ form {max-width: 550px;}
 .product-gallery a:nth-child(5) {margin-left: 1%;}
 .product-grid {padding: 0; margin: 0;}
 .product-grid li {list-style: none; padding: 0; margin: 0; float: left; width: 24.25%; margin-left: 1%; text-align: center;}
-.product-grid li:first-child {margin-left: 0;}
 .product-grid li a {display: block; color: #777777!important; text-decoration: none!important;}
 .product-grid li a img {margin-bottom: 5px;}
 .product-grid li a:hover, .product-grid li a:focus {color: #d9230f!important;}

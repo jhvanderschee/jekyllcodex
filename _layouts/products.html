@@ -21,15 +21,19 @@
                         {{ content }}
                         <br />
                         <ul class="product-grid">
-                        {% assign items = site.products | sort: 'price' %}
-                        {% for item in items %}
-                        {% assign price_split = item.price | round: 2 | split: "." %}
-                        {% assign integral = price_split[0] %}
-                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-                          <li><a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
-                            <img src="/img/blank.png" style="width: 100%; background: url('{{ item.images[0].image }}') center center no-repeat; background-size: cover;" />  
-                            {{ item.subtitle }}<br />&euro; {{ integral }}.{{ fractional }}</a></li>
+                            {% assign items = site.products | sort: 'price' %}
+                            {% for item in items %}
+                            {% assign price_split = item.price | round: 2 | split: "." %}
+                            {% assign integral = price_split[0] %}
+                            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                            {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
+                            <li {% cycle 'style="margin-left: 0;"','','','' %}>
+                                <a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
+                                <img src="/img/blank.png" style="width: 100%; background: url('{{ item.images[0].image }}') center center no-repeat; background-size: cover;" />  
+                                {{ item.subtitle }}<br />
+                                {% if item.price > 0 %}&euro; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
+                                </a>
+                            </li>
                         {% endfor %}
                         </ul>
                       </div>

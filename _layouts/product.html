@@ -27,7 +27,7 @@
                 <div class="col-md-4 col-sm-6">
                     
                     <header>
-                    <h1 class="post-title">{{ page.title }}</h1>
+                    <h1 class="post-title">{{ page.subtitle }}</h1>
                     </header>
                 
                     <div class="post-content">
@@ -39,10 +39,9 @@
                         {% assign integral = price_split[0] %}
                         {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
                         {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-                        <h2 class="price">&euro; {{ integral }}.{{ fractional }}</h2>
+                        <h2 class="price">{% if page.price > 0 %}&euro; {{ integral }}.{{ fractional }}{% endif %}</h2>
 
-                        {{ content }}
-                        
+                      
                         {% if page.variants[0].name != nil and page.variants[0].name != '' %}
                         <label>Choose a {{ page.variant_name }}: &nbsp; </label>
                         <select name="variant" class="form-control" onchange="updatevariant(this,'{{ page.title }}');">
@@ -56,13 +55,18 @@
                         <br />
                         {% endif %}
 
-                        {% assign price_split = page.price | round: 2 | split: "." %}
-                        {% assign integral = price_split[0] %}
-                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                        <a href="/donate/cart" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg addtocart">Donate</a>
+                        {% if page.price > 0 %}
+                            {% assign price_split = page.price | round: 2 | split: "." %}
+                            {% assign integral = price_split[0] %}
+                            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
+                            <a href="/donate/cart" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg addtocart">Donate</a>
+                        {% else %}
+                            {% include share-buttons.html pageurl="/" %}
+                        {% endif %}
+                        <br /><br />
+                        {{ content }}
 
-
-                        </div>
+                    </div>
                     
                     </article>
                     </div>

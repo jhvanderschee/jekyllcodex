@@ -1,6 +1,6 @@
 ---
 title: Donate
-layout: cart
+layout: page
 ---
 
-<script>window.location.href='/without-plugin/web-shop'</script>
+This page is coming soon...
