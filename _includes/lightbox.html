@@ -9,8 +9,16 @@
 	transform: translate(-50%,-50%);
 	max-width: 100%;
 	max-height: 100%;
-	max-width: 1200px;
-	max-height: 1200px;
+}
+@media screen and (min-width: 1200px) {
+    .lightbox img {
+		max-width: 1200px;
+    }
+}
+@media screen and (min-height: 1200px) {
+    .lightbox img {
+		max-height: 1200px;
+	}
 }
 .lightbox .videoWrapperContainer {
 	position: relative; 
