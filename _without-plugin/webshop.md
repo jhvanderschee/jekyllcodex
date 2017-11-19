@@ -35,8 +35,8 @@ Make sure the bottom of your layout document looks like this (the paymentlink sh
 
 #### Step 4. Add the cart file to the root of your site
 
-Get the cart.html file here. Edit it to your liking.
+Get the cart.html file here (not yet available). Edit it to your liking.
 
 #### Step 5. Add the checkout file to the root of your site
 
-Get the checkout.html file here. Edit it to your liking.
+Get the checkout.html file here (not yet available). Edit it to your liking.
