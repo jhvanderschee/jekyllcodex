@@ -46,7 +46,9 @@ Download [checkout.html](#) (not yet available) and add it to the root of your s
 Create some product links. They should look roughly like this:
 
 ```
-{% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>{% endraw %}
+{% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>
+
+<a href="/cart" class="directcheckout" price="1.00" description="test">Add to cart</a>{% endraw %}
 ```
 
 #### Step 7. Fine-tuning
