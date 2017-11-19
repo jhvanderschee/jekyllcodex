@@ -42,15 +42,12 @@ Download [webshop.html](#) (not yet available) and add it to your '_includes' fo
 </html>{% endraw %}
 ```
 
-#### Step 4. Add the cart file to the root of your site
+#### Step 4. Add the cart and checkout files to your site
 
-Download [cart.html](#) (not yet available) and add it to the root of your site.
+Download [cart.md](#) (not yet available) and [checkout.md](#) (not yet available) and save them in the root of your site.<br />
+Download [cart.html](#) (not yet available) and [checkout.html](#) (not yet available) and save them in your '_includes' directory.
 
-#### Step 5. Add the checkout file to the root of your site
-
-Download [checkout.html](#) (not yet available) and add it to the root of your site.
-
-#### Step 6. Create some product links
+#### Step 5. Create some product links
 
 Create some product links. They should look roughly like this:
 
@@ -58,6 +55,6 @@ Create some product links. They should look roughly like this:
 {% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>{% endraw %}
 ```
 
-#### Step 7. Fine-tuning
+#### Step 6. Fine-tuning
 
 Once you got it running, you can fine-tune everything by editing the Liquid/HTML code. Are you unable to figure out how to create nice product pages with product variants? Feel free to look at the source code of this website on Github. Still need help? Ask a question on Stack Overflow, or pay me to help you.

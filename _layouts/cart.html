@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    {% include head-additions.html %}
+  </head>
+  <body class="{{ page.layout }}">
+    <div class="main">
+	    {% include header.html %}
+		<div class="container">
+			<div class="row">
+		    	<div class="col-md-8">
+		    	    <article class="post page">
+                    
+                      <header class="post-header">
+                        {% include breadcrumbs.html %}
+                        <h1 class="post-title">{{ page.title }}</h1>
+                      </header>
+                    
+                      <div class="post-content">
+                        <article class="post page">
+                        
+                          <div class="post-content">
+                            {{ content }}
+
+                            <table class="cart table">
+                                <tr><th></th><th>Quantity</th><th>Price</th></tr>
+                                <tr><td><img src="/uploads/coffee/1.jpg" /><span>Coffee tall<br />&euro; 2.25<br /><a href="#" class="">remove</a></span></td><td><input type="number" class="form-control" value="1" /></td><td>&euro; 2.25</td></tr>
+                                <tr><td><img src="/uploads/coffee/1.jpg" /><span>Coffee ventiCoffee ventiCoffee ventiCoffee ventiCoffee ventiCoffee ventiCoffee venti<br />&euro; 4.25<br /><a href="#" class="">remove</a></span></td><td><input type="number" class="form-control" value="1" /></td><td>&euro; 4.25</td></tr>
+                                <tr><td colspan="3" class="carttotal">&euro; 6.50</td></tr>
+                            </table>
+
+                            <div style="text-align: right;"><a href="/donate" class="btn btn-secondary" style="border-color: transparent!important; text-decoration: underline!important;">Continue shopping</a> &nbsp;&nbsp; <a href="/checkout" class="btn btn-primary">Proceed to checkout</a></div>
+
+                            <div style="margin-top: 50px; position: relative; top: 30px;">
+                                <ul id="checkout_progress">
+                                    <li class="current"><span><a href="#">Shopping cart</a></span></li><li><span><span>Checkout</span></span></li><li><span><span>Payment</span></span></li>
+                                </ul>
+                            </div>   
+
+                          </div>
+                        
+                        </article>
+                      </div>
+                    
+                    </article>
+		    	</div>
+		    	<div class="col-md-1"></div>
+		    	<div class="col-md-3"></div>
+		    </div>
+		</div>
+	</div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
