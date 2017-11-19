@@ -47,8 +47,7 @@ Create some product links. They should look roughly like this:
 
 ```
 {% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>
-
-<a href="/cart" class="directcheckout" price="1.00" description="test">Add to cart</a>{% endraw %}
+<a href="/checkout" class="buy" price="1.00" description="test">Buy</a>{% endraw %}
 ```
 
 #### Step 7. Fine-tuning
