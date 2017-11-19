@@ -1,10 +1,21 @@
 <script>
-function submitcheckout() {
+function submitcheckout(event) {
+    event.preventDefault();
     $.ajax({
         url: "https://formspree.io/jhvanderschee@gmail.com",
         method: "POST",
         data: {message: "hello!"},
-        dataType: "json"
+        dataType: "json",
+        success: function(data) {
+            window.location.href='https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T/10/test';
+        }
     });
+    return false;
+}
+function updatevariant(el,productname) {
+    var addtocart = $(el).val().split(' | ');
+    $('#shoppingcartbutton').attr('price',addtocart[1]);
+    $('.price').html("&euro; " + addtocart[1]);
+    $('#shoppingcartbutton').attr('description',productname + ' ' + addtocart[0]);
 }
 </script>
