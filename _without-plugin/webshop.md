@@ -8,8 +8,17 @@ inactive: true
 This is a simple webshop with payment methods that do not require a monthly fee. Look at the donate page for its current state. It is not yet finished and I will update this page very soon.
 
 ### How it works
+ webshop basically works like this: you create a link with an 'addtocart' class that links to the cart. This link will look for the 'price' and 'description' attribute and add the product to the cart cookie. When you click 'checkout' in the cart you go to a checkout form. This forms adds additional data to the cart cookie. When you click the next step in the payment process, you go to a payment link from Plink (Mollie). Before sending the user to the payment link the cart info will be submitted through email. After succesful payment the user gets redirected to your websites (by Plink). 
 
-The webshop basically works like this: you create a link with an 'addtocart' class. This link will look for the 'price' and 'description' attribute and add them to a javascript cookie. When you click 'checkout' you go to a checkout form. This forms adds additional data to the javascript cookie. When you click the next step in the payment process, you go to a payment link from Plink (Mollie). Before sending the user to the payment link the cart info will be submitted through an email. After a succesful payment you get redirected to your websites success page (by Plink). 
+[expand]
+
+When you do not want to use the cart, simply use these links:
+
+```
+{% raw %}<a href="/checkout" class="buy" price="1.00" description="test">Buy</a>{% endraw %}
+```
+
+[/expand]
 
 ### Installation
 
@@ -46,8 +55,7 @@ Download [checkout.html](#) (not yet available) and add it to the root of your s
 Create some product links. They should look roughly like this:
 
 ```
-{% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>
-<a href="/checkout" class="buy" price="1.00" description="test">Buy</a>{% endraw %}
+{% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>{% endraw %}
 ```
 
 #### Step 7. Fine-tuning
