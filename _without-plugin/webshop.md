@@ -15,7 +15,7 @@ The webshop basically works like this: you create a link with an 'addtocart' cla
 
 #### Step 1. Create a Mollie account
 
-You start by [creating a Mollie account](https://www.mollie.com). Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add [payment methods](https://www.mollie.com/en/payments).
+You start by [creating a Mollie account](https://www.mollie.com). Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods.
 
 #### Step 2. Create a Plink payment link
 
@@ -23,7 +23,7 @@ Go to [https://useplink.com](https://useplink.com) and register. Within your Mol
 
 #### Step 3. Add the footer include and the payment link
 
-Make sure the bottom of your layout document looks like this (the paymentlink should be your personal re-usable link you just created):
+Download [webshop.html](#) (not yet available) and add it to your '_includes' folder. Make sure the bottom of your layout document looks like this (the paymentlink should be your personal re-usable link you just created):
 
 ```
 {% raw %}...
@@ -35,8 +35,20 @@ Make sure the bottom of your layout document looks like this (the paymentlink sh
 
 #### Step 4. Add the cart file to the root of your site
 
-Get the cart.html file here (not yet available). Edit it to your liking.
+Download [cart.html](#) (not yet available) and add it to the root of your site.
 
 #### Step 5. Add the checkout file to the root of your site
 
-Get the checkout.html file here (not yet available). Edit it to your liking.
+Download [checkout.html](#) (ot yet available) and add it to the root of your site.
+
+#### Step 6. Create some product links
+
+Create some product links. They should look roughly like this:
+
+```
+{% raw %}<a href="/cart" class="addtocart" price="1.00" description="test">Add to cart</a>{% endraw %}
+```
+
+#### Step 7. Fine-tuning
+
+Once you got it running, you can fine-tune everything by editing the Liquid/HTML code. Are you unable to figure out how to create nice product pages with product variants? Feel free to look at the source code of this website on Github. Still need help? Ask a question on Stack Overflow, or pay me to help you.
