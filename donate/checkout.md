@@ -1,5 +1,5 @@
 ---
-title: Cart
+title: Checkout
 layout: page
 ---
 
