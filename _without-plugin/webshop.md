@@ -39,7 +39,7 @@ Download [cart.html](#) (not yet available) and add it to the root of your site.
 
 #### Step 5. Add the checkout file to the root of your site
 
-Download [checkout.html](#) (ot yet available) and add it to the root of your site.
+Download [checkout.html](#) (not yet available) and add it to the root of your site.
 
 #### Step 6. Create some product links
 
