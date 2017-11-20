@@ -7,9 +7,9 @@ h1 {font-size: 33px; margin-top: 0; padding-top: 50px;}
 .post-header h1 {padding-top: 0;}
 .post-header {padding-top: 50px;}
 h2 {font-size: 25px; margin-top: 0; padding-top: 50px;}
-h3 {font-size: 17px; margin: 0; padding: 20px 0 3px;}
-h4 {font-size: 14px; margin: 0; padding: 6px 0 3px;}
-h4:before {content: '► '; position: relative; bottom: 1px;}
+h3 {font-size: 18px; margin: 0; padding: 20px 0 4px;}
+h4 {font-size: 14px; margin: 0; padding: 20px 0 3px;}
+h4:before {content: ''; position: relative; bottom: 1px;}
 h3.post-meta {padding: 0;}
 h3 + h4 {padding-top: 18px;}
 .navbar-brand>img {
