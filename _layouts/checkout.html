@@ -25,20 +25,8 @@
 
                             <br />
 
-                            <script>
-                                    function submitcheckout(event) {
-                                        event.preventDefault();
-                                        $.ajax({
-                                            url: "https://formspree.io/jhvanderschee@gmail.com",
-                                            method: "POST",
-                                            data: {message: "hello!"},
-                                            dataType: "json"
-                                        });
-                                        return false;
-                                    }
-                                    </script>
-
-
+                            <div class="row">
+                                    <div class="col-md-8">
                             <form id="checkoutform" class="form" method="POST" action="http://formspree.io/jhvanderschee@gmail.com" onsubmit="return submitcheckout(event)">
                                 <input name="_next" value="http://localhost:4000/" type="hidden">
                                 <input name="_gotcha" style="display:none" type="text">
@@ -92,6 +80,13 @@
                                     <a href="/cart" class="btn btn-secondary" style="border-color: transparent!important; text-decoration: underline!important;">Back</a> &nbsp;&nbsp; <input value="Proceed to payment" class="btn btn-primary" type="submit">
                                 </div>
                             </form>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                    <label>Heads up!</label><div class="well">Payments are 100% secure and will be handled by Mollies Paylink service, called Plink. In the next screen you will be redirected to a secure checkout process.</div>
+                                    </div>
+                                    </div>
+
 
 
                             <div style="margin-top: 50px; max-width: 550px; position: relative; top: 30px;">

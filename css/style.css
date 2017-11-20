@@ -116,6 +116,7 @@ select.form-control::-ms-expand {display: none;}
 #checkout_progress li.past {border-color: #d9230f;}
 #checkout_progress li:last-child {border: 0; width: 55px;}
 #checkout_progress li > span > * {
+    white-space: nowrap;
     display: inline-block;
     -ms-transform: translateX(-50%); /* IE 9 */
     -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */

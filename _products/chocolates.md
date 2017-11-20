@@ -12,4 +12,4 @@ variants:
 price: 9.95
 ---
 
-Buy me a fancy box of chocolates... not for me, but for my wife. Giving here chocolates will most certainly buy me extra programming time in my Linux powered man cave.
+Buy me a fancy box of chocolates... not for me, but for my wife. Giving her chocolates will most certainly buy me extra programming time in my Linux powered man cave.
