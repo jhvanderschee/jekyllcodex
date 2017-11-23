@@ -13,21 +13,21 @@ This scripts shuffles all items with the class randomize. Note that this script 
 [expand]
 
 ```
-{% include radomize.html %}
+{% include randomize.html %}
 ```
 
 [/expand]
 
 ### Installation
 
-Step 1. Download the file [radomize.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/radomize.html)
+Step 1. Download the file [randomize.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/randomize.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-{% include radomize.html %}
+{% include randomize.html %}
 </body>
 </html>{% endraw %}
 ```
