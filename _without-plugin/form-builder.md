@@ -41,7 +41,7 @@ form:
     - name: message
       input_type: textarea
       placeholder: Message
-      required: true
+      required: false
     - name: terms
       input_type: checkbox
       placeholder: I accept the terms and conditions

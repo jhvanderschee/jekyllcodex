@@ -26,7 +26,7 @@ form:
     - name: message
       input_type: textarea
       placeholder: Message
-      required: true
+      required: false
     - name: terms
       input_type: checkbox
       placeholder: I would accept the terms and conditions (if there were any)
@@ -39,7 +39,7 @@ form:
 
 ## About this page
 
-Although the primary function of this page/form is to illustrate how the [form builder](/without-plugin/form-builder){: .gray} works, it will actually send an email to my inbox. It uses [Formspree](https://formspree.io){: .gray} to do so, as this website is hosted on GitHub.
+Although the primary function of this page/form is to illustrate how the [form builder](/without-plugin/form-builder){: .gray} and [better forms](/without-plugin/better-forms){: .gray} work, it will actually send an email to my inbox. It uses [Formspree](https://formspree.io){: .gray} to do so, as this website is hosted on GitHub.
 
 ## Contact form
 
