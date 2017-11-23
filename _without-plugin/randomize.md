@@ -4,11 +4,11 @@ title: "Randomize"
 
 ### Introduction
 
-Sometimes when you want to create a randomized list of items. Especially when you want to show only the first few items. In a static site this is quite hard, because random in Liquid means random at build time. This script randomizes at each visit/page load using Javascript.
+Sometimes you want to create a randomized list of items. More often you want to show three random items out of collection. In a static site this is quite hard, because random in Liquid means random at build time. This script, however, randomizes at each visit/page load using Javascript.
 
 ### How it works
 
-This scripts shuffles all items with the class randomize. Make sure you hide the items you do not want to show with CSS. If you want to prevent the potentially massive amount of DOM elements to take up too much memory and bandwith, write all image sources as 'data-src'. This script will rewrite only the visible ones as 'src'. The same can be done for background images, by using 'data-style' on your elements.
+This scripts shuffles all items in the page that have the class randomize. Make sure you hide the items you do not want to show with CSS. To prevent the potentially massive amount of DOM elements to take up too much memory and bandwith, you can write all image sources as 'data-src'. This script will rewrite only the visible ones to 'src'. The same can be done for background images, by using 'data-style' on your elements.
 
 [expand]
 
