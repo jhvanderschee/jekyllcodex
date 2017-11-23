@@ -4,7 +4,7 @@ title: "Randomize"
 
 ### Introduction
 
-Sometimes you want to create a randomized list of items. More often you want to show three random items out of collection. In a static site this is quite hard, because random in Liquid means random at build time. This script, however, randomizes at each visit/page load using Javascript.
+Sometimes you want to create a randomized list of items. In a static site this is quite hard, because random in Liquid means random at build time. This script, however, randomizes at each visit/page load using Javascript.
 
 ### How it works
 
