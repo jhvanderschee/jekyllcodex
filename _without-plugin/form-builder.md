@@ -80,7 +80,7 @@ form_engines:
   - formbucket{% endraw %}
 ```
 
-Disclaimer: Note that there is no select (dropdown) support (yet). Also note that browser support is not perfect. The native HTML5 date picker is not available in every browser and that HMTL5 validation does not work in IE9 and Opera Mini.
+Disclaimer: Note that there is no select (dropdown) support (yet). Also note that browser support is not perfect. The native HTML5 date picker is not available in every browser and that HMTL5 validation does not work in IE9 and Opera Mini. Use [better forms](/without-plugin/better-forms){: .gray}, if you want HTML5 validation support for all browsers.
 
 [/expand]
 

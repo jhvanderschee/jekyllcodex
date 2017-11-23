@@ -12,4 +12,24 @@ function submitcheckout(event) {
     });
     return false;
 }
+
+var cart_array = [];
+function updatecart() {
+    if(readCookie('cartcookie')) cart_array = unescape(readCookie('cartcookie')).split(',');
+    //toon cart_array
+}
+
+
+$('body').on('click', '.addtocart', function() {
+    //voeg het item toe aan de cart
+    cart_array.push($(this).attr('description'));
+    eraseCookie('cartcookie');
+    createCookie('cartcookie',escape(cart_array.join(',')),30);
+    updatecart();
+});
+
+
+$( document ).ready(function() {
+    updatecart();
+});
 </script>
