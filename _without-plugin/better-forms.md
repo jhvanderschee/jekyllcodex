@@ -8,7 +8,7 @@ This script makes your forms a pleasure to fill out. It shows graphical validati
 
 ### How it works
 
-It validates all fields with javascript on blur. It adds 'active', 'valid' and 'error' classes. This enables you to build all kind of nice features. The 'active' class, for example, can be used to create Material Design styled labels that look like placeholders and shrink to make place for the cursor. To make entered values persist, the script places a serialized cookie on your computer with all fields. The cookies name equals the id of the form. In the [form builder](/without-plugin/form-builder/){: .gray} the id of the form is generated and equal to the {% raw %}{{ page.slug }}{% endraw %} variable.
+It validates all fields with javascript on blur. It adds 'active', 'valid' and 'error' classes. This enables you to build all kind of nice features. The 'active' class, for example, can be used to create Material Design styled labels that look like placeholders and shrink to make place for the cursor. To make entered values persist, the script places a serialized cookie on your computer with all fields. The cookies name equals the id of the form. In the [form builder](/without-plugin/form-builder/){: .gray} the id of the form is generated and equal to the {% raw %}{{ page.url | slugify }}{% endraw %} variable.
 
 ### Installation
 
