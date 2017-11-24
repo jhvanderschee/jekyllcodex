@@ -9,13 +9,13 @@
 </style>
 
 {% if page.form.form_engine == 'cloudcannon' %}
-    <form id="{{ page.slug }}" class="form autofill" method="POST" action="{{ page.form.redirect }}">
+    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ page.form.redirect }}">
         <input type="hidden" name="_to" value="{{ page.form.to }}">
 {% elsif page.form.form_engine == 'formspree' %}
-    <form id="{{ page.slug }}" class="form autofill" method="POST" action="http://formspree.io/{{ page.form.to }}">
+    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="http://formspree.io/{{ page.form.to }}">
         <input type="hidden" name="_next" value="{{ site.url }}{{ page.form.redirect }}" />
 {% elsif page.form.form_engine == 'formbucket' %}
-    <form id="{{ page.slug }}" class="form autofill" method="POST" action="{{ page.form.to }}">
+    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ page.form.to }}">
 {% endif %}
 
     <input type="text" name="_gotcha" style="display:none" />
