@@ -14,20 +14,59 @@ function submitcheckout(event) {
     return false;
 }
 
-var cart_array = [];
-function updatecart() {
-    if(readCookie('cartcookie')) cart_array = unescape(readCookie('cartcookie')).split(',');
-    //toon cart_array
-    var total = 0;
-    for (var i=0; i<cart_array.length; i++) {
-        var item_array = cart_array[i].split('|');
-        $('tbody').append('<tr><td><img src="'+item_array[2]+'" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="">remove</a></span></td><td><input type="number" class="form-control" value="1" /></td><td>&euro; '+item_array[1]+'</td></tr>');
-        total = parseFloat(total) + parseFloat(item_array[1]);
-    }
-    $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
-    $('body').append('<input id="carttotal" type="hidden" value="'+total+'" />');
+function uniq(a) {
+    var prims = {"boolean":{}, "number":{}, "string":{}}, objs = [];
+
+    return a.filter(function(item) {
+        var type = typeof item;
+        if(type in prims)
+            return prims[type].hasOwnProperty(item) ? false : (prims[type][item] = true);
+        else
+            return objs.indexOf(item) >= 0 ? false : objs.push(item);
+    });
 }
 
+var cart_array = [];
+function updatecart() {
+    if(readCookie('cartcookie')) {
+        cart_array = unescape(readCookie('cartcookie')).split(',');
+        var counted_cart_array = [];
+        //create counted cart array
+        for (var i=0; i<cart_array.length; i++) {
+            //check how many times this item exists and add it to the string
+            var thiscount = 0;
+            for(var j=0;j<cart_array.length;j++){
+                if(cart_array[j] == cart_array[i]) thiscount++;
+            }
+            counted_cart_array.push(cart_array[i]+'|'+thiscount);
+        }
+        //remove all other occurances of this string
+        counted_cart_array = uniq(counted_cart_array);
+        //toon cart_array
+        var total = 0;
+        for (var i=0; i<counted_cart_array.length; i++) {
+            var item_array = counted_cart_array[i].split('|');
+            $('tbody').append('<tr><td><img src="'+item_array[2]+'" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\')">remove</a></span></td><td><input type="number" disabled class="form-control" value="'+item_array[3]+'" /></td><td>&euro; '+item_array[1]+'</td></tr>');
+            total = parseFloat(total) + parseFloat(item_array[1]);
+        }
+        $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
+        $('body').append('<input id="carttotal" type="hidden" value="'+total+'" />');
+    }
+}
+function removefromcart(string) {
+    if(readCookie('cartcookie')) {
+        cart_array = unescape(readCookie('cartcookie')).split(',');
+        console.log(string);
+        cart_array = cart_array.filter(function(item) { 
+            return item !== string;
+        });
+        console.log(cart_array);
+        eraseCookie('cartcookie');
+        createCookie('cartcookie',escape(cart_array.join(',')),30);
+        $('tbody > *').remove();
+        updatecart();
+    }
+}
 
 $('body').on('click', '.addtocart', function() {
     //voeg het item toe aan de cart
