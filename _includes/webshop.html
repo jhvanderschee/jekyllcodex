@@ -1,14 +1,43 @@
+<style>
+#checkout_progress {display: block; text-align: center;}
+#checkout_progress li {width: 110px; text-align: left; display: inline-block; border-top: 1px solid #dddddd; padding-top: 10px;}
+#checkout_progress li.past {border-color: #d9230f;}
+#checkout_progress li:last-child {border: 0; width: 55px;}
+#checkout_progress li > span > * {
+    white-space: nowrap;
+    display: inline-block;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+    transform: translateX(-50%);
+}
+#checkout_progress li > *:before {position: absolute; margin: -16px 0 0 -5px; width: 11px; height: 11px; content: ""; 
+    border-radius: 99px; border: 2px solid white; 
+    box-shadow: 0px 0px 0.1px 1px #bbb; background: white;
+}
+#checkout_progress li.past > span:before,
+#checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;}
+</style>
 <script>
 function submitcheckout(event) {
     event.preventDefault();
+    var ordernumber = new Date().getTime();
     var price = $('#carttotal').val();
     $.ajax({
         url: "https://formspree.io/jhvanderschee@gmail.com",
         method: "POST",
-        data: {message: "hello!"},
+        data: {
+            firstname: $('#firstname').val(),
+            lastname: $('#lastname').val(),
+            email: $('#email').val(),
+            address: $('#address').val(),
+            city: $('#city').val(),
+            postalcode: $('#postalcode').val(),
+            message: $('#message').val(),
+            ordernumber: ordernumber
+        },
         dataType: "json",
         success: function(data) {
-            window.location.href='{{ include.paymentlink }}/'+price+'/donation';
+            window.location.href='{{ include.paymentlink }}/'+price+'/order:'+ordernumber;
         }
     });
     return false;
@@ -27,7 +56,7 @@ function uniq(a) {
 }
 
 var cart_array = [];
-function updatecart() {
+function updatecart(redraw) {
     if(readCookie('cartcookie')) {
         cart_array = unescape(readCookie('cartcookie')).split(',');
         var counted_cart_array = [];
@@ -44,26 +73,73 @@ function updatecart() {
         counted_cart_array = uniq(counted_cart_array);
         //toon cart_array
         var total = 0;
+        $('tbody > *').remove();
         for (var i=0; i<counted_cart_array.length; i++) {
             var item_array = counted_cart_array[i].split('|');
-            $('tbody').append('<tr><td><img src="'+item_array[2]+'" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\')">remove</a></span></td><td><input type="number" disabled class="form-control" value="'+item_array[3]+'" /></td><td>&euro; '+(item_array[3] * item_array[1]).toFixed(2)+'</td></tr>');
+            $('tbody').append('<tr><td><img src="http://images.weserv.nl/?url=jekyllcodex.org'+item_array[2]+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\',this.value)" class="form-control" value="'+item_array[3]+'" /></td><td>&euro; '+(item_array[3] * item_array[1]).toFixed(2)+'</td></tr>');
             total = parseFloat(total) + parseFloat((item_array[3] * item_array[1]));
         }
         $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
+        $('#carttotal').remove();
         $('body').append('<input id="carttotal" type="hidden" value="'+total+'" />');
+    } else {
+        $('tbody > *').remove();
+        $('tbody').append('<tr><td colspan="2">Your cart is currently empty...</td><td></td></tr>');
+        $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; 0.00</td></tr>');
+        $('body').append('<input id="carttotal" type="hidden" value="0.00" />');
     }
 }
+
+function updateproductamount(cookiestring,amount){
+    //Calculate diff with cookie
+    cart_array = unescape(readCookie('cartcookie')).split(',');
+    for (var i=0; i<cart_array.length; i++) {
+        //console.log(cart_array[i]);
+        //console.log(cookiestring);
+        if(cart_array[i]==cookiestring) {
+
+            //check how many times this item exists and add it to the string
+            var thiscount = 0;
+            for(var j=0;j<cart_array.length;j++){
+                if(cart_array[j] == cart_array[i]) thiscount++;
+            }
+
+            //add items to the cart cookie
+            if(thiscount<amount) {
+                for (var j=0; j<(amount - thiscount); j++) {
+                    cart_array.push(cookiestring);
+                    eraseCookie('cartcookie');
+                    createCookie('cartcookie',escape(cart_array.join(',')),30);
+                }
+            }
+            //remove items from the cart cookie
+            if(thiscount>amount) {
+                for (var j=0; j<(thiscount - amount); j++) {
+                    console.log('remove item');
+                    var index = cart_array.indexOf(cookiestring);    // <-- Not supported in <IE9
+                    if (index !== -1) {
+                        cart_array.splice(index, 1);
+                    }
+                    eraseCookie('cartcookie');
+                    createCookie('cartcookie',escape(cart_array.join(',')),30);
+                }
+            }
+            updatecart();
+        }  
+    }
+}
+
+
 function removefromcart(string) {
     if(readCookie('cartcookie')) {
         cart_array = unescape(readCookie('cartcookie')).split(',');
-        console.log(string);
+        //console.log(string);
         cart_array = cart_array.filter(function(item) { 
             return item !== string;
         });
-        console.log(cart_array);
+        //console.log(cart_array);
         eraseCookie('cartcookie');
         createCookie('cartcookie',escape(cart_array.join(',')),30);
-        $('tbody > *').remove();
         updatecart();
     }
 }
@@ -71,6 +147,14 @@ function removefromcart(string) {
 $('body').on('click', '.addtocart', function() {
     //voeg het item toe aan de cart
     cart_array.push($(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image'));
+    eraseCookie('cartcookie');
+    createCookie('cartcookie',escape(cart_array.join(',')),30);
+    updatecart();
+});
+
+$('body').on('click', '.buy', function() {
+    //voeg het item toe aan de cart en maak de cart leeg
+    var cart_array = [$(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image')];
     eraseCookie('cartcookie');
     createCookie('cartcookie',escape(cart_array.join(',')),30);
     updatecart();

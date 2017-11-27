@@ -12,11 +12,13 @@ This is a simple webshop with payment methods that do not require a monthly fee.
 
 [expand]
 
-When you do not want to use the cart, simply use these links (not yet implemented):
+When you do not want to use the cart, simply use these links:
 
 ```
-{% raw %}<a href="/checkout" class="buy" price="1.00" description="test">Buy</a>{% endraw %}
+{% raw %}<a href="/checkout" class="buy" image="/path/to/productimage.jpg" price="1.00" description="test">Buy</a>{% endraw %}
 ```
+
+Once you got the webshop running, you can fine-tune everything by editing the Liquid/HTML code. Are you unable to figure out how to create nice product pages with product variants? Just look at the source code of this website on Github. Still need help? Ask a question on Stack Overflow, or pay me to help you.
 
 [/expand]
 
@@ -26,7 +28,7 @@ Before you can add the webshop you need to [create a Mollie account](https://www
 
 #### Step 1. Add the footer include with the payment link
 
-Download [webshop.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/webshop.html) and add it to your '_includes' folder. Make sure the bottom of your layout document looks like this (the paymentlink should be your personal re-usable link you just created):
+Download [webshop.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/webshop.html) and add it to your '_includes' folder. Make sure the bottom of your layout document looks like this (the paymentlink should be the personal re-usable link you just created):
 
 ```
 {% raw %}...
@@ -47,7 +49,3 @@ Create some product links. They should look roughly like this:
 ```
 {% raw %}<a href="/cart" class="addtocart" image="/path/to/productimage.jpg" price="1.00" description="test">Add to cart</a>{% endraw %}
 ```
-
-### Questions?
-
-Once you got it running, you can fine-tune everything by editing the Liquid/HTML code. Are you unable to figure out how to create nice product pages with product variants? Just look at the source code of this website on Github. Still need help? Ask a question on Stack Overflow, or pay me to help you.
