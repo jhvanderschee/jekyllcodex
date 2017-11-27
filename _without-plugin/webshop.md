@@ -1,6 +1,5 @@
 ---
 title: "Webshop"
-inactive: true
 ---
 
 ### Introduction
