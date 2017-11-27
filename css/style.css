@@ -61,7 +61,7 @@ transition: all .3s ease;
 #searchbutton svg {height: 20px; margin-top: 8px; fill: rgba(255,255,255,0.70);}
 #searchbutton:hover svg {fill: rgba(255,255,255,0.80);}
 
-.navbar-default svg {position: absolute; height: 40px; margin-top: -11px; margin-left: -4px; fill: #777; border: 12px solid white; border-left: 0; border-right: 0;}
+.navbar-default svg {height: 16px; fill: #777; margin: 12px 12px 8px;}
 
 code {color: #444444; background-color: #f5f5f5;}
 pre code {white-space: pre;}
@@ -98,7 +98,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/img/chevron_down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
 select.form-control::-ms-expand {display: none;}
 
-
+#cartnumber {display: none; background: #d9230f; color: white; margin: 5px 0 0 20px; font-weight: bold; position: absolute; line-height: 18px; width: 19px; height: 19px; border-radius: 20px; text-align: center; z-index: 3;}
 
 .form-control {
     border: 1px solid #dddddd!important;
@@ -107,8 +107,8 @@ select.form-control::-ms-expand {display: none;}
 }
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
-    .download {margin-bottom: 12px; margin-top: -20px;}
-    .navbar-default svg {margin-left: -0px;}
+    .download {margin-bottom: 12px; margin-top: -43px;}
+    .navbar-default svg {}
 }
 @media (max-width: 500px) {
     .columns {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}
