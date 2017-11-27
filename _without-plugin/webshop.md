@@ -27,12 +27,12 @@ Before you can add the webshop you need to [create a Mollie account](https://www
 
 #### Step 1. Add the footer include with the payment link
 
-Download [webshop.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/webshop.html) and add it to your '_includes' folder. Make sure the bottom of your layout document looks like this (the paymentlink should be the personal re-usable link you just created):
+Download [webshop.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/webshop.html) and add it to your '_includes' folder. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. The email address should be the address on which you want to receive your email confirmation of the order.
 
 ```
 {% raw %}...
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-{% include webshop.html paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
+{% include webshop.html email="jhvanderschee@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
 </body>
 </html>{% endraw %}
 ```

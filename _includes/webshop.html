@@ -23,7 +23,7 @@ function submitcheckout(event) {
     var ordernumber = new Date().getTime();
     var price = $('#carttotal').val();
     $.ajax({
-        url: "https://formspree.io/jhvanderschee@gmail.com",
+        url: "https://formspree.io/{{ include.email }}",
         method: "POST",
         data: {
             firstname: $('#firstname').val(),
