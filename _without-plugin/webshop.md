@@ -4,7 +4,7 @@ title: "Webshop"
 
 ### Introduction
 
-This is a simple webshop with payment methods that do not require a monthly fee.
+This is a simple webshop with serveral payment methods that does not require a monthly fee. Great for a simple webshop. The webshop currently does not allow for variable shipping rates or (variable) tax calculations. It also does not provide an alternative shipping address, although these things can be added easily. An email parser would allow you to automate the buying processes even further (if required).
 
 ### How it works
 The webshop basically works like this: you create a link with an 'addtocart' class that links to the cart. This link will look for the 'image', 'price' and 'description' attribute and add the product to the cart cookie. When you click 'checkout' in the cart you go to a checkout form. When you click the next step in the payment process, you go to a payment link from Plink (Mollie). Before sending the user to the payment link the cart info will be submitted through email. At the same time an ordernumber will be generated, using a timestamp in milliseconds. This ordernumber is added to the email and the payment. After succesful payment the user gets redirected to your websites (by Plink). 
