@@ -11,7 +11,7 @@ The webshop basically works like this: you create a link with an 'addtocart' cla
 
 [expand]
 
-When you do not want to use the cart, simply use these links:
+When you do not want to use the cart, simply use a link with a 'buy' class and directly link to the checkout page. This will make sure there is only one item in the cart.
 
 ```
 {% raw %}<a href="/checkout" class="buy" image="/path/to/productimage.jpg" price="1.00" description="test">Buy</a>{% endraw %}
