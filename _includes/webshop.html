@@ -82,13 +82,13 @@ function updatecart(redraw) {
         $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
         $('#carttotal').remove();
         $('body').append('<input id="carttotal" type="hidden" value="'+total+'" />');
-        $('#cartnumber').html(cart_array.length).parent().show();
+        $('#cartnumber').show().html(cart_array.length);
     } else {
         $('tbody > *').remove();
         $('tbody').append('<tr><td colspan="2">Your cart is currently empty...</td><td></td></tr>');
         $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; 0.00</td></tr>');
         $('body').append('<input id="carttotal" type="hidden" value="0.00" />');
-        $('#cartnumber').parent().hide();
+        $('#cartnumber').hide();
     }
 }
 
