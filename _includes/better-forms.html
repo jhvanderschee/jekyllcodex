@@ -31,71 +31,76 @@
 
     $("form").addClass('js');
     var formname = $("form.autofill").first().attr('id');
-
-    // on pageload read the cookie and write the values to the form
-    if(readCookie(formname)) {
-        form_array = unescape(readCookie(formname)).split(',');
-        
-        var i = 0;
-        $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).each(function(){
-            if(form_array[i]) {
+    
+    console.log(formname);
+    if(formname) {
+       
+        // on pageload read the cookie and write the values to the form
+        if(readCookie(formname)) {
+            form_array = unescape(readCookie(formname)).split(',');
             
-            if($(this).is("input[type='radio']") || $(this).is("input[type='checkbox']")) {
-                if ($(this).val() == form_array[i]) {
-                if(!$(this).attr('checked')) $(this).click();
+            var i = 0;
+            $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).each(function(){
+                if(form_array[i]) {
+                
+                if($(this).is("input[type='radio']") || $(this).is("input[type='checkbox']")) {
+                    if ($(this).val() == form_array[i]) {
+                    if(!$(this).attr('checked')) $(this).click();
+                    } else {
+                    if($(this).attr('checked')) $(this).click();
+                    }
                 } else {
-                if($(this).attr('checked')) $(this).click();
+                    $(this).val(form_array[i]);
+                    $(this).parent().addClass('active');
                 }
-            } else {
-                $(this).val(form_array[i]);
-                $(this).parent().addClass('active');
-            }
 
-            if ($(this).val()!='' && typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
-                if($(this).is("input[type='email']" )) {
-                if (validateEmail($(this).val())) {
+                if ($(this).val()!='' && typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
+                    if($(this).is("input[type='email']" )) {
+                    if (validateEmail($(this).val())) {
+                        $(this).addClass('isvalid');
+                    } else {
+                        $(this).removeClass('isvalid');
+                    }
+                    } else {
                     $(this).addClass('isvalid');
-                } else {
-                    $(this).removeClass('isvalid');
+                    }
                 }
-                } else {
-                $(this).addClass('isvalid');
                 }
-            }
+                i++;
+            });
+        }
+
+    
+        /* input label helper - blur */
+        $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).blur( function() {
+            
+
+            //store data in cookie
+            eraseCookie(formname);
+            var form_array = [];
+            var i = 0;
+            $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).each(function(){
+            if($(this).is("input[type='radio']") || $(this).is("input[type='checkbox']")) {
+                if ($(this).is('input:checked')) {
+                form_array[i] = $(this).val();
+                }
+                else form_array[i] = '-';
+            } else {
+                form_array[i] = $(this).val();
             }
             i++;
+            });
+            createCookie(formname,escape(form_array.join(',')),30);
+        
+            //remove active class for empty inputs
+            if($(this).val()=='') $(this).parent().removeClass('active');
         });
-    }
+    }  
 
     /* input label helper - focus */
     $( "input[type='text'], input[type='number'], input[type='email'], textarea" ).focus( function() {
         $(this).parent().addClass('active');
     });
-    
-    /* input label helper - blur */
-    $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).blur( function() {
-        
-        //store data in cookie
-        eraseCookie(formname);
-        var form_array = [];
-        var i = 0;
-        $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='radio'], input[type='checkbox']" ).each(function(){
-        if($(this).is("input[type='radio']") || $(this).is("input[type='checkbox']")) {
-            if ($(this).is('input:checked')) {
-            form_array[i] = $(this).val();
-            }
-            else form_array[i] = '-';
-        } else {
-            form_array[i] = $(this).val();
-        }
-        i++;
-        });
-        createCookie(formname,escape(form_array.join(',')),30);
-    
-        //remove active class for empty inputs
-        if($(this).val()=='') $(this).parent().removeClass('active');
-    });
-    
     
     $( "input[type='text'], input[type='number'], input[type='email'], textarea, select, input[type='checkbox']" ).blur( function() {
         if(typeof $(this).attr('required') !== typeof undefined && $(this).attr('required') !== false) {
