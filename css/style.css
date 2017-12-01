@@ -17,6 +17,7 @@ h3 + h4 {padding-top: 18px;}
     position: relative;
     vertical-align: top;
     bottom: 7px;
+    height: 32px;
 }
 article.page {padding-top: 0px;}
 img {display: block; max-width: 100%;}
