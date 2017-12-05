@@ -106,13 +106,6 @@ select.form-control::-ms-expand {display: none;}
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)!important;
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)!important;
 }
-form .error, 
-input:-moz-ui-invalid {
-    -moz-box-shadow: 0 0 2px 1px #e21a23!important;
-    -webkit-box-shadow: 0 0 2px 1px #e21a23!important;
-    box-shadow: 0 0 2px 1px #e21a23!important;
-}
-
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
     .download {margin-bottom: 12px; margin-top: -43px;}
