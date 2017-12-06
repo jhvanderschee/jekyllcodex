@@ -23,7 +23,7 @@ The webshop accepts all payment methods from Mollie:
 - Cartes Bancaires
 - Gift cards
 
-Although I know that this webshop is far from perfect, it allow you to sell products in almost any country, for a very small fee. Things that are currently missing, but you could easily add are a thank you page and a seperate delivery address. Tax calculations, based on country and delivery prices are also missing, but would be a little bit harder to add. 
+Although I know that this webshop is far from perfect, it allow you to sell products in almost any country, for a very small fee. Things that are currently missing, but could easily be added, are a thank you page and a seperate delivery address. Tax calculations, based on country and delivery prices are also missing, but would be a little bit harder to add. 
 
 Adding these missing things is still on my to-do list. I will update this post once they are added.
 
