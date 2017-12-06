@@ -4,11 +4,11 @@ title: "Live chat"
 
 ### Introduction
 
-Live Chat is one of the most important features a website can offer. My requirements would be that the live chat solution should be free or freemium. It should be simple for visitors to engage in real time. Finally it should be easy to operate, manage and customize. I have found these things in [Crisp](http://crisp.chat){:.gray}, thanks to some extensive research by [Appernetic](https://blog.appernetic.io/2016/07/14/use-live-chat-to-beat-the-competition/){:.gray}.
+Live Chat is one of the most important features a website can offer. This live chat solution should be free or freemium and it should be very simple for visitors to engage in real time. Also, it should be easy to operate, manage and customize and have an mobile app for the operator. I have found these things in [Crisp](http://crisp.chat){:.gray}, thanks to some extensive research by [Appernetic](https://blog.appernetic.io/2016/07/14/use-live-chat-to-beat-the-competition/){:.gray}.
 
 ### How it works
 
-You create an account at Crisp and add a script in the head or footer of your website. The script inserts the chat module in the website. That's it. An example script is shown below.
+You create an account at Crisp and add a script in the head or footer of your website. The script inserts the chat module in the website. That's it. An example script is shown below. You should get your personal code from your Crisp account.
 
 [expand]
 
