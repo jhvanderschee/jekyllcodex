@@ -22,4 +22,4 @@ You create an account at Crisp and add a script in the head or footer of your we
 
 Step 1. Create an account at [Crisp](http://crisp.chat) and configure it
 <br />Step 2. Insert the HTML code from Crisp in the head or footer of your website
-<br />Step 3. Download the Android or iOS app for easy availability and notifications
+<br />Step 3. Download the free Android or iOS app for a seamless chat experience
