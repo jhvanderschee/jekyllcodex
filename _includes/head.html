@@ -3,7 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.content %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% assign pagecontent_description= page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
+  <meta name="description" content="{% if pagecontent_description %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
   
   <link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
   <link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
