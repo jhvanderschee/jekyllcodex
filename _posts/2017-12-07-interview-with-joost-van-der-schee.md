@@ -18,10 +18,7 @@ I build websites for designers/advertising agencies. I think I build around 30 s
 
 ### What do you like about the SSG workflow?
 
-There are two things I like about working with SSGs.
-
-- Their simplicity. Flat files easily viewed, edited, and generated into HTML. There’s no magic to process, you build the workflow you want.
-- Their robustness. The fact they don’t rely on (communication to) a database means you have got so much less to worry about. Any hosting environment will do and security is not an issue.
+There are two things I like about working with SSGs. First of all their simplicity. Flat files are easily viewed, edited, and tranformed into HTML. There’s no magic to process, you can build the workflow you want. Second of all their robustness. The fact they don’t rely on (communication to) a database means you have got so much less to worry about. Any hosting environment will do and security is not an issue (anymore).
 
 ### What is your most favorite feature in Jekyll?
 
@@ -29,11 +26,11 @@ Its use of Liquid. I’ve tried a few other SSGs and Jekyll has been by far the 
 
 ### What feature do you miss the most?
 
-Build speed is my main problem with Jekyll. That is why I am currently porting this website to Hugo at [hugocodex.org](http://hugocodex.org).
+Build speed is my main problem with Jekyll. Not for this website, but for some of my client websites. That is why I am currently porting this website to Hugo at [hugocodex.org](http://hugocodex.org). I want to be able to choose for Hugo when needed.
 
 ### Why is there so few Jekyll quality themes?
 
-Yes, that is really strange. I think most Jekyll developers are people like Michael Rose. They are pretty good at CSS and they love to build their own themes and layouts. Jekyll also makes that really easy. Maybe it is too easy to build your own theme... I don't know.
+Yes, that is really strange. I think most Jekyll developers are people like Michael Rose. They are pretty good at CSS and they love to build themes and layouts. Jekyll also makes that really easy. Maybe it is too easy to build your own theme... I really don't know.
 
 ### Why aren’t there more webdesigners working with Static Site Generators?
 
