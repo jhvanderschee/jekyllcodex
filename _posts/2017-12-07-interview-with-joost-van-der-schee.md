@@ -34,4 +34,4 @@ Yes, that is really strange. I think most Jekyll developers are people like Mich
 
 ### Why aren’t there more webdesigners working with Static Site Generators?
 
-I think a lot of webdesigners think that SSG's cannot deliver an high-end editing experience for clients. They think manual image resizing is needed, form builders are not an option and that graphical CMS systems have too limited functionality. Also... clients often ask explicitly for a WordPres solution, as they have heard of it before (and are mythically good at SEO). Static Site Generators are not very well known yet.
+I think a lot of webdesigners think that SSG's cannot deliver an high-end editing experience for clients. They think manual image resizing is needed, form builders are not an option and that graphical CMS systems have too limited functionality. Also... clients often explicitly ask for a WordPres solution, as that is the only thing they now. They also often think that WordPress sites get the best Google ranking. So basically because Static Site Generators are not very well known yet.
