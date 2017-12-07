@@ -14,7 +14,7 @@ I already sold static websites since 2000, using Adobe Contribute as client CMS,
 
 ### What kind of websites are you working on?
 
-I build websites for designers/advertising agencies. I think I build around 30 static websites each year.
+I build websites for designers/advertising agencies. I think I build around 30 static websites each year. They vary from one-pagers to big corporate websites with all the bells and whistles.
 
 ### What do you like about the SSG workflow?
 
@@ -22,11 +22,11 @@ There are two things I like about working with SSGs. First of all their simplici
 
 ### What is your most favorite feature in Jekyll?
 
-Its use of Liquid. I’ve tried a few other SSGs and Jekyll has been by far the easiest the learn and build with.
+I do not really have a favorite feature. But what stands out about Jekyll is the fact that it has a solid community. I love things like [JekyllConf](https://jekyllconf.com/), a Jekyll conference, the [excellent documentation](https://jekyllrb.com/) and the fact that there are so many different good graphical CMS systems. [CloudCannon](https://cloudcannon.com/) is absolutely fabulous, but [Jekyll Admin](https://jekyll.github.io/jekyll-admin/) and [Forestry.io](https://forestry.io/) are pretty good too. These things are probably all related.
 
 ### What feature do you miss the most?
 
-Build speed is my main problem with Jekyll. Not for this website, but for some of my client websites. That is why I am currently porting this website to Hugo at [hugocodex.org](http://hugocodex.org). I want to be able to choose for Hugo when needed.
+Build speed is my main problem with Jekyll. Not for this website, but for some of my client websites. That is why I am currently porting this website to Hugo at [hugocodex.org](http://hugocodex.org){:.gray}. I want to be able to choose for Hugo when needed and might switch to Hugo completely in the future.
 
 ### Why is there so few Jekyll quality themes?
 
