@@ -22,7 +22,7 @@ There are two things I like about working with SSGs. First of all their simplici
 
 ### What is your most favorite feature in Jekyll?
 
-I do not really have a favorite feature. But what stands out about Jekyll is the fact that it has a solid community. I love things like [JekyllConf](https://jekyllconf.com/){:.gray}, a Jekyll conference, the [excellent documentation](https://jekyllrb.com/){:.gray} and the fact that there are so many different good graphical CMS systems. [CloudCannon](https://cloudcannon.com/){:.gray} is absolutely fabulous, but [Jekyll Admin](https://jekyll.github.io/jekyll-admin/){:.gray} and [Forestry.io](https://forestry.io/){:.gray} are pretty good too. These things are probably all related.
+I do not really have a favorite feature. But what stands out about Jekyll is the fact that it has a solid community. I love things like [JekyllConf](https://jekyllconf.com/){:.gray}, a Jekyll conference, the [excellent documentation](https://jekyllrb.com/){:.gray} and the fact that there are so many different good graphical CMS systems. [CloudCannon](https://cloudcannon.com/){:.gray} is absolutely fabulous, but [Jekyll Admin](https://jekyll.github.io/jekyll-admin/){:.gray} and [Forestry.io](https://forestry.io/){:.gray} are pretty good too. These things are most definitely all related.
 
 ### What feature do you miss the most?
 
