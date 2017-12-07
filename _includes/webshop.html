@@ -56,7 +56,7 @@ function uniq(a) {
 }
 
 var cart_array = [];
-function updatecart(redraw) {
+function updatecart() {
     if(readCookie('cartcookie')) {
         cart_array = unescape(readCookie('cartcookie')).split(',');
         var counted_cart_array = [];
@@ -129,6 +129,7 @@ function updateproductamount(cookiestring,amount){
             updatecart();
         }  
     }
+    $('.cart.table tr:nth-child(1) td:nth-child(2) input').focus();
 }
 
 
