@@ -18,7 +18,7 @@ slider:
 
 ### Introduction
 
-Embedding a slider in your layout is a much requested feature. Twitter Bootstrap is often used for creating layouts and allows yout to add a slider relatively effortless. The code below simplifies things even more and makes the slider easy adjustable and editable. 
+Embedding a slider in your layout is a much requested feature. Twitter Bootstrap is often used for creating layouts and allows yout to add a slider relatively effortless. The code below simplifies things even more and makes the slider configurable and editable. 
 
 ### How it works
 
