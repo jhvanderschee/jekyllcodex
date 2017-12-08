@@ -18,11 +18,11 @@ slider:
 
 ### Introduction
 
-A lot of websites have a slider in the header. Twitter Bootstrap has a carousel and is often used for creating layouts. The code below also used Twitter Bootstrap (version 3.3.7), but simplifies things by making the default slider configurable and editable. Things that need to be editable by the end-user are stored in YML of the page. Things that are design decisions are stored in include variables. An interesting feature, is the option to make the slider responsive. If you set the height to '50' and the unit to '%', the dimensions will always be 2:1, but the height will vary. If you set the height to '300' and the unit to 'px' the height will always be the same, but the dimensions will vary.
+A lot of websites have a slider in the header. Twitter Bootstrap has a carousel and is often used for creating layouts. The code below also used Twitter Bootstrap (version 3.3.7), but simplifies things by making the default slider configurable and editable. Things that need to be editable by the end-user are stored in YML of the page. Things that are design decisions are stored in include variables.
 
 ### How it works
 
-This slider replaces the default icons for big HTML arrows and uses background images to make sure the slider maintains the same height. The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds). Click the 'read more' link for a demo.
+This slider replaces the default icons for big HTML arrows and uses background images to make sure the slider maintains the same height. The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds). An interesting feature, is the option to make the slider responsive. If you set the height to '50' and the unit to '%', the dimensions will always be 2:1, but the height will vary. If you set the height to '300' and the unit to 'px' the height will always be the same, but the dimensions will vary. Click the 'read more' link for a demo.
 
 [expand]
 
