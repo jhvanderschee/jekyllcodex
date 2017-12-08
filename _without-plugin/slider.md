@@ -20,7 +20,7 @@ Embedding a slider in your layout is somehting a lot of people want. Twitter Boo
 
 ### How it works
 
-The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds). Click the 'read more' link for a demo.
+The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds).
 
 {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
 
