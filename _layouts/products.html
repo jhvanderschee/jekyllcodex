@@ -29,7 +29,7 @@
                             {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
-                                <img src="/img/blank.png" style="width: 100%; background: url('https://images.weserv.nl/?url=jekyllcodex.org{{ item.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
+                                <img src="/img/blank.png" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
                                 {{ item.subtitle }}<br />
                                 {% if item.price > 0 %}&euro; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
                                 </a>

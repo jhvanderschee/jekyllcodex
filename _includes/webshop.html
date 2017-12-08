@@ -76,7 +76,7 @@ function updatecart() {
         $('tbody > *').remove();
         for (var i=0; i<counted_cart_array.length; i++) {
             var item_array = counted_cart_array[i].split('|');
-            $('tbody').append('<tr><td><img src="https://images.weserv.nl/?url=jekyllcodex.org'+item_array[2]+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\',this.value)" class="form-control" value="'+item_array[3]+'" /></td><td>&euro; '+(item_array[3] * item_array[1]).toFixed(2)+'</td></tr>');
+            $('tbody').append('<tr><td><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}'+item_array[2]+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\',this.value)" class="form-control" value="'+item_array[3]+'" /></td><td>&euro; '+(item_array[3] * item_array[1]).toFixed(2)+'</td></tr>');
             total = parseFloat(total) + parseFloat((item_array[3] * item_array[1]));
         }
         $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');

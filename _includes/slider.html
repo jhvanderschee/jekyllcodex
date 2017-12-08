@@ -1,26 +1,18 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
+    {% for item in page.slider.slides %}
+      <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+    {% endfor %}
     </ol>
   
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active" style="background: url('//images.weserv.nl/?url=jekyllcodex.org/uploads/slider/ganapathy-kumar-93498.jpg&w=1000&h=500&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
-        <div><h3>slide number 1</h3>What are you looking at?</div>
+    {% for item in page.slider.slides %}
+        <div class="item{% if forloop.first %} active{% endif %}" style="background: url('//images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={{ page.slider.image_width }}&h={{ page.slider.image_height }}&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
+        <div>{{ item.slide_html }}</div>
       </div>
-      <div class="item" style="background: url('//images.weserv.nl/?url=jekyllcodex.org/uploads/slider/samuel-zeller-356272.jpg&w=1000&h=500&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
-        <div><h3>slide number 2</h3>Shirley, do you own a Ferrari?</div>
-      </div>
-      <div class="item" style="background: url('//images.weserv.nl/?url=jekyllcodex.org/uploads/slider/samuel-zeller-356338.jpg&w=1000&h=500&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
-        <div><h3>slide number 3</h3>Yes, my life is your dream...</div>
-      </div>
-      <div class="item" style="background: url('//images.weserv.nl/?url=jekyllcodex.org/uploads/slider/ricardo-gomez-angel-180819.jpg&w=1000&h=500&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
-        <div><h3>slide number 4</h3>Have you ever been to Milan?</div>
-      </div>
+    {% endfor %}
     </div>
   
     <!-- Left and right controls -->
@@ -36,18 +28,21 @@
 
 
   <style>
-  .item {padding-bottom: 50%;}
+  {% if include.unit == '%' %}.item {padding-bottom: {{ include.height }}%;}{% endif %}
+  {% if include.unit == 'px' %}.item {height: {{ include.height }}px;}{% endif %}
   .item > div {position: absolute; left: 50%; top: 50%;
     -ms-transform: translate(-50%, -50%); /* IE 9 */
     -webkit-transform: translate(-50%, -50%); /* Safari */
     transform: translate(-50%, -50%);
     color: white; font-weight: bold;
     text-align: center;
+    text-shadow: 0 0 40px rgba(0,0,0,1);
+    font-size: 15px;
+    white-space: nowrap;
   }
   .item > div h3 {
-    padding-top: 0;
+    padding-top: 7px;
     color: white; font-weight: bold; font-size: 30px; 
-    text-shadow: 0 0 20px rgba(0,0,0,0.75);
   }
   span.glyphicon {
       font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important;
@@ -62,11 +57,14 @@
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  min-width: 60px!important;
   }
   .carousel-control:hover {opacity: 1!important;}
-  .carousel-indicators {bottom: 10px;}
+  .carousel-indicators {bottom: 0!important; margin-bottom: 12px;}
   .glyphicon-chevron-left::before,
   .glyphicon-chevron-right::before {content: "";}
-  .carousel-control .glyphicon-chevron-right {margin-right: -30px;}
-  .carousel-control .glyphicon-chevron-left {margin-left: -30px;}
+  .carousel-control.left {text-align: left; background: none!important;}
+  .carousel-control.right {text-align: right; background: none!important;}
+  .carousel-control .glyphicon-chevron-right {margin-right: 15px; position: relative; right: auto; text-shadow: none;}
+  .carousel-control .glyphicon-chevron-left {margin-left: 15px; position: relative; left: auto; text-shadow: none}
   </style>

@@ -20,7 +20,7 @@
                 <div class="col-sm-6">
                     <div class="product-gallery">
                     {% for item in page.images %}
-                        <a href="https://images.weserv.nl/?url=jekyllcodex.org{{ item.image }}&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url=jekyllcodex.org{{ item.image }}&w={% if forloop.index == 1 %}1400{% else %}350{% endif %}&output=jpg&q=50" /></a>
+                        <a href="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={% if forloop.index == 1 %}1400{% else %}350{% endif %}&output=jpg&q=50" /></a>
                     {% endfor %}
                     </div>
                 </div>
