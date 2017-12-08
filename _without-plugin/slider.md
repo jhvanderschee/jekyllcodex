@@ -18,7 +18,7 @@ slider:
 
 ### Introduction
 
-A lot of websites have a slider in the header. Twitter Bootstrap has a carousel and is often used for creating layouts. The code below also used Twitter Bootstrap (version 3.3.7), but simplifies things by making the default slider configurable and editable. 
+A lot of websites have a slider in the header. Twitter Bootstrap has a carousel and is often used for creating layouts. The code below also used Twitter Bootstrap (version 3.3.7), but simplifies things by making the default slider configurable and editable. Things that need to be editable by the end-user are stored in YML of the page. Things that are design decisions are stored in include variables.
 
 ### How it works
 
@@ -26,7 +26,7 @@ This slider replaces the default icons for big HTML arrows and uses background i
 
 [expand]
 
-{% include slider.html height="50" unit="%" transition="slide" duration="7" %}
+{% include slider.html height="50" unit="%" transition="slide" duration="7" image_width="1000" image_height="500" %}
 
 [/expand]
 
@@ -47,9 +47,7 @@ Step 5. Add the following YML to the head of your Markdown file:
 ```
 slider:
   text_color: white
-  shadow_color: black 
-  image_width: 1000
-  image_height: 500
+  shadow_color: black
   slides: 
     - image: /uploads/slider/ganapathy-kumar-93498.jpg
       slide_html:

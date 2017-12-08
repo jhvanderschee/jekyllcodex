@@ -70,7 +70,7 @@ Need to override the 3.3 new styles for modern browsers & apply opacity
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
     {% for item in page.slider.slides %}
-        <div class="item{% if forloop.first %} active{% endif %}" style="background: url('//images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={{ page.slider.image_width }}&h={{ page.slider.image_height }}&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
+        <div class="item{% if forloop.first %} active{% endif %}" style="background: url('//images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={{ include.image_width }}&h={{ include.image_height }}&output=jpg&q=50&t=square') center center no-repeat; background-size: cover;">
         <div>{{ item.slide_html }}</div>
       </div>
     {% endfor %}
