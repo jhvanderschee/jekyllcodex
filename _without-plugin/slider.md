@@ -16,11 +16,11 @@ slider:
 
 ### Introduction
 
-Embedding a slider in your layout is somehting a lot of people want. Twitter Bootstrap is often used for creating layouts and allows yout to add a slider without any effort. This slider replaces the default Glyphicons for big HTML arrows and uses background images.
+Embedding a slider in your layout is a much requested feature. Twitter Bootstrap is often used for creating layouts and allows yout to add a slider relatively effortless. This include simplifies things even more. 
 
 ### How it works
 
-The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds).
+This slider replaces the default Glyphicons for big HTML arrows and uses background images to make sure the slider maintains the same height. The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds).
 
 {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
 
