@@ -95,19 +95,21 @@ Need to override the 3.3 new styles for modern browsers & apply opacity
     -ms-transform: translate(-50%, -50%); /* IE 9 */
     -webkit-transform: translate(-50%, -50%); /* Safari */
     transform: translate(-50%, -50%);
-    color: white; font-weight: bold;
+    color: {{ page.slider.text_color }}; 
+    font-weight: bold;
     text-align: center;
-    text-shadow: 0 0 40px rgba(0,0,0,1);
+    text-shadow: 0 0 40px {{ page.slider.shadow_color }};
     font-size: 15px;
     white-space: nowrap;
   }
   .item > div h3 {
     padding-top: 7px;
-    color: white; font-weight: bold; font-size: 30px; 
+    color: {{ page.slider.text_color }}; 
+    font-weight: bold; font-size: 30px; 
   }
   span.glyphicon {
       font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important;
-      color: white!important;
+      color: {{ page.slider.text_color }}!important;
       font-size: 60px!important;
       height: 60px!important;
       line-height: 50px!important;
