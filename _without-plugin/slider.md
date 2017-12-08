@@ -22,9 +22,13 @@ Embedding a slider in your layout is a much requested feature. Twitter Bootstrap
 
 ### How it works
 
-This slider replaces the default icons for big HTML arrows and uses background images to make sure the slider maintains the same height. The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds).
+This slider replaces the default icons for big HTML arrows and uses background images to make sure the slider maintains the same height. The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds). Click the 'read more' link for a demo.
+
+[expand]
 
 {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
+
+[/expand]
 
 ### Installation
 
