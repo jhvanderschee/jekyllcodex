@@ -20,7 +20,7 @@ Embedding a slider in your layout is somehting a lot of people want. Twitter Boo
 
 ### How it works
 
-The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. Click the 'read more' link for a demo.
+The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds). Click the 'read more' link for a demo.
 
 {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
 
@@ -32,7 +32,7 @@ Step 1. Download the file [slider.html](https://raw.githubusercontent.com/jhvand
 <br />Step 4. Add the following statement to your layout where you want the slider to appear:
 
 ```
-{% raw %}{% include slider.html  height="50" unit="%" transition="slide" duration="7" %}{% endraw %}
+{% raw %}{% include slider.html height="50" unit="%" transition="slide" duration="7" %}{% endraw %}
 ```
 Step 5. Add the following YML to the head of your Markdown file:
 
