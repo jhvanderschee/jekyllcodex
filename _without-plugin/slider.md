@@ -34,15 +34,14 @@ The code allows you to set the height of the slider as an integer (number), and 
 
 Step 1. Download the file [slider.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/slider.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure you load the Bootstrap CSS in your head and jQuery and Bootstrap JS in your footer
-<br />Step 4. Add the following statement to your layout where you want the slider to appear:
+<br />Step 3. Make sure you load Twitter Bootstrap 3.3.7 and add this to your layout:
 
 ```
 {% raw %}{% if page.slider %}
   {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
 {% endif %}{% endraw %}
 ```
-Step 5. Add the following YML to the head of your Markdown file:
+Step 4. Add this YML to the head of your Markdown file:
 
 ```
 slider:
