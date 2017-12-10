@@ -9,4 +9,4 @@ In our blog we keep you updated on all things 'Jekyll' that are relevant to you 
 
 <br /><br /><br />
 
-{% for post in site.posts %}{{ post.date | date: "%d/%m/%Y" }} - <a href="{{ post.url }}">{{ post.title }}</a><br />{% endfor %}
+{% for post in site.posts %}{{ post.date | date: "%Y/%m/%d" }} - <a href="{{ post.url }}">{{ post.title }}</a><br />{% endfor %}
