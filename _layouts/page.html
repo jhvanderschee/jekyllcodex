@@ -24,6 +24,9 @@
                             {{ content }}
 
                             {% if page.form %}{% include form.html %}{% endif %}
+                            {% if page.title == 'search' %}<div class="row">
+                              <div class="col-xs-8">{% include search-google.html %}</div>
+                            </div>{% endif %}
                           </div>
                         
                         </article>
