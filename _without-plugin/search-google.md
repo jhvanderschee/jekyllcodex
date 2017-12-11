@@ -8,13 +8,15 @@ Modern websites have a search bar, searching within the site for specific conten
 
 ### How it works
 
-This search relies on the index from Google. It queries the Google Search engine directly. Results will be shown within the Google interface (on a new page), but will be limited to the site you specified.
+This search relies on the index from Google. It queries the Google Search engine directly. Results will be shown within the Google interface (on a new page), but will be limited to the site you specified. Click the 'read more' link for a demo.
 
 [expand]
 
 ```
 {% raw %}<form method="get" action="http://www.google.com/search" target="_blank"><input type="hidden" name="sitesearch" value="yourdomain.com" /><input type="text" name="q" maxlength="255" value="" placeholder="Search via Google" /></form>{% endraw %}
 ```
+
+{% include search-google.html %}
 
 [/expand]
 
