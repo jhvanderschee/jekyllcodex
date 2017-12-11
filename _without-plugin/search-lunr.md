@@ -1,5 +1,6 @@
 ---
 title: Search (Lunr.js)
+inactive: true
 ---
 
 ### Introduction
