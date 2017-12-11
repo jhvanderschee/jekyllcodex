@@ -117,7 +117,7 @@ function updateproductamount(cookiestring,amount){
             //remove items from the cart cookie
             if(thiscount>amount) {
                 for (var j=0; j<(thiscount - amount); j++) {
-                    console.log('remove item');
+                    //console.log('remove item');
                     var index = cart_array.indexOf(cookiestring);    // <-- Not supported in <IE9
                     if (index !== -1) {
                         cart_array.splice(index, 1);
