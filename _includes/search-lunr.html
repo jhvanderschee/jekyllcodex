@@ -3,36 +3,80 @@
 
 <script>
 var documents = [{
-    "name": "Lunr",
+    "id": 0,
+    "url": "/lunr",
+    "title": "A Solr library",
     "text": "Like Solr, but much smaller, and not as bright."
   }, {
-    "name": "React",
-    "text": "A JavaScript library for building user interfaces."
+    "id": 1,
+    "url": "/react",
+    "title": "A interface library",
+    "text": "A JavaScript but library for building user interfaces."
   }, {
-    "name": "Lodash",
-    "text": "A modern JavaScript utility library delivering modularity, performance & extras."
+    "id": 2,
+    "url": "/lodash",
+    "title": "A modern but JavaScript utility",
+    "text": "A modern but JavaScript utility library delivering modularity, performance & extras."
   }];
 
+var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
+    "id": {{ forloop.index0 }},
+    "url": "{{ site.url }}{{ page.url }}",
+    "title": "{{ page.title }}",
+    "text": "{{ page.content | strip_html }}"
+    }{% if forloop.last %}{% else %}, {% endif %}{% endif %}{% endfor %}
+  ];
+
 var idx = lunr(function () {
-    this.ref('name')
+    this.ref('id')
+    this.field('title')
     this.field('text')
 
     documents.forEach(function (doc) {
         this.add(doc)
     }, this)
 });
-
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
 function lunr_search(term) {
+    document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
     if(term) {
-        console.log(idx.search(term));
+        document.getElementById('lunrsearchresults').innerHTML = "<p>Search results for '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
         //put results on the screen.
+        var results = idx.search(term);
+        if(results.length>0){
+            console.log(idx.search(term));
+            //if results
+            for (var i = 0; i < results.length; i++) {
+                // more statements
+                console.log('d');
+                var ref = results[i]['ref'];
+                var url = documents[ref]['url'];
+                var title = replaceAll(documents[ref]['title'], term, '<strong>'+term+'</strong>');
+                var text = replaceAll(documents[ref]['text'].substring(0,160), term, '<strong>'+term+'</strong>');
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='text'>"+ text +"</span><br /><span class='url'>"+ url +"</span></a></li>";
+            }
+        }
     }
     return false;
 }
-
 </script>
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
 
-
-<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <input type="text" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" />
-</form>
+<div class="row">
+    <div class="col-xs-8">
+        <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+            <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>
+        </form>
+        <div id="lunrsearchresults">
+            <ul></ul>
+        </div>
+    </div>
+</div>
