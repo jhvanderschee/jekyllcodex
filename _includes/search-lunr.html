@@ -1,31 +1,23 @@
-
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="/js/lunr.js"></script>
 
 <script>
-var documents = [{
-    "id": 0,
-    "url": "/lunr",
-    "title": "A Solr library",
-    "text": "Like Solr, but much smaller, and not as bright."
-  }, {
-    "id": 1,
-    "url": "/react",
-    "title": "A interface library",
-    "text": "A JavaScript but library for building user interfaces."
-  }, {
-    "id": 2,
-    "url": "/lodash",
-    "title": "A modern but JavaScript utility",
-    "text": "A modern but JavaScript utility library delivering modularity, performance & extras."
-  }];
-
+{% assign counter = 0 %}
 var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
-    "id": {{ forloop.index0 }},
+    "id": {{ counter }},
     "url": "{{ site.url }}{{ page.url }}",
     "title": "{{ page.title }}",
-    "text": "{{ page.content | strip_html }}"
-    }{% if forloop.last %}{% else %}, {% endif %}{% endif %}{% endfor %}
-  ];
+    "text": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
+    "id": {{ counter }},
+    "url": "{{ site.url }}{{ page.url }}",
+    "title": "{{ page.title }}",
+    "text": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    }, {% endfor %}{% for page in site.posts %}{
+    "id": {{ counter }},
+    "url": "{{ site.url }}{{ page.url }}",
+    "title": "{{ page.title }}",
+    "text": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+    }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
 
 var idx = lunr(function () {
     this.ref('id')
@@ -46,15 +38,14 @@ function lunr_search(term) {
         //put results on the screen.
         var results = idx.search(term);
         if(results.length>0){
-            console.log(idx.search(term));
+            //console.log(idx.search(term));
             //if results
             for (var i = 0; i < results.length; i++) {
                 // more statements
-                console.log('d');
                 var ref = results[i]['ref'];
                 var url = documents[ref]['url'];
-                var title = replaceAll(documents[ref]['title'], term, '<strong>'+term+'</strong>');
-                var text = replaceAll(documents[ref]['text'].substring(0,160), term, '<strong>'+term+'</strong>');
+                var title = documents[ref]['title'];
+                var text = documents[ref]['text'].substring(0,160)+'...';
                 document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='text'>"+ text +"</span><br /><span class='url'>"+ url +"</span></a></li>";
             }
         }
@@ -66,7 +57,7 @@ function lunr_search(term) {
     .lunrsearchresult .title {color: #d9230f;}
     .lunrsearchresult .url {color: silver;}
     .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover {text-decoration: none;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
     .lunrsearchresult a:hover .title {text-decoration: underline;}
 </style>
 
