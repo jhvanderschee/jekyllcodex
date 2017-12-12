@@ -4,6 +4,8 @@ title: Interview with Joost van der Schee
 
 This is a double interview with Michael Rose, who was interviewed by [{static is} The New Dynamic](https://www.thenewdynamic.org). I borrowed their questions and answered them myself. Please also read [his interview](https://www.thenewdynamic.org/article/interview-michael-rose/){:.gray}, as it is very inspiring.
 
+{% include image-gallery.html folder="/uploads/joost" %}
+
 ### Hi Joost, how would you introduce yourself?
 
 I consider myself to be a front-end developer. I graduated as Industrial Design Engineer, but started as a self-thought self-employed programmer as soon as I finished my masters 10 years ago.
