@@ -56,8 +56,10 @@ function uniq(a) {
 }
 
 var cart_array = [];
+var product_array = [];
 function updatecart() {
     if(readCookie('cartcookie')) {
+        product_array = unescape(readCookie('productcookie')).split(',');
         cart_array = unescape(readCookie('cartcookie')).split(',');
         var counted_cart_array = [];
         //create counted cart array
@@ -76,8 +78,11 @@ function updatecart() {
         $('tbody > *').remove();
         for (var i=0; i<counted_cart_array.length; i++) {
             var item_array = counted_cart_array[i].split('|');
-            $('tbody').append('<tr><td><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}'+item_array[2]+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+item_array[0]+'<br />&euro; '+item_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+item_array[0]+'|'+item_array[1]+'|'+item_array[2]+'\',this.value)" class="form-control" value="'+item_array[3]+'" /></td><td>&euro; '+(item_array[3] * item_array[1]).toFixed(2)+'</td></tr>');
-            total = parseFloat(total) + parseFloat((item_array[3] * item_array[1]));
+            var item_count = item_array[1];
+            var item_index = item_array[0];
+            var product_string_array = product_array[item_index].split('|');
+            $('tbody').append('<tr><td><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}'+product_string_array[2]+'&w=120&h=120&t=square&output=jpg&q=50" /><span>'+product_string_array[0]+'<br />&euro; '+product_string_array[1]+'<br /><a href="#" class="" onclick="removefromcart(\''+item_index+'\')">remove</a></span></td><td><input type="number" onchange="updateproductamount(\''+product_string_array[0]+'|'+product_string_array[1]+'|'+product_string_array[2]+'\',this.value)" class="form-control" value="'+item_count+'" /></td><td>&euro; '+(item_count * product_string_array[1]).toFixed(2)+'</td></tr>');
+            total = parseFloat(total) + parseFloat((item_count * product_string_array[1]));
         }
         $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
         $('#carttotal').remove();
@@ -92,13 +97,15 @@ function updatecart() {
     }
 }
 
-function updateproductamount(cookiestring,amount){
-    //Calculate diff with cookie
+function updateproductamount(productstring,amount){
+    //find the index of the productstring
+    var product_array_index = product_array.indexOf(productstring);
+
+    //calculate diff with cookie
     cart_array = unescape(readCookie('cartcookie')).split(',');
+
     for (var i=0; i<cart_array.length; i++) {
-        //console.log(cart_array[i]);
-        //console.log(cookiestring);
-        if(cart_array[i]==cookiestring) {
+        if(cart_array[i]==product_array_index) {
 
             //check how many times this item exists and add it to the string
             var thiscount = 0;
@@ -109,7 +116,7 @@ function updateproductamount(cookiestring,amount){
             //add items to the cart cookie
             if(thiscount<amount) {
                 for (var j=0; j<(amount - thiscount); j++) {
-                    cart_array.push(cookiestring);
+                    cart_array.push(product_array_index);
                     eraseCookie('cartcookie');
                     createCookie('cartcookie',escape(cart_array.join(',')),30);
                 }
@@ -117,8 +124,7 @@ function updateproductamount(cookiestring,amount){
             //remove items from the cart cookie
             if(thiscount>amount) {
                 for (var j=0; j<(thiscount - amount); j++) {
-                    //console.log('remove item');
-                    var index = cart_array.indexOf(cookiestring);    // <-- Not supported in <IE9
+                    var index = cart_array.indexOf(product_array_index.toString());    // <-- Not supported in <IE9
                     if (index !== -1) {
                         cart_array.splice(index, 1);
                     }
@@ -146,20 +152,44 @@ function removefromcart(string) {
         updatecart();
     }
 }
+function isInArray(value, array) {
+  return array.indexOf(value) > -1;
+}
 
 $('body').on('click', '.addtocart', function() {
-    //voeg het item toe aan de cart
-    cart_array.push($(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image'));
+    var productstring = $(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image');
+    //check if product is available in the product_array
+    var product_array_index = product_array.indexOf(productstring);
+    //if not add product to product_array
+    if(product_array_index<0) {
+        product_array_index = (product_array.push(productstring) -1);
+    }
+    //add the index to the cart
+    cart_array.push(product_array_index);
+
+    //add the item to the cart
     eraseCookie('cartcookie');
     createCookie('cartcookie',escape(cart_array.join(',')),30);
+    eraseCookie('productcookie');
+    createCookie('productcookie',escape(product_array.join(',')),30);
     updatecart();
 });
 
 $('body').on('click', '.buy', function() {
-    //voeg het item toe aan de cart en maak de cart leeg
-    var cart_array = [$(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image')];
+    var productstring = $(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image');
+    //check if product is available in the product_array
+    var product_array_index = product_array.indexOf(productstring);
+    //if not add product to product_array
+    if(product_array_index<0) {
+        product_array_index = (product_array.push(productstring) -1);
+    }
+    //clear the cart and add the index
+    var cart_array = [product_array_index];
+
     eraseCookie('cartcookie');
     createCookie('cartcookie',escape(cart_array.join(',')),30);
+    eraseCookie('productcookie');
+    createCookie('productcookie',escape(product_array.join(',')),30);
     updatecart();
 });
 
