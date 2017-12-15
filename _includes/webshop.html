@@ -87,7 +87,8 @@ function updatecart() {
         $('tbody').append('<tr><td colspan="3" class="carttotal">&euro; '+total.toFixed(2)+'</td></tr>');
         $('#carttotal').remove();
         $('body').append('<input id="carttotal" type="hidden" value="'+total+'" />');
-        $('#cartnumber').show().html(cart_array.length);
+        if(counted_cart_array.length>9) $('#cartnumber').show().html("9");
+        else $('#cartnumber').show().html(counted_cart_array.length);
     } else {
         $('tbody > *').remove();
         $('tbody').append('<tr><td colspan="2">Your cart is currently empty...</td><td></td></tr>');
