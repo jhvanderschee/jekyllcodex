@@ -203,7 +203,7 @@ $('form').change(function() {
         var price = parseFloat($(this).attr('price')).toFixed(2);
         var description = $(this).attr('description');
         $('#checkoutcalc').html($('#checkoutcalc').html() + "<br /><span style='float: left;'>"+description+": </span>&euro; "+price); 
-        checkouttotal =  checkouttotal + parseFloat(price);
+        checkouttotal = (parseFloat(checkouttotal) + parseFloat(price)).toFixed(2);
     });
     $('#checkouttotal').remove();
     $('body').append('<input id="checkouttotal" type="hidden" value="'+checkouttotal+'" />');
