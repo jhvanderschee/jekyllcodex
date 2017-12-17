@@ -195,10 +195,9 @@ $('body').on('click', '.buy', function() {
 });
 
 $('form').change(function() {
-    console.log('form changed');
+    var carttotal = parseFloat($('#carttotal').val()).toFixed(2);
     $('#checkoutcalc').html('');
-    $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&euro; "+$('#carttotal').val());
-    var carttotal = parseFloat($('#carttotal').val());
+    $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&euro; "+carttotal);
     var checkouttotal = carttotal;
     $('input[price]:checked').each( function() {
         var price = parseFloat($(this).attr('price')).toFixed(2);
