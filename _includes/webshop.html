@@ -21,7 +21,7 @@
 function submitcheckout(event) {
     event.preventDefault();
     var ordernumber = new Date().getTime();
-    var price = $('#carttotal').val();
+    var price = $('#checkouttotal').val();
     $.ajax({
         url: "https://formspree.io/{{ include.email }}",
         method: "POST",
@@ -194,8 +194,28 @@ $('body').on('click', '.buy', function() {
     updatecart();
 });
 
+$('form').change(function() {
+    console.log('form changed');
+    $('#checkoutcalc').html('');
+    $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&euro; "+$('#carttotal').val());
+    var carttotal = parseFloat($('#carttotal').val());
+    var checkouttotal = carttotal;
+    $('input[price]:checked').each( function() {
+        var price = parseFloat($(this).attr('price')).toFixed(2);
+        var description = $(this).attr('description');
+        $('#checkoutcalc').html($('#checkoutcalc').html() + "<br /><span style='float: left;'>"+description+": </span>&euro; "+price); 
+        checkouttotal =  checkouttotal + parseFloat(price);
+    });
+    $('#checkouttotal').remove();
+    $('body').append('<input id="checkouttotal" type="hidden" value="'+checkouttotal+'" />');
+    if(carttotal != checkouttotal) {
+        $('#checkoutcalc').html($('#checkoutcalc').html() + "<div style='border-top: 1px solid #aaa; padding-top: 2px; margin-top: 3px;'><span style='float: left;'>Payment total: </span>&euro; "+checkouttotal+"</div>"); 
+    }
+});
+
 
 $( document ).ready(function() {
     updatecart();
+    $('form').change();
 });
 </script>

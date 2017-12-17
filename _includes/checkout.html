@@ -1,64 +1,94 @@
-<div class="row">
-        <div class="col-md-8">
-<form id="checkoutform" class="form autofill" method="POST" action="http://formspree.io/jhvanderschee@gmail.com" onsubmit="return submitcheckout(event)">
-    <input name="_next" value="{{ site.url }}" type="hidden">
-    <input name="_gotcha" style="display:none" type="text">
-    <input name="_subject" value="New submission!" type="hidden">
-    <div class="row form-group">
-        <div class="col-sm-6">
-            <label for="firstname">First name*</label>
-            <input name="firstname" id="firstname" class="form-control" required="" type="text">
-        </div>
-        <div class="col-sm-6">
-            <label for="lastname">Last name*</label>
-            <input name="lastname" id="lastname" class="form-control" required="" type="text">
-        </div>
-    </div>
-    <div class="row form-group">
-        <div class="col-sm-12">
-            <label for="email">Email address*</label>
-            <input name="email" id="email" class="form-control" required="" type="email">
-        </div>
-    </div>
-    <div class="row form-group">
-        <div class="col-sm-12">
-            <label for="address">Address*</label>
-            <input name="address" id="address" class="form-control" required="" type="text">
-        </div>
-    </div>
-    <div class="row form-group">
-            <div class="col-sm-6">
-                <label for="city">City*</label>
-                <input name="city" id="city" class="form-control" required="" type="text">
-            </div>
-            <div class="col-sm-6">
-                <label for="postalcode">Postal code*</label>
-                <input name="postalcode" id="postalcode" class="form-control" required="" type="text">
-            </div>
-    </div>
-    <div class="row form-group">
-        <div class="col-sm-12">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
-        </div>
-    </div>
-    <div class="row rowcheckbox">
-        <div class="col-sm-12">
-            <div class="checkbox">
-                <label><input name="terms" value="I accept the terms and conditions" required="" type="checkbox">I accept the terms and conditions</label>
-            </div>
-        </div>
-    </div>
-    <div class="form-group" style="text-align: right;">
-        <a href="/cart" class="btn btn-secondary" style="border-color: transparent!important; text-decoration: underline!important;">Back</a> &nbsp;&nbsp; <input value="Proceed to payment" class="btn btn-primary" type="submit">
-    </div>
-</form>
+<style>
+    .radio, .checkbox {position: relative; bottom: 8px;}
+    .rowradio + .rowradio .radio {margin-top: 0px;}
+    input[type="checkbox"], input[type="radio"] {position: relative; bottom: 1px;}
+    input[type='number'] {-moz-appearance: textfield;}
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
+    select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/img/chevron_down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
+    select.form-control::-ms-expand {display: none;}
+</style>
 
+<div class="row">
+    <div class="col-md-8">
+
+        <form id="checkoutform" class="form autofill" method="POST" action="http://formspree.io/jhvanderschee@gmail.com" onsubmit="return submitcheckout(event)">
+            <input name="_next" value="{{ site.url }}" type="hidden">
+            <input name="_gotcha" style="display:none" type="text">
+            <input name="_subject" value="New submission!" type="hidden">
+            <div class="row form-group">
+                <div class="col-sm-6">
+                    <label for="firstname">First name*</label>
+                    <input name="firstname" id="firstname" class="form-control" required="" type="text">
+                </div>
+                <div class="col-sm-6">
+                    <label for="lastname">Last name*</label>
+                    <input name="lastname" id="lastname" class="form-control" required="" type="text">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-sm-12">
+                    <label for="email">Email address*</label>
+                    <input name="email" id="email" class="form-control" required="" type="email">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-sm-12">
+                    <label for="address">Address*</label>
+                    <input name="address" id="address" class="form-control" required="" type="text">
+                </div>
+            </div>
+            <div class="row form-group">
+                    <div class="col-sm-6">
+                        <label for="city">City*</label>
+                        <input name="city" id="city" class="form-control" required="" type="text">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="postalcode">Postal code*</label>
+                        <input name="postalcode" id="postalcode" class="form-control" required="" type="text">
+                    </div>
+            </div>
+            <div class="row rowradio">
+                <div class="col-sm-12">
+                    <div class="radio">
+                        <label><input type="radio" name="wrapped" value="yes" required> Not gift wrapped</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row rowradio">
+                <div class="col-sm-12">
+                    <div class="radio">
+                        <label><input type="radio" name="wrapped" value="no" price="2" description="Gift wrapped" required> Gift wrapped (+ &euro; 2.00)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-sm-12">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row rowcheckbox">
+                <div class="col-sm-12">
+                    <div class="checkbox">
+                        <label><input name="terms" value="I accept the terms and conditions" required="" type="checkbox">I accept the terms and conditions</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="text-align: right;">
+                <a href="/cart" class="btn btn-secondary" style="border-color: transparent!important; text-decoration: underline!important;">Back</a> &nbsp;&nbsp; <input value="Proceed to payment" class="btn btn-primary" type="submit">
+            </div>
+        </form>
+
+    </div>
+    <div class="col-md-4">
+        <label>Payment total</label>
+        <div class="well">
+            <div id="checkoutcalc" style="text-align: right;"></div>
         </div>
-        <div class="col-md-4">
-        <label>Heads up!</label><div class="well">Payments are 100% secure and will be handled by Mollies Paylink service, called Plink. In the next screen you will be redirected to a secure checkout process on useplink.com.</div>
-        </div>
-        </div>
+
+        <em>Payments are 100% secure and will be handled by Mollies Paylink service, called Plink. In the next screen you will be redirected to a secure checkout process on useplink.com.</em>
+    </div>
+</div>
 
 
 
