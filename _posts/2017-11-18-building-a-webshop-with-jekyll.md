@@ -23,11 +23,4 @@ The webshop accepts all payment methods from Mollie:
 - Cartes Bancaires
 - Gift cards
 
-Although I know that this webshop is far from perfect, it allow you to sell products in almost any country, for a very small fee. Things that are currently missing, but could easily be added, are a thank you page and a seperate delivery address. Tax calculations, based on country and delivery prices are also missing, but would be a little bit harder to add. 
-
-Adding these missing things is still on my to-do list. I will update this post once they are added.
-
-Things that are not included in this webshop *by design* are:
-
-- Automatic invoices
-- Track and trace codes for parcels
+Although I know that this webshop is far from perfect, it allow you to sell products in almost any country, for a very small fee. All fields in the ceckout form are automagically added to your confirmation email and when you add radio buttons with a price and description, these values will be added to the order (i.e. gift wrapping or shipping method).
