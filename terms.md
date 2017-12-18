@@ -2,9 +2,9 @@
 title: Terms and conditions
 ---
 
-## Please read this carefully
+## Making a donation
 
-This website allows you to make a donation. The following terms and conditions apply.
+The following terms and conditions apply.
 
 1. The Donation Service<br />Once you confirm to us through the Website that you wish to proceed with your donation your transaction will be processed through our payment services provider, Mollie. By confirming that you wish to proceed with your donation you authorise Mollie to request funds from your credit or debit card provider.
 
