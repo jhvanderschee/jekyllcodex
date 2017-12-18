@@ -20,4 +20,4 @@ All forms on this website are handled by Formspree. Formspree has a mail server 
 
 ### Mollie
 
-Payments are handled by Mollie. Mollie can track your IP address upon connecting to Mollie (Paylink/Plink), but we do NOT actively share any form data with them (like your name, address, email, etc.). The only thing Mollie receives is an order number and the due amount. On succesful payment Mollie will confirm the payment of the due amount to us, by sending an email and referencing the order number.
+Payments are handled by Mollie. Mollie can track your IP address upon connecting to Mollie (Plink), but we do NOT actively share any form data with them (like your name, address, email, etc.). The only thing Mollie receives is an order number and the due amount. On succesful payment Mollie will confirm the payment of the due amount to us, by sending an email and referencing the order number.
