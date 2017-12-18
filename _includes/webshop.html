@@ -20,21 +20,18 @@
 <script>
 function submitcheckout(event) {
     event.preventDefault();
+
+    var values = {};
+    $.each($('#checkoutform').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+    });
+
     var ordernumber = new Date().getTime();
     var price = $('#checkouttotal').val();
     $.ajax({
         url: "https://formspree.io/{{ include.email }}",
         method: "POST",
-        data: {
-            firstname: $('#firstname').val(),
-            lastname: $('#lastname').val(),
-            email: $('#email').val(),
-            address: $('#address').val(),
-            city: $('#city').val(),
-            postalcode: $('#postalcode').val(),
-            message: $('#message').val(),
-            ordernumber: ordernumber
-        },
+        data: values,
         dataType: "json",
         success: function(data) {
             window.location.href='{{ include.paymentlink }}/'+price+'/order:'+ordernumber;
