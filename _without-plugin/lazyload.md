@@ -11,13 +11,13 @@ Coming soon...
 Use it like this:
 
 ```
-<img src="img/blank.gif" alt="" data-echo="img/album-1.jpg">
+<img src="/img/blank.png" alt="" data-echo="/img/realimage.jpg">
 ```
 
 ... or for background images like this:
 
 ```
-<div style="background: url(img/blank.gif) center center no-repeat; background-size: cover;" data-echo-background="img/album-1.jpg"></div>
+<div style="background: url(/img/blank.png) center center no-repeat; background-size: cover;" data-echo-background="/img/realimage.jpg"></div>
 ```
 
 ### Installation
