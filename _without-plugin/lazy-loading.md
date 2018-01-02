@@ -20,7 +20,7 @@ Use it like this:
 <div style="background: url(/img/blank.png) center center no-repeat; background-size: cover;" data-echo-background="/img/actualimage.jpg"></div>
 ```
 
-Note that you can create a fancy effect by replacing the 'blank.png' image by a very small version of the actual image. This will cause a blur that is being resolved on scroll.
+Note that you can create a (popular and) fancy effect by replacing the 'blank.png' image by a very small version of the actual image. This will cause a blur that is being resolved on scroll.
 
 ### Installation
 
