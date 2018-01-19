@@ -51,6 +51,7 @@ function submitcheckout(event) {
         values[description] = parseFloat(price).toFixed(2);
     });
     values['Checkout total'] = parseFloat($('#checkouttotal').val()).toFixed(2);
+    values['Order number'] = ordernumber;
 
     var ordernumber = new Date().getTime();
     var price = $('#checkouttotal').val();
