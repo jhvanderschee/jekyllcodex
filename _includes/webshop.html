@@ -50,10 +50,10 @@ function submitcheckout(event) {
         var description = $(this).attr('description');
         values[description] = parseFloat(price).toFixed(2);
     });
-    values['Checkout totals'] = parseFloat($('#checkouttotal').val()).toFixed(2);
-    values['Order number'] = ordernumber;
-
+    values['Checkout total'] = parseFloat($('#checkouttotal').val()).toFixed(2);
+    
     var ordernumber = new Date().getTime();
+    values['Order number'] = ordernumber;
     var price = $('#checkouttotal').val();
     $.ajax({
         url: "https://formspree.io/{{ include.email }}",
