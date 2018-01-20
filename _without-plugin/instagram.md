@@ -6,7 +6,7 @@ title: "Instagram"
 
 This script creates an instagram feed of a user. The script reads all images from your instagram account, downloads the largest size (612x612) and shows the last five.
 
-{% include instagram.html %}
+{% include instagram.html clientId="ed7b5036b29a48d482376be6c3413d24" userId="260010543" accessToken="260010543.ed7b503.9571dca5a7cb4914b866004d67c96ef0" %}
 
 ### How it works
 
