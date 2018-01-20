@@ -42,6 +42,7 @@ filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
 -ms-transition: all .3s ease;
 transition: all .3s ease;
 }
+#instafeed a:hover img,
 .product-grid a:hover img,
 .product-gallery a:hover img,
 .image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%); filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
