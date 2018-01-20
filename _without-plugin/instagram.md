@@ -10,7 +10,7 @@ This script creates an instagram feed of a user. The script reads all images fro
 
 ### How it works
 
-This script loads instafeed.js and requires three variables: [userId](https://smashballoon.com/instagram-feed/find-instagram-user-id/), [clientId](https://www.instagram.com/developer/) and [accessToken](https://www.instagram.com/developer/authentication/). To obtain a clientId you need to register your website as an instagram application. This will give you a clientId. Next you need to follow a three step process to obtain the accessToken.
+This script loads instafeed.js and requires three variables: [userId](https://smashballoon.com/instagram-feed/find-instagram-user-id/), [clientId](https://www.instagram.com/developer/) and [accessToken](https://www.instagram.com/developer/authentication/). To obtain a clientId you need to register your website as an Instagram application. This will give you a clientId. Next you need to follow a three step process to obtain the accessToken.
 
 ### Installation
 
