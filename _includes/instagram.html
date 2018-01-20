@@ -12,10 +12,17 @@
     var feed = new Instafeed({
         get: 'user',
         userId: '260010543',
-        accessToken: '09ca3a66a6254530a7cd9452f1838f9c',
+        limit: '5',
+        sortBy: 'most-recent',
+        resolution: 'standard_resolution',
+        accessToken: '260010543.ed7b503.9571dca5a7cb4914b866004d67c96ef0',
         clientId: 'ed7b5036b29a48d482376be6c3413d24'
     });
     feed.run();
 </script>
-
-<div id="instafeed"></div>
+<style>
+    #instafeed {overflow: auto; margin-left: -1%;}
+    #instafeed a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    #instafeed a img {width: 100%;}
+</style>
+<p id="instafeed"></p>
