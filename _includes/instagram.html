@@ -11,12 +11,12 @@
 //jhvanderschee
     var feed = new Instafeed({
         get: 'user',
-        userId: '260010543',
+        userId: '{{ include.userId }}',
         limit: '5',
         sortBy: 'most-recent',
         resolution: 'standard_resolution',
-        accessToken: '260010543.ed7b503.9571dca5a7cb4914b866004d67c96ef0',
-        clientId: 'ed7b5036b29a48d482376be6c3413d24',
+        accessToken: '{{ include.accessToken }}',
+        clientId: '{{ include.clientId }}',
         template: '<a href="{% raw %}{{link}}{% endraw %}" target="_blank"><img src="{% raw %}{{image}}{% endraw %}" /></a>'
     });
     feed.run();
