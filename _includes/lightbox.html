@@ -127,10 +127,13 @@ $(document).ready(function() {
 				if($("a.gallery.current").nextAll("a.gallery:first").length) $("a.gallery.current").nextAll("a.gallery:first").click();
 				else $("a.gallery.current").parent().find("a.gallery").first().click();
 			}
-			if ($(event.target).attr('id')=='prev') {
+			else if ($(event.target).attr('id')=='prev') {
 				//prev item
 				if($("a.gallery.current").prevAll("a.gallery:first").length) $("a.gallery.current").prevAll("a.gallery:first").click();
 				else $("a.gallery.current").parent().find("a.gallery").last().click();
+			}
+			else {
+				$("a.gallery").removeClass('gallery');
 			}
 		}
 		else $(this).remove();
