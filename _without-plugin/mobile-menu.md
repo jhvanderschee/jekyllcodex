@@ -4,19 +4,11 @@ title: "Mobile menu"
 
 ### Introduction
 
-This page is coming soon... Do not want to wait? Send me an email on <a href="mailto:jhvanderschee@gmail.com" style="color: #777777;">jhvanderschee@gmail.com</a>.
+If you want to add a menu to a navbar, you only have to add the menu as an unordered list with links. This script will take care of the rest. It will show a hamburger with the word 'MENU' next to it. When you press the menu, the list items will appear below each other and the button will change into an 'X' with the word 'CLOSE' next to it.
 
 ### How it works
 
-...
-
-[expand]
-
-```
-{% raw %}{% include mobile-menu.html color="#777777" %}{% endraw %}
-```
-
-[/expand]
+Create a menu in the navigation bar by creating an unordered list with links. Wrap this list in a `div` with `id="mobile-menu"`. Add the script to the footer to take care of the rest.
 
 ### Installation
 
