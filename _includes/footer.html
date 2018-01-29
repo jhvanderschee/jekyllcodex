@@ -20,6 +20,10 @@
     <script src="/js/jquery.min.js"></script>
     <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 
+<script>
+    $('.no-js').removeClass('no-js');
+</script>
+
 {% include mobile-menu.html color="#777777" %}
 {% include better-forms.html %}
 {% include products.html %}

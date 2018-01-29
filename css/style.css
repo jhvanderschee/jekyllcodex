@@ -5,7 +5,7 @@ body {background: #333;}
 .main {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 60px 0 80px; position: relative;}
 h1 {font-size: 33px; margin-top: 0; padding-top: 50px;}
 .post-header h1 {padding-top: 0;}
-.post-header {padding-top: 50px;}
+.post-header {padding-top: 40px;}
 h2 {font-size: 25px; margin-top: 0; padding-top: 50px;}
 h3 {font-size: 18px; margin: 0; padding: 20px 0 4px;}
 h4 {font-size: 14px; margin: 0; padding: 20px 0 3px;}
@@ -111,6 +111,10 @@ select.form-control::-ms-expand {display: none;}
 .form-group > * {
     margin-bottom: 15px;
 }
+
+.no-js .main {padding-top: 0;}
+.no-js .navbar-fixed-top, .no-js .navbar-fixed-bottom { position: relative;}
+
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
     .download {margin-bottom: 12px; margin-top: -43px;}
