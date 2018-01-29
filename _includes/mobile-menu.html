@@ -1,0 +1,72 @@
+<style>
+#mobile-menu {font-size: 0;}
+#mobile-menu li {font-size: 13px; display: inline-block; float: none; vertical-align: top;}
+
+#mobile-menu-toggler {float: right; text-decoration: none; cursor: pointer; font-size: 12px; font-weight: bold; color: {{ include.color }}!important;}
+#mobile-menu-toggler span::before, #mobile-menu-toggler span::after, #mobile-menu-toggler span {display: inline-block; width: 15px; height: 2px; background: {{ include.color }}!important;}
+#mobile-menu-toggler span {margin-left: 5px; position: relative; bottom: 0px;}
+#mobile-menu-toggler span::before, #mobile-menu-toggler span::after {content: ""; vertical-align: middle; position: absolute;}
+#mobile-menu-toggler span::before {margin-top: -4px;}
+#mobile-menu-toggler span::after {margin-top: -8px;}
+
+#mobile-menu-toggler.open span {background: transparent!important; margin-left: 4px;}
+#mobile-menu-toggler.open span::before {margin-top: -4px;}
+#mobile-menu-toggler.open span::after {margin-top: -4px;}
+#mobile-menu-toggler.open span::before {
+-webkit-transform-origin: 50% 50%;
+-moz-transform-origin: 50% 50%;
+-o-transform-origin: 50% 50%;
+transform-origin: 50% 50%;
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+}
+#mobile-menu-toggler.open span::after {
+-webkit-transform-origin: 50% 50%;
+-moz-transform-origin: 50% 50%;
+-o-transform-origin: 50% 50%;
+transform-origin: 50% 50%;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+}
+
+.navbar-header {float: left!important;}
+
+@media screen and (max-width: 767px) {
+        #mobile-menu {clear: left;}
+        #mobile-menu li {display: block;}
+}
+</style>
+
+<script>
+    function mobilemenutoggle() {
+        if($("#mobile-menu-toggler").hasClass('open')) {
+            $("#mobile-menu-toggler").html('MENU<span></span>');
+            $("#mobile-menu-toggler").removeClass('open');
+        } else {
+            $("#mobile-menu-toggler").html('CLOSE<span></span>');
+            $("#mobile-menu-toggler").addClass('open');
+        }
+        $("#mobile-menu").toggle();
+    }
+    $( window ).resize(function() {
+        $('#mobile-menu').hide();
+        if($( window ).width() < 768 ) {
+            if(!($("#mobile-menu-toggler").length>0)) {
+                var mobilemenuheight = $('#mobile-menu').parent().parent().height();
+                var toggler = "<a id='mobile-menu-toggler' onclick='mobilemenutoggle();' style='height: "+mobilemenuheight+"px; line-height: "+(mobilemenuheight-1)+"px;'>MENU<span></span></a>";
+                $( toggler ).insertBefore( "#mobile-menu" );
+            }
+        } else {
+            $('#mobile-menu').show();
+            $("#mobile-menu-toggler").remove();
+        }
+        if( $("#mobile-menu-toggler").html()=='MENU<span></span>' ) $('#mobile-menu').hide();
+        else $('#mobile-menu').show();
+
+    });
+    $( window ).resize();
+</script>

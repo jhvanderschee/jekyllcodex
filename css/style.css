@@ -114,7 +114,8 @@ select.form-control::-ms-expand {display: none;}
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
     .download {margin-bottom: 12px; margin-top: -43px;}
-    .navbar-default svg {}
+    .navbar-default svg {margin-left: 15px;}
+    #cartnumber {margin-left: 23px;}
 }
 @media (max-width: 500px) {
     .columns {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}
