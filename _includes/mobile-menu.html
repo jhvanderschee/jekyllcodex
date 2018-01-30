@@ -5,21 +5,22 @@
 
 #mobile-menu-toggler {display: none; float: right; text-decoration: none; cursor: pointer; font-size: 12px; font-weight: bold; color: {{ include.color }}!important;}
 #mobile-menu-toggler span.mobile-menu-icon::before, #mobile-menu-toggler span.mobile-menu-icon::after, #mobile-menu-toggler span.mobile-menu-icon {display: inline-block; width: 15px; height: 2px; background: {{ include.color }}!important;}
-#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::before, 
-#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::after {
-  -webkit-transition: all 0.25s ease-in-out!important;
-  -moz-transition: all 0.25s ease-in-out!important;
-  -o-transition: all 0.25s ease-in-out!important;
-  transition: all 0.25s ease-in-out!important;
+#mobile-menu #mobile-menu-toggler span.mobile-menu-icon,
+#mobile-menu #mobile-menu-toggler span.mobile-menu-icon::before, 
+#mobile-menu #mobile-menu-toggler span.mobile-menu-icon::after {
+  -webkit-transition: all 0.15s ease-in-out!important;
+  -moz-transition: all 0.15s ease-in-out!important;
+  -o-transition: all 0.15s ease-in-out!important;
+  transition: all 0.15s ease-in-out!important;
 }
-#mobile-menu-toggler span.mobile-menu-icon {margin-left: 5px; position: relative; bottom: 0px;}
+#mobile-menu-toggler span.mobile-menu-icon {margin-left: 5px; position: relative; bottom: 4px;}
 #mobile-menu-toggler span.mobile-menu-icon::before, #mobile-menu-toggler span.mobile-menu-icon::after {content: ""; vertical-align: middle; position: absolute;}
 #mobile-menu-toggler span.mobile-menu-icon::before {margin-top: -4px;}
-#mobile-menu-toggler span.mobile-menu-icon::after {margin-top: -8px;}
+#mobile-menu-toggler span.mobile-menu-icon::after {margin-top: 4px;}
 
-#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon {background: transparent!important; margin-left: 4px;}
-#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::before {margin-top: -4px;}
-#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::after {margin-top: -4px;}
+#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon {background: transparent!important;}
+#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::before {margin-top: 0px;}
+#mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::after {margin-top: 0px;}
 #mobile-menu.open #mobile-menu-toggler span.mobile-menu-icon::before {
 -webkit-transform-origin: 50% 50%;
 -moz-transform-origin: 50% 50%;
@@ -46,7 +47,7 @@ transform-origin: 50% 50%;
 
 .navbar-header {float: left!important;}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: {{ include.width }}px) {
         #mobile-menu-toggler {display: block;}
         #mobile-menu ul {clear: left; display: none;}
         #mobile-menu.open ul {display: block;}
@@ -64,7 +65,7 @@ transform-origin: 50% 50%;
             //show toggler if not exists
             if(!($("#mobile-menu-toggler").length>0)) {
                 var mobilemenuheight = $('#mobile-menu').height();
-                var toggler = "<a id='mobile-menu-toggler' onclick='mobilemenutoggle();' style='height: "+mobilemenuheight+"px; line-height: "+(mobilemenuheight-1)+"px;'><span class='mobile-menu-text open'>CLOSE</span><span class='mobile-menu-text'>MENU</span><span class='mobile-menu-icon'></span></a>";
+                var toggler = "<a id='mobile-menu-toggler' onclick='mobilemenutoggle();' style='height: "+mobilemenuheight+"px; line-height: "+(mobilemenuheight-1)+"px;'><span class='mobile-menu-text open'></span><span class='mobile-menu-text'>MENU</span><span class='mobile-menu-icon'></span></a>";
                 $( "#mobile-menu" ).prepend( toggler );
             }
         }

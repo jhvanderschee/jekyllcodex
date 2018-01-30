@@ -117,9 +117,12 @@ select.form-control::-ms-expand {display: none;}
 
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
-    .download {margin-bottom: 12px; margin-top: -43px;}
+    .download {margin-bottom: 12px; margin-top: -43px; display: none;}
+    #mobile-menu.open .download {display: block;}
     .navbar-default svg {margin-left: 15px;}
     #cartnumber {margin-left: 23px;}
+    .no-js #mobile-menu ul {display: block;}
+    .no-js .download {display: block;}
 }
 @media (max-width: 500px) {
     .columns {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}

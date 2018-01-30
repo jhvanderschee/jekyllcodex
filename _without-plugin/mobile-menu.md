@@ -19,7 +19,7 @@ Step 1. Download the file [mobile-menu.html](https://raw.githubusercontent.com/j
 ```
 {% raw %}...
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-{% include mobile-menu.html color="#777777" %}
+{% include mobile-menu.html color="#777777" width="757" %}
 </body>
 </html>{% endraw %}
 ```
