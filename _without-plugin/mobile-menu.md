@@ -4,7 +4,7 @@ title: "Mobile menu"
 
 ### Introduction
 
-If you want to add a menu to a navbar, you only have to add the menu as an unordered list with links. This script will take care of the rest. It will show the links in an inline-setting and show a hamburger with the word 'MENU' next to it. When you press the menu, the list items will appear below each other and the button will change into an 'X' with the word 'CLOSE'.
+If you want to add a menu to a navbar, you only have to add the menu as an unordered list with links. This script will take care of the rest. It will show the links in an inline-setting and show a hamburger with the word 'MENU' next to it. When you press the menu, the list items will appear below each other and the button will change into an 'X'.
 
 ### How it works
 
