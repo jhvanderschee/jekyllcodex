@@ -7,7 +7,7 @@
     select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/img/chevron_down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
     select.form-control::-ms-expand {display: none;}
 </style>
-
+{% assign includenumber = include.number | plus: 0 %}
 {% if page.form.form_engine == 'cloudcannon' %}
     <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ page.form.redirect }}">
         <input type="hidden" name="_to" value="{{ page.form.to }}">
