@@ -30,6 +30,8 @@ Or use [simple-menu.html](/without-plugin/simple-menu){:.gray}:
 </div>{% endraw %}
 ```
 
+If you have trouble implementing this, you can also check this [universal Codepen example](https://codepen.io/anon/pen/eVZrow){:.gray}.
+
 [/expand]
 
 ### Installation
