@@ -5,7 +5,7 @@ body {background: #333;}
 .main {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 60px 0 80px; position: relative;}
 h1 {font-size: 33px; margin-top: 0; padding-top: 50px;}
 .post-header h1 {padding-top: 0;}
-.post-header {padding-top: 50px;}
+.post-header {padding-top: 40px;}
 h2 {font-size: 25px; margin-top: 0; padding-top: 50px;}
 h3 {font-size: 18px; margin: 0; padding: 20px 0 4px;}
 h4 {font-size: 14px; margin: 0; padding: 20px 0 3px;}
@@ -29,7 +29,7 @@ ul, ol {margin-bottom: 18px;}
 pre, p {margin: 0 0 18px;}
 .navbar-default {border-color: #e5e5e5;}
 .form-control {height: 37px;}
-
+#instafeed a img,
 .product-grid a img,
 .product-gallery a img,
 .image-gallery a img{
@@ -41,6 +41,7 @@ filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
 -ms-transition: all .3s ease;
 transition: all .3s ease;
 }
+#instafeed a:hover img,
 .product-grid a:hover img,
 .product-gallery a:hover img,
 .image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%); filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
@@ -110,10 +111,18 @@ select.form-control::-ms-expand {display: none;}
 .form-group > * {
     margin-bottom: 15px;
 }
+
+.no-js .main {padding-top: 0;}
+.no-js .navbar-fixed-top, .no-js .navbar-fixed-bottom { position: relative;}
+
 @media (max-width: 767px) {
     .columns {-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;}
-    .download {margin-bottom: 12px; margin-top: -43px;}
-    .navbar-default svg {}
+    .download {margin-bottom: 12px; margin-top: -43px; display: none;}
+    #mobile-menu.open .download {display: block;}
+    .navbar-default svg {margin-left: 15px;}
+    #cartnumber {margin-left: 23px;}
+    .no-js #mobile-menu ul {display: block;}
+    .no-js .download {display: block;}
 }
 @media (max-width: 500px) {
     .columns {-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;}

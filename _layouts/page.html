@@ -4,7 +4,7 @@
     {% include head.html %}
     {% include head-additions.html %}
   </head>
-  <body class="{{ page.layout }}">
+  <body class="{{ page.layout }} no-js">
     <div class="main">
 	    {% include header.html %}
 		<div class="container">
@@ -24,6 +24,7 @@
                             {{ content }}
 
                             {% if page.form %}{% include form.html %}{% endif %}
+
                             {% if page.title == 'Search' %}
                             <div class="row">
                               <div class="col-sm-8">{% include search-lunr.html %}</div>
