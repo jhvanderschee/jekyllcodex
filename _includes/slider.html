@@ -6,28 +6,28 @@ CSS from:       http://codepen.io/transportedman/pen/NPWRGq
 and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
 Inspired from:  http://codepen.io/Rowno/pen/Afykb 
 */
-.carousel-fade .carousel-inner .item {
+#myCarousel.carousel-fade .carousel-inner .item {
 opacity: 0;
 transition-property: opacity;
 }
 
-.carousel-fade .carousel-inner .active {
+#myCarousel.carousel-fade .carousel-inner .active {
 opacity: 1;
 }
 
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
+#myCarousel.carousel-fade .carousel-inner .active.left,
+#myCarousel.carousel-fade .carousel-inner .active.right {
 left: 0;
 opacity: 0;
 z-index: 1;
 }
 
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
+#myCarousel.carousel-fade .carousel-inner .next.left,
+#myCarousel.carousel-fade .carousel-inner .prev.right {
 opacity: 1;
 }
 
-.carousel-fade .carousel-control {
+#myCarousel.carousel-fade .carousel-control {
 z-index: 2;
 }
 
@@ -36,21 +36,21 @@ WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern 
 Need to override the 3.3 new styles for modern browsers & apply opacity
 */
 @media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-fade .carousel-inner > .item.next,
-  .carousel-fade .carousel-inner > .item.active.right {
+  #myCarousel.carousel-fade .carousel-inner > .item.next,
+  #myCarousel.carousel-fade .carousel-inner > .item.active.right {
     opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  .carousel-fade .carousel-inner > .item.prev,
-  .carousel-fade .carousel-inner > .item.active.left {
+  #myCarousel.carousel-fade .carousel-inner > .item.prev,
+  #myCarousel.carousel-fade .carousel-inner > .item.active.left {
     opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  .carousel-fade .carousel-inner > .item.next.left,
-  .carousel-fade .carousel-inner > .item.prev.right,
-  .carousel-fade .carousel-inner > .item.active {
+  #myCarousel.carousel-fade .carousel-inner > .item.next.left,
+  #myCarousel.carousel-fade .carousel-inner > .item.prev.right,
+  #myCarousel.carousel-fade .carousel-inner > .item.active {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -89,9 +89,10 @@ Need to override the 3.3 new styles for modern browsers & apply opacity
 
 
   <style>
-  {% if include.unit == '%' %}.item {padding-bottom: {{ include.height }}%;}{% endif %}
-  {% if include.unit == 'px' %}.item {height: {{ include.height }}px;}{% endif %}
-  .item > div {position: absolute; left: 50%; top: 50%;
+  #myCarousel .item { width: 100%; backface-visibility: visible;}
+  {% if include.unit == '%' %}#myCarousel .item {padding-bottom: {{ include.height }}%;}{% endif %}
+  {% if include.unit == 'px' %}#myCarousel .item {height: {{ include.height }}px;}{% endif %}
+  #myCarousel .item > div {position: absolute; left: 50%; top: 50%;
     -ms-transform: translate(-50%, -50%); /* IE 9 */
     -webkit-transform: translate(-50%, -50%); /* Safari */
     transform: translate(-50%, -50%);
@@ -102,12 +103,12 @@ Need to override the 3.3 new styles for modern browsers & apply opacity
     font-size: 15px;
     white-space: nowrap;
   }
-  .item > div h3 {
+  #myCarousel .item > div h3 {
     padding-top: 7px;
     color: {{ page.slider.text_color }}; 
     font-weight: bold; font-size: 30px; 
   }
-  span.glyphicon {
+  #myCarousel span.glyphicon {
       font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important;
       color: {{ page.slider.text_color }}!important;
       font-size: 60px!important;
@@ -115,19 +116,19 @@ Need to override the 3.3 new styles for modern browsers & apply opacity
       line-height: 50px!important;
       margin-top: -30px!important;
   }
-  .carousel-control {opacity: 0!important;
+  #myCarousel .carousel-control {opacity: 0!important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   min-width: 60px!important;
   }
-  .carousel-control:hover {opacity: 1!important;}
-  .carousel-indicators {bottom: 0!important; margin-bottom: 12px;}
-  .glyphicon-chevron-left::before,
-  .glyphicon-chevron-right::before {content: "";}
-  .carousel-control.left {text-align: left; background: none!important;}
-  .carousel-control.right {text-align: right; background: none!important;}
-  .carousel-control .glyphicon-chevron-right {margin-right: 15px; position: relative; right: auto; text-shadow: none;}
-  .carousel-control .glyphicon-chevron-left {margin-left: 15px; position: relative; left: auto; text-shadow: none}
+  #myCarousel .carousel-control:hover {opacity: 1!important;}
+  #myCarousel .carousel-indicators {bottom: 0!important; margin-bottom: 12px;}
+  #myCarousel .glyphicon-chevron-left::before,
+  #myCarousel .glyphicon-chevron-right::before {content: "";}
+  #myCarousel .carousel-control.left {text-align: left; background: none!important;}
+  #myCarousel .carousel-control.right {text-align: right; background: none!important;}
+  #myCarousel .carousel-control .glyphicon-chevron-right {margin-right: 15px; position: relative; right: auto; text-shadow: none;}
+  #myCarousel .carousel-control .glyphicon-chevron-left {margin-left: 15px; position: relative; left: auto; text-shadow: none}
   </style>
