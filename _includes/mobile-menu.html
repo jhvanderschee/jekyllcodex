@@ -61,7 +61,7 @@ transform-origin: 50% 50%;
     }
     $( window ).resize(function() {
         $('#mobile-menu ul').hide();
-        if($( window ).width() < 768 ) {
+        if($( window ).width() < {{ include.width }} ) {
             //show toggler if not exists
             if(!($("#mobile-menu-toggler").length>0)) {
                 var mobilemenuheight = $('#mobile-menu').height();
