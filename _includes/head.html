@@ -15,7 +15,7 @@
 	{% if page.image %}<meta property="og:image" content="{{ page.image }}"/>{% endif %}
 	<meta property="og:url" content="{{ page.url }}"/>
 	<meta property="og:site_name" content="{{ site.title }}"/>
-	<meta property="og:description" content="{% if page.content %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+	<meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
 	<meta name="twitter:title" content="{{ page.title }}" />
 	{% if page.image %}<meta name="twitter:image" content="{{ page.image }}" />{% endif %}
 	<meta name="twitter:url" content="{{ page.url }}" />
