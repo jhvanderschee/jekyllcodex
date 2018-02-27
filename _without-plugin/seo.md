@@ -21,32 +21,37 @@ The script adds the items below to your head.
 [expand]
 
 ```
-{% raw %}<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{% raw %}  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-{% assign pagecontent_description= page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '', ' ' | truncate: 160 %}
-<meta name="description" content="{% if pagecontent_description %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
+  <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
+  <link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
+  <link rel="apple-touch-icon" href="/img/icon-196x196.png">
 
-<link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
-<link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
-<link rel="apple-touch-icon" href="/img/icon-196x196.png">
+   <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content="{{ page.title }}"/>
+  {% if page.image %}<meta property="og:image" content="{{ page.image }}"/>{% endif %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}"/>
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter_url }}">
+  <meta name="twitter:title" content="{{ page.title }}" />
+  {% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+  <meta name="twitter:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}" />
 
-<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="{{ page.title }}"/>
-	{% if page.image %}<meta property="og:image" content="{{ page.image }}"/>{% endif %}
-	<meta property="og:url" content="{{ page.url }}"/>
-	<meta property="og:site_name" content="{{ site.title }}"/>
-	<meta property="og:description" content="{% if page.content %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
-	<meta name="twitter:title" content="{{ page.title }}" />
-	{% if page.image %}<meta name="twitter:image" content="{{ page.image }}" />{% endif %}
-	<meta name="twitter:url" content="{{ page.url }}" />
-	<meta name="twitter:card" content="{% if page.content %}{{ page.content | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />{% endraw %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />{% endraw %}
 ```
 
 Note: With just some minor tweaks you can add a manual page descriptions, using 'page.description' and a matching front matter / YML variable in your page. 
