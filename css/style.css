@@ -30,6 +30,7 @@ pre, p {margin: 0 0 18px;}
 .navbar-default {border-color: #e5e5e5;}
 .form-control {height: 37px;}
 #instafeed a img,
+.image-gallery-index a img,
 .product-grid a img,
 .product-gallery a img,
 .image-gallery a img{
@@ -42,6 +43,7 @@ filter: grayscale(100%) brightness(116%) contrast(83%) opacity(70%);
 transition: all .3s ease;
 }
 #instafeed a:hover img,
+.image-gallery-index a:hover img,
 .product-grid a:hover img,
 .product-gallery a:hover img,
 .image-gallery a:hover img{-webkit-filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%); filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);}
