@@ -17,7 +17,7 @@ This script creates an image gallery index. This can be used for all kind of ima
 
 ### How it works
 
-The image gallery index works like the [image gallery](/without-plugin/image-gallery).
+The image gallery index works like the [image gallery](/without-plugin/image-gallery){:.gray}.
 
 [expand]
 
