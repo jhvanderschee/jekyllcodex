@@ -1,37 +1,43 @@
 ---
 title: Image gallery index
 galleries:
-  - title: Gallery 1
+  - title: Link to homepage
     image: /uploads/album/1.jpg
     url: /
-  - title: Gallery 2
+  - title: Link to image gallery
     image: /uploads/album/2.jpg
-    url: /without-plugins
+    url: /without-plugin/image-gallery
 ---
 
 ### Introduction
 
-This script creates an image gallery index. 
+This script creates an image gallery index. This can be used for all kind of image links (not just to pages with galleries).
 
 {% include image-gallery-index.html %}
 
 ### How it works
 
-...
-
-[expand]
+Just add some Front Matter to your page
 
 ```
 ---
 galleries:
-  - title: Gallery 1
-    image: /
+  - title: Link to homepage
+    image: /uploads/album/1.jpg
+    url: /
+  - title: Link to image gallery
+    image: /uploads/album/2.jpg
+    url: /without-plugin/image-gallery
 ---
 ```
 
-Note that the images are being resized and served by [images.weserv.nl](https://images.weserv.nl).
+And add the include to your layout:
 
-[/expand]
+```
+{% raw %}{% if page.galleries %}{% include image-gallery-index.html %}{% endif %}{% endraw %}
+```
+
+Note that the images are being resized and served by [images.weserv.nl](https://images.weserv.nl).
 
 ### Installation
 
