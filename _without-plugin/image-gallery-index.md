@@ -34,10 +34,13 @@ Note that the images are being resized and served by [images.weserv.nl](https://
 Step 1. Download the file [image-gallery-index.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/image-gallery-index.html)
 <br />Step 2. Save the file in the ‘_includes’ directory of your project
 <br />Step 3. Add the following line to your layout on the place where you want the image gallery index to appear:
+
 ```
 {% raw %}{% if page.galleries %}{% include image-gallery-index.html %}{% endif %}{% endraw %}
 ```
+
 Step 4. Add the following front matter to the page where you want the image gallery index to appear:
+
 ```
 ---
 galleries:
