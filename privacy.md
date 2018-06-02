@@ -8,11 +8,11 @@ This website is powered by Jekyll, Crisp, Formspree, Mollie and CloudCannon and 
 
 ### Google Analytics
 
-This website uses Google Analytics. If you don't like this, please use a script blocker, or do not use this website all. However, we have taken all actions we can to limit the power of Google. We have configured Google Analytics to anonymize IP addresses, use SSL at all time and we have agreed a Data Processing Amendment with Google. These measures were taken from a derective of the CBP (Dutch Institute for Privacy Protection) from March 2013 on how to legally use Google Analytics while not showing a cookie warning. 
+This website uses Google Analytics. This happens only if you approve third party cookies and scripts. However, we have taken all actions we can to limit the power of Google. We have configured Google Analytics to anonymize IP addresses, use SSL at all time and we have agreed a Data Processing Amendment with Google. These measures were taken from a derective of the CBP (Dutch Institute for Privacy Protection) from March 2013 on how to legally use Google Analytics while not showing a cookie warning. 
 
 ### Crisp Chat
 
-The chat module in the bottom right corner uses Crisp Chat and upon loading that module, your visitor data is sent to Crisp Chat. If you don't like this, please use a script blocker, or do not use this website all.
+The chat module in the bottom right corner uses Crisp Chat and upon loading that module, your visitor data is sent to Crisp Chat. This happens only if you approve third party cookies and scripts.
 
 ### Formspree
 
