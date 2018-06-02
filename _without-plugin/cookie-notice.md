@@ -10,14 +10,6 @@ title: "Cookie notice"
 
 ...
 
-[expand]
-
-```
-{% include cookie-notice.html %}
-```
-
-[/expand]
-
 ### Installation
 
 Step 1. Download the file [cookie-notice.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/cookie-notice.html)
