@@ -4,11 +4,18 @@ title: "Cookie notice"
 
 ### Introduction
 
-...
+To be compliant with the GDPR, you have to have user consent for all non-functional and third pary cookies and scripts. This must be explicit, so scrolling a website is no longer compliant. To help you this script allows you to delay the loading of Javascript, until the user approves these cookies and scripts.
 
 ### How it works
 
-...
+Just put the scripts you want to block in a Javascript include.
+
+```
+{% raw %}if(readCookie('cookie-notice-dismissed')=='true') {
+    {% include ga.js %}
+    {% include chatbutton.js %}
+}{% raw %}
+```
 
 ### Installation
 
