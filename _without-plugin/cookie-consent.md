@@ -19,14 +19,14 @@ The code inserts a cookie banner at the bottom of the screen. When you click 'Ap
 
 ### Installation
 
-Step 1. Download the file [cookie-notice.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/cookie-notice.html)
+Step 1. Download the file [cookie-consent.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/cookie-consent.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
 <script src="/js/jquery.min.js"></script>
-{% include cookie-notice.html %}
+{% include cookie-consent.html %}
 </body>
 </html>{% endraw %}
 ```
