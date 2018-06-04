@@ -14,7 +14,7 @@ The code inserts a cookie banner at the bottom of the screen. When you click 'Ap
 {% raw %}if(readCookie('cookie-notice-dismissed')=='true') {
     {% include ga.js %}
     {% include chatbutton.js %}
-}{% raw %}
+}{% endraw %}
 ```
 
 ### Installation
