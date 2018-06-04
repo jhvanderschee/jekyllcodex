@@ -28,7 +28,7 @@ Step 1. Download the file [buttons.html](https://raw.githubusercontent.com/jhvan
 
 ```
 {% raw %}...
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% include buttons.html %}
 </body>
 </html>{% endraw %}

@@ -25,7 +25,7 @@ Step 1. Download the file [cookie-notice.html](https://raw.githubusercontent.com
 
 ```
 {% raw %}...
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% include cookie-notice.html %}
 </body>
 </html>{% endraw %}

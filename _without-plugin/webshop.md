@@ -31,7 +31,7 @@ Download [webshop.html](https://raw.githubusercontent.com/jhvanderschee/jekyllco
 
 ```
 {% raw %}...
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% include webshop.html email="jhvanderschee@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
 </body>
 </html>{% endraw %}
