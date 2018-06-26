@@ -18,7 +18,7 @@
 #checkout_progress li.current > span:before {box-shadow: 0px 0px 0.1px 1px #d9230f; background: #d9230f;}
 </style>
 <script>
-    if(typeof createCookie !== 'function'){
+
         function createCookie(name,value,days) {
             var expires = "";
             if (days) {
@@ -28,8 +28,7 @@
             }
             document.cookie = name + "=" + value + expires + "; path=/";
         }
-    }
-    if(typeof readCookie !== 'function'){
+
         function readCookie(name) {
             var nameEQ = name + "=";
             var ca = document.cookie.split(';');
@@ -40,12 +39,10 @@
             }
             return null;
         }
-    }
-    if(typeof createCookie !== 'function'){
         function eraseCookie(name) {
             createCookie(name,"",-1);
         }
-    }
+
 
 var cart_array = [];
 var product_array = [];
