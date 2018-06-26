@@ -50,7 +50,7 @@ Step 4. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% include future-date.html %}
 </body>
 </html>{% endraw %}

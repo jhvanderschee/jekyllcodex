@@ -28,7 +28,7 @@ Step 1. Download the file [lightbox.html](https://raw.githubusercontent.com/jhva
 
 ```
 {% raw %}...
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% include lightbox.html %}
 </body>
 </html>{% endraw %}

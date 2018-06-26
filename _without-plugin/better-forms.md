@@ -18,7 +18,7 @@ Step 1. Download the file [better-forms.html](https://raw.githubusercontent.com/
 
 ```
 {% raw %}...
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 {% include better-forms.html %}
 </body>
 </html>{% endraw %}
