@@ -1,5 +1,5 @@
 <script>
-    if(typeof createCookie != 'function'){
+
         function createCookie(name,value,days) {
             var expires = "";
             if (days) {
@@ -9,8 +9,7 @@
             }
             document.cookie = name + "=" + value + expires + "; path=/";
         }
-    }
-    if(typeof readCookie != 'function'){
+
         function readCookie(name) {
             var nameEQ = name + "=";
             var ca = document.cookie.split(';');
@@ -21,12 +20,11 @@
             }
             return null;
         }
-    }
-    if(typeof createCookie != 'function'){
+
         function eraseCookie(name) {
             createCookie(name,"",-1);
         }
-    }
+
     
     function validateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
