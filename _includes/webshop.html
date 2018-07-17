@@ -86,6 +86,7 @@ function submitcheckout(event) {
     values['Order number'] = ordernumber;
     var price = $('#checkouttotal').val();
     if(getParameterByName('paymentlink')) {
+        console.log('test');
         $.ajax({
             url: "https://formspree.io/{{ include.email }}",
             method: "POST",
