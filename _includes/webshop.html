@@ -48,16 +48,21 @@ var product_array = [];
 
 function submitcheckout(event) {
     event.preventDefault();
-    
     //get all values from the form
     var values = {};
     $.each($('#checkoutform').serializeArray(), function(i, field) {
         var human_label = field.name[0].toUpperCase() + field.name.substring(1).replace(/-/g, " ");
         values[human_label] = field.value;
     });
-    var counted_product_array = createcountedproductarray();
-    var total = 0;
-    for (var i=0; i<counted_product_array.length; i++) {
+    //get the products
+    if(getParameterByName('paymentlink')) {
+        values['Order 1'] = "1 x " + getParameterByName('desc') + " (€ " + parseFloat(getParameterByName('price')).toFixed(2) + ")";
+        values['Shopping cart'] = parseFloat(getParameterByName('price')).toFixed(2);
+
+    } else {
+        var counted_product_array = createcountedproductarray();
+        var total = 0;
+        for (var i=0; i<counted_product_array.length; i++) {
             var item_array = counted_product_array[i].split('|');
             var item_index = item_array[0];
             var description = item_array[1];
@@ -66,27 +71,41 @@ function submitcheckout(event) {
             var count = item_array[4];
             values['Order '+(i+1)] = count + " x " + description + " (€ " + parseFloat(price).toFixed(2) + ")";
             total = parseFloat(total) + parseFloat((count * price));
+        }
+        values['Shopping cart'] = parseFloat(total).toFixed(2);
     }
-    values['Shopping cart'] = parseFloat(total).toFixed(2);
     $('input[price]:checked').each( function() {
         var price = parseFloat($(this).attr('price')).toFixed(2);
         var description = $(this).attr('description');
         values[description] = parseFloat(price).toFixed(2);
     });
     values['Checkout total'] = parseFloat($('#checkouttotal').val()).toFixed(2);
-    
+
+
     var ordernumber = new Date().getTime();
     values['Order number'] = ordernumber;
     var price = $('#checkouttotal').val();
-    $.ajax({
-        url: "https://formspree.io/{{ include.email }}",
-        method: "POST",
-        data: values,
-        dataType: "json",
-        success: function(data) {
-            window.location.href='{{ include.paymentlink }}/'+price+'/order:'+ordernumber;
-        }
-    });
+    if(getParameterByName('paymentlink')) {
+        $.ajax({
+            url: "https://formspree.io/{{ include.email }}",
+            method: "POST",
+            data: values,
+            dataType: "json",
+            success: function(data) {
+                window.location.href=getParameterByName('paymentlink')+'/'+price+'/order:'+ordernumber;
+            }
+        });
+    } else {
+        $.ajax({
+            url: "https://formspree.io/{{ include.email }}",
+            method: "POST",
+            data: values,
+            dataType: "json",
+            success: function(data) {
+                window.location.href='{{ include.paymentlink }}/'+price+'/order:'+ordernumber;
+            }
+        });       
+    }
     return false;
 }
 
@@ -244,6 +263,9 @@ $('body').on('click', '.addtocart', function() {
     createCookie('productcookie',escape(product_array.join(',')),30);
     updatecart();
 });
+$('body').on('click', '.checkout', function() {
+
+});
 
 $('body').on('click', '.buy', function() {
     var productstring = $(this).attr('description')+'|'+$(this).attr('price')+'|'+$(this).attr('image');
@@ -263,10 +285,28 @@ $('body').on('click', '.buy', function() {
     updatecart();
 });
 
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
 $('form').change(function() {
-    var carttotal = parseFloat($('#carttotal').val()).toFixed(2);
-    $('#checkoutcalc').html('');
-    $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&euro; "+carttotal);
+    if(getParameterByName('paymentlink')) {
+        //hide the progress overview
+        $('#checkout_progress').hide();
+        //hide the back link
+        $('input[type="submit"]').prev().hide();
+        //if description is set and price and url, set them:
+        var carttotal = parseFloat(getParameterByName('price')).toFixed(2);
+        $('#checkoutcalc').html('');
+        $('#checkoutcalc').html("<span style='float: left;'>This order: </span>&euro; "+carttotal);
+    } else {
+        //otherwise do this:
+        var carttotal = parseFloat($('#carttotal').val()).toFixed(2);
+        $('#checkoutcalc').html('');
+        $('#checkoutcalc').html("<span style='float: left;'>Shopping cart: </span>&euro; "+carttotal);
+    }
+
     var checkouttotal = carttotal;
     $('input[price]:checked').each( function() {
         var price = parseFloat($(this).attr('price')).toFixed(2);
