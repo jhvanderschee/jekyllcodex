@@ -56,7 +56,7 @@ function submitcheckout(event) {
     });
     //get the products
     if(getParameterByName('paymentlink')) {
-        values['Order 1'] = "1 x " + getParameterByName('desc') + " (€ " + parseFloat(getParameterByName('price')).toFixed(2) + ")";
+        values['Order 1'] = "1 x " + getParameterByName('description') + " (€ " + parseFloat(getParameterByName('price')).toFixed(2) + ")";
         values['Shopping cart'] = parseFloat(getParameterByName('price')).toFixed(2);
 
     } else {
@@ -263,8 +263,8 @@ $('body').on('click', '.addtocart', function() {
     createCookie('productcookie',escape(product_array.join(',')),30);
     updatecart();
 });
-$('body').on('click', '.checkout', function() {
-
+$('body').on('click', '.checkout', function(event) {
+    $(this).attr('href','/checkout/?paymentlink={{ page.payment_link }}&description={{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}&price={{ integral }}.{{ fractional }}');
 });
 
 $('body').on('click', '.buy', function() {
@@ -299,7 +299,7 @@ $('form').change(function() {
         //if description is set and price and url, set them:
         var carttotal = parseFloat(getParameterByName('price')).toFixed(2);
         $('#checkoutcalc').html('');
-        $('#checkoutcalc').html("<span style='float: left;'>"+getParameterByName('desc')+": </span>&euro; "+carttotal);
+        $('#checkoutcalc').html("<span style='float: left;'>"+getParameterByName('description')+": </span>&euro; "+carttotal);
     } else {
         //otherwise do this:
         var carttotal = parseFloat($('#carttotal').val()).toFixed(2);
