@@ -59,7 +59,7 @@
                                 {% assign price_split = page.price | round: 2 | split: "." %}
                                 {% assign integral = price_split[0] %}
                                 {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                                <a href="/cart/" image="{{ page.images[0].image }}" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg {% if page.payment_link %}checkout{% else %}addtocart{% endif %}">Donate</a>
+                                <a href="/cart/" image="{{ page.images[0].image }}" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg {% if page.payment_link %}checkout{% else %}addtocart{% endif %}">{% if page.payment_link %}Download{% else %}Donate{% endif %}</a>
                         {% else %}
                             {% include share-buttons.html pageurl="/" %}
                         {% endif %}
