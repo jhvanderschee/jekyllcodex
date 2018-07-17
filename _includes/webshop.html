@@ -300,7 +300,7 @@ $('form').change(function() {
         //if description is set and price and url, set them:
         var carttotal = parseFloat(getParameterByName('price')).toFixed(2);
         $('#checkoutcalc').html('');
-        $('#checkoutcalc').html("<span style='float: left;'>This order: </span>&euro; "+carttotal);
+        $('#checkoutcalc').html("<span style='float: left;'>"+getParameterByName('desc')+": </span>&euro; "+carttotal);
     } else {
         //otherwise do this:
         var carttotal = parseFloat($('#carttotal').val()).toFixed(2);
