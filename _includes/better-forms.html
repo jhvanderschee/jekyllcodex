@@ -163,6 +163,9 @@
             scrollTop: ($('.error:visible:first').offset().top - 150) // 150px is an arbitrary amount to have the field better centered
         }, 300);
         }
+        else {
+		$(eraseCookie(formname));
+		}
     });
 
     $( document ).ready(function() {
