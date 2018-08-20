@@ -17,8 +17,8 @@ The script searches for any file with a path that contains the string given in '
 ```
 {% raw %}<style>
   .image-gallery {overflow: auto; margin-left: -1%!important;}
-  .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-  .image-gallery a span { text-align: center; display: block;}
+  .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 19%; text-align: center; color: silver!important; text-decoration: none!important;}
+  .image-gallery a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
   .image-gallery a img {width: 100%; display: block;}
 </style>
 
@@ -35,7 +35,7 @@ The script searches for any file with a path that contains the string given in '
 
       <a href="{{ file.path }}">
         <img src="//images.weserv.nl/?url=jekyllcodex.org/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" alt="{{ filename }}" />
-        <span>{{ filename | truncate: 13 }}</span>
+        <span>{{ filename }}</span>
       </a>
     {% endif %}
   {% endif %}
