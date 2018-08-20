@@ -16,9 +16,10 @@ The script searches for any file with a path that contains the string given in '
 
 ```
 {% raw %}<style>
-  .image-gallery {overflow: auto; margin-left: -1%;}
+  .image-gallery {overflow: auto; margin-left: -1%!important;}
   .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-  .image-gallery a img {width: 100%;}
+  .image-gallery a span { text-align: center; display: block;}
+  .image-gallery a img {width: 100%; display: block;}
 </style>
 
 <div class="image-gallery">
@@ -28,8 +29,13 @@ The script searches for any file with a path that contains the string given in '
       file.extname == '.jpeg' or 
       file.extname == '.JPG' or 
       file.extname == '.JPEG' %}
+
+      {% assign filenameparts = file.path | split: "/" %}
+      {% assign filename = filenameparts | last | replace: file.extname,"" %}
+
       <a href="{{ file.path }}">
-        <img src="//images.weserv.nl/?url=jekyllcodex.org/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" />
+        <img src="//images.weserv.nl/?url=jekyllcodex.org/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" alt="{{ filename }}" />
+        <span>{{ filename | truncate: 13 }}</span>
       </a>
     {% endif %}
   {% endif %}
