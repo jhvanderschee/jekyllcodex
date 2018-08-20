@@ -59,7 +59,14 @@ transition: all .3s ease;
     border: 1px solid #777777!important; color: #777777!important;
 }
 .btn-lg {padding: 8px 18px !important;}
-
+.image-gallery a {color: silver!important;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease;
+}
+.image-gallery a:hover {color: #777!important;}
 
 #searchbutton {border: 0; border-radius: 30px; padding: 0 8px 0 9px; height: 37px;}
 #searchbutton svg {height: 20px; margin-top: 8px; fill: rgba(255,255,255,0.70);}
