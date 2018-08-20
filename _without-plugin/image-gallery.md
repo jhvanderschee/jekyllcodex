@@ -33,7 +33,7 @@ The script searches for any file with a path that contains the string given in '
       {% assign filenameparts = file.path | split: "/" %}
       {% assign filename = filenameparts | last | replace: file.extname,"" %}
 
-      <a href="{{ file.path }}">
+      <a href="{{ file.path }}" title="{{ filename }}">
         <img src="//images.weserv.nl/?url=jekyllcodex.org/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" alt="{{ filename }}" />
         <span>{{ filename }}</span>
       </a>
