@@ -290,6 +290,8 @@ function getParameterByName(name) {
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
+if(getParameterByName('paymentlink')) $('#checkoutform .rowradio').hide();
+
 $('form').change(function() {
     if(getParameterByName('paymentlink')) {
         //hide the progress overview
