@@ -19,11 +19,13 @@
                         <h3 class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</h3>
                       </header>
                     <br /><br />
-                    <i>{% include reading-time.html %}</i>
+                    <i style="color: silver;">{% include reading-time.html %}</i>
                     <div class="post-content" itemprop="articleBody">
                         {{ content }}
+                        <i>Joost van der Schee</i><br />
                         <br />
                         {% include share-buttons.html %}
+                        
                       </div>
                     
                     </article>

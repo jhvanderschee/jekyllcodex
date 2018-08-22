@@ -13,3 +13,4 @@ Read more about these changes in the [full article](https://github.com/blog/2100
 The changes introduced today promise to make GitHub Pages a faster, more intuitive experience for new and power users alike. For more information on upgrading, see Jekyll's 3.0 upgrade guide, and if you have any questions about Jekyll 3.0, the upgrade process, or just GitHub Pages in general, please get in touch with us.
 
 Happy (simplified) publishing!
+

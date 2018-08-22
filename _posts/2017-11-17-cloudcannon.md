@@ -9,3 +9,4 @@ CloudCannon is a cloud-based content management system (CMS) and hosting provide
 CloudCannon is pure magic. Just add `class="editable"` to your HTML elements, and your static website has a full featured CMS. Jekyll is also fully supported. Do you want to host your websites on Github pages? No problem. Just connect your Github repository to CloudCannon. This allows you to host on Github and edit your content seamlessly in CloudCannon. 
 
 Interested? Take a look at the very friendly [CloudCannon pricing](https://cloudcannon.com/pricing/). You can even start for free.
+

@@ -24,3 +24,4 @@ The webshop accepts all payment methods from Mollie:
 - Gift cards
 
 This webshop is far from perfect. It has no stock keeping, no VAT calculations and no automated invoices. However, this webshop does allow you to sell products in almost any country for a very small fee. All fields in the checkout form are automagically added to your confirmation email and when you add radio buttons with a price and description, these values will be added to the order (i.e. gift wrapping or shipping method).
+

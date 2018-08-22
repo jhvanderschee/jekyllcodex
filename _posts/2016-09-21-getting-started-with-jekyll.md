@@ -7,3 +7,4 @@ I have written a three step&nbsp;[Getting Started manual for Jekyll](/getting-st
 Jekyll/a static sites are quick to develop, simple to adjust, hosting is cheaper and they can be easily optimized for SEO and speed. As a bonus, static websites are extremely stable and they can handle a huge amount of visitors.
 
 So do you want a next-generation website? Follow the&nbsp;[manual](/getting-started/)! Your first Jekyll site is only minutes away!
+
