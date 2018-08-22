@@ -1,5 +1,6 @@
 ---
 title: Lightbox
+lightbox_captions: false
 ---
 
 ### Introduction

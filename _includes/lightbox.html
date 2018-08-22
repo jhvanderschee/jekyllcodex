@@ -20,6 +20,13 @@
 		max-height: 1200px;
 	}
 }
+.lightbox span {display: block; position: fixed; bottom: 13px; height: 1.5em; line-height: 1.4em; width: 100%; text-align: center; color: white; text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+{% if page.lightbox_captions == false %}.lightbox span {display: none;}{% endif %}
 .lightbox .videoWrapperContainer {
 	position: relative; 
 	top: 50%;
@@ -148,7 +155,7 @@ $(document).ready(function() {
 	//add the image lightbox on click
 	$("a.lightbox-image").click(function(event){
 		event.preventDefault();
-		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><img src="'+$(this).attr('href')+'" alt="'+$(this).text()+'" title="'+$(this).text()+'" /></div>').appendTo('body');
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><img src="'+$(this).attr('href')+'" alt="'+$(this).text()+'" title="'+$(this).text()+'" /><span>'+$(this).text()+'</span></div>').appendTo('body');
 	});
 	//add the vimeo lightbox on click
 	$("body").on("click", "a.lightbox-vimeo", function(event){
