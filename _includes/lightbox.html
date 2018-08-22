@@ -122,7 +122,14 @@ $(document).ready(function() {
 		if(url) {
 			if(url.indexOf('vimeo') !== -1 && !$(this).hasClass('no-lightbox')) is_vimeolink(url,$(this));
 			if(is_youtubelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-youtube').attr('data-id',is_youtubelink(url));
-			if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-image');
+			if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) {
+				$(this).addClass('lightbox-image');
+				var href = $(this).attr('href');
+				var filename = href.split('/').pop();
+				var split = filename.split(".");
+				var name = split[0];
+				$(this).attr('title',name);
+			}
 		}
 	});
 	//remove the clicked lightbox
@@ -155,7 +162,7 @@ $(document).ready(function() {
 	//add the image lightbox on click
 	$("a.lightbox-image").click(function(event){
 		event.preventDefault();
-		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><img src="'+$(this).attr('href')+'" alt="'+$(this).text()+'" title="'+$(this).text()+'" /><span>'+$(this).text()+'</span></div>').appendTo('body');
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><img src="'+$(this).attr('href')+'" alt="'+$(this).attr('title')+'" title="'+$(this).attr('title')+'" /><span>'+$(this).text()+'</span></div>').appendTo('body');
 	});
 	//add the vimeo lightbox on click
 	$("body").on("click", "a.lightbox-vimeo", function(event){
