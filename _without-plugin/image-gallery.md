@@ -1,5 +1,6 @@
 ---
 title: Image gallery
+lightbox_captions: true
 ---
 
 ### Introduction
