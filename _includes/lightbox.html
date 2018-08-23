@@ -27,8 +27,8 @@
     1px 1px 0 #000;  
 }
 
-{% if include.lightbox_captions == false %}.lightbox span {display: none;}{% endif %}
-{% if include.lightbox_captions == true %}.lightbox span {display: block;}{% endif %}
+{% if include.lightbox_captions == "false" %}.lightbox span {display: none;}{% endif %}
+{% if include.lightbox_captions == "true" %}.lightbox span {display: block;}{% endif %}
 {% if page.lightbox_captions == false %}.lightbox span {display: none;}{% endif %}
 {% if page.lightbox_captions == true %}.lightbox span {display: block;}{% endif %}
 
