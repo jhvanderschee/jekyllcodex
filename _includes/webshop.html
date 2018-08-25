@@ -86,16 +86,20 @@ function submitcheckout(event) {
     values['Order number'] = ordernumber;
     var price = $('#checkouttotal').val();
     if(getParameterByName('paymentlink')) {
+        console.log(values);
+        console.log(getParameterByName('paymentlink'));
         $.ajax({
             url: "https://formspree.io/{{ include.email }}",
             method: "POST",
             data: values,
             dataType: "json",
             success: function(data) {
-                window.location.href=getParameterByName('paymentlink')+'/'+price+'/order:'+ordernumber;
+                window.location.href=getParameterByName('paymentlink');
             }
         });
     } else {
+        console.log(values);
+        console.log(getParameterByName('paymentlink'));
         $.ajax({
             url: "https://formspree.io/{{ include.email }}",
             method: "POST",
