@@ -7,7 +7,7 @@ variant_name: size
 variants:
   - name:
     price: 
-price: 2
+price: 20
 payment_link: https://useplink.com/payment/rjC3CqpNM5gs4GcrEVad
 ---
 
