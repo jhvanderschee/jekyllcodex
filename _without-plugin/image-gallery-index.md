@@ -2,10 +2,10 @@
 title: Image gallery index
 galleries:
   - title: Link to homepage
-    image: /uploads/album/1.jpg
+    image: /uploads/album/Beautiful Mountains.jpg
     url: /
   - title: Link to image gallery
-    image: /uploads/album/2.jpg
+    image: /uploads/album/Museum of Pop Culture.jpg
     url: /without-plugin/image-gallery
 ---
 
