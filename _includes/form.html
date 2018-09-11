@@ -22,7 +22,7 @@
     <input type="hidden" name="_subject" value="{{ page.form.subject }}" />
 
     {% for item in page.form.fields %}
-        {% if item.required %}{% assign requiredstar = '*' %}{% else %}{% assign requiredstar = '' %}{% endif %}
+        {% if item.required %}{% assign requiredstar = '' %}{% else %}{% assign requiredstar = ' (optional)' %}{% endif %}
         {% if item.required %}{% assign requiredtext = 'required' %}{% else %}{% assign requiredtext = '' %}{% endif %}
 
         {% if item.input_type == 'textarea' %}
