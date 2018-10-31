@@ -1,34 +1,6 @@
 {% if page.commentIssueId %}
 <script type="text/javascript">
-    $(".post-content").append("<div id='comments'><h3>Comments</h3><p>Want to leave a comment? Visit <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}'> this post's issue page on GitHub</a>.</p></div>");
-
-    function createCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        value = btoa(unescape(encodeURIComponent(value)));
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) {
-                var stringreturn = c.substring(nameEQ.length,c.length);
-                stringreturn = decodeURIComponent(escape(atob(stringreturn)));
-                return stringreturn;
-            }
-        }
-        return null;
-    }
-    function eraseCookie(name) {
-        createCookie(name,"",-1);
-    }
+    $(".post-content").append("<div id='comments'><h3>Comments</h3><p>You can leave a comment on this pages on GitHub. <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}'>Leave a comment.</a></p></div>");
     function loadComments(data) {
         for (var i=0; i<data.length; i++) {
             var cuser = data[i].user.login;
@@ -40,11 +12,7 @@
             $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
         }
     }
-
-    //var data = readCookie('comments_{{ site.github_account }}_{{page.commentIssueId}}');
     var data = localStorage.getItem('comments_{{ site.github_account }}_{{page.commentIssueId}}');
-    //var data = '[{"url":"https://api.github.com/repos/jhvanderschee/concept/issues/comments/331936582","html_url":"https://github.com/jhvanderschee/concept/issues/1#issuecomment-331936582","issue_url":"https://api.github.com/repos/jhvanderschee/concept/issues/1","id":331936582,"node_id":"MDEyOklzc3VlQ29tbWVudDMzMTkzNjU4Mg==","user":{"login":"jhvanderschee","id":13737508,"node_id":"MDQ6VXNlcjEzNzM3NTA4","avatar_url":"https://avatars1.githubusercontent.com/u/13737508?v=4","gravatar_id":"","url":"https://api.github.com/users/jhvanderschee","html_url":"https://github.com/jhvanderschee","followers_url":"https://api.github.com/users/jhvanderschee/followers","following_url":"https://api.github.com/users/jhvanderschee/following{/other_user}","gists_url":"https://api.github.com/users/jhvanderschee/gists{/gist_id}","starred_url":"https://api.github.com/users/jhvanderschee/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jhvanderschee/subscriptions","organizations_url":"https://api.github.com/users/jhvanderschee/orgs","repos_url":"https://api.github.com/users/jhvanderschee/repos","events_url":"https://api.github.com/users/jhvanderschee/events{/privacy}","received_events_url":"https://api.github.com/users/jhvanderschee/received_events","type":"User","site_admin":false},"created_at":"2017-09-25T16:27:35Z","updated_at":"2017-09-25T16:27:35Z","author_association":"OWNER","body_html":"<p>tets</p>","body_text":"tets","body":"tets"},{"url":"https://api.github.com/repos/jhvanderschee/concept/issues/comments/331940832","html_url":"https://github.com/jhvanderschee/concept/issues/1#issuecomment-331940832","issue_url":"https://api.github.com/repos/jhvanderschee/concept/issues/1","id":331940832,"node_id":"MDEyOklzc3VlQ29tbWVudDMzMTk0MDgzMg==","user":{"login":"jhvanderschee","id":13737508,"node_id":"MDQ6VXNlcjEzNzM3NTA4","avatar_url":"https://avatars1.githubusercontent.com/u/13737508?v=4","gravatar_id":"","url":"https://api.github.com/users/jhvanderschee","html_url":"https://github.com/jhvanderschee","followers_url":"https://api.github.com/users/jhvanderschee/followers","following_url":"https://api.github.com/users/jhvanderschee/following{/other_user}","gists_url":"https://api.github.com/users/jhvanderschee/gists{/gist_id}","starred_url":"https://api.github.com/users/jhvanderschee/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jhvanderschee/subscriptions","organizations_url":"https://api.github.com/users/jhvanderschee/orgs","repos_url":"https://api.github.com/users/jhvanderschee/repos","events_url":"https://api.github.com/users/jhvanderschee/events{/privacy}","received_events_url":"https://api.github.com/users/jhvanderschee/received_events","type":"User","site_admin":false},"created_at":"2017-09-25T16:42:54Z","updated_at":"2017-09-25T16:42:54Z","author_association":"OWNER","body_html":"<p>test2</p>","body_text":"test2","body":"test2"},{"url":"https://api.github.com/repos/jhvanderschee/concept/issues/comments/373949652","html_url":"https://github.com/jhvanderschee/concept/issues/1#issuecomment-373949652","issue_url":"https://api.github.com/repos/jhvanderschee/concept/issues/1","id":373949652,"node_id":"MDEyOklzc3VlQ29tbWVudDM3Mzk0OTY1Mg==","user":{"login":"jhvanderschee","id":13737508,"node_id":"MDQ6VXNlcjEzNzM3NTA4","avatar_url":"https://avatars1.githubusercontent.com/u/13737508?v=4","gravatar_id":"","url":"https://api.github.com/users/jhvanderschee","html_url":"https://github.com/jhvanderschee","followers_url":"https://api.github.com/users/jhvanderschee/followers","following_url":"https://api.github.com/users/jhvanderschee/following{/other_user}","gists_url":"https://api.github.com/users/jhvanderschee/gists{/gist_id}","starred_url":"https://api.github.com/users/jhvanderschee/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/jhvanderschee/subscriptions","organizations_url":"https://api.github.com/users/jhvanderschee/orgs","repos_url":"https://api.github.com/users/jhvanderschee/repos","events_url":"https://api.github.com/users/jhvanderschee/events{/privacy}","received_events_url":"https://api.github.com/users/jhvanderschee/received_events","type":"User","site_admin":false},"created_at":"2018-03-17T20:19:18Z","updated_at":"2018-03-17T20:19:18Z","author_association":"OWNER","body_html":"<p>test today</p>","body_text":"test today","body":"test today"}]';
-    console.log(data);
     if(data) {
         loadComments(JSON.parse(data));
     } else {
@@ -52,11 +20,9 @@
             headers: {Accept: "application/vnd.github.full+json"},
             dataType: "json",
             success: function(msg){
-                //createCookie('comments_{{ site.github_account }}_{{page.commentIssueId}}',JSON.stringify(msg),1);
                 localStorage.setItem('comments_{{ site.github_account }}_{{page.commentIssueId}}',JSON.stringify(msg));
                 console.log(JSON.stringify(msg));
                 loadComments(msg);
-
             }
         });
     }
@@ -64,12 +30,12 @@
 
 </script>
 <style>
-.comment {margin-bottom: 10px;}
+.comment {margin-bottom: 20px;}
 .comment P:last-child {margin-bottom: 0;}
 .commentgravatar {position: absolute; width: 40px; border: 1px solid #e5e5e5;}
 .commentheader, .commentbody {padding: 5px 10px; margin-left: 55px; border: 1px solid #e5e5e5; background: white;}
 .commentheader {position: relative; background: #f4f4f4; border-bottom: 0;}
-.commentbody {padding-bottom: 8px;}
+.commentbody {padding: 10px 10px 13px;}
 .commentheader a {color: #777777;}
 .commentheader::before {
     position: absolute;
