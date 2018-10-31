@@ -1,6 +1,7 @@
 ---
 title: "Comments"
-inactive: true
+inactive: false
+commentIssueId: 1
 ---
 
 ### Introduction
