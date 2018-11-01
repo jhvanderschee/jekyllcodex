@@ -11,7 +11,6 @@ description: > # this means to ignore newlines until "baseurl:"
   Jekyll Codex wants to make it easier for front-end developers to choose for Jekyll in their next project.
 url: "https://jekyllcodex.org" # the base hostname & protocol for your site
 permalink: /blog/:title/
-github_account: jhvanderschee/jekyllcodex
 
 facebook_url: https://www.facebook.com/jhvanderschee
 twitter_url: https://twitter.com/jhvanderschee

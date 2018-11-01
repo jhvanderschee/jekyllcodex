@@ -1,13 +1,13 @@
-{% if page.commentIssueId %}
+{% if page.comment_issue_id %}
 <script type="text/javascript">
-    $(".post-content").append("<div id='comments'><h3>Comments</h3><p>You can <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}'>leave a comment</a> through GitHub, or <a onclick=' reloadComments();' style='cursor: pointer;'>refresh comments</a>.</p></div>");
+    $("{{ include.element }}").append("<div id='comments'><h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>leave a comment</a> through GitHub, or <a onclick=' reloadComments();' style='cursor: pointer;'>refresh comments</a>.</p></div>");
     function reloadComments() {
         $('.comment').remove();
-        $.ajax("https://api.github.com/repos/{{ site.github_account }}/issues/{{page.commentIssueId}}/comments?per_page=100", {
+        $.ajax("https://api.github.com/repos/{{ include.github_account }}/issues/{{page.comment_issue_id}}/comments?per_page=100", {
             headers: {Accept: "application/vnd.github.full+json"},
             dataType: "json",
             success: function(msg){
-                localStorage.setItem('comments_{{ site.github_account }}_{{page.commentIssueId}}',JSON.stringify(msg));
+                localStorage.setItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}',JSON.stringify(msg));
                 loadComments(msg);
             }
         });
@@ -17,24 +17,22 @@
         for (var i=0; i<data.length; i++) {
             var cuser = data[i].user.login;
             var cuserlink = "https://www.github.com/" + data[i].user.login;
-            var clink = "https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+            var clink = "https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
             var cbody = data[i].body_html;
             var cavatarlink = data[i].user.avatar_url;
             var cdate = data[i].created_at;
             $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
         }
     }
-    var data = localStorage.getItem('comments_{{ site.github_account }}_{{page.commentIssueId}}');
+    var data = localStorage.getItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}');
     if(data) {
         loadComments(JSON.parse(data));
     } else {
         /* if you do not use the cookie notice, replace the code below by 'reloadComments()' */
         if(readCookie('cookie-notice-dismissed')=='true') reloadComments();
-        else $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>");
+        else $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>");
         /* end */
     }
-
-
 </script>
 <style>
 .comment {padding: 5px 0 15px;}
