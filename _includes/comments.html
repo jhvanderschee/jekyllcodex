@@ -1,6 +1,6 @@
 {% if page.commentIssueId %}
 <script type="text/javascript">
-    $(".post-content").append("<div id='comments'><h3>Comments</h3><p>You can <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}'>leave a comment</a> on this pages on GitHub, or <a onclick=' reloadComments();' style='cursor: pointer;'>reload comments</a>.</p></div>");
+    $(".post-content").append("<div id='comments'><h3>Comments</h3><p>You can <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}'>leave a comment</a> through GitHub, or <a onclick=' reloadComments();' style='cursor: pointer;'>refresh comments</a>.</p></div>");
     function reloadComments() {
         $('.comment').remove();
         $.ajax("https://api.github.com/repos/{{ site.github_account }}/issues/{{page.commentIssueId}}/comments?per_page=100", {
@@ -28,7 +28,10 @@
     if(data) {
         loadComments(JSON.parse(data));
     } else {
-        reloadComments();
+        /* if you do not use the cookie notice, replace the code below by 'reloadComments()' */
+        if(readCookie('cookie-notice-dismissed')=='true') reloadComments();
+        else $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ site.github_account }}/issues/{{page.commentIssueId}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>");
+        /* end */
     }
 
 
