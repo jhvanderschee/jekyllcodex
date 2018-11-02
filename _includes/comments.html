@@ -1,6 +1,7 @@
 {% if page.comment_issue_id %}
 <script type="text/javascript">
-    $("{{ include.element }}").append("<div id='comments'><h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>leave a comment</a> through GitHub, or <a onclick=' reloadComments();' style='cursor: pointer;'>refresh comments</a>.</p></div>");
+    $("{{ include.element }}").append("<div id='comments'></div>");
+    $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub.</p>");
     function reloadComments() {
         $('.comment').remove();
         $.ajax("https://api.github.com/repos/{{ include.github_account }}/issues/{{page.comment_issue_id}}/comments?per_page=100", {
@@ -9,11 +10,15 @@
             success: function(msg){
                 localStorage.setItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}',JSON.stringify(msg));
                 loadComments(msg);
+            },
+            error: function() { 
+                $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub. The comments cannot be shown inline because we have hit the rate limit of Github.</p>");
             }
         });
         return false;
     }
     function loadComments(data) {
+        $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>leave a comment</a> through GitHub, or <a onclick=' reloadComments();' style='cursor: pointer;'>refresh comments</a>.</p>");
         for (var i=0; i<data.length; i++) {
             var cuser = data[i].user.login;
             var cuserlink = "https://www.github.com/" + data[i].user.login;
@@ -28,10 +33,12 @@
     if(data) {
         loadComments(JSON.parse(data));
     } else {
-        /* if you do not use the cookie notice, replace the code below by 'reloadComments()' */
-        if(readCookie('cookie-notice-dismissed')=='true') reloadComments();
-        else $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>");
-        /* end */
+        {% if include.require_cookie_consent == 'true' %}
+            if(readCookie('cookie-notice-dismissed')=='true') reloadComments();
+            else $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>");
+        {% else %}
+            reloadComments();
+        {% endif %}
     }
 </script>
 <style>

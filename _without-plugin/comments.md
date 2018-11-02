@@ -6,22 +6,24 @@ comment_issue_id: 4
 
 ### Introduction
 
-Being able to add comments to your posts is good for visitor engagement.
+Being able to add comments to your posts is good for visitor engagement. However, we do not want to send our valuable visitor data to a random surveillance company. Even more so, when the only purpose of that company is to make money from this data and when this company does not know how security works. Yes, I am talking about [Disqus, owned by Zeta Global](https://www.ghacks.net/2017/12/06/disqus-commenting-platform-sold-to-big-data-and-analytics-firm-zeta-global/){:.gray}. I have chosen GitHub for hosting comments, as you probably host your website on GitHub anyway. This ensures you do not send any additional information to a third party (as all requests already go to GitHub), which makes you GDPR compliant. If you host your website elsewhere, you should make sure that your visitor has approved third party scripts through the [cookie consent banner](/without-plugin/cookie-consent/){:.gray}. I have implemented a 'require_cookie_consent' variable to make this optional.
 
 ### How it works
 
-Every comment tread is an issue on Github. The script adds a tread of comments to pages with a 'comment_issue_id'. The tread is added to the bottom of the (jQuery defined) element in the include .
+Every comment tread is an issue on GitHub. A call to the GitHub API, using the 'comment_issue_id', retreives a JSON object with all comments. This JSON object is converted into a nice HTML comment tread. The tread is added to the bottom of the (jQuery defined) element in the include. To stay below the rate limit of GitHub, the call is being stored in local storage. A refresh button enables the visitor to force a new GitHub call. Once the reate limit is hit, the visitor has to go to the GitHub issue page to read the comments. This is also true for adding comments. Adding a comment can only be done at the GitHub issue page and requires a GitHub account.
 
 ### Installation
 
-Step 1. Download the file [comments.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/comments.html)
-<br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure the bottom of your layout document looks like this:
+Step 1. Create a new issue in your Github repository and look for the issue ID (a number).
+<br />Step 2. Add `comment_issue_id: 1` to the front matter of your page (replace '1' by your issue ID).
+<br />Step 3. Download the file [comments.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/comments.html)
+<br />Step 4. Save the file in the '_includes' directory of your project
+<br />Step 5. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
 <script src="/js/jquery.min.js"></script>
-{% include comments.html element=".post-content" github_account="jhvanderschee/jekyllcodex" %}
+{% include comments.html element=".post-content" github_account="jhvanderschee/jekyllcodex" require_cookie_consent="true" %}
 </body>
 </html>{% endraw %}
 ```
