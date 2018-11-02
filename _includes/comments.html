@@ -29,7 +29,7 @@
                     var cavatarlink = data[i].user.avatar_url;
                 } else {
                     var cavatarlink = '/img/emptyavatar.png';
-                    cbody = cbody.replaceAll(" src="," data-src=");
+                    cbody = cbody.replace(/ src=/g," data-src=");
                 }
             {% else %}
                 var cavatarlink = data[i].user.avatar_url;
