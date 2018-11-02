@@ -26,7 +26,7 @@
             var cbody = data[i].body_html;
             var cavatarlink = data[i].user.avatar_url;
             var cdate = data[i].created_at;
-            $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+            $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="/img/emptyavatar.png" data-src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
         }
     }
     var data = localStorage.getItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}');
