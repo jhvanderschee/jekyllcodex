@@ -1,5 +1,6 @@
 ---
 title: GDPR compliant comments
+comment_issue_id: 4
 ---
 
 Being able to add comments to your posts is good for visitor engagement. Therefore I have created a [GDPR compliant comment script for Jekyll](/without-plugin/comments/). We do not want to send our valuable visitor data to a random surveillance company. Even more so, when the only purpose of that company is to make money from this data and when this company has a bad security reputation. Yes, I am talking about you, Facebook and Disqus.

@@ -1,7 +1,5 @@
 ---
 title: "Comments"
-inactive: false
-comment_issue_id: 4
 ---
 
 ### Introduction
