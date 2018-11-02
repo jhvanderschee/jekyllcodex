@@ -11,7 +11,7 @@ Being able to add comments to your posts is good for visitor engagement. However
 
 ### How it works
 
-Every comment tread is an issue on GitHub. A call to the GitHub API, using the 'comment_issue_id', retreives a JSON object with all comments. This JSON object is converted into a nice HTML comment tread. The tread is added to the bottom of the (jQuery defined) element in the include. To stay below the rate limit of GitHub, the call is being stored in local storage. A refresh button enables the visitor to force a new GitHub call. Once the reate limit is hit, the visitor has to go to the GitHub issue page to read the comments.
+Every comment tread is an issue on GitHub. A call to the GitHub API, using the 'comment_issue_id', retreives a JSON object with all comments. This JSON object is converted into a nice HTML comment tread. The tread is added to the bottom of the (jQuery defined) element in the include. To stay below the rate limit of GitHub, the call is being stored in local storage. A refresh button enables the visitor to force a new GitHub call. Once the rate limit is reached, the visitor has to go to the GitHub issue page to read the comments.
 
 ### Installation
 
