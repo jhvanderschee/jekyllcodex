@@ -25,13 +25,18 @@
             var clink = "https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
             var cbody = data[i].body_html;
             {% if include.require_cookie_consent == 'true' %}
-                if(readCookie('cookie-notice-dismissed')=='true') var cavatarlink = data[i].user.avatar_url;
-                else var cavatarlink = '/img/emptyavatar.png';
+                if(readCookie('cookie-notice-dismissed')=='true') {
+                    var cavatarlink = data[i].user.avatar_url;
+                } else {
+                    var cavatarlink = '/img/emptyavatar.png';
+                    cbody = cbody.replace(" src="," data-src=");
+                }
             {% else %}
                 var cavatarlink = data[i].user.avatar_url;
             {% endif %}
             var cdate = data[i].created_at;
             $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+            $('img[data-src]').replaceWith( "[Image blocked] " );
         }
     }
     var data = localStorage.getItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}');
