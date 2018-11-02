@@ -24,9 +24,14 @@
             var cuserlink = "https://www.github.com/" + data[i].user.login;
             var clink = "https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
             var cbody = data[i].body_html;
-            var cavatarlink = data[i].user.avatar_url;
+            {% if include.require_cookie_consent == 'true' %}
+                if(readCookie('cookie-notice-dismissed')=='true') var cavatarlink = data[i].user.avatar_url;
+                else var cavatarlink = '/img/emptyavatar.png';
+            {% else %}
+                var cavatarlink = data[i].user.avatar_url;
+            {% endif %}
             var cdate = data[i].created_at;
-            $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="/img/emptyavatar.png" data-src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+            $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
         }
     }
     var data = localStorage.getItem('comments_{{ include.github_account }}_{{page.comment_issue_id}}');
