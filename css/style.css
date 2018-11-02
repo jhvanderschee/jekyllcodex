@@ -112,6 +112,7 @@ select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance
 select.form-control::-ms-expand {display: none;}
 
 #cartnumber {display: none; background: #d9230f; color: white; margin: 5px 0 0 20px; font-weight: bold; position: absolute; line-height: 18px; width: 19px; height: 19px; border-radius: 20px; text-align: center; z-index: 3;}
+body.post #comments {padding-top: 30px;}
 
 .form-control {
     border: 1px solid #dddddd!important;
