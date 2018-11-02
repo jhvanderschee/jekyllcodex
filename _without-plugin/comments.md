@@ -6,12 +6,7 @@ comment_issue_id: 4
 
 ### Introduction
 
-Being able to add comments to your posts is good for visitor engagement. However, we do not want to send our valuable visitor data to a random surveillance company. Even more so, when the only purpose of that company is to make money from this data and when this company has a bad security reputation. Yes, I am talking about Facebook and Disqus.
-
-> Data is stored on Disqus servers, and the company has been criticized for its user tracking activities. The company suffered two major security breaches, one in 2013 and another in October 2017. A snapshot of a database containing 17.5 million user email addresses, login dates and sign-up dates was copied according to Disqus in the latest breach.
-
-I have chosen GitHub for hosting comments, as you probably host your website on GitHub anyway. This ensures you do not send any additional information to a third party (as all requests already go to GitHub), which makes you GDPR compliant. If you host your website elsewhere, you should make sure that your visitor has approved third party scripts through the [cookie consent banner](/without-plugin/cookie-consent/){:.gray}. I have implemented a 'require_cookie_consent' variable to make this optional. Adding a comment can only be done at the GitHub issue page and requires a GitHub account. These things can be considered as down-sides of using GitHub issues for comments. However, this solution does allow you to fully customize the comment tread with CSS and HTML and to moderate all comments. Additionally, GitHub issues allow commenters to write markdown, automatically escaped code, use custom links, an avatar and their own images. Another plus is that the comments are being stored next to your code, exactly where they belong. Finally, the chosen platform (GitHub) is not known for its data breaches nor for making money from selling visitor data.
-
+Being able to add comments to your posts is good for visitor engagement. I have chosen GitHub for hosting comments, as you probably host your website on GitHub anyway. Adding a comment can only be done at the GitHub issue page and requires a GitHub account. These things can be considered as down-sides of using GitHub issues for comments. However, this solution does allow you to fully customize the comment tread with CSS and HTML and to moderate all comments. Additionally, GitHub issues allow commenters to write markdown, automatically escaped code, use custom links, an avatar and their own images. Another plus is that the comments are being stored next to your code, exactly where they belong. Finally, the chosen platform (GitHub) is not known for its data breaches nor for making money from selling visitor data.
 
 ### How it works
 
