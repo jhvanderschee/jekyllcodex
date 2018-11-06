@@ -4,7 +4,7 @@ title: "Comments"
 
 ### Introduction
 
-Being able to add comments to your posts is good for visitor engagement. I have chosen GitHub for hosting comments, as you probably host your website on GitHub anyway. Adding a comment can only be done at the GitHub issue page and requires a GitHub account. These things can be considered as down-sides of using GitHub issues for comments. However, this solution does allow you to fully customize the comment tread with CSS and HTML and to moderate all comments. Additionally, GitHub issues allow commenters to write markdown, automatically escaped code, use custom links, an avatar and their own images. Another plus is that the comments are being stored next to your code, exactly where they belong. Finally, the chosen platform (GitHub) is not known for its data breaches nor for making money from selling visitor data.
+Being able to add comments to your posts is good for visitor engagement. I have chosen GitHub for hosting comments, as you probably host your website on GitHub anyway. Adding a comment can only be done at the GitHub issue page and requires a GitHub account. These things can be considered as down-sides of using GitHub issues for comments. However, this solution does allow you to fully customize the comment tread with CSS and HTML and to moderate all comments. Additionally, GitHub issues allow commenters to write markdown, automatically escaped code, use custom links, an avatar and their own images. Another plus is that the comments are being stored next to your code, exactly where they belong. Finally, the chosen platform (GitHub) is not known for its data breaches nor for making money from selling visitor data. Make sure to check out the [demo](/blog/gdpr-compliant-comment/).
 
 ### How it works
 
