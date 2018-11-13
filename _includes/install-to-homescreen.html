@@ -46,6 +46,7 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
     } else {
         if(iOS && safari) {
             $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website to your homescreen. Just click on the 'Share' button in the bottom of your screen and then select 'Add to homescreen'.</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
+            $('#install-to-homescreen').show();
         }
     }
 
