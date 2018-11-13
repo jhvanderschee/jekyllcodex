@@ -47,7 +47,14 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
     if (iOS) {
         if (window.navigator.standalone) {
             $('a').each( function() {
-                if($(this).attr('href')) $(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
+                if($(this).attr('href')) {
+                    //$(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
+                    var thishref = $(this).attr('href');
+                    $(this).attr('href','#');
+                    $(this).click(function() {
+                        window.location.href=$(this).attr('href') + '?install-to-homescreen-dismissed=true';
+                    });
+                }
             });
         }
         //dismiss forever
