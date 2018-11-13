@@ -41,6 +41,7 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
         alert('standalone: '+ window.navigator.standalone);
     }
     if(readCookie('install-to-homescreen-dismissed')=='true') {
+        alert('install-to-homescreen-dismissed: true');
         //do nothing... message dismissed... nag again after the set period
     } else {
         if(iOS && safari) {
