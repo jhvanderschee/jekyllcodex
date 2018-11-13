@@ -35,7 +35,7 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
         createCookie(name,"",-1);
     }
 
-    if (iOS && safari) {
+    if (iOS) {
         //dismiss forever
         if (window.navigator.standalone) createCookie('install-to-homescreen-dismissed','true',9999);
         alert('iOS: ' + iOS);
