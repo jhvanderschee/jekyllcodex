@@ -1,0 +1,49 @@
+<style>
+#install-to-homescreen {padding: 7px 15px; display: none; text-align: center; position: fixed; bottom: 0px; left: 0px; width: 100%; background: #222; color: rgba(255,255,255,0.8); z-index: 99999;}
+#install-to-homescreen a {cursor: pointer; margin-left: 10px;}
+@media (max-width: 767px) {
+    #install-to-homescreen span {display: block; padding-top: 3px; margin-bottom: 13px;}
+    #install-to-homescreen a {position: relative; bottom: 4px;}
+}
+</style>
+
+<script>
+var iOS = /^(iPhone|iPad|iPod)/.test(navigator.platform);
+var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1);
+
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    if (iOS && safari && 'standalone' in navigator) {
+        //dismiss forever
+        createCookie('install-to-homescreen-dismissed','true',9999);
+    }
+    if(readCookie('install-to-homescreen-dismissed')=='true') {
+        //do nothing... message dismissed... nag again after the set period
+    } else {
+        if(iOS && safari) {
+            $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website to your homescreen. Just click on the 'Share' button in the bottom of your screen and then select 'Add to homescreen'.</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
+        }
+    }
+
+</script>
