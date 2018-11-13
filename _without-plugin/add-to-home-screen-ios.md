@@ -1,6 +1,5 @@
 ---
 title: "Add to home screen"
-inactive: true
 ---
 
 ### Introduction
