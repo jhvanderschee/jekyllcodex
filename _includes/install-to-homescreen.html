@@ -46,12 +46,9 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
 
     if (iOS) {
         if (window.navigator.standalone) {
-            /*
             $('a').each( function() {
                 if($(this).attr('href')) $(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
             });
-            */
-            window.location.href=window.location.href+'about/?install-to-homescreen-dismissed=true';
         }
         //dismiss forever
         if (getParameterByName('install-to-homescreen-dismissed')=='true') createCookie('install-to-homescreen-dismissed','true',9999);
