@@ -61,4 +61,6 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
             $('#install-to-homescreen').show();
         }
     }
+
+    $('head').append('<meta name="apple-mobile-web-app-capable" content="yes" />');
 </script>
