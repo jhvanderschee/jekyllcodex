@@ -12,6 +12,12 @@
 <script>
 var iOS = /^(iPhone|iPad|iPod)/.test(navigator.platform);
 var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1);
+
+    function getParameterByName(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+
     function createCookie(name,value,days) {
         var expires = "";
         if (days) {
@@ -36,8 +42,13 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
     }
 
     if (iOS) {
+        if (window.navigator.standalone) {
+            $('a').each( function() {
+                $(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
+            });
+        }
         //dismiss forever
-        if (window.navigator.standalone) createCookie('install-to-homescreen-dismissed','true',9999);
+        if (window.navigator.standalone || getParameterByName('install-to-homescreen-dismissed')=='true') createCookie('install-to-homescreen-dismissed','true',9999);
         alert('iOS: ' + iOS);
         alert('safari: ' + safari);
         alert('standalone: '+ window.navigator.standalone);
