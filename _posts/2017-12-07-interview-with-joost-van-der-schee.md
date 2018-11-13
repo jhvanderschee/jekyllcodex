@@ -28,7 +28,7 @@ I do not really have a favorite feature. But what stands out about Jekyll is the
 
 ### What feature do you miss the most?
 
-Build speed is my main problem with Jekyll. Not for this website, as this one builds in under 5 seconds, but some of my client sites take several minutes to build. That is why I am currently porting this website to Hugo at [hugocodex.org](http://hugocodex.org){:.gray}. I want to be able to choose for Hugo when needed and might even switch to Hugo completely in the future.
+Build speed is my main problem with Jekyll. Not for this website, as this one builds in under 5 seconds, but some of my client sites take several minutes to build. That is why I am currently porting this website to Hugo at [hugocodex.org](http://hugocodex.org){:.gray}. I want to be able to choose Hugo when needed and might even switch to Hugo completely in the future.
 
 ### Why is there so few Jekyll quality themes?
 

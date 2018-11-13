@@ -44,7 +44,7 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
     if (iOS) {
         if (window.navigator.standalone) {
             $('a').each( function() {
-                $(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
+                if($(this).attr('href')) $(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
             });
         }
         //dismiss forever
@@ -54,7 +54,7 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
         //do nothing... message dismissed... nag again after the set period
     } else {
         if(iOS && safari) {
-            $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website to your homescreen. Just click on the 'Share' button (<img src=\"/img/share.svg\" class=\"share_img\" />) and then select 'Add to homescreen' (<img src=\"/img/addtohomescreen.svg\" class=\"addtohomescreen_img\" />).</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
+            $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website as a mobile app. Find the share button in your browser (<img src=\"/img/share.svg\" class=\"share_img\" />) and select the plus (<img src=\"/img/addtohomescreen.svg\" class=\"addtohomescreen_img\" />) to install.</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
             $('#install-to-homescreen').show();
         }
     }
