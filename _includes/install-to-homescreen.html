@@ -10,8 +10,8 @@
 <script>
 var iOS = /^(iPhone|iPad|iPod)/.test(navigator.platform);
 var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1);
-alert('iOS: ' + iOS);
-alert('safari: ' + safari);
+console.log('iOS: ' + iOS);
+console.log('safari: ' + safari);
     function createCookie(name,value,days) {
         var expires = "";
         if (days) {
