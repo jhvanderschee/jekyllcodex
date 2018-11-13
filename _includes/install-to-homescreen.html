@@ -10,8 +10,6 @@
 <script>
 var iOS = /^(iPhone|iPad|iPod)/.test(navigator.platform);
 var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer, Inc./) && navigator.userAgent.indexOf('Safari') != -1);
-alert('iOS: ' + iOS);
-alert('safari: ' + safari);
     function createCookie(name,value,days) {
         var expires = "";
         if (days) {
@@ -35,9 +33,12 @@ alert('safari: ' + safari);
         createCookie(name,"",-1);
     }
 
-    if (iOS && safari && 'standalone' in navigator) {
+    if (iOS && safari) {
         //dismiss forever
-        createCookie('install-to-homescreen-dismissed','true',9999);
+        if (window.navigator.standalone) createCookie('install-to-homescreen-dismissed','true',9999);
+        alert('iOS: ' + iOS);
+        alert('safari: ' + safari);
+        alert('standalone: '+ window.navigator.standalone);
     }
     if(readCookie('install-to-homescreen-dismissed')=='true') {
         //do nothing... message dismissed... nag again after the set period
