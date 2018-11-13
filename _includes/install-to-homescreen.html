@@ -1,6 +1,8 @@
 <style>
 #install-to-homescreen {padding: 7px 15px; display: none; text-align: center; position: fixed; bottom: 0px; left: 0px; width: 100%; background: #222; color: rgba(255,255,255,0.8); z-index: 99999;}
 #install-to-homescreen a {cursor: pointer; margin-left: 10px;}
+#install-to-homescreen img {display: inline-block; height: 15px; margin: 0 2px; position: relative;}
+#install-to-homescreen img.share_img {height: 18px; bottom: 1px;}
 @media (max-width: 767px) {
     #install-to-homescreen span {display: block; padding-top: 3px; margin-bottom: 13px;}
     #install-to-homescreen a {position: relative; bottom: 4px;}
@@ -45,9 +47,12 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
         //do nothing... message dismissed... nag again after the set period
     } else {
         if(iOS && safari) {
-            $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website to your homescreen. Just click on the 'Share' button in the bottom of your screen and then select 'Add to homescreen'.</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
+            $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website to your homescreen. Just click on the 'Share' button (<img src=\"/img/share.svg\" class=\"share_img\" />) and then select 'Add to homescreen' (<img src=\"/img/addtohomescreen.svg\" class=\"addtohomescreen_img\" />).</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
             $('#install-to-homescreen').show();
         }
     }
-
+    /*
+    $('body').append("<div id='install-to-homescreen'><span>We would love you to install this website to your homescreen. Just click on the 'Share' button (<img src=\"/img/share.svg\" class=\"share_img\" />) and then select 'Add to homescreen' (<img src=\"/img/addtohomescreen.svg\" class=\"addtohomescreen_img\" />).</span><a id='dismiss-install-to-homescreen' class='btn btn-primary btn-sm' onclick=\"createCookie('install-to-homescreen-dismissed','true',1); $('#install-to-homescreen').hide();\">Dismiss</a></div>");
+    $('#install-to-homescreen').show();
+*/
 </script>
