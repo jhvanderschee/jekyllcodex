@@ -51,7 +51,8 @@ var safari = (navigator.vendor != null && navigator.vendor.match(/Apple Computer
                     //$(this).attr('href',$(this).attr('href') + '?install-to-homescreen-dismissed=true');
                     var thishref = $(this).attr('href');
                     $(this).attr('href','#');
-                    $(this).attr('onclick','window.location.href=\''+$(this).attr('href') + '?install-to-homescreen-dismissed=true\'';
+                    $(this).on("click", function(){
+                        window.location.href=$(this).attr('href') + '?install-to-homescreen-dismissed=true';
                     });
                 }
             });
