@@ -6,10 +6,10 @@ I have been creating quite a few native apps for clients. Because I am a big fan
 
 If we want to add a website to the home screen, we are confronted with quite a few complications:
 
-- A home screen icon (PWA) can only be created from Safari (and not from Chrome for iOS).
-- Clicking a link on the home screen can only be detected by the website (thourgh javascript) if it opens in PWA mode (full screen, without an address bar).
-- Apple does not allow a page load (link with a href) in a PWA. It will open the link in Safari (in a new window).
-- The PWA does not share its cookies with this new Safari window, nor does Safari share cookies with the PWA.
+- A home screen icon (PWA) can only be created from the native browser of the platform (so not from Chrome for iOS).
+- Clicking a link on the home screen can only be detected by the website (through javascript) if it opens in PWA mode (full screen, without an address bar).
+- Apple/iOS does not allow a page load (link with a href) in a PWA. It will open the link in Safari (in a new window).
+- A PWA does not share its cookies with the browser, nor does the browser share its cookies with the PWA.
 
 The desired functionality, however, is very simple. We want to show a 'nagging' message that tells you to install the mobile app. If you dismiss this message it will return the next day. If you have 'installed' the app and you click on its icon, this nagging message should be hidden forever. To accomplish this we let javascript detect Safari on iOS. That will show the instructions on how to add the website to the home screen. If you dismiss these instructions a cookie will be set that expires in a day. When the user actually installs the app and clicks on the home screen icon, we let javascript detect this PWA version of the website. We do this by testing the 'window.navigator' for the 'standalone' variable, which is true in case of a PWA. We then let javascript add a parameter to the URL of every link on the page of the PWA. Once a link is clicked, the browser opens and the extra parameter makes sure a cookie is set (in Safari) that hides the nagging message forever.
 
