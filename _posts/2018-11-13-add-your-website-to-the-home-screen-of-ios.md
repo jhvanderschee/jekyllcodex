@@ -6,7 +6,7 @@ I have been creating quite a few native apps for clients. Because I am a big fan
 
 If we want to add a website to the home screen, we are confronted with quite a few complications:
 
-- A home screen icon (PWA) can only be created from the native browser of the platform (so not from Chrome for iOS).
+- A home screen icon (PWA) can only be created in the native browser of the platform (so not in Chrome for iOS).
 - Clicking a link on the home screen can only be detected by the website (through javascript) if it opens in PWA mode (full screen, without an address bar).
 - Apple/iOS does not allow a page load (link with a href) in a PWA. It will open the link in Safari (in a new window).
 - A PWA does not share its cookies with the browser, nor does the browser share its cookies with the PWA.
