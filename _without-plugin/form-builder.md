@@ -15,48 +15,48 @@ To create a form, add the following code to the front matter of your page:
 
 ```
 {% raw %}---
-form:
-  to: jhvanderschee@gmail.com
-  subject: New submission!
-  redirect: /
-  form_engine: formspree
-  placeholders: false
-  fields: 
-    - name: name
-      input_type: text
-      placeholder: Name
-      required: true
-    - name: email
-      input_type: email
-      placeholder: Email address
-      required: true
-    - name: sex
-      input_type: radio
-      placeholder: male
-      required: true
-    - name: sex
-      input_type: radio
-      placeholder: female
-      required: true
-    - name: message
-      input_type: textarea
-      placeholder: Message
-      required: false
-    - name: terms
-      input_type: checkbox
-      placeholder: I accept the terms and conditions
-      required: true
-    - name: submit
-      input_type: submit
-      placeholder: Submit form
-      required: true
+forms:
+  - to: jhvanderschee@gmail.com
+    subject: New submission!
+    redirect: /
+    form_engine: formspree
+    placeholders: false
+    fields: 
+      - name: name
+        input_type: text
+        placeholder: Name
+        required: true
+      - name: email
+        input_type: email
+        placeholder: Email address
+        required: true
+      - name: sex
+        input_type: radio
+        placeholder: male
+        required: true
+      - name: sex
+        input_type: radio
+        placeholder: female
+        required: true
+      - name: message
+        input_type: textarea
+        placeholder: Message
+        required: false
+      - name: terms
+        input_type: checkbox
+        placeholder: I accept the terms and conditions
+        required: true
+      - name: submit
+        input_type: submit
+        placeholder: Submit form
+        required: true
 ---{% endraw %}
 ```
 
 And add this to your layout:
 
 ```
-{% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
+{% raw %}{% if page.forms %}{% include form.html %}{% endif %}{% endraw %}
 ```
 
 CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother.
@@ -92,5 +92,5 @@ Step 3. Save the file in the '_includes' directory of your project<br>
 Step 4. Add the following line to your layout on the place where you want the form to appear:
 
 ```
-{% raw %}{% if page.form %}{% include form.html %}{% endif %}{% endraw %}
+{% raw %}{% if page.forms %}{% include form.html %}{% endif %}{% endraw %}
 ```

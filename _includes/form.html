@@ -8,28 +8,35 @@
     select.form-control::-ms-expand {display: none;}
 </style>
 
-{% if page.form.form_engine == 'cloudcannon' %}
-    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ page.form.redirect }}">
-        <input type="hidden" name="_to" value="{{ page.form.to }}">
-{% elsif page.form.form_engine == 'formspree' %}
-    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="https://formspree.io/{{ page.form.to }}">
-        <input type="hidden" name="_next" value="{{ site.url }}{{ page.form.redirect }}" />
-{% elsif page.form.form_engine == 'formbucket' %}
-    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ page.form.to }}">
+{% if include.form %}
+    {% assign formnumber = include.form | minus: 1 %}
+    {% assign pageform = page.forms[formnumber] %}
+{% else %}
+    {% assign pageform = page.forms[0] %}
+{% endif %}
+
+{% if pageform.form_engine == 'cloudcannon' %}
+    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ pageform.redirect }}">
+        <input type="hidden" name="_to" value="{{ pageform.to }}">
+{% elsif pageform.form_engine == 'formspree' %}
+    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="https://formspree.io/{{ pageform.to }}">
+        <input type="hidden" name="_next" value="{{ site.url }}{{ pageform.redirect }}" />
+{% elsif pageform.form_engine == 'formbucket' %}
+    <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ pageform.to }}">
 {% endif %}
 
     <input type="text" name="_gotcha" style="display:none" />
-    <input type="hidden" name="_subject" value="{{ page.form.subject }}" />
+    <input type="hidden" name="_subject" value="{{ pageform.subject }}" />
 
-    {% for item in page.form.fields %}
+    {% for item in pageform.fields %}
         {% if item.required %}{% assign requiredstar = '' %}{% else %}{% assign requiredstar = ' (optional)' %}{% endif %}
         {% if item.required %}{% assign requiredtext = 'required' %}{% else %}{% assign requiredtext = '' %}{% endif %}
 
         {% if item.input_type == 'textarea' %}
         <div class="row form-group">
             <div class="col-sm-12">
-                <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
-                <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" class="form-control" {% if page.form.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}></textarea>
+                <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
+                <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" class="form-control" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}></textarea>
             </div>
         </div>
         {% elsif item.input_type == 'radio' %}
@@ -59,36 +66,36 @@
             {% if item.name == 'name' %}
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="firstname">First name{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" {% if page.form.placeholders == true %}placeholder="First name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="firstname">First name{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" {% if pageform.placeholders == true %}placeholder="First name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                     <div class="col-sm-6">
-                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="lastname">Last name{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" {% if page.form.placeholders == true %}placeholder="Last name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="lastname">Last name{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" {% if pageform.placeholders == true %}placeholder="Last name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
             {% elsif item.name == 'address' %}
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="address">Address{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="address" id="address" class="form-control" {% if page.form.placeholders == true %}placeholder="Address{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="address">Address{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="address" id="address" class="form-control" {% if pageform.placeholders == true %}placeholder="Address{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
                 <div class="row form-group">
                         <div class="col-sm-6">
-                            <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="city">City{{ requiredstar }}</label>
-                            <input type="{{ item.input_type }}" name="city" id="city" class="form-control" {% if page.form.placeholders == true %}placeholder="City{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                            <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="city">City{{ requiredstar }}</label>
+                            <input type="{{ item.input_type }}" name="city" id="city" class="form-control" {% if pageform.placeholders == true %}placeholder="City{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                         </div>
                         <div class="col-sm-6">
-                            <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="postalcode">Postal code{{ requiredstar }}</label>
-                            <input type="{{ item.input_type }}" name="postalcode" id="postalcode" class="form-control" {% if page.form.placeholders == true %}placeholder="Postal code{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                            <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="postalcode">Postal code{{ requiredstar }}</label>
+                            <input type="{{ item.input_type }}" name="postalcode" id="postalcode" class="form-control" {% if pageform.placeholders == true %}placeholder="Postal code{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                         </div>
                 </div>
             {% else %}
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <label {% if page.form.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if page.form.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
+                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                     </div>
                 </div>
             {% endif %}
