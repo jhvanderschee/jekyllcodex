@@ -56,7 +56,7 @@ forms:
 And add this to your layout:
 
 ```
-{% raw %}{% if page.forms %}{% include form.html %}{% endif %}{% endraw %}
+{% raw %}{% if page.forms %}{% include form.html form="1" %}{% endif %}{% endraw %}
 ```
 
 CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother.
