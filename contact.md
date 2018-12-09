@@ -4,7 +4,7 @@ forms:
   - to: jhvanderschee@gmail.com
     subject: New submission!
     redirect: /
-    form_engine: netlify
+    form_engine: formspree
     placeholders: false
     fields: 
       - name: name
@@ -30,10 +30,6 @@ forms:
       - name: terms
         input_type: checkbox
         placeholder: I would accept the terms and conditions (if there were any)
-        required: true
-      - name: recaptcha
-        input_type: recaptcha
-        placeholder:
         required: true
       - name: submit
         input_type: submit
