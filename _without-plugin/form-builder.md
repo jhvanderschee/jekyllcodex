@@ -56,7 +56,7 @@ forms:
 And add this to your layout:
 
 ```
-{% raw %}{% if page.forms %}{% include form.html form="1" %}{% endif %}{% endraw %}
+{% raw %}{% if page.forms[0] %}{% include form.html form="1" %}{% endif %}{% endraw %}
 ```
 
 CloudCannon users should add the available options to their '_config.yml' file to make the experience for content editors even smoother.
@@ -73,11 +73,13 @@ CloudCannon users should add the available options to their '_config.yml' file t
   - radio
   - number
   - submit
+  - recaptcha
 
 form_engines:
   - cloudcannon
   - formspree
-  - formbucket{% endraw %}
+  - formbucket
+  - netlify{% endraw %}
 ```
 
 Disclaimer: Note that there is no select (dropdown) support (yet). Also note that browser support is not perfect. The native HTML5 date picker is not available in every browser and that HMTL5 validation does not work in IE9 and Opera Mini. Use [better forms](/without-plugin/better-forms){: .gray}, if you want HTML5 validation support for all browsers.
@@ -92,5 +94,5 @@ Step 3. Save the file in the '_includes' directory of your project<br>
 Step 4. Add the following line to your layout on the place where you want the form to appear:
 
 ```
-{% raw %}{% if page.forms %}{% include form.html %}{% endif %}{% endraw %}
+{% raw %}{% if page.forms[0] %}{% include form.html form="1" %}{% endif %}{% endraw %}
 ```
