@@ -23,7 +23,7 @@ If you do NOT use Netlify as your form engine, but one of the others (cloudcanno
   required: true
 ```
 
-Additionally you need to add this to your head:
+Additionally you need to add this to your head (non-Netlify only):
 
     {% raw %}{% if page.forms %}<script src='https://www.google.com/recaptcha/api.js'></script>{% endif %}{% endraw %}
     
