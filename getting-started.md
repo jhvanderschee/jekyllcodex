@@ -9,7 +9,7 @@ A website typically consists of a few elements. The header with a menu, a sideba
 
 You used to create an 'index.php' file and do something like this:
 
-```
+```html
 <html>
 <head></head>
 <body>
@@ -23,7 +23,7 @@ content
 
 Now you create an 'index.md' file and you replace your PHP tags with Liquid tags, like so:
 
-```
+```html
 {% raw %}---
 ---
 <html>
