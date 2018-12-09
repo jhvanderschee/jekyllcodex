@@ -23,6 +23,6 @@ If you do NOT use Netlify as your form engine, but one of the others (cloudcanno
 
 Additionally you need to add this to your head:
 
-    {% if page.forms %}<script src='https://www.google.com/recaptcha/api.js'></script>{% endif %}
+    {% raw %}{% if page.forms %}<script src='https://www.google.com/recaptcha/api.js'></script>{% endif %}{% endraw %}
     
 Note that the above code assumes you use the latest version of the [form builder](/without-plugin/form-builder/). Happy coding!
