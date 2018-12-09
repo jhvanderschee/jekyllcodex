@@ -8,3 +8,5 @@ fields:
   label: Title
   config:
     required: true
+pages:
+- _posts/improvements-to-the-form-builder.md
