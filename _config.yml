@@ -70,8 +70,10 @@ input_types:
   - radio
   - number
   - submit
+  - recaptcha
 
 form_engines:
   - cloudcannon
   - formspree
   - formbucket
+  - netlify

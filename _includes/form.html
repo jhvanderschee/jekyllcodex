@@ -10,12 +10,15 @@
 
 {% if include.form %}
     {% assign formnumber = include.form | minus: 1 %}
-    {% assign pageform = page.forms[formnumber] %}
 {% else %}
-    {% assign pageform = page.forms[0] %}
+    {% assign formnumber = 0 %}
 {% endif %}
+{% assign pageform = page.forms[formnumber] %}
 
-{% if pageform.form_engine == 'cloudcannon' %}
+{% if pageform.form_engine == 'netlify' %}
+    <form name="{{ page.title }} {% if formnumber > 0 %}{{ formnumber | plus:1 }}{% endif %}" id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ pageform.redirect }}" data-netlify="true" netlify-honeypot="_gotcha">
+        <input type="hidden" name="_to" value="{{ pageform.to }}">
+{% elsif pageform.form_engine == 'cloudcannon' %}
     <form id="{{ page.url | slugify }}" class="form autofill" method="POST" action="{{ pageform.redirect }}">
         <input type="hidden" name="_to" value="{{ pageform.to }}">
 {% elsif pageform.form_engine == 'formspree' %}
@@ -55,8 +58,16 @@
                 </div>
             </div>
         </div>
+        {% elsif item.input_type == 'recaptcha' %}
+            <div class="form-group">
+                {% if pageform.form_engine == 'netlify' %}
+                    <div data-netlify-recaptcha></div>
+                {% else %}
+                    <div class="g-recaptcha" data-sitekey="{{ item.placeholder }}"></div>
+                {% endif %}
+            </div>
         {% elsif item.input_type == 'html' %}
-        {{ item.placeholder }}
+            {{ item.placeholder }}
         {% elsif item.input_type == 'submit' %}
         <div class="form-group">
             <input type="{{ item.input_type }}" value="{{ item.placeholder }}" class="btn btn-primary" />
