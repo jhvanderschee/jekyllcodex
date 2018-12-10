@@ -19,6 +19,7 @@ I have set up different CMS services that work at the same time. Note that Cloud
 - This website can be edited directly on [Github](https://github.com/jhvanderschee/jekyllcodex){:.gray}.
 - This website can be edited in the [Forestry.io CMS](https://forestry.io){:.gray}.
 - This website can be edited in the [CloudCannon CMS](https://cloudcannon.com){:.gray}.
+- This website can be edited in the [Netlify CMS](https://www.netlifycms.org){:.gray}.
 
 ### Then why is it hard?
 
