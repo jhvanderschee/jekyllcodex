@@ -1,5 +1,7 @@
 ---
 title: About availability and redundancy
+date: 2018-12-10T22:00:32.639Z
+thumbnail: /uploads/img_20181101_113818211.jpg
 ---
 
 The hardest problem to solve with static site generators, is availability and redundancy. In a monolithic system you would just replicate the server and you will have a complete fail-over. This is not so simple for Static Site Generators. However, you can quite easily deploy a website to multiple platforms. I have used this website as an example.
