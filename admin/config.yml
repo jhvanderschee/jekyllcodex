@@ -1,0 +1,4 @@
+backend:
+  name: git-gateway
+  branch: gh-pages # Branch to update (optional; defaults to master)
+media_folder: "uploads"
