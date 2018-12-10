@@ -6,7 +6,7 @@ The hardest problem to solve with static site generators, is availability and re
 
 ### What if the hosting is down?
 
-- This website is available at Netlify hosting at [https://boatman-bird-64062.netlify.com/]https://boatman-bird-64062.netlify.com/).
+- This website is available at Netlify hosting at [https://boatman-bird-64062.netlify.com/](https://boatman-bird-64062.netlify.com/).
 - This website is available at CloudCannon hosting at [https://gifted-pooch.cloudvent.net/](https://gifted-pooch.cloudvent.net/).
 - This website is available at Github hosting at [http://jhvanderschee.github.io/jekyllcodex/](http://jhvanderschee.github.io/jekyllcodex/).
 
