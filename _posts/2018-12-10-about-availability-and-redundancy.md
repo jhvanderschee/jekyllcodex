@@ -14,7 +14,7 @@ When this website goes down, I just need to point the DNS of the domain name to 
 
 ### What if the CMS does not work properly?
 
-I have set up different CMS services that work at the same time. Note that CloudCannon provides different levels of access (full/code access and limited/editor access), while Forestry.io only provides limited/editor access and Github only provides full/code access.
+I have set up different CMS services that work at the same time. Note that each CMS has his own levels of access. CloudCannon provides full/code access AND limited/editor access. Forestry.io and Netlify CMS only provide limited/editor access and Github only provides full/code access.
 
 - This website can be edited directly on [Github](https://github.com/jhvanderschee/jekyllcodex){:.gray}.
 - This website can be edited in the [Forestry.io CMS](https://forestry.io){:.gray}.
