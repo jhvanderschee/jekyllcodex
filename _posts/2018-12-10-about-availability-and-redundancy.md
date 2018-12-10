@@ -5,20 +5,18 @@ title: About availability and redundancy
 The hardest problem to solve with static site generators, is availability and redundancy. In a monolithic system you would just replicate the server and you will have a complete fail-over. This is not so simple for Static Site Generators. However, you can quite easily deploy a website to multiple platforms. I have used this website as an example.
 
 ### What if the hosting is down?
+When this website goes down, I just need to point the DNS of the domain name to another service and it is back online. This process can be automated with [DNS failover](https://dnsmadeeasy.com/services/dnsfailover/). This is a DNS system that automatically updates your records based on the availability of the endpoints in the record. Magic, right?
 
 - This website is available at Netlify hosting at [https://boatman-bird-64062.netlify.com/](https://boatman-bird-64062.netlify.com/).
 - This website is available at CloudCannon hosting at [https://gifted-pooch.cloudvent.net/](https://gifted-pooch.cloudvent.net/).
 - This website is available at Github hosting at [http://jhvanderschee.github.io/jekyllcodex/](http://jhvanderschee.github.io/jekyllcodex/).
 
-When this website goes down, I just need to point the DNS of the domain name to another service and it is back online. This process can be automated with [DNS failover](https://dnsmadeeasy.com/services/dnsfailover/). This is a DNS system that automatically updates your records based on the availability of the endpoints in the record. Magic, right?
-
 ### What if the CMS does not work properly?
+I have set up different CMS services that work at the same time. Note that CloudCannon provides different levels of access (full/code access and limited/editor access), while Forestry.io only provides limited/editor access and Github only provides full/code access.
 
 - This website can be edited directly on [Github](https://github.com/jhvanderschee/jekyllcodex).
 - This website can be edited in the [Forestry.io CMS](https://forestry.io).
 - This website can be edited in the [CloudCannon CMS](https://cloudcannon.com).
-
-I can use these services all at the same time. Note that CloudCannon provides different levels of access (full/code access and limited/editor access), while Forestry.io only provides limited/editor access and Github only provides full/code access.
 
 ### Then why is it hard?
 
