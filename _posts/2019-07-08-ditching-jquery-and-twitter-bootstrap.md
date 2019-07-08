@@ -2,7 +2,7 @@
 title: Ditching jQuery and Twitter Bootstrap
 ---
 
-I have been using Jekyll Codex extensively the last few years and so have you. Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. The average amount of clicks has also risen from just a few to an average of 20 a day. 
+I have been using Jekyll Codex extensively the last few years and so have you. Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. The average amount of clicks has also risen from just a few to an average of 20 a day. This makes for an average of 600 visitors per month, which is not half-bad for such a niche website.
 
 Jekyll Codex has been my personal code base for reusable scripts, but the last months a shift has taken place in my personal workflow. I have gotten rid of all frameworks I was using. This means: no more (overriding) Twitter Bootstrap and no more jQuery. I am now writing my own CSS, using Flexbox and I have been chosing vanilla (plain) javascript over jQuery in all my new projects. This allows me to build [websites that are 20kb or smaller](https://www.usecue.com/blog/a-tribute-to-the-web/). Twitter Bootstrap and Flexbox made my website unnecessary  large and slow. 
 
