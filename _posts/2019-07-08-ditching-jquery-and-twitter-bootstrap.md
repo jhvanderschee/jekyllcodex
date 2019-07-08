@@ -6,7 +6,7 @@ I have been using Jekyll Codex extensively the last few years and so have you. J
 
 Jekyll Codex has been my personal code base for reusable scripts, but the last months a shift has taken place in my personal workflow. I have gotten rid of all frameworks I was using. This means: no more (overriding) Twitter Bootstrap and no more jQuery. I am now writing my own CSS, using Flexbox and I have been chosing vanilla (plain) javascript over jQuery in all my new projects. This allows me to build [websites that are 20kb or smaller](https://www.usecue.com/). Twitter Bootstrap and Flexbox made my website unnecessary  large and slow. 
 
-My ultimate goal is to 'fix' Jekyll Codex too: the code as well as the website itsself. I want the upgrade my Google Lighthouse score to a solid 100.
+My ultimate goal is to 'fix' Jekyll Codex too: the code as well as the website itsself. I want the upgrade the Google Lighthouse score to a solid 100.
 
 I have started by porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it ;-)). The website youmightnotneedjquery.com, MDN web docs and Stack Overflow have been helpful resources.
 
