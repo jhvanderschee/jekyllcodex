@@ -8,9 +8,7 @@ Jekyll Codex has been my personal code base for reusable scripts, but the last m
 
 My ultimate goal is to 'fix' Jekyll Codex too: the code as well as the website itsself. I want the upgrade the Google Lighthouse score to a solid 100.
 
-I have started with upgrading the `new-window-fix.html` script. Google Lighthouse suggested it needed a `rel="noopener"` on all external links, so I added that.
-
-Then I got to the big work: porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it ;-)). The websites [youmightnotneedjquery.com](http://youmightnotneedjquery.com/), [MDN web docs](https://developer.mozilla.org/en-US/) and [Stack Overflow](https://stackoverflow.com/) have been helpful resources. Below you can find my first version of the plain javascript lightbox. Note that it does NOT support swipe or captions. You can see it in action [here](https://www.usecue.com/blog/the-need-for-speed-on-the-web/). 
+I have started with upgrading the `new-window-fix.html` script. Google Lighthouse suggested it needed a `rel="noopener"` on all external links, so I added that. Then I got to the big work: porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it ;-)). The websites [youmightnotneedjquery.com](http://youmightnotneedjquery.com/), [MDN web docs](https://developer.mozilla.org/en-US/) and [Stack Overflow](https://stackoverflow.com/) have been helpful resources. Below you can find my first version of the plain javascript lightbox. Note that it does NOT support swipe or captions. You can see it in action [here](https://www.usecue.com/blog/the-need-for-speed-on-the-web/). 
 
 A lot of scripts still need to be ported. I am not sure if they are all going to make it to the new version of Jekyll Codex, but we will see. For now it is a one-at-a-time task.
 
