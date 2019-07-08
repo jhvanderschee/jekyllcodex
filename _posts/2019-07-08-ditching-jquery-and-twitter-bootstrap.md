@@ -8,9 +8,7 @@ Jekyll Codex has been my personal code base for reusable scripts, but the last m
 
 My ultimate goal is to 'fix' Jekyll Codex too: the code as well as the website itsself. I want the upgrade the Google Lighthouse score to a solid 100.
 
-I have started by porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it ;-)). The websites youmightnotneedjquery.com, MDN web docs and Stack Overflow have been helpful resources.
-
-Below you can find my first version of the plain javascript lightbox. Note that it does NOT support swipe or captions. You can see it in action [here](https://www.usecue.com/blog/the-need-for-speed-on-the-web/). 
+I have started by porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it ;-)). The websites youmightnotneedjquery.com, MDN web docs and Stack Overflow have been helpful resources. Below you can find my first version of the plain javascript lightbox. Note that it does NOT support swipe or captions. You can see it in action [here](https://www.usecue.com/blog/the-need-for-speed-on-the-web/). 
 
 ```
 function is_youtubelink(url) {
