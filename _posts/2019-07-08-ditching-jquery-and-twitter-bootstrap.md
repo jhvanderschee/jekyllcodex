@@ -1,5 +1,5 @@
 ---
-title: The status quo
+title: Ditching jQuery and Twitter Bootstrap
 ---
 
 I have been using Jekyll Codex extensively the last few years and so have you. Jekyll Codex displays in Google has risen to 200 a day. The average amount of clicks has risen to 20 a day. Jekyll Codex has been my personal code base for reusable scripts. 
