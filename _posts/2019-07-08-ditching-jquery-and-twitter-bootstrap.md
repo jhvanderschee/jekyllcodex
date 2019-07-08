@@ -2,13 +2,15 @@
 title: Ditching jQuery and Twitter Bootstrap
 ---
 
-I have been using Jekyll Codex extensively the last few years and so have you. Jekyll Codex displays in Google has risen to 200 a day. The average amount of clicks has risen to 20 a day. Jekyll Codex has been my personal code base for reusable scripts. 
+I have been using Jekyll Codex extensively the last few years and so have you. Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. The average amount of clicks has also risen from just a few to an average of 20 a day. 
 
-The last months a shift has taken place in my personal workflow. I have gotten rid of all frameworks I was using. This means: no more (overriding) Twitter Bootstrap and no more jQuery. I am writing my own CSS, using Flexbox and I have been chosing vanilla (plain) javascript over jQuery in all my new projects. This allows me to build [websites that are 20kb or smaller](https://www.usecue.com/). Twitter Bootstrap and Flexbox made my website  unnecessary  large and slow. My goal is to 'fix' Jekyll Codex too: the code as well as the website itsself.
+Jekyll Codex has been my personal code base for reusable scripts, but the last months a shift has taken place in my personal workflow. I have gotten rid of all frameworks I was using. This means: no more (overriding) Twitter Bootstrap and no more jQuery. I am now writing my own CSS, using Flexbox and I have been chosing vanilla (plain) javascript over jQuery in all my new projects. This allows me to build [websites that are 20kb or smaller](https://www.usecue.com/). Twitter Bootstrap and Flexbox made my website unnecessary  large and slow. 
 
-I have started by porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it). The website youmightnotneedjquery.com, MDN web docs and Stack Overflow have been helpful resources.
+My ultimate goal is to 'fix' Jekyll Codex too: the code as well as the website itsself. I want the upgrade my Google Lighthouse score to a solid 100.
 
-Here is my first version of the plain javascript lightbox. You can see it in action [here](https://www.usecue.com/blog/the-need-for-speed-on-the-web/).
+I have started by porting the code for the lightbox from jQuery to plain javascript. This was tougher than I thought. Porting code from jQuery to plain javascript is extremely educational and makes you appreciate the things jQuery can do (but not enough to keep it ;-)). The website youmightnotneedjquery.com, MDN web docs and Stack Overflow have been helpful resources.
+
+Below you can find my first version of the plain javascript lightbox. You can see it in action [here](https://www.usecue.com/blog/the-need-for-speed-on-the-web/). 
 
 ```
     function is_youtubelink(url) {
