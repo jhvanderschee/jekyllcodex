@@ -10,7 +10,7 @@ It has been an enormous honor to speak at JekyllConf2019. I got this nice reacti
 
 &nbsp;
 
-I was accompanied by some great speakers. The message of Chris Ferdinandyreally resonated with me. His statement was that the web is a mess and that we should fix it by using less frameworks. 
+I was accompanied by some great speakers. The message of Chris Ferdinandy really resonated with me. His statement was that the web is a mess and that we should fix it by using less frameworks. You can find his talk here:
 
 <div class="videoWrapper"><iframe src="https://www.youtube.com/embed/_x5GWpu2ing?start=4568" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
