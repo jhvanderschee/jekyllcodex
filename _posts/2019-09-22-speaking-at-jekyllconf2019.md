@@ -6,11 +6,11 @@ It has been an enormous honor to speak at JekyllConf2019. I got this nice reacti
 
 > [#JekyllConf](https://twitter.com/hashtag/JekyllConf?src=hashtag_click) @jekyllrb Thank you for your [@jhvanderschee](https://twitter.com/jhvanderschee), epic to see that you can build a Jekyll Site in under 20 minutes. If you missed it, catch up later on at [https://jekyllconf.com](https://jekyllconf.com)
 
-<p><img src="/uploads/joostvanderschee.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?start=14067');" style="cursor: pointer;" /></p>
+<p><img src="/uploads/joostvanderschee.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?autoplay=1&start=14067');" style="cursor: pointer;" /></p>
 
 I was accompanied by some great speakers. The message of Chris Ferdinandy really resonated with me. His statement was that the web is a mess and that we should fix it by using less frameworks. You can find his talk here:
 
-<p><img src="/uploads/chrisferdinandi.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?start=9475');" style="cursor: pointer;" /></p>
+<p><img src="/uploads/chrisferdinandi.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?autoplay=1&start=9475');" style="cursor: pointer;" /></p>
 
 > [#JekyllConf](https://twitter.com/hashtag/JekyllConf?src=hashtag_click) let's build a simpler, faster world wide web (be a dev dynosaur). Thanks [@ChrisFerdinandi](https://twitter.com/ChrisFerdinandi) for a super inspiring talk!
 
