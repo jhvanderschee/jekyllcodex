@@ -7,7 +7,7 @@ It has been an enormous honor to speak at JekyllConf2019. I got this nice reacti
 > #JekyllConf @jekyllrb Thank you for your @jhvanderschee, epic to see that you can build a Jekyll Site in under 20 minutes. If you missed it, catch up later on at [https://jekyllconf.com](https://jekyllconf.com)
 
 
-<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/_x5GWpu2ing?start=14067" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_x5GWpu2ing?start=14067" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 &nbsp;
 
