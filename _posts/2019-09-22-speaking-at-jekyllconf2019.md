@@ -6,8 +6,7 @@ It has been an enormous honor to speak at JekyllConf2019. I got this nice reacti
 
 > [#JekyllConf](https://twitter.com/hashtag/JekyllConf?src=hashtag_click) @jekyllrb Thank you for your [@jhvanderschee](https://twitter.com/jhvanderschee), epic to see that you can build a Jekyll Site in under 20 minutes. If you missed it, catch up later on at [https://jekyllconf.com](https://jekyllconf.com)
 
-
-Click the link: [https://www.youtube.com/embed/_x5GWpu2ing?start=14067](https://www.youtube.com/embed/_x5GWpu2ing?start=14067)
+<div>Click the link: [https://www.youtube.com/embed/_x5GWpu2ing?start=14067](https://www.youtube.com/embed/_x5GWpu2ing?start=14067)</div>
 
 I was accompanied by some great speakers. The message of Chris Ferdinandy really resonated with me. His statement was that the web is a mess and that we should fix it by using less frameworks. You can find his talk here:
 
