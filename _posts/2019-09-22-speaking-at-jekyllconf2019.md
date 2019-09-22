@@ -6,11 +6,15 @@ It has been an enormous honor to speak at JekyllConf2019. I got this nice reacti
 
 > #JekyllConf @jekyllrb Thank you for your @jhvanderschee, epic to see that you can build a Jekyll Site in under 20 minutes. If you missed it, catch up later on at http://jekyllconf.com
 
-<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/_x5GWpu2ing/?byline=0&title=0&portrait=0&start=14067" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div class="videoWrapper"><iframe src="https://www.youtube.com/embed/_x5GWpu2ing?start=14067" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+&nbsp;
 
 I was accompanied by some great speakers. The message of Chris Ferdinandyreally resonated with me. His statement was that the web is a mess and that we should fix it by using less frameworks. 
 
-<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/_x5GWpu2ing/?byline=0&title=0&portrait=0&start=4568" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div class="videoWrapper"><iframe src="https://www.youtube.com/embed/_x5GWpu2ing?start=4568" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+&nbsp;
 
 > #JekyllConf let's build a simpler, faster world wide web (be a dev dynosaur). Thanks @ChrisFerdinandi for a super inspiring talk!
 
