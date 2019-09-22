@@ -30,6 +30,7 @@ function vimeo_embed(url,el) {
           id = response.video_id;
           if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
           if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+	  if(url.indexOf('start=') !== -1) alert(url.substring(url.indexOf('start='));
           var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
           if(autoplay==1) theInnerHTML += '&autoplay=1';
           if(loop==1) theInnerHTML += '&loop=1';
