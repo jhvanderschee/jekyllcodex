@@ -2,7 +2,7 @@
 title: Speaking at JekyllConf2019
 ---
 
-It has been an enormous honor to speak at JekyllConf2019. I got this nice reaction from the JekyllConf team. You can find my talk by clicking on the image above.
+It has been an enormous honor to speak at JekyllConf2019. I got a nice reaction from the JekyllConf team (see the tweet). You can find my talk by clicking on the image below.
 
 <p><img src="/uploads/joostvanderschee.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?autoplay=1&start=14067');" style="cursor: pointer;" /></p>
 
