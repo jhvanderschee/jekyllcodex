@@ -2,7 +2,7 @@
 title: Speaking at JekyllConf2019
 ---
 
-It has been an enormous honor to speak at JekyllConf2019. This was my first conference talk ever. Fortunately I could speak from within my own home-based studio, so it involved no flying around the world. After my talk I got a nice reaction from the JekyllConf team (see the tweet), which made me happy. That was exactly what I wanted to show: You can build a website in under 20 minutes. Want to know more? You can find my talk by clicking on the image below.
+It has been an enormous honor to speak at JekyllConf2019. This was my first conference talk ever. Fortunately, I could speak from my own home-based studio, so it involved no flying around the world. After my talk I got a nice reaction from the JekyllConf team (see the tweet), which made me happy. That was exactly what I wanted to show: You can build a website in under 20 minutes. Want to know more? You can find my talk by clicking on the image below.
 
 <p><img src="/uploads/joostvanderschee.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?autoplay=1&start=14067');" style="cursor: pointer;" /></p>
 
