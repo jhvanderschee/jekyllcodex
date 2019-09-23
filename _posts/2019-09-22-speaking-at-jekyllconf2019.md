@@ -4,7 +4,7 @@ title: Speaking at JekyllConf2019
 
 It has been an enormous honor to speak at JekyllConf2019. This was my first conference talk ever. Fortunately, I could speak live from my own home-based studio, so it involved no flying around the world. After my talk I got a nice reaction from the JekyllConf team (see the tweet), which made me happy. That was exactly what I wanted to show: You can build a website in under 20 minutes. Want to know more? You can find my talk by clicking on the image below.
 
-<p><img src="/uploads/joostvanderschee.jpg" onclick="window.open('https://www.youtube.com/embed/_x5GWpu2ing?autoplay=1&start=14067');" style="cursor: pointer;" /></p>
+<p><a href="https://vimeo.com/361839295"><img src="/uploads/joostvanderschee.jpg" /></a></p>
 
 > [#JekyllConf](https://twitter.com/hashtag/JekyllConf?src=hashtag_click) @jekyllrb Thank you for your [@jhvanderschee](https://twitter.com/jhvanderschee), epic to see that you can build a Jekyll Site in under 20 minutes. If you missed it, catch up later on at [https://jekyllconf.com](https://jekyllconf.com)
 
