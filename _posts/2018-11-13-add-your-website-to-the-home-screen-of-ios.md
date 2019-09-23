@@ -1,5 +1,6 @@
 ---
 title: Add your website to the home screen of iOS
+date: 2018-11-13 00:00:00 Z
 ---
 
 I have been creating quite a few native apps for clients. Because I am a big fan of website technology (simple and safe), I have been building native apps that consist of only a web view. They are basically website wrappers or browsers without a URL bar. This works fine for Android, but Apple refuses to allow these kind of apps in the Apple store. They will not tell you what the minimum functionality is you have to add, although big American companies, like Basecamp, seem to get away with only an extra menu. Somehow I get the feeling that might not be the case in my situation. Because I see no future in developing for a closed platform with arbitrary rules, I have chosen to make these websites installable as mobile web apps on iOS devices. In laymans terms this is called: adding the website to the home screen. Web developers call this PWA's (Progressive Web Apps).

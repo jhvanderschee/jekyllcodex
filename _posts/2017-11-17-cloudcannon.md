@@ -1,5 +1,6 @@
 ---
-title:  "CloudCannon CMS: edit with ease"
+title: 'CloudCannon CMS: edit with ease'
+date: 2017-11-17 00:00:00 Z
 ---
 
 CloudCannon is a cloud-based content management system (CMS) and hosting provider for static and Jekyll websites. Agencies, freelancers and enterprise teams use CloudCannon to deliver CMS editable websites to clients and non-technical team members.

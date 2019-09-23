@@ -1,5 +1,6 @@
 ---
 title: Lightbox captions added
+date: 2018-08-22 00:00:00 Z
 ---
 
 I was on a holiday in France and got an email from a guy named Stu who was using Jekyll Codex. He wrote: 

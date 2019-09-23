@@ -2,11 +2,11 @@
 title: Digital download
 subtitle: Digital download
 images:
-  - image: /uploads/feature.jpg
+- image: "/uploads/feature.jpg"
 variant_name: size
 variants:
-  - name:
-    price: 
+- name: 
+  price: 
 price: 20
 payment_link: https://useplink.com/payment/rjC3CqpNM5gs4GcrEVad
 ---

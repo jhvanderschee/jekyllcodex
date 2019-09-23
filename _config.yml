@@ -1,79 +1,69 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+---
 title: Jekyll Codex
-description: > # this means to ignore newlines until "baseurl:"
-  Jekyll Codex wants to make it easier for front-end developers to choose Jekyll in their next project.
-url: "https://jekyllcodex.org" # the base hostname & protocol for your site
-permalink: /blog/:title/
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  products:
+    title: Products
+    output: true
+    permalink: "/donate/:path/"
+  uploads:
+    title: Uploads
+    output: true
+  without-plugin:
+    title: Without Plugin
+    output: true
+    permalink: "/without-plugin/:path/"
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: without-plugin
+  values:
+    layout: without-plugin-item
+- scope:
+    path: ''
+    type: products
+  values:
+    layout: product
+description: 'Jekyll Codex wants to make it easier for front-end developers to choose
+  Jekyll in their next project.
 
+'
+url: https://jekyllcodex.org
+permalink: "/blog/:title/"
 facebook_url: https://www.facebook.com/jhvanderschee
 twitter_url: https://twitter.com/jhvanderschee
 linkedin_url: https://www.linkedin.com/in/joost-van-der-schee-4b26682
 googleplus_url: https://plus.google.com/u/0/+JoostvanderSchee
-pinterest_url:
-instagram_url:
-
-# Defaults
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: ""
-      type: "without-plugin"
-    values:
-      layout: "without-plugin-item"
-  -
-    scope:
-      path: ""
-      type: "products" # a collection in your site, in plural form
-    values:
-      layout: "product"
-
-# Collections
-collections:
-  without-plugin:
-    output: true
-    permalink: /without-plugin/:path/  
-  products:
-    output: true
-    permalink: /donate/:path/  
-
+pinterest_url: 
+instagram_url: 
 highlighter: rouge
 markdown: kramdown
 kramdown:
-   syntax_highlighter_opts:
-      disable : true
-
+  syntax_highlighter_opts:
+    disable: true
 input_types:
-  - text
-  - textarea
-  - email
-  - date
-  - checkbox
-  - radio
-  - number
-  - submit
-  - recaptcha
-
+- text
+- textarea
+- email
+- date
+- checkbox
+- radio
+- number
+- submit
 form_engines:
-  - cloudcannon
-  - formspree
-  - formbucket
-  - netlify
+- cloudcannon
+- formspree
+- formbucket

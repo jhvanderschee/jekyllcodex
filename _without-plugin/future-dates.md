@@ -1,5 +1,5 @@
 ---
-title: "Future dates"
+title: Future dates
 ---
 
 ### Introduction

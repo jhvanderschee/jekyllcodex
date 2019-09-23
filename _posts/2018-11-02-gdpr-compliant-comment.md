@@ -1,5 +1,6 @@
 ---
 title: GDPR compliant comments
+date: 2018-11-02 00:00:00 Z
 comment_issue_id: 4
 ---
 

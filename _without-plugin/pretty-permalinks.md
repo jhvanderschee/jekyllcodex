@@ -1,5 +1,5 @@
 ---
-title: "Pretty URL's"
+title: Pretty URL's
 ---
 
 ### Introduction

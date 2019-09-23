@@ -1,5 +1,5 @@
 ---
-title: "Add to home screen"
+title: Add to home screen
 ---
 
 ### Introduction

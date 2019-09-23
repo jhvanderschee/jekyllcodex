@@ -2,14 +2,14 @@
 title: T-shirt
 subtitle: Buy me a t-shirt
 images:
-  - image: /uploads/t-shirt/view3.jpeg
-  - image: /uploads/t-shirt/view.jpeg
-  - image: /uploads/t-shirt/view4.jpeg
+- image: "/uploads/t-shirt/view3.jpeg"
+- image: "/uploads/t-shirt/view.jpeg"
+- image: "/uploads/t-shirt/view4.jpeg"
 variant_name: size
 variants:
-  - name:
-    price: 
-price: 25.70
+- name: 
+  price: 
+price: 25.7
 payment_link: 
 ---
 

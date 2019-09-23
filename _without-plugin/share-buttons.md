@@ -1,5 +1,5 @@
 ---
-title: "Share buttons"
+title: Share buttons
 ---
 
 ### Introduction
