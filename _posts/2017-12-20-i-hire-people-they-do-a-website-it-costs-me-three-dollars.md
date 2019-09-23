@@ -1,5 +1,6 @@
 ---
 title: I hire people, they do a website, it costs me $3
+date: 2017-12-20 00:00:00 Z
 ---
 
 https://www.youtube.com/watch?v=k_rdevccD08&autoplay=1

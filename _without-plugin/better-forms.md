@@ -1,5 +1,5 @@
 ---
-title: "Better forms"
+title: Better forms
 ---
 
 ### Introduction

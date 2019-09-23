@@ -1,5 +1,6 @@
 ---
 title: Ditching jQuery and Twitter Bootstrap
+date: 2019-07-08 00:00:00 Z
 ---
 
 I have been using Jekyll Codex extensively the last few years and so have you. Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. The average amount of clicks has also risen from just a few to an average of 20 a day. This makes for an average of 600 visitors per month, which is not half-bad for such a niche website. Some of these people have even donated a coffee. Thank you so much!

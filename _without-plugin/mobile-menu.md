@@ -1,5 +1,5 @@
 ---
-title: "Mobile menu"
+title: Mobile menu
 ---
 
 ### Introduction

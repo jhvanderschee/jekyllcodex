@@ -1,5 +1,6 @@
 ---
 title: Digital downloads in the webshop
+date: 2018-07-17 00:00:00 Z
 ---
 
 Every now and then I get messages through Crisp (the chat button on the bottom of this website). Some people ask questions, some want to say thanks and some people provide great ideas. The latter was the case yesterday. Andrei (I will leave out his last name for privacy reasons) introduced himself to me and asked if it would be possible to use the webshop in Jekyll Codex to create digital downloads.

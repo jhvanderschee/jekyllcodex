@@ -1,5 +1,6 @@
 ---
 title: 'Major update: Jekyll without plugins'
+date: 2017-10-17 00:00:00 Z
 ---
 
 This site exists now for almost two years. It has been a place to collect scripts I have created during the production of over 70 commercial Jekyll websites (I create about 30 commercial Jekyll website per year). It was time to reorder my scripts, so I have rewritten their descriptions to fit the theme 'Jekyll without plugins'. 

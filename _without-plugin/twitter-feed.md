@@ -1,5 +1,5 @@
 ---
-title: "Twitter feed"
+title: Twitter feed
 inactive: true
 ---
 

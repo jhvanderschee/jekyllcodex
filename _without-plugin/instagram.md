@@ -1,5 +1,5 @@
 ---
-title: "Instagram"
+title: Instagram
 ---
 
 ### Introduction

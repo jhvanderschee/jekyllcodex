@@ -1,5 +1,6 @@
 ---
 title: Lightbox improved
+date: 2018-01-02 00:00:00 Z
 ---
 
 Happy New Year! As a present from me to you I have improved the lightbox. I hope you like it. 

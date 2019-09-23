@@ -1,6 +1,8 @@
 ---
-title:  "Jekyll against the rest of the world"
+title: Jekyll against the rest of the world
+date: 2015-11-09 00:00:00 Z
 ---
+
 Heavy with confidence, I would deposit my lumbering frame in the middle of the room. My choice to go all static had been a good one. It was quite a serene scenery—nothing could touch me.
 
 There were website owners running around wildly, chasing WordPress security vulnerabilities, while at the same time trying to plug holes, which the dubious free plug-ins they downloaded had ripped into their very essence.

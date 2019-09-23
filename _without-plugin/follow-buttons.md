@@ -1,5 +1,5 @@
 ---
-title: "Follow buttons"
+title: Follow buttons
 ---
 
 ### Introduction

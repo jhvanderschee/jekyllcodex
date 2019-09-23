@@ -1,5 +1,6 @@
 ---
 title: Interview with Joost van der Schee
+date: 2017-12-07 00:00:00 Z
 ---
 
 This is a double interview with Michael Rose, who was interviewed by [{static is} The New Dynamic](https://www.thenewdynamic.org). I borrowed their questions and answered them myself. Please also read [his interview](https://www.thenewdynamic.org/article/interview-michael-rose/){:.gray}, as it is very inspiring.

@@ -2,11 +2,11 @@
 title: Share
 subtitle: Share the love
 images:
-  - image: /uploads/share.jpg
+- image: "/uploads/share.jpg"
 variant_name: size
 variants:
-  - name:
-    price:
+- name: 
+  price: 
 price: 0
 payment_link: 
 ---

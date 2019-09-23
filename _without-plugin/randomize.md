@@ -1,5 +1,5 @@
 ---
-title: "Randomize"
+title: Randomize
 ---
 
 ### Introduction

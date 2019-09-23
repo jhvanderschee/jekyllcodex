@@ -1,5 +1,5 @@
 ---
-title: "Cookie consent"
+title: Cookie consent
 ---
 
 ### Introduction

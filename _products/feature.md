@@ -2,11 +2,11 @@
 title: Feature
 subtitle: Sponsor a feature
 images:
-  - image: /uploads/feature.jpg
+- image: "/uploads/feature.jpg"
 variant_name: size
 variants:
-  - name:
-    price: 
+- name: 
+  price: 
 price: 150
 payment_link: 
 ---

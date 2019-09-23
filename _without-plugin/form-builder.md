@@ -1,5 +1,5 @@
 ---
-title: "Form builder"
+title: Form builder
 inactive: false
 ---
 
