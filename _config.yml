@@ -11,7 +11,7 @@ collections:
     permalink: "/donate/:path/"
   uploads:
     title: Uploads
-    output: true
+    output: false
   without-plugin:
     title: Without Plugin
     output: true
