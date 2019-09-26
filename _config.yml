@@ -9,9 +9,6 @@ collections:
     title: Products
     output: true
     permalink: "/donate/:path/"
-  uploads:
-    title: Uploads
-    output: true
   without-plugin:
     title: Without Plugin
     output: true
