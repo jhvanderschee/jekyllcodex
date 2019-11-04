@@ -24,12 +24,12 @@ Note that I wrote this lightbox myself and tested it on a minimal amount of devi
 
 Step 1. Download the file [lightbox.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/lightbox.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure the bottom of your layout document looks like this:
+<br />Step 3. Make sure the head of your layout document looks like this:
 
 ```
 {% raw %}...
 <script src="/js/jquery.min.js"></script>
 {% include lightbox.html %}
-</body>
+</head>
 </html>{% endraw %}
 ```
