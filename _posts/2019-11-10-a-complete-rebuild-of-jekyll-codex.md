@@ -9,7 +9,7 @@ I realize that you may think that not using jQuery and Twitter Bootstrap will ma
 
 I [announced this change](/blog/ditching-jquery-and-twitter-bootstrap/) a while ago, but now I finally found the time to execute it. It took me about a week, but that is more of an investment than lost time... as I myself am the biggest user of (the scripts on) this website.
 
-So what has changed? The most popular item that has changed significantly is the lightbox. I have removed the 'swipe' feature, as it was causing some bugs. I might re-add this feature later, but for now this functionality is gone. I also removed the captions, as I found myself removing them on every website I was using the lightbox.
+So what has changed? The most popular item that has changed significantly is the lightbox. I did not re-add the 'swipe' feature, as it was causing some bugs. I might add this feature later, but for now this functionality is gone. I did not re-add the captions, as I found myself removing them on every website I was using the lightbox.
 
 Another big thing that has changed is the webshop. It depended on a Ajax call to Formspree. Formspree, however, removed these Ajax calls from their free tier. Although the Ajax call was still working in the free teir, I replaced it by a simple redirect. This allows you to choose any form handler you want and makes the webshop a lot easier to set up.
 
