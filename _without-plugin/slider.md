@@ -18,7 +18,7 @@ slider:
 
 ### Introduction
 
-A lot of websites have a slider. Most of them in the header. Twitter Bootstrap has a slider (carousel) and is often used for creating layouts. The code below also used Twitter Bootstrap (version 3.3.7) and simplifies things by making the default slider fully configurable and editable. Content is stored in the YML of the page. Design decisions are stored in the include variables.
+A lot of websites have a slider or carousel. Most of them in the header. The carousel is based on this [pure CSS carousel](https://codeburst.io/how-to-pure-css-carousel-ce1a8cb231c8) with plenty of [options](https://codepen.io/jh3y/pen/WwVKLN). Content is stored in YML in the data directory. Design decisions are stored in the include variables.
 
 ### How it works
 
@@ -26,7 +26,7 @@ The code allows you to set the height of the slider as an integer (number), and 
 
 [expand]
 
-{% include slider.html height="50" unit="%" transition="slide" duration="7" image_width="1000" image_height="500" %}
+{% include carousel.html height="50" unit="%" transition="slide" duration="7" image_width="1000" image_height="500" %}
 
 [/expand]
 
