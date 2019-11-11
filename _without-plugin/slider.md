@@ -4,7 +4,7 @@ title: Slider/Carousel
 
 ### Introduction
 
-A lot of websites have a slider (or carousel). Most of them in the header. The big question is though: [Should I use a carousel?](http://shouldiuseacarousel.com/) If you decide you should... here is a decent one. The carousel is based on this [pure CSS carousel](https://codeburst.io/how-to-pure-css-carousel-ce1a8cb231c8) with plenty of [options](https://codepen.io/jh3y/pen/WwVKLN). Content is stored in YML in the data directory. Design decisions are stored in the include variables.
+A lot of websites have a slider (or carousel). Most of them in the header. The big question is: [Should I use a carousel?](http://shouldiuseacarousel.com/) If you decide you should... this page shows you how to use a decent one. The carousel is based on this [pure CSS carousel](https://codeburst.io/how-to-pure-css-carousel-ce1a8cb231c8) with plenty of [options](https://codepen.io/jh3y/pen/WwVKLN). Content is stored in YML in the data directory. Design decisions are stored in the include variables.
 
 ### How it works
 
