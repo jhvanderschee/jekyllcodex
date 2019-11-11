@@ -4,7 +4,7 @@ title: Toggle menu
 
 ### Introduction
 
-Every website needs a menu button. A little animation that transforms the hamburger into a cross, will delight your users. An example of this script can be seen on mobile in the header of this website.
+Every website needs a menu button. You know... the much debated hamburger that toggles the menu on mobile. It is best practise to add the word 'Menu' to the hamburger and to add a little animation that transforms the hamburger into the close button. An example of this script can be seen on mobile in the header of this website.
 
 ### How it works
 
