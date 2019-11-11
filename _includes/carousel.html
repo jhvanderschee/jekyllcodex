@@ -27,9 +27,7 @@
         <div class="carousel__track">
           <ul>
             {% for item in site.data.carousel.images %}
-            <li class="carousel__slide" style="background-image: url('{{ item.image }}');">
-                <div class="overlay"></div>
-            </li>
+            <li class="carousel__slide" style="background-image: url('{{ item.image }}');"></li>
             {% endfor %}
           </ul>
         </div>
@@ -42,7 +40,7 @@
 </div>
 
 <style>
-.carousel__holder {width: 100%; position: relative; padding-bottom: 50%; margin: 4rem 0 1rem;}
+.carousel__holder {width: 100%; position: relative; padding-bottom: {{ include.height }}{{ include.unit }}; margin: 1rem 0 1rem;}
 .carousel {
   height: 100%;
   width: 100%;

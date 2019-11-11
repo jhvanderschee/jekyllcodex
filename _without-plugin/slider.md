@@ -26,7 +26,7 @@ The code allows you to set the height of the slider as an integer (number), and 
 
 [expand]
 
-{% include carousel.html height="50" unit="%" transition="slide" duration="7" image_width="1000" image_height="500" %}
+{% include carousel.html height="50" unit="%" duration="7" %}
 
 [/expand]
 
@@ -38,7 +38,7 @@ Step 1. Download the file [slider.html](https://raw.githubusercontent.com/jhvand
 
 ```
 {% raw %}{% if page.slider %}
-  {% include slider.html height="50" unit="%" transition="slide" duration="7" %}
+  {% include carousel.html height="50" unit="%" duration="7" %}
 {% endif %}{% endraw %}
 ```
 Step 4. Add this YML to the head of your Markdown file:
