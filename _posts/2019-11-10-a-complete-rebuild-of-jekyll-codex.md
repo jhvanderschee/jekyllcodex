@@ -9,8 +9,12 @@ I realize that you may think that not using jQuery and Twitter Bootstrap will ma
 
 I [announced this change](/blog/ditching-jquery-and-twitter-bootstrap/) a while ago, but now I finally found the time to execute it. It took me about a week, but that is more of an investment than lost time... as I myself am the biggest user of (the scripts on) this website.
 
-So what has changed? The most popular item that has changed significantly is the lightbox. I did not re-add the 'swipe' feature, as it was causing some bugs. I might add this feature later, but for now this functionality is gone. I did not re-add the captions, as I found myself removing them on every website I was using the lightbox.
+So what has changed? 
 
-Another big thing that has changed is the webshop. It depended on a Ajax call to Formspree. Formspree, however, removed these Ajax calls from their free tier. Although the Ajax call was still working in the free teir, I replaced it by a simple redirect. This allows you to choose any form handler you want and makes the webshop a lot easier to set up.
+The most popular item that has changed significantly is the lightbox. I did not re-add the 'swipe' feature, as it was causing some bugs. I might add this feature later, but for now this functionality is gone. I did not re-add the captions, as I found myself removing them on every website I was using the lightbox.
 
-If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain. 
+Another thing I rebuild from the ground up, is the slider, or carousel. I replaced the Twitter Bootstrap variant with a pure CSS carousel. When I have time left I will re-add things like additional HTML in the slides and the option to choose for a fade transition.
+
+But the biggest change of all is the webshop. It depended on a Ajax call to Formspree. Formspree, however, removed these Ajax calls from their free tier. Although the Ajax call was still working, I replaced it by a simple redirect. This allows you to choose any form handler you want and makes the webshop a lot easier to set up. Additionally I simplified the product template and data structure and cour cart is now stored in a JSON object in local storage instead of in a string in a cookie.
+
+If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain.
