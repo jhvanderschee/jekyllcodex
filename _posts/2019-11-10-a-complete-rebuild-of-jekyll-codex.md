@@ -20,6 +20,7 @@ The biggest change of all is the webshop. It depended on a Ajax call to Formspre
 
 Some things are still broken or jQuery and will be replaced soon:
 
+- Add to homescreen
 - Better forms
 - Comments
 - Future dates
