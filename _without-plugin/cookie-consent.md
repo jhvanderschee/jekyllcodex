@@ -25,7 +25,6 @@ Step 1. Download the file [cookie-consent.html](https://raw.githubusercontent.co
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
 {% include cookie-consent.html %}
 </body>
 </html>{% endraw %}

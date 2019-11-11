@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-    {% include head-additions.html %}    
-  </head>
-  <body class="{{ page.layout }} no-js">
-    <div class="main">
-	    {% include header.html %}
-		<div class="container">
-			<div class="row">
-		    	<div class="col-md-8">
+{% include header.html %}
+  <div class="content">
+    <div class="container">
+
 		    	
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+                    <article itemscope itemtype="http://schema.org/BlogPosting">
                     
                       <header class="post-header">
                         {% include breadcrumbs.html %}
@@ -33,15 +25,7 @@
                     
                     </article>
 
-		    	</div>
-		    	<div class="col-md-1"></div>
-		    	<div class="col-md-3"></div>
-		    </div>
 		</div>
 	</div>
 
-    {% include footer.html %}
-
-  </body>
-
-</html>
+{% include footer.html %}

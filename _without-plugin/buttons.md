@@ -8,13 +8,17 @@ Allowing people to add buttons to their content is a much requested feature. Alt
 
 ### How it works
 
-The script looks for a link where the link text is cotained by square brackets, like this: `[link text]`. It will remove the brackets and add `.btn` and `.btn-primary` classes to the link. If you use Twitter Bootstrap, these buttons will be automagically styled. If not, you will have to add these classes to your CSS.
+The script looks for a link where the link text is contained by square brackets, like this: `[link text]`. It will remove the brackets and add `.btn` and `.btn-primary` classes to the link. If you use Twitter Bootstrap, these buttons will be automagically styled. If not, you will have to add these classes to your CSS. 
 
 [expand]
 
 ```
 {% include buttons.html %}
 ```
+
+Example:
+
+[[Button example]](https://www.google.com)
 
 Note that the page works perfectly fine when this script does not run. The link just has some brackets around it.
 
@@ -28,7 +32,6 @@ Step 1. Download the file [buttons.html](https://raw.githubusercontent.com/jhvan
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
 {% include buttons.html %}
 </body>
 </html>{% endraw %}

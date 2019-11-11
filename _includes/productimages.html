@@ -1,0 +1,6 @@
+<div class="image">
+    <ul>
+        <li><a href="{{ page.image }}" class="productimage" style="background-image: url({{ page.image }});"><span class="overlay"></span></a></li>
+        {% for item in page.images %}{% unless item.image.size < 3 or item.image.size == nil %}<li><a href="{{ item.image }}" class="productimage" style="background-image: url({{ item.image }});"><span class="overlay"></span></a></li>{% endunless %}{% endfor %}
+    </ul>
+</div>

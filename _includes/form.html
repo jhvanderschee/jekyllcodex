@@ -1,13 +1,3 @@
-<style>
-    .radio, .checkbox {position: relative; bottom: 8px;}
-    .rowradio + .rowradio .radio {margin-top: 0px;}
-    input[type="checkbox"], input[type="radio"] {position: relative; bottom: 1px;}
-    input[type='number'] {-moz-appearance: textfield;}
-    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
-    select.form-control {-webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("/img/chevron_down.svg") calc(100% - 17px) 60% no-repeat; background-size: auto 11px;}
-    select.form-control::-ms-expand {display: none;}
-</style>
-
 {% if include.form %}
     {% assign formnumber = include.form | minus: 1 %}
 {% else %}
@@ -36,30 +26,20 @@
         {% if item.required %}{% assign requiredtext = 'required' %}{% else %}{% assign requiredtext = '' %}{% endif %}
 
         {% if item.input_type == 'textarea' %}
-        <div class="row form-group">
-            <div class="col-sm-12">
+            <div>
                 <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
                 <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" class="form-control" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}></textarea>
             </div>
-        </div>
         {% elsif item.input_type == 'radio' %}
-        <div class="row rowradio">
-            <div class="col-sm-12">
-                <div class="radio">
-                    <label><input type="radio" name="{{ item.name }}" value="{{ item.placeholder }}" {{ requiredtext }}>{{ item.placeholder }}</label>
-                </div>
+            <div class="radio">
+                <label><input type="radio" name="{{ item.name }}" value="{{ item.placeholder }}" {{ requiredtext }}>{{ item.placeholder }}</label>
             </div>
-        </div>
         {% elsif item.input_type == 'checkbox' %}
-        <div class="row checkbox">
-            <div class="col-sm-12">
-                <div class="checkbox">
-                    <label><input type="checkbox" name="{{ item.name }}" value="{{ item.placeholder }}" {{ requiredtext }}>{{ item.placeholder }}</label>
-                </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="{{ item.name }}" value="{{ item.placeholder }}" {{ requiredtext }}>{{ item.placeholder }}</label>
             </div>
-        </div>
         {% elsif item.input_type == 'recaptcha' %}
-            <div class="form-group">
+            <div>
                 {% if pageform.form_engine == 'netlify' %}
                     <div data-netlify-recaptcha></div>
                 {% else %}
@@ -69,45 +49,37 @@
         {% elsif item.input_type == 'html' %}
             {{ item.placeholder }}
         {% elsif item.input_type == 'submit' %}
-        <div class="form-group">
+        <div>
             <input type="{{ item.input_type }}" value="{{ item.placeholder }}" class="btn btn-primary" />
         </div>
 
         {% else %}
             {% if item.name == 'name' %}
-                <div class="row form-group">
-                    <div class="col-sm-6">
-                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="firstname">First name{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" {% if pageform.placeholders == true %}placeholder="First name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
-                    </div>
-                    <div class="col-sm-6">
-                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="lastname">Last name{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" {% if pageform.placeholders == true %}placeholder="Last name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
-                    </div>
+                <div class="half">
+                    <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="firstname">First name{{ requiredstar }}</label>
+                    <input type="{{ item.input_type }}" name="firstname" id="firstname" class="form-control" {% if pageform.placeholders == true %}placeholder="First name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
+                </div>
+                <div class="half">
+                    <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="lastname">Last name{{ requiredstar }}</label>
+                    <input type="{{ item.input_type }}" name="lastname" id="lastname" class="form-control" {% if pageform.placeholders == true %}placeholder="Last name{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                 </div>
             {% elsif item.name == 'address' %}
-                <div class="row form-group">
-                    <div class="col-sm-12">
-                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="address">Address{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="address" id="address" class="form-control" {% if pageform.placeholders == true %}placeholder="Address{{ requiredstar }}"{% endif %} {{ requiredtext }}>
-                    </div>
+                <div>
+                    <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="address">Address{{ requiredstar }}</label>
+                    <input type="{{ item.input_type }}" name="address" id="address" class="form-control" {% if pageform.placeholders == true %}placeholder="Address{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                 </div>
-                <div class="row form-group">
-                        <div class="col-sm-6">
+                        <div class="half">
                             <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="city">City{{ requiredstar }}</label>
                             <input type="{{ item.input_type }}" name="city" id="city" class="form-control" {% if pageform.placeholders == true %}placeholder="City{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="half">
                             <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="postalcode">Postal code{{ requiredstar }}</label>
                             <input type="{{ item.input_type }}" name="postalcode" id="postalcode" class="form-control" {% if pageform.placeholders == true %}placeholder="Postal code{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                         </div>
-                </div>
             {% else %}
-                <div class="row form-group">
-                    <div class="col-sm-12">
-                        <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
-                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
-                    </div>
+                <div>
+                    <label {% if pageform.placeholders == true %}class="sr-only"{% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
+                    <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="form-control" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}"{% endif %} {{ requiredtext }}>
                 </div>
             {% endif %}
         {% endif %}

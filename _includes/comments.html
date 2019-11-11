@@ -1,9 +1,14 @@
 {% if page.comment_issue_id %}
 <script type="text/javascript">
-    $("{{ include.element }}").append("<div id='comments'></div>");
-    $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub.</p>");
+    
+    document.querySelector("{{ include.element }}").innerHTML = document.querySelector("{{ include.element }}").innerHTML + "<div id='comments'></div>";
+    document.getElementById("comments").innerHTML = "<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub.</p>";
+
     function reloadComments() {
-        $('.comment').remove();
+        var elements = document.querySelectorAll('.comment');
+        Array.prototype.forEach.call(elements, function(el, i){
+            el.remove();
+        });
         $.ajax("https://api.github.com/repos/{{ include.github_account }}/issues/{{page.comment_issue_id}}/comments?per_page=100", {
             headers: {Accept: "application/vnd.github.full+json"},
             dataType: "json",
@@ -12,7 +17,7 @@
                 loadComments(msg);
             },
             error: function() { 
-                $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub. The comments cannot be shown inline because we have hit the rate limit of Github.</p>");
+                document.getElementById("comments").innerHTML = "<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub. The comments cannot be shown inline because we have hit the rate limit of Github.</p>";
             }
         });
         return false;
@@ -35,7 +40,7 @@
                 var cavatarlink = data[i].user.avatar_url;
             {% endif %}
             var cdate = data[i].created_at;
-            $("#comments").append("<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+            document.getElementById("comments").innerHTML = document.getElementById("comments").innerHTML + "<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>";
             $('img[data-src]').replaceWith( "[Image blocked] " );
         }
     }
@@ -45,7 +50,7 @@
     } else {
         {% if include.require_cookie_consent == 'true' %}
             if(readCookie('cookie-notice-dismissed')=='true') reloadComments();
-            else $("#comments").html("<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>");
+            else document.getElementById("comments").innerHTML = "<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub (approve third party scripts to view them inline).</p>";
         {% else %}
             reloadComments();
         {% endif %}

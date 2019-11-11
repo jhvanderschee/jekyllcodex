@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-    {% include head-additions.html %}
-  </head>
-  <body class="{{ page.layout }} no-js">
-    <div class="main">
-	    {% include header.html %}
-		<div class="container">
-			<div class="row">
-		    	<div class="col-md-8">
-		    	    <article class="post page">
+{% include header.html %}
+  <div class="content">
+    <div class="container">
+
+
+		    	    <article>
                     
                       <header class="post-header">
                         {% include breadcrumbs.html %}
@@ -23,22 +16,12 @@
                         {% if page.forms %}{% include form.html %}{% endif %}
 
                         {% if page.title == 'Search' %}
-                        <div class="row">
-                          <div class="col-sm-8">{% include search-lunr.html %}</div>
-                        </div>
+                          {% include search-lunr.html %}
                         {% endif %}
                       </div>
                     
               </article>
-		    	</div>
-		    	<div class="col-md-1"></div>
-		    	<div class="col-md-3"></div>
-		    </div>
-		</div>
-	</div>
+    </div>
+  </div>
 
-    {% include footer.html %}
-
-  </body>
-
-</html>
+{% include footer.html %}

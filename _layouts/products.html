@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-    {% include head-additions.html %}    
-  </head>
-  <body class="{{ page.layout }} no-js">
-    <div class="main">
-	    {% include header.html %}
-		<div class="container">
-			<div class="row">
-		    	<div class="col-md-8">
-		    	    <article class="post page">
+{% include header.html %}
+  <div class="content">
+    <div class="container">
+
+		    	    <article>
                     
                       <header class="post-header">
                         {% include breadcrumbs.html %}
@@ -20,34 +12,29 @@
                       <div class="post-content">
                         {{ content }}
                         <br />
-                        <div class="row product-grid">
-                            {% assign items = site.products | sort: 'price' %}
+
+                        <ul id="productlist">
+                            {% assign items = site.products | sort: 'order_number' %}
                             {% for item in items %}
-                            {% assign price_split = item.price | round: 2 | split: "." %}
+                            {% assign price_split = item.variants[0].price | round: 2 | split: "." %}
                             {% assign integral = price_split[0] %}
                             {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
                             {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-                            <div class="col-md-4 col-sm-4 col-xs-6">
-                                <a href="{{ item.url }}" {% if item.inactive %}style="color: #777777; text-decoration: none; cursor: text;"{% endif %}>
-                                <img src="/img/blank.png" style="width: 100%; background: url('https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.images[0].image }}&w=500&h=350&output=jpg&q=50') center center no-repeat; background-size: cover;" />  
-                                {{ item.subtitle }}<br />
-                                {% if item.price > 0 %}&euro; {{ integral }}.{{ fractional }}{% else %}free{% endif %}<br />&nbsp;
+                            <li>
+                                <a href="{{ item.url }}">
+                                    <div class="productimage" style="background-image: url(https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w=500&h=350&output=jpg&q=50);" data-cms-original-style="background-image: url(/img/slideshow5.jpg);"><div class="overlay"></div></div>
+                                    <h2>{{ item.title }}</h2>
+                                    <span>{% if item.variants[0].price > 0 %}&euro; {{ integral }}.{{ fractional }}{% else %}free{% endif %}</span>
                                 </a>
-                            </div>
-                        {% endfor %}
-                        </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
                       </div>
                       
                       <!--list all add-ons per feature-->
                     
                     </article>
-		    	 </div>
-		    </div>
-		</div>
-	</div>
+    </div>
+  </div>
 
-    {% include footer.html %}
-
-  </body>
-
-</html>
+{% include footer.html %}

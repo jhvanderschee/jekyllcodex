@@ -1,78 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include head.html %}
-    {% include head-additions.html %}
-  </head>
-  <body class="{{ page.layout }} no-js">
-    <div class="main">
-	    {% include header.html %}
-		<div class="container">
-			<div class="row">
-		    	<article class="post page">
-                <div class="col-md-12">
+{% include header.html %}
+  <div class="content">
+    <div class="container">
+
+
+		    	<article>
 
                     <div class="post-header">
-                    {% include breadcrumbs.html %}
-                    <br />
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="product-gallery">
-                    {% for item in page.images %}
-                        <a href="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w=1400&output=jpg&q=50" ><img src="https://images.weserv.nl/?url={{ site.url | replace: 'https://','' | replace: 'http://','' }}{{ item.image }}&w={% if forloop.index == 1 %}1400{% else %}350{% endif %}&output=jpg&q=50" /></a>
-                    {% endfor %}
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    
-                    <header>
-                    <h1 class="post-title">{{ page.subtitle }}</h1>
-                    </header>
-                
-                     
-                        <div class="post-content">
-
-                        {% assign price_split = page.price | round: 2 | split: "." %}
-                        {% assign integral = price_split[0] %}
-                        {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                        {% if fractional == '00' %}{% assign fractional = '-' %}{% endif %}
-                        <h2 class="price">{% if page.price > 0 %}&euro; {{ integral }}.{{ fractional }}{% endif %}</h2>
-
-                      
-                        {% if page.variants[0].name != nil and page.variants[0].name != '' %}
-                        <label>Choose a {{ page.variant_name }}: &nbsp; </label>
-                        <select name="variant" class="form-control" onchange="updatevariant(this,'{{ page.title }}');">
-                        {% for item in page.variants %}
-                            {% assign price_split = item.price | round: 2 | split: "." %}
-                            {% assign integral = price_split[0] %}
-                            {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                            <option value="{{ item.name }} | {{ integral }}.{{ fractional }}">{{ item.name }}</option>
-                        {% endfor %}
-                        </select>
+                        {% include breadcrumbs.html %}
                         <br />
-                        {% endif %}
-
-                        {% if page.price > 0 %}
-                                {% assign price_split = page.price | round: 2 | split: "." %}
-                                {% assign integral = price_split[0] %}
-                                {% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}
-                                <a href="/cart/" image="{{ page.images[0].image }}" price="{{ integral }}.{{ fractional }}" description="{{ page.title }}{% if page.variants[0].name != nil and page.variants[0].name != '' %} {{ page.variants[0].name }}{% endif %}" id="shoppingcartbutton" class="btn btn-primary btn-lg {% if page.payment_link %}checkout{% else %}addtocart{% endif %}">{% if page.payment_link %}Download{% else %}Donate{% endif %}</a>
-                        {% else %}
-                            {% include share-buttons.html pageurl="/" %}
-                        {% endif %}
-                        <br /><br />
-                        {{ content }}
-
                     </div>
-		    	</div>
+                    <div class="productpage">
+                        {% include productimages.html %}
+
+                        <div class="text">
+            
+                            <h1>{{ page.title }}</h1>
+                            {% if page.variants[0].price > 0 %}<h2>&euro; <span class="productprice">{% assign price_split = page.variants[0].price | round: 2 | split: "." %}{% assign integral = price_split[0] %}{% assign fractional = price_split[1] | append: "00" | truncate: 2, "" %}{{ integral }}.{{ fractional }}</span></h2>{% else %}
+                                {% include share-buttons.html %}
+                            {% endif %}
+            
+                            <form action="/donate/cart" onsubmit="return addToCart(this)">
+                                {% if page.variants[1].name %}
+                                    <div>
+                                        <label for="variant">Choose a {{ page.variant_type }}:</label>
+                                        <select onchange="updateBuyButton(this)" id="variant" name="variant">
+                                            {% for item in page.variants %}<option data-sku="{{ item.sku }}" data-variantname="{{ item.name }}" data-price="{{ item.price }}">{{ item.name }}</option>{% endfor %}
+                                        </select>
+                                    </div>
+                                {% endif %}
+                                {% if page.variants[0].price > 0 %}
+                                <div>
+                                    <input type="submit" data-url="{{ page.url }}" data-sku="{{ page.variants[0].sku }}" data-title="{{ page.title }}" data-varianttype="{{ page.variant_type }}" data-variantname="{{ page.variants[0].name }}" data-price="{{ page.variants[0].price }}" data-image="{{ page.image }}" value="Add to cart" />
+                                </div>
+                                {% endif %}
+                                
+                            </form>
+            
+                            {% include productimages.html %}
+            
+                            {{ content }}
+                        </div>
+                    </div>
+        
                 </article>
-		    </div>
-		</div>
-	</div>
 
-    {% include footer.html %}
-
-  </body>
-
-</html>
+        </div>
+    </div>
+    
+{% include footer.html %}
