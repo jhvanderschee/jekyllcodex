@@ -2,7 +2,7 @@
 title: Sponsor a feature
 image: "/uploads/feature.jpg"
 images:
-- image:
+- image: 
 variant_type: size
 variants:
 - name: Normal

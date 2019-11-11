@@ -2,7 +2,7 @@
 title: Share the love
 image: "/uploads/share.jpg"
 images:
-- image:
+- image: 
 variant_name: size
 variants:
 - title: Normal
