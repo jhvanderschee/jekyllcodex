@@ -4,7 +4,7 @@ title: Webshop
 
 ### Introduction
 
-This is a simple webshop with serveral payment methods that does not require a monthly fee. Great for a simple webshop. The webshop currently does not allow for variable shipping rates or (variable) tax calculations. It also does not provide an alternative shipping address, although these things can be added easily. An email parser would allow you to automate the buying processes even further (if required).
+This is a simple webshop with serveral payment methods that does not require a monthly fee. Great for a simple webshop. The webshop currently does not allow for variable (variable) tax calculations. It also does not provide an alternative shipping address, although that can be added easily. An email parser would allow you to automate the buying processes even further.
 
 ### How it works
 The webshop basically works like this: you create a link with an 'addtocart' class that links to the cart. This link will look for the 'image', 'price' and 'description' attribute and add the product to the cart cookie. When you click 'checkout' in the cart you go to a checkout form. When you click the next step in the payment process, you go to a payment link from Plink (Mollie). Before sending the user to the payment link the cart info will be submitted through email. At the same time an ordernumber will be generated, using a timestamp in milliseconds. This ordernumber is added to the email and the payment. After succesful payment the user gets redirected to your websites (by Plink). 
@@ -25,7 +25,7 @@ Once you got the webshop running, you can fine-tune everything by editing the Li
 
 Before you can add the webshop you need to [create a Mollie account](https://www.mollie.com){: .gray}. Mollie will ask you to register your website. They will verify if you have a proper return policy, clearly mentioned company data and clear general terms and conditions. Once your website is approved by Mollie you can add payment methods. Go to [https://useplink.com](https://useplink.com){: .gray} and register. Within your Mollie dashboard you can click on your profile and select 'Payment links' to go to your Plink account. Create a re-usable link with a variable amount and description. Once you have done that, you are ready to add the webshop to your website.
 
-#### Step 1. Add the footer include with the payment link
+#### Step 1. Add the footer files with the payment link
 
 Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. 
 
