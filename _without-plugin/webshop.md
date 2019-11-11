@@ -27,24 +27,52 @@ Before you can add the webshop you need to [create a Mollie account](https://www
 
 #### Step 1. Add the footer include with the payment link
 
-Download [webshop.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/webshop.html) and add it to your '_includes' folder. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. The email address should be the address on which you want to receive your email confirmation of the order.
+Download the files and add them to your folders. Make sure the bottom of your layout document looks like the code below. The paymentlink should be the personal re-usable link you just created. 
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
-{% include webshop.html email="jhvanderschee@gmail.com" paymentlink="https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T" %}
+
+<!-- webshop -->
+<script type="text/javascript" src="/js/webshop.js"></script>
+<link rel="stylesheet" href="/css/webshop.css">
+<script type="text/javascript">
+    updateCartCount();
+    {% if page.layout == 'cart' %}populateCart();{% endif %}
+    {% if page.layout == 'checkout' %}initCheckoutForm(document.querySelector('#checkout form'));{% endif %}
+    {% if page.layout == 'paylink' %}redirectToPayment('https://useplink.com/payment/ssMgtkddEzgC4rKKJJ9T');{% endif %}
+</script>
+
 </body>
 </html>{% endraw %}
 ```
 
-#### Step 2. Add the cart and checkout files
+#### Step 2. Add the cart, checkout and paylink files
 
-First, download [cart.md](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/cart.md) and [checkout.md](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/checkout.md) and save them in the root of your site. Next, download [cart.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/cart.html) and [checkout.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/checkout.html) and save them in your '_includes' directory.
+...
 
-#### Step 3. Create some product links
+#### Step 3. Create some products
 
-Create some product links. They should look roughly like this:
+Create some products. They should look roughly like this:
 
 ```
-{% raw %}<a href="/cart" class="addtocart" image="/path/to/productimage.jpg" price="1.00" description="test">Add to cart</a>{% endraw %}
+---
+title: Buy me a beer
+image: "/uploads/beer/5.jpg"
+images:
+- image: "/uploads/beer/2.jpg"
+- image: "/uploads/beer/3.jpg"
+- image: "/uploads/beer/4.jpg"
+- image: "/uploads/beer/1.jpg"
+variant_type: size
+variants:
+- name: half-a-pint
+  price: 2.75
+  sku: beerhalfapint
+- name: pint
+  price: 4.25
+  sku: beerpint
+order_number: 2
+---
+
+I like beer a lot! IPA, Guinness, Stout, craft beers... and I love to try new ones. Buy me half-a-pint to get going or a pint to get a good buzz.
 ```
