@@ -117,7 +117,6 @@ Step 1. Download the file [open-embed.html](https://raw.githubusercontent.com/jh
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
 {% include open-embed.html %}
 </body>
 </html>{% endraw %}
