@@ -48,11 +48,11 @@ Download the files and add them to your folders. Make sure the bottom of your la
 
 #### Step 2. Add the cart, checkout and paylink files
 
-...
+You need to download the 'cart.html', 'checkout.html' and 'paylink.html' files along with their '.md' counterparts and put them in the html files in the layout directory and the md files in the 'donate' directory. Feel free to change that to 'webshop' or whatever you like.
 
 #### Step 3. Create some products
 
-Create some products. They should look roughly like this:
+Create some products. They should be part of the 'products' collection and each 'product.md' file should look like this:
 
 ```
 ---
