@@ -100,7 +100,7 @@ function populateCart() {
 
     document.getElementById('shoppingcart').querySelector('tbody').innerHTML = '<tr><td colspan="6" style="text-align: center;">Your shopping cart is currently empty.</td></tr>';
 
-    if(cart.length) {
+    if(cart && cart.length) {
         document.getElementById('shoppingcart').querySelector('tbody').innerHTML = '';
         for (i = 0; i < cart.length; ++i) {
             var newline = '<tr><td><a href="'+cart[i].url+'" class="productavatar" style="background-image: url(\''+cart[i].image+'\');" title="'+cart[i].sku+'"></a></td><td>'+cart[i].title;
