@@ -39,8 +39,7 @@ a.gray {color: #777777; text-decoration: underline;}
 #navigation ul li svg {height: 1rem; fill: #777; position: relative; top: 0.1rem;}
 
 #togglemenu {display: none; color: #777777; cursor: pointer;}
-
-
+.menuopen #togglemenu {color: white;}
 
 #breadcrumbs, #breadcrumbs a {color: silver; text-decoration: none;}
 .post-header {padding-top: 2.3rem;}
