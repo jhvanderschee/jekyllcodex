@@ -17,7 +17,7 @@ Another thing I rebuild is the slider, or carousel. I replaced the Twitter Boots
 
 The biggest change of all is the webshop. It depended on a Ajax call to Formspree. Formspree, however, removed these Ajax calls from their free tier. Although the Ajax call was still working, I replaced it by a simple redirect. This allows you to choose any form handler you want and makes the webshop a lot easier to set up. Additionally I simplified the product template and data structure and cour cart is now stored in a JSON object in local storage instead of in a string in a cookie.
 
-## Not yet completely finished
+### Not yet completely finished
 
 Although 99% of the work is ready, some things are still depending on jQuery. They will be replaced soon. These are the following items:
 
@@ -25,6 +25,6 @@ Although 99% of the work is ready, some things are still depending on jQuery. Th
 - Better forms
 - Comments
 
-## I like the old website better
+### I like the old website better
 
 If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain.
