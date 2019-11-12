@@ -45,7 +45,7 @@ a.gray {color: #777777; text-decoration: underline;}
 .post-header {padding-top: 2.3rem;}
 .post-header h1 {padding-top: 0;}
 
-p:not(:last-child), pre:not(:last-child), .content ul:not(:last-child), .content ol:not(:last-child) {margin-bottom: 1.2rem;}
+p:not(:last-child), pre:not(:last-child), .content ul:not(:last-child), .content ol:not(:last-child), div.expand {margin-bottom: 1.2rem;}
 
 pre {
     display: block;
@@ -137,7 +137,7 @@ select {
 
 
 .cart form, #shoppingcart, #checkout_progress {max-width: 45rem;}
-
+.image-gallery-index a {color: #777;}
 
 
 

@@ -1,25 +1,38 @@
 <script>
-    $.fn.shuffle = function() {
-        var allElems = this.get(),
-            getRandom = function(max) {
-                return Math.floor(Math.random() * max);
-            },
-            shuffled = $.map(allElems, function(){
-                var random = getRandom(allElems.length),
-                    randEl = $(allElems[random]).clone(true)[0];
-                allElems.splice(random, 1);
-                return randEl;
-            });
-        this.each(function(i){
-            $(this).replaceWith($(shuffled[i]));
+function isvisible(obj) {
+  return obj.offsetWidth > 0 && obj.offsetHeight > 0;
+}
+var shuffle = function() {
+      elements = document.querySelectorAll('.randomize');
+      Array.prototype.forEach.call(elements, function(parentel, i){
+        var children = parentel.children;
+        children = Array.prototype.slice.call(children, 0);
+        children = Array.prototype.sort.call(children, function(a, b) {
+            return Math.random() - 0.5;
         });
-        return $(shuffled);
-    };
-    $('.randomize').shuffle();
-    $('.randomize:visible img').each(function() {
-        if($(this).attr('data-src')) $(this).attr('src',$(this).attr('data-src'));
+        for(var i = 0, l = children.length; i < l; i++) parentel.append(children[i]);
+      });
+};
+shuffle();
+
+elements = document.querySelectorAll('.randomize');
+Array.prototype.forEach.call(elements, function(parentel, i){
+    children = parentel.children;
+    Array.prototype.forEach.call(children, function(el, j){
+        if(isvisible(el)) {
+            if(el.getAttribute('data-src')) el.setAttribute('src',el.getAttribute('data-src'));
+            if(el.querySelector('img')) {
+                Array.prototype.forEach.call(el.querySelectorAll('img'), function(imgel, j){
+                    imgel.setAttribute('src',imgel.getAttribute('data-src'));
+                });
+            }
+            if(el.querySelector('*')) {
+                Array.prototype.forEach.call(el.querySelectorAll('*'), function(subel, j){
+                    subel.setAttribute('style',imgel.getAttribute('data-style'));
+                });
+            }
+        }
     });
-    $('.randomize:visible *').each(function() {
-        if($(this).attr('data-style')) $(this).attr('style',$(this).attr('data-style'));
-    });
+});
+
 </script>
