@@ -3,6 +3,8 @@ title: A complete rebuild of Jekyll Codex
 date: 2019-11-10 00:00:00 Z
 ---
 
+I wrote in July that Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. I am happy to announce that that amount has doubled in the last six months! The average amount of clicks has also risen 20 to a little under 30 a day. This makes for an average of around 900 visits per month. Great news! I hope that my rebuild will improve my Google ranking even further.
+
 ### A big day for Jekyll Codex
 
 Today I have launched a complete rebuild of the Jekyll Codex website, which I [announced](/blog/ditching-jquery-and-twitter-bootstrap/) a while ago. You may not see it, but I have rewritten all CSS and scripts, so they will no longer use jQuery nor Twitter Bootstrap. This means the website has gone on quite a diet, because jQuery and Twitter Bootstrap accounted for a hefty 250kb (compressed) per page load. Page loads have gone down from 400kb to less than 150kb. This influenced the Speed Index, which is now 1.0s instead of 1.8s. Quite some progress, which improves accessibility and SEO.
