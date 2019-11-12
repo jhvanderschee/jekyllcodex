@@ -18,7 +18,7 @@ The code allows you to set the height of the slider as an integer (number), and 
 
 ### Installation
 
-Step 1. Download the file [slider.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/slider.html)
+Step 1. Download the file [carousel.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/carousel.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Add this to your layout:
 
