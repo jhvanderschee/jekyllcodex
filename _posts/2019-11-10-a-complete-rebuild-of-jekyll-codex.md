@@ -29,4 +29,4 @@ Although 99% of the work is ready, some things are still depending on jQuery. Th
 
 ### You liked the old code better?
 
-If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain. This is useful if your website is using jQuery anyway or if your website is based on the old code. I will not work on/update the old version anymore. If you want to move foward, the new way is the way to go ;-).
+If you do not like all this new fancy stuff you can still visit the [jQuery and Twitter Bootstrap version](https://fresh-butterfly.cloudvent.net) of this website at a CloudCannon development domain. This is useful if your website is using jQuery anyway or if your website is based on the old code. I will not work on/update the old version anymore. If you want to move foward, the new way is the way to go ;-).
