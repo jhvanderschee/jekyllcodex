@@ -24,6 +24,5 @@ Some things are still broken or jQuery and will be replaced soon:
 - Better forms
 - Comments
 - Future dates
-- Randomize
 
 If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain.
