@@ -8,7 +8,7 @@ In case of an event listing, you want to show only future dates. This is hard, b
 
 ### How it works
 
-Normal dates are hard to compare, but dates written as integers in the YYYYMMDD format are not. We let javascript get the current date in this format to compare with. We call this the 'CompareDate'. We write the events date as a custom attribute to the containing HTML element with Jekyll/Liquid. Note that this can be any type of element, a list item or a link will work too. In the same way you can add the custom attribute 'first-future-date' to your elements. This will instruct the javascript to hide all elements, except for the one with the first upcoming date.
+The script gets the current date in the 'yyyy-mm-dd' format from Javascript. You only have to write the events date as a custom attribute called 'future-date' to the containing HTML element with Jekyll/Liquid and the script will remove elements that have a 'future-date' in the past. Note that these elements can be any type of element, a list item or a link will work too.
 
 [expand]
 
@@ -16,7 +16,7 @@ An example of the Jekyll/Liquid code:
 
 ```
 {% raw %}{% for item in site.events %}
-  <div future-date="{{ item.date | date: '%Y%m%d' }}">...</div>
+  <div future-date="{{ item.date | date: '%Y-%m-%d' }}">...</div>
 {% endfor %}{% endraw %}
 ```
 
@@ -35,7 +35,7 @@ And the javascript, doing its magic:
     }
     var elements = document.querySelectorAll('[future-date]');
     Array.prototype.forEach.call(elements, function(el, i){
-        if(el.getAttribute('future-date') < getCompareDate()) el.remove();
+        if(el.getAttribute('future-date').split('-').join('') < getCompareDate()) el.remove();
     });
 </script>{% endraw %}
 ```

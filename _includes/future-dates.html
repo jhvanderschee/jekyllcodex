@@ -10,6 +10,6 @@
     }
     var elements = document.querySelectorAll('[future-date]');
     Array.prototype.forEach.call(elements, function(el, i){
-        if(el.getAttribute('future-date') < getCompareDate()) el.remove();
+        if(el.getAttribute('future-date').split('-').join('') < getCompareDate()) el.remove();
     });
 </script>
