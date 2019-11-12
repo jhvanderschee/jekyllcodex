@@ -7,7 +7,6 @@ A big day for Jekyll Codex... because today I have launched a complete rebuild o
 
 I realize that you may think that not using jQuery and Twitter Bootstrap will make your (or my) life harder. I also realize that you may think that 250kb on your first page load is 'not a big deal'. But plain Javascript has come a long way and writing plain Javascript is alsmost as easy as writing jQuery. Also, not having to fight 136kb of CSS from Twitter Bootstrap is absolutely worth having to re-style your inputs. But the most important reason is that this approach is essential when you want to build [websites that load instantly](https://www.usecue.com/blog/websites-that-load-instantly/). And, as Google promotes fast loading websites in its search ranking, we are talking about improved SEO too. So this change is not about short term results, but about better websites performance in the long run.
 
-
 ### So what has changed? 
 
 Responsiveness is now fully handled in plain CSS. My philosophy is that CSS and JS have evolved to a point where frameworks do more harm than good. Making a website responsive is very easy when you use flexbox and/or CSS columns. Therefore I removed the 'Mobile menu' from the list of scripts. It depended heavily on Twitter Bootstrap and jQuery and is nowadays very easy to build with a few lines of CSS and a single line of Javascript.
@@ -18,10 +17,14 @@ Another thing I rebuild is the slider, or carousel. I replaced the Twitter Boots
 
 The biggest change of all is the webshop. It depended on a Ajax call to Formspree. Formspree, however, removed these Ajax calls from their free tier. Although the Ajax call was still working, I replaced it by a simple redirect. This allows you to choose any form handler you want and makes the webshop a lot easier to set up. Additionally I simplified the product template and data structure and cour cart is now stored in a JSON object in local storage instead of in a string in a cookie.
 
-Some things are still broken or jQuery and will be replaced soon:
+## Not yet completely finished
+
+Although 99% of the work is ready, some things are still depending on jQuery. They will be replaced soon. These are the following items:
 
 - Add to homescreen
 - Better forms
 - Comments
+
+## I like the old website better
 
 If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain.
