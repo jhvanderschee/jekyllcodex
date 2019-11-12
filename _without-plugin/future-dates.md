@@ -24,18 +24,19 @@ And the javascript, doing its magic:
 
 ```
 {% raw %}<script>
-function getCompareDate() {
-    var d = new Date(),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-    return [year, month, day].join('');
-}
-$('[future-date]').each(function() {
-    if($(this).attr('future-date') < getCompareDate()) $(this).hide();
-});
+    function getCompareDate() {
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        return [year, month, day].join('');
+    }
+    var elements = document.querySelectorAll('[future-date]');
+    Array.prototype.forEach.call(elements, function(el, i){
+        if(el.getAttribute('future-date') < getCompareDate()) el.remove();
+    });
 </script>{% endraw %}
 ```
 
@@ -50,7 +51,6 @@ Step 4. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
 {% include future-date.html %}
 </body>
 </html>{% endraw %}

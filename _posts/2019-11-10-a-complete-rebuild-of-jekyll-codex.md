@@ -23,6 +23,5 @@ Some things are still broken or jQuery and will be replaced soon:
 - Add to homescreen
 - Better forms
 - Comments
-- Future dates
 
 If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain.
