@@ -3,7 +3,9 @@ title: A complete rebuild of Jekyll Codex
 date: 2019-11-10 00:00:00 Z
 ---
 
-A big day for Jekyll Codex... because today I have launched a complete rebuild of the Jekyll Codex website, which I [announced](/blog/ditching-jquery-and-twitter-bootstrap/) a while ago. You may not see it, but I have rewritten all CSS and scripts so they will no longer use jQuery nor Twitter Bootstrap. This means the website has gone on a big diet, because jQuery and Twitter Bootstrap accounted for a hefty 250kb (compressed) per page load. This means that page loads have gone down from 400kb to less than 150kb. This influenced the Speed Index, which is now 1.0s instead of 1.8s. Quite some progress, which improves accessibility and SEO.
+### A big day for Jekyll Codex
+
+Today I have launched a complete rebuild of the Jekyll Codex website, which I [announced](/blog/ditching-jquery-and-twitter-bootstrap/) a while ago. You may not see it, but I have rewritten all CSS and scripts so they will no longer use jQuery nor Twitter Bootstrap. This means the website has gone on a big diet, because jQuery and Twitter Bootstrap accounted for a hefty 250kb (compressed) per page load. This means that page loads have gone down from 400kb to less than 150kb. This influenced the Speed Index, which is now 1.0s instead of 1.8s. Quite some progress, which improves accessibility and SEO.
 
 I realize that you may think that not using jQuery and Twitter Bootstrap will make your (or my) life harder. I also realize that you may think that 250kb on your first page load is 'not a big deal'. But plain Javascript has come a long way and writing plain Javascript is alsmost as easy as writing jQuery. Also, not having to fight 136kb of CSS from Twitter Bootstrap is absolutely worth having to re-style your inputs. But the most important reason is that this approach is essential when you want to build [websites that load instantly](https://www.usecue.com/blog/websites-that-load-instantly/). And, as Google promotes fast loading websites in its search ranking, we are talking about improved SEO too. So this change is not about short term results, but about better websites performance in the long run.
 
@@ -27,4 +29,4 @@ Although 99% of the work is ready, some things are still depending on jQuery. Th
 
 ### I like the old website better
 
-If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain.
+If you do not like all this new fancy stuff you can still visit the [old website](https://fresh-butterfly.cloudvent.net) at a CloudCannon development domain. This is useful if your website is using jQuery anyway or if your website is based on the old code. I will not work on/update the old version any further. If you want to move foward, the new way is the only way ;-).
