@@ -3,7 +3,7 @@ title: A complete rebuild of Jekyll Codex
 date: 2019-11-10 00:00:00 Z
 ---
 
-I wrote in July that Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. I am happy to announce that that amount has doubled in the last six months! The average amount of clicks has also risen 20 to a little under 30 a day. This makes for an average of around 900 visits per month. Great news! I hope that my rebuild will improve my Google ranking even further.
+I wrote in July that Jekyll Codex displays in Google has risen from almost zero to an average of 200 a day. I am happy to announce that that amount has doubled in the last four months! The average amount of clicks has also risen 20 to a little under 30 a day. This makes for an average of around 900 visits per month. Great news! I hope that this rebuild will improve my Google ranking even further.
 
 ### A big day for Jekyll Codex
 
