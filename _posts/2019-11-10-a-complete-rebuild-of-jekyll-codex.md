@@ -11,11 +11,11 @@ You may think that NOT using jQuery and Twitter Bootstrap will make your (or my)
 
 ### So what has changed? 
 
-Responsiveness is now fully handled in plain CSS. My philosophy is that CSS and JS have evolved to a point where frameworks do more harm than good. Making a website responsive is very easy when you use flexbox and/or CSS columns. Therefore I removed the 'Mobile menu' from the list of scripts. It depended heavily on Twitter Bootstrap and jQuery and is nowadays very easy to build with a few lines of CSS and a single line of Javascript.
+Responsiveness is now fully handled in plain CSS. My philosophy is that CSS and JS have evolved to a point where frameworks do more harm than good. Making a website responsive is very easy when you use flexbox and/or CSS columns. Therefore I changed the 'Mobile menu' script into a 'Toggle menu' script that is no longer dependent on Twitter Bootstrap and jQuery.
 
-The most popular item that has changed significantly is the lightbox. I did not re-add the 'swipe' feature, as it was causing some bugs. I might add this feature later, but for now this functionality is gone. I did not re-add the captions, as I found myself removing them on every website I was using the lightbox. 
+The most popular item that has changed is the lightbox. I did not re-add the 'swipe' feature, as it was causing some bugs. I might add this feature later, but for now this functionality is gone. I did not re-add the captions, as I found myself removing them on every website I was using the lightbox and I was having enough on my plate already. I might add this functionality later. 
 
-Another thing I rebuild is the slider, or carousel. I replaced the Twitter Bootstrap variant with a pure CSS carousel. When I have time left I will re-add things like additional HTML in the slides and the option to choose for a fade transition. 
+Another thing I rebuilt is the slider, or carousel. I replaced the Twitter Bootstrap variant with a pure CSS carousel. When I have time left I will re-add things like HTML texts in the slides and the option to choose for a fade transition. 
 
 The biggest change of all is the webshop. It depended on a Ajax call to Formspree. Formspree, however, removed these Ajax calls from their free tier. Although the Ajax call was still working, I replaced it by a simple redirect. This allows you to choose any form handler you want and makes the webshop a lot easier to set up. Additionally I simplified the product template and data structure and cour cart is now stored in a JSON object in local storage instead of in a string in a cookie.
 
