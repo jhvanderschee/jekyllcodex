@@ -151,7 +151,7 @@ select {
 #footer img {cursor: pointer; height: 6.5rem; opacity: 0.35; display: inline-block;}
 #footer img:first-child {margin-right: 0.8rem; margin-left: -0.5rem;}
 
-@media (max-width: 1000px) {
+@media (max-width: 55rem) {
     .threecols .col {width: 47.5%;}
     .threecols .col:nth-child(3) {margin-top: 1.5rem;}
     #togglemenu {display: block;}
@@ -172,7 +172,8 @@ select {
     .menuopen #navigation .container #menu {display: block;}
     #navigation .container .btn {margin: 1rem;}
 }
-@media (max-width: 750px) {
+@media (max-width: 45rem) {
+    html {font-size: 18px;}
     .threecols {display: block;}
     .threecols .col {width: 100%;}
     .threecols .col + .col {margin-top: 1.5rem;}
