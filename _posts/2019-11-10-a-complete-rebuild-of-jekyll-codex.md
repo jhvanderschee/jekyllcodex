@@ -13,7 +13,7 @@ You may think that NOT using jQuery and Twitter Bootstrap will make your (or my)
 
 ### So what has changed? 
 
-Responsiveness is now fully handled in plain CSS. My philosophy is that CSS and JS have evolved to a point where frameworks do more harm than good. Making a website responsive is very easy when you use flexbox and/or CSS columns. Therefore I changed the 'Mobile menu' script into a 'Toggle menu' script that is no longer dependent on Twitter Bootstrap and jQuery.
+Responsiveness is now fully handled in plain CSS. My philosophy is that CSS and JS have evolved to a point where frameworks do more harm than good. Making a website responsive is very easy when you use flexbox and/or CSS columns. Therefore I changed the 'Mobile menu' script into a 'Toggle menu' script that is no longer dependent on Twitter Bootstrap and jQuery. I also rewritten all sizes and break-points (media queries) from 'px' to 'rem'. This makes the website truly scalable with a single setting: the font-size in 'px' on the HTML element.
 
 The most popular item that has changed is the lightbox. I did not re-add the 'swipe' feature, as it was causing some bugs. I might add this feature later, but for now this functionality is gone. I did not re-add the captions, as I found myself removing them on every website I was using the lightbox and I was having enough on my plate already. I might add this functionality later. 
 
