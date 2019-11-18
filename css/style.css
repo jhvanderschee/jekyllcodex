@@ -93,7 +93,7 @@ textarea, input, select {
     border: 0.0625rem solid #dddddd; 
     border-radius: 0.25rem;
     width: calc(100% - 1.24rem);
-    padding: 0.2rem 0.625rem;
+    padding: 0.1875rem 0.625rem;
     background: white;
     color: #777777;
 }
