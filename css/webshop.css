@@ -26,8 +26,8 @@
 #shoppingcart > table tr > *:nth-child(2) {text-align: left;}
 #shoppingcart > table tr > *:last-child {text-align: right;}
 #shoppingcart > table tr > *:first-child {padding-right: 1.25rem; width: 4rem;}
-#shoppingcart > table tr > th {border-bottom: 0.15rem solid #dddddd;; padding: 0 0 0.5rem;}
-#shoppingcart > table tr > td {border-bottom: 0.1rem solid #dddddd;}
+#shoppingcart > table tr > th {border-bottom: 0.125rem solid #dddddd;; padding: 0 0 0.5rem;}
+#shoppingcart > table tr > td {border-bottom: 0.125rem solid #dddddd;}
 #shoppingcart > table tr > th:nth-child(2) {width: 50%;}
 #shoppingcart .productavatar {display: block; width: 4rem; height: 4rem; border-radius: 100%; background-size: cover; background-position: 50% 50%;}
 @media only screen and (max-width: 800px)  {
