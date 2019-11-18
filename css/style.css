@@ -36,7 +36,7 @@ a.gray {color: #777777; text-decoration: underline;}
 #navigation .brand {font-size: 1.05rem; color: #777777; padding: 0.25rem 0.9rem 0.25rem 0;}
 #navigation ul li a {display: block; color: #777777; text-decoration: none; padding: 0.25rem 0.9rem;}
 #navigation .brand:hover, #navigation ul li a:hover, #navigation ul li.active a {color: #d9230f;}
-#navigation ul li svg {height: 1rem; fill: #777; position: relative; top: 0.1rem;}
+#navigation ul li svg {height: 1rem; fill: #777; position: relative; top: 0.0625rem;}
 
 #togglemenu {display: none; color: #777777; cursor: pointer;}
 .menuopen #togglemenu {color: white;}
