@@ -60,7 +60,7 @@ Note: With just some minor tweaks you can add a manual page descriptions, using 
 
 ### Installation
 
-Step 1. Download the file [head.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/head.html)
+Step 1. Download the file [header.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/header.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
 <br />Step 3. Make sure the structure of your layout document looks like this:
 
