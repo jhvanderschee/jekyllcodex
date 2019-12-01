@@ -65,12 +65,11 @@ Step 1. Download the file [header.html](https://raw.githubusercontent.com/jhvand
 <br />Step 3. Make sure the structure of your layout document looks like this:
 
 ```
-{% raw %}<!DOCTYPE html>
-<html>
-<head>
-{% include head.html %}
-</head>
-<body>
-...{% endraw %}
+{% raw %}
+{% include header.html %}
+{{ content }}
+...
+{% include footer.html %}
+{% endraw %}
 ```
 
