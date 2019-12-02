@@ -18,9 +18,16 @@
 {% include follow-buttons.html %}
 {% include buttons.html %}
 
+{% if page.url contains 'gdpr-compliant-comment' %}
+<script 
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+
+    {% include comments.html element=".post-content" github_account="jhvanderschee/jekyllcodex" require_cookie_consent="true" %}
+{% endif %}
 {% comment %}
     {% include better-forms.html %}
-    {% include comments.html element=".post-content" github_account="jhvanderschee/jekyllcodex" require_cookie_consent="true" %}
     {% include add-to-homescreen.html %}
 {% endcomment %}
 
