@@ -8,19 +8,8 @@
         if (day.length < 2) day = '0' + day;
         return [year, month, day].join('');
     }
-    $('[future-date]').each(function() {
-        if($(this).attr('future-date') < getCompareDate()) $(this).hide();
-    });
-
-    var firstfuturedate = $("[first-future-date]").sort(sortbydate);
-    function sortbydate(a, b) {
-        return ($(b).attr('first-future-date')) < ($(a).attr('first-future-date')) ? 1 : -1;
-    }
-    $(firstfuturedate).each(function() {
-        $('[first-future-date]').hide();
-        if($(this).attr('first-future-date') > getCompareDate()) {
-            $(this).show();
-            return false;
-        }
+    var elements = document.querySelectorAll('[future-date]');
+    Array.prototype.forEach.call(elements, function(el, i){
+        if(el.getAttribute('future-date').split('-').join('') < getCompareDate()) el.remove();
     });
 </script>

@@ -22,13 +22,14 @@ Note that I wrote this lightbox myself and tested it on a minimal amount of devi
 
 ### Installation
 
-Step 1. Download the file [lightbox.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/lightbox.html)
-<br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure the head of your layout document looks like this:
+Step 1. Download the file [lightbox.js](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/js/lightbox.js) and [lightbox.css](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/css/lightbox.css)
+<br />Step 2. Save the file in the '/js' and '/css' directory of your project
+<br />Step 3. Make sure the footer of your layout document looks like this:
 
 ```
 {% raw %}...
-{% include lightbox.html %}
-</head>
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+</body>
 </html>{% endraw %}
 ```

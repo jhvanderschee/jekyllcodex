@@ -27,7 +27,7 @@ a.gray {color: #777777; text-decoration: underline;}
 .container {max-width: 73rem; margin: 0 auto; padding: 0 1rem;}
 .content {background: #fcfcfc url(/img/bg_content.svg) center top no-repeat; background-attachment: fixed; padding: 4rem 0 5.5rem;}
 
-#navigation {background: white; border-bottom: 0.02rem solid #e5e5e5; position: fixed; width: 100%;}
+#navigation {background: white; border-bottom: 0.0625rem solid #e5e5e5; position: fixed; width: 100%;}
 #navigation .container {display: flex; align-items: center;}
 #navigation .container #menu {display: flex; align-items: center; justify-content: space-between; flex-grow: 1;}
 #navigation ul {display: flex; align-items: center;}
@@ -36,15 +36,16 @@ a.gray {color: #777777; text-decoration: underline;}
 #navigation .brand {font-size: 1.05rem; color: #777777; padding: 0.25rem 0.9rem 0.25rem 0;}
 #navigation ul li a {display: block; color: #777777; text-decoration: none; padding: 0.25rem 0.9rem;}
 #navigation .brand:hover, #navigation ul li a:hover, #navigation ul li.active a {color: #d9230f;}
-#navigation ul li svg {height: 1rem; fill: #777; position: relative; top: 0.1rem;}
+#navigation ul li svg {height: 1rem; fill: #777; position: relative; top: 0.0625rem;}
 
 #togglemenu {display: none; color: #777777; cursor: pointer;}
+.menuopen #togglemenu {color: white;}
 
 #breadcrumbs, #breadcrumbs a {color: silver; text-decoration: none;}
 .post-header {padding-top: 2.3rem;}
 .post-header h1 {padding-top: 0;}
 
-p:not(:last-child), pre:not(:last-child), .content ul:not(:last-child), .content ol:not(:last-child) {margin-bottom: 1.2rem;}
+p:not(:last-child), pre:not(:last-child), .content ul:not(:last-child), .content ol:not(:last-child), div.expand {margin-bottom: 1.2rem;}
 
 pre {
     display: block;
@@ -56,7 +57,7 @@ pre {
     word-wrap: break-word;
     color: #444444;
     background-color: #f5f5f5;
-    border: 0.02rem solid #cccccc;
+    border: 0.0625rem solid #cccccc;
     border-radius: 0.25rem;
     overflow: auto;
 }
@@ -89,10 +90,10 @@ textarea, input, select {
     font-size: 0.8rem; 
     height: 1.83rem; 
     line-height: 1rem; 
-    border: 0.02rem solid #dddddd; 
+    border: 0.0625rem solid #dddddd; 
     border-radius: 0.25rem;
     width: calc(100% - 1.24rem);
-    padding: 0.2rem 0.6rem;
+    padding: 0.1875rem 0.625rem;
     background: white;
     color: #777777;
 }
@@ -136,7 +137,7 @@ select {
 
 
 .cart form, #shoppingcart, #checkout_progress {max-width: 45rem;}
-
+.image-gallery-index a {color: #777;}
 
 
 
@@ -150,7 +151,7 @@ select {
 #footer img {cursor: pointer; height: 6.5rem; opacity: 0.35; display: inline-block;}
 #footer img:first-child {margin-right: 0.8rem; margin-left: -0.5rem;}
 
-@media (max-width: 1000px) {
+@media (max-width: 55rem) {
     .threecols .col {width: 47.5%;}
     .threecols .col:nth-child(3) {margin-top: 1.5rem;}
     #togglemenu {display: block;}
@@ -166,12 +167,13 @@ select {
         width: 100%;
         background: white;
         z-index: -1;
-        border-bottom: 0.02rem solid #e5e5e5;
+        border-bottom: 0.0625rem solid #e5e5e5;
     }
-    #navigation .container #menu.open {display: block;}
+    .menuopen #navigation .container #menu {display: block;}
     #navigation .container .btn {margin: 1rem;}
 }
-@media (max-width: 750px) {
+@media (max-width: 45rem) {
+    html {font-size: 18px;}
     .threecols {display: block;}
     .threecols .col {width: 100%;}
     .threecols .col + .col {margin-top: 1.5rem;}

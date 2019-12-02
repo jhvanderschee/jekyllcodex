@@ -15,28 +15,21 @@ This scripts shuffles all items in the page that have the class randomize. Make 
 Here is some example HTML:
 
 ```
-<ul>
-  <li class="randomize">Item 0</li>
-  <li class="randomize">Item 1</li>
-  <li class="randomize">Item 2</li>
-  <li class="randomize">Item 3</li>
-  <li class="randomize">Item 4</li>
-  <li class="randomize">Item 5</li>
-  <li class="randomize">Item 6</li>
-  <li class="randomize">Item 7</li>
-  <li class="randomize">Item 8</li>
-  <li class="randomize">Item 9</li>
+<ul class="randomize">
+  <li>Item 0</li>
+  <li>Item 1</li>
+  <li>Item 2 <img data-src="https://jekyllcodex.org/uploads/grumpycat2.jpg" /></li>
 </ul>
 ```
 
 And some example CSS:
 
 ```
-.randomize {display: none;}
-.randomize:nth-child(1), .randomize:nth-child(2), .randomize:nth-child(3) {display: block;}
+.randomize > * {display: none;}
+.randomize > *:nth-child(1), .randomize > *:nth-child(2) {display: block;}
 ```
 
-Note that this script can be used only once on a page.
+You can use this script as many times on a page as you like.
 
 [/expand]
 
@@ -44,11 +37,11 @@ Note that this script can be used only once on a page.
 
 Step 1. Download the file [randomize.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/randomize.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Make sure the bottom of your layout document looks like this:
+<br />Step 3. Add the 'randomize' class to the parent of the elements you want to randomize
+<br />Step 4. Make sure the bottom of your layout document looks like this:
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
 {% include randomize.html %}
 </body>
 </html>{% endraw %}
