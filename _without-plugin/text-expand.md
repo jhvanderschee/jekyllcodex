@@ -26,7 +26,6 @@ Step 1. Download the file [text-expand.html](https://raw.githubusercontent.com/j
 
 ```
 {% raw %}...
-<script src="/js/jquery.min.js"></script>
 {% include text-expand.html %}
 </body>
 </html>{% endraw %}
