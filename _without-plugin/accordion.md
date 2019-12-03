@@ -34,7 +34,7 @@ The code uses no javascript and uses the CSS checkbox 'hack' to toggle the conte
 
 
 ```
-{% include accordion.html %}
+{% raw %}{% include accordion.html %}{% endraw %}
 ```
 
 [/expand]
