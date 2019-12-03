@@ -26,7 +26,7 @@ accordion:
 ---{% endraw %}
 ```
 
-The code uses no javascript and uses the CSS 'checkbox hack' to toggle the content. The accordion deliberately refrains from setting the height of the content blocks. Calculating this height with javascript is required to add animatio (slide down), but adds a lot of complexity. If you want to animate this accordion nevertheless, I would suggest to calculate the height during the 'onclick' and remove the height directly after the animation process. Calculating the height during the 'window.resize' seems more logical, but will slow down your website. Although I like animated accordions, I think that this CSS-only solution is more elegant. The code of the example above can be found here.
+The code uses no javascript and uses the CSS 'checkbox hack' to toggle the content. The accordion deliberately refrains from setting the height of the content blocks. Calculating this height with javascript is required to add animation (slide down), but adds a lot of complexity. If you want to animate this accordion nevertheless, I would suggest to calculate the height during the 'onclick' and remove the height directly after the animation process. Calculating the height during the 'window.resize' seems more logical, but will slow down your website. Although I like animated accordions, I think that this CSS-only solution is more elegant. The code of the example above can be found here.
 
 [expand]
 
