@@ -1,0 +1,31 @@
+I""<p>The hardest problem to solve with static site generators, is availability and redundancy. In a monolithic system you would just replicate the server and you will have a complete fail-over. This is not so simple for Static Site Generators. However, you can quite easily deploy a website to multiple platforms. I have used this website as an example.</p>
+
+<h3 id="what-if-the-hosting-is-down">What if the hosting is down?</h3>
+
+<p>When this website goes down, I just need to point the DNS of the domain name to another service and it is back online. This process can be automated with <a href="https://dnsmadeeasy.com/services/dnsfailover/" class="gray">DNS failover</a>. This is a DNS system that automatically updates your records based on the availability of the endpoints in the record. Magic, right?</p>
+
+<ul>
+  <li>This website is available at Netlify hosting at <a href="https://boatman-bird-64062.netlify.com/" class="gray">https://boatman-bird-64062.netlify.com/</a>.</li>
+  <li>This website is available at CloudCannon hosting at <a href="https://gifted-pooch.cloudvent.net/" class="gray">https://gifted-pooch.cloudvent.net/</a>.</li>
+  <li>This website is available at Github hosting at <a href="http://jhvanderschee.github.io/jekyllcodex/" class="gray">http://jhvanderschee.github.io/jekyllcodex/</a>.</li>
+</ul>
+
+<h3 id="what-if-the-cms-does-not-work-properly">What if the CMS does not work properly?</h3>
+
+<p>I have set up different CMS services that work at the same time. Note that each CMS has his own levels of access. CloudCannon provides full/code access AND limited/editor access. Forestry.io and Netlify CMS only provide limited/editor access and Github only provides full/code access.</p>
+
+<ul>
+  <li>This website can be edited directly on <a href="https://github.com/jhvanderschee/jekyllcodex" class="gray">Github</a>.</li>
+  <li>This website can be edited in <a href="https://forestry.io" class="gray">Forestry.io</a>.</li>
+  <li>This website can be edited in <a href="https://cloudcannon.com" class="gray">CloudCannon</a>.</li>
+  <li>This website can be edited in <a href="https://www.netlifycms.org" class="gray">Netlify CMS</a>.</li>
+</ul>
+
+<h3 id="then-why-is-it-hard">Then why is it hard?</h3>
+
+<p>In reality there is a lot more going on in a static site. It is not just the hosting and the CMS. This site, for example, uses dynamic image resizing. I use <a href="https://images.weserv.nl" class="gray">images.weserv.nl</a> for that for which I currently have no failover. CloudCannon can solve the image resizing partially for us, making <a href="https://images.weserv.nl" class="gray">images.weserv.nl</a> potentially obsolete, but it is not yet very efficient and I have not seen any other CMS do this so far. Then there is ‘forms’. As you can see in the <a href="/without-plugin/form-builder">form builder</a> I have implemented several form engines… and for a reason. You want to be able to easily switch your form engine. Forms can use the platform-specific solution, like <a href="https://www.netlify.com/docs/form-handling/" class="gray">forms on Netlify</a> or <a href="https://docs.cloudcannon.com/hosting/forms/introduction/" class="gray">forms on CloudCannon</a>. These are reliable solutions, but they only work on their own hosting platform. You can also choose platform-independent form handlers like <a href="https://formspree.io/" class="gray">Formspree</a> or <a href="https://www.formbucket.com/" class="gray">FormBucket</a>. If you use them, your forms will work on any hosting platform, but they have a bigger chance of being down. Finally, each website has some very specific solutions, like a <a href="/without-plugin/webshop">webshop</a> or <a href="/without-plugin/comments">comments</a>, using <a href="https://github.com/" class="gray">Github</a> or <a href="https://staticman.net/" class="gray">Staticman</a>. These specific solutions are very hard to replace.</p>
+
+<h3 id="how-to-best-solve-the-redundancy-problem">How to best solve the redundancy problem</h3>
+
+<p>For important forms I have set up an extra AJAX form submission, to have the form entry duplicated. When the AJAX form submission returns an error code it nevertheless submits the ‘normal’ form. Setting up a failover DNS is a good measure too, as well as configuring multiple CMS systems. In reality every service fails every now and then and the more services you use, the more failure you will encounter. The most important thing is to be aware of it, so you can limit the impact. This can be done by monitoring uptime. I use <a href="https://uptimerobot.com" class="gray">Uptime Robot</a> for this. If a service goes down, <a href="https://uptimerobot.com" class="gray">Uptime Robot</a> will send me an email. If that happens I assess what to do next. A short term solution is to switch from provider and a long term solution is to improve the redundancy.</p>
+:ET

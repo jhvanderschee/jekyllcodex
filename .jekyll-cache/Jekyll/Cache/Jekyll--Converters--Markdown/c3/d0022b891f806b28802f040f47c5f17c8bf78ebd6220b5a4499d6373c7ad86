@@ -1,0 +1,15 @@
+I"!<h2>About this blog</h2>
+
+<p>In our blog we keep you updated on stuff that is going on at this website. Do you have a great topic or are you missing something? Drop me a line through twitter <a href="https://twitter.com/jhvanderschee" target="_blank" style="color: #777777;">@jhvanderschee</a>.</p>
+
+<p><br /><br /><br /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>{% for post in site.posts %}{{ post.date</td>
+      <td>date: “%Y/%m/%d” }} - <a href="{{ post.url }}">{{ post.title }}</a><br />{% endfor %}</td>
+    </tr>
+  </tbody>
+</table>
+:ET

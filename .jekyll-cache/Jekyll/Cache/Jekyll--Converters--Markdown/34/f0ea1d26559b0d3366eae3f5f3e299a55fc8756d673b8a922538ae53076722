@@ -1,0 +1,17 @@
+I"�<h3 id="introduction">Introduction</h3>
+
+<p>This page is coming soon… Do not want to wait? Send me an email on <a href="mailto:jhvanderschee@gmail.com" style="color: #777777;">jhvanderschee@gmail.com</a>.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/add-to-homescreen.html">add-to-homescreen.html</a>
+<br />Step 2. Save the file in the ‘_includes’ directory of your project
+<br />Step 3. Make sure the bottom of your layout document looks like this:</p>
+
+<pre><code>...
+&lt;script src="/js/jquery.min.js"&gt;&lt;/script&gt;
+{% include add-to-homescreen.html %}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+:ET

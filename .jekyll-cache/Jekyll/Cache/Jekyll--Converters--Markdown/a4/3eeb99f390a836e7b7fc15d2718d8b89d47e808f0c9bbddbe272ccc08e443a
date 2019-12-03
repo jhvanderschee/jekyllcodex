@@ -1,0 +1,52 @@
+I"i<h2 id="step-1-create-a-basic-website">Step 1. Create a basic website</h2>
+
+<p>A website typically consists of a few elements. The header with a menu, a sidebar, the content and the footer. Back in the days we used frames to put these components together. Nowadays we use includes. These includes require a programming language to work, like PHP. Using PHP however introduces a lot of vulnerabilities. What if we could prevent that by design? Well… you can with Jekyll.</p>
+
+<p>You used to create an ‘index.php’ file and do something like this:</p>
+
+<pre><code class="language-html">&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;?php include('header.php'); ?&gt;
+content
+&lt;?php include('sidebar.php'); ?&gt;
+&lt;?php include('footer.php'); ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Now you create an ‘index.md’ file and you replace your PHP tags with Liquid tags, like so:</p>
+
+<pre><code class="language-html">---
+---
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+{% include header.html %}
+content
+{% include sidebar.html %}
+{% include footer.html %}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>You need to place html files you want to include in a root folder named: ‘_includes’. <a href="https://github.com/jhvanderschee/jekyllinclude">Get the code →</a></p>
+
+<h2 id="step-2-preview-your-website">Step 2. Preview your website</h2>
+
+<p>Opening the ‘index.md’ file in your browser does not work, so you need to have an enivronment that runs Jekyll. You can install Jekyll through command-line on your own machine. If this is your cup of tea, please go to <a href="http://jekyllrb.com/">jekyllrb.com</a>. Otherwise, follow these simple instructions:</p>
+
+<ul>
+  <li>Create a free account at <a href="http://cloudcannon.com">cloudcannon.com</a></li>
+  <li>Create a website and name it</li>
+  <li>Create an empty ‘_config.yml’ file in the root</li>
+  <li>Upload your ‘default.html’ file and the ‘_layouts’ directory</li>
+  <li>Upload the needed includes to the ‘_includes’ directory</li>
+  <li>Upload your ‘index.md’ file to the root directory</li>
+  <li>Visit your website on the URL CloudCannon created for you</li>
+</ul>
+
+<h2 id="step-3-host-your-website">Step 3. Host your website</h2>
+
+<p>Oh, how I hate shared hosting accounts… untill Jekyll. Shared hosting accounts are cheap but unreliable. However, a Git based static site provides us with a back-up (actually the source code), which makes me feel a whole lot safer. CloudCannon exports the static version of your site to an FTP account on every update, enabling you to use an hosting environment of your choice. Just connect your FTP account through the CloudCannon options. So if your cheap hosting account goes down, the source code will still live on in Git and in your CloudCannon environment, enabling you to push the site to another cheap hosting account. Isn’t that reassuring?</p>
+:ET

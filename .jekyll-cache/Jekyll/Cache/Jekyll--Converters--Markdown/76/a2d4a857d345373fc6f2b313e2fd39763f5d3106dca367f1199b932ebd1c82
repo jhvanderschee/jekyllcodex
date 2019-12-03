@@ -1,0 +1,56 @@
+I"�<h3 id="introduction">Introduction</h3>
+
+<p>According to many site owners, PDF documents and external links should open in a new window. Markdown makes it relatively hard to specify this. This script automates this for you, so you do not have to worry about this.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>This script detects external links and links to PDF files, using plain javascript. It automagically adds ‘target=”_blank”’ to these links. This is done by the following code.</p>
+
+<p>[expand]</p>
+
+<pre><code>&lt;script&gt;
+//open external links in a new window
+function external_new_window() {
+    for(var c = document.getElementsByTagName("a"), a = 0;a &lt; c.length;a++) {
+        var b = c[a];
+        if(b.getAttribute("href") &amp;&amp; b.hostname !== location.hostname) {
+            b.target = "_blank";
+            b.rel = "noopener";
+        }
+    }
+}
+//open PDF links in a new window
+function pdf_new_window ()
+{
+    if (!document.getElementsByTagName) return false;
+    var links = document.getElementsByTagName("a");
+    for (var eleLink=0; eleLink &lt; links.length; eleLink ++) {
+    if ((links[eleLink].href.indexOf('.pdf') !== -1)||(links[eleLink].href.indexOf('.doc') !== -1)||(links[eleLink].href.indexOf('.docx') !== -1)) {
+        links[eleLink].onclick =
+        function() {
+            window.open(this.href);
+            return false;
+        }
+    }
+    }
+} 
+pdf_new_window();
+external_new_window();
+&lt;/script&gt;
+
+</code></pre>
+
+<p>[/expand]</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/new-window-fix.html">new-window-fix.html</a>
+<br />Step 2. Save the file in the ‘_includes’ directory of your project
+<br />Step 3. Make sure the bottom of your layout document looks like this:</p>
+
+<pre><code>...
+{% include new-window-fix.html %}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+:ET

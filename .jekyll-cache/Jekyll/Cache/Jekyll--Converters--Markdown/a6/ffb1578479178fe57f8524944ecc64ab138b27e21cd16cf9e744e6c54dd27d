@@ -1,0 +1,58 @@
+I"�<h3 id="introduction">Introduction</h3>
+
+<p>The Atom Syndication Format is an XML language used for web feeds. A web feed (also called ‘news feed’ or ‘RSS feed’) is a data format used for providing users with frequently updated content. Content distributors syndicate a web feed, thereby allowing users to subscribe a channel to it. A typical scenario of web-feed use might involve the following: a content provider publishes a feed link on its site which end users can register with an aggregator program (also called a feed reader or a news reader) running on their own machines.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>The atom feed, in the ‘feed.xml’ file uses Liquid to build the XML. The file contains the following code.</p>
+
+<p>[expand]</p>
+
+<pre><code>---
+layout: null
+---
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;{{ site.title | xml_escape }}&lt;/title&gt;
+    &lt;description&gt;{{ site.description | xml_escape }}&lt;/description&gt;
+    &lt;link&gt;{{ site.url }}{{ site.baseurl }}/&lt;/link&gt;
+    &lt;atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/&gt;
+    &lt;pubDate&gt;{{ site.time | date_to_rfc822 }}&lt;/pubDate&gt;
+    &lt;lastBuildDate&gt;{{ site.time | date_to_rfc822 }}&lt;/lastBuildDate&gt;
+    &lt;generator&gt;Jekyll v{{ jekyll.version }}&lt;/generator&gt;
+    {% for post in site.posts limit:10 %}
+      &lt;item&gt;
+        &lt;title&gt;{{ post.title | xml_escape }}&lt;/title&gt;
+        &lt;description&gt;{{ post.content | xml_escape }}&lt;/description&gt;
+        &lt;pubDate&gt;{{ post.date | date_to_rfc822 }}&lt;/pubDate&gt;
+        &lt;link&gt;{{ post.url | prepend: site.baseurl | prepend: site.url }}&lt;/link&gt;
+        &lt;guid isPermaLink="true"&gt;{{ post.url | prepend: site.baseurl | prepend: site.url }}&lt;/guid&gt;
+        {% for tag in post.tags %}
+        &lt;category&gt;{{ tag | xml_escape }}&lt;/category&gt;
+        {% endfor %}
+        {% for cat in post.categories %}
+        &lt;category&gt;{{ cat | xml_escape }}&lt;/category&gt;
+        {% endfor %}
+      &lt;/item&gt;
+    {% endfor %}
+  &lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre>
+
+<p>The code above will create a XML feed with the 10 latest posts in it. To tell the browsers you have a web feed, add a simple line to the head of your HTML:</p>
+
+<pre><code>&lt;link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml"&gt;
+</code></pre>
+
+<p>[/expand]</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/feed.xml">feed.xml</a>
+<br />Step 2. Save the file in the root of your Jekyll project
+<br />Step 3. Add the following line to your head/the ‘head.html’ include:</p>
+
+<pre><code>&lt;link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml"&gt;
+</code></pre>
+:ET

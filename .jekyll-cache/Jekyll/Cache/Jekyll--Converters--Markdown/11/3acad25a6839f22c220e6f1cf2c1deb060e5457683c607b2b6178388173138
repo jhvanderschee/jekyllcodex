@@ -1,0 +1,13 @@
+I"š<h3 id="introduction">Introduction</h3>
+
+<p>If you upload a huge image in CloudCannon (or any other Jekyll CMS), you would love it to be displayed small or cropped. This is super easy if you use an image resize proxy, like <a href="https://images.weserv.nl/">images.weserv.nl</a>.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>Just create an image tag in your layout file that looks like this:</p>
+
+<pre><code>&lt;img src="http://images.weserv.nl/?url=www.yourdomain.com{{ page.image }}&amp;w=200&amp;h=200&amp;output=jpg&amp;q=65" /&gt;
+</code></pre>
+
+<p>More info about this service can be found at <a href="https://images.weserv.nl/">images.weserv.nl</a>.</p>
+:ET

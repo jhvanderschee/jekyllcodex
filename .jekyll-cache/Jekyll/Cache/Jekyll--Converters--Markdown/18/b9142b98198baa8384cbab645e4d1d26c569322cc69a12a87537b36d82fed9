@@ -1,0 +1,30 @@
+I"<h3 id="introduction">Introduction</h3>
+
+<p>Sometimes pages contain an awful lot of images. In that case you want these images to only load when the user scrolls down. This principle is called lazy loading and it is the opposite of pre-loading.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>Use it like this:</p>
+
+<pre><code>&lt;img src="/img/blank.png" alt="" data-echo="/img/actualimage.jpg"&gt;
+</code></pre>
+
+<p>… or for background images like this:</p>
+
+<pre><code>&lt;div style="background: url(/img/blank.png) center center no-repeat; background-size: cover;" data-echo-background="/img/actualimage.jpg"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>Note that you can create a (popular and) fancy effect by replacing the ‘blank.png’ image by a very small version of the actual image. This will cause a blur that is being resolved on scroll.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/lazyload.html">lazyload.html</a>
+<br />Step 2. Save the file in the ‘_includes’ directory of your project
+<br />Step 3. Make sure the bottom of your layout document looks like this:</p>
+
+<pre><code>...
+{% include lazyload.html %}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+:ET

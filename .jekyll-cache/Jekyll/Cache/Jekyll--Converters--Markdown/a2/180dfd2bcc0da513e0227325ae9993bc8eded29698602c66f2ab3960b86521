@@ -1,0 +1,26 @@
+I"b<h3 id="introduction">Introduction</h3>
+
+<p>Modern websites have a search bar, searching within the site for specific content. These search boxes often search the database in real-time. That is not possible within a static website. Therefore another solution must be found.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>This search relies on the index from Google. It queries the Google Search engine directly. Results will be shown within the Google interface (on a new page), but will be limited to the site you specified. Click the ‘read more’ link for a demo.</p>
+
+<p>[expand]</p>
+
+<pre><code>&lt;form method="get" action="http://www.google.com/search" target="_blank"&gt;&lt;input type="hidden" name="sitesearch" value="yourdomain.com" /&gt;&lt;input type="text" name="q" maxlength="255" value="" placeholder="Search via Google" /&gt;&lt;/form&gt;
+</code></pre>
+
+<form method="get" id="search-google" action="https://www.google.com/search" target="_blank"><input type="hidden" name="sitesearch" value="jekyllcodex.org" /><input type="text" name="q" maxlength="255" value="" placeholder="Search via Google" class="form-control" /></form>
+
+<p>[/expand]</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/search-google.html">search-google.html</a> and change the domain name
+<br />Step 2. Save the file in the ‘_includes’ directory of your project
+<br />Step 3. Add the following statement to your layout where you want the search box to appear:</p>
+
+<pre><code>{% include search-google.html %}
+</code></pre>
+:ET

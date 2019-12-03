@@ -1,0 +1,25 @@
+I"�<p>Today I have made some improvements to the form builder. It is now possible to have multiple forms on one page. I also added Netlify as a form engine. Netlify is a hosting platform for static websites that can also handle form submissions. Note that Netlify’s free plan limits you to 100 submissions per month. If your website sends more forms you will be bumped to the paid plan, which starts at a hefty 45 dollar a month. Therefore you need to enable a recaptcha on your form (otherwise you will end up paying for the spam submissions alone). To do so I added ‘recaptcha’ as a new ‘input type’.</p>
+
+<p>If you use Netlify as your form engine, you only need to write this in your form builder:</p>
+
+<pre><code>- name: recaptcha
+  input_type: recaptcha
+  placeholder:
+  required: true
+</code></pre>
+
+<p>If you do NOT use Netlify as your form engine, but one of the others (cloudcannon, formspree or formbucket), you need to write this:</p>
+
+<pre><code>- name: recaptcha
+  input_type: recaptcha
+  placeholder: [your recaptcha site-key]
+  required: true
+</code></pre>
+
+<p>Additionally you need to add this to your head (non-Netlify only):</p>
+
+<pre><code>{% if page.forms %}&lt;script src='https://www.google.com/recaptcha/api.js'&gt;&lt;/script&gt;{% endif %}
+</code></pre>
+
+<p>Note that the above code assumes you use the latest version of the <a href="/without-plugin/form-builder/">form builder</a>. Happy coding!</p>
+:ET

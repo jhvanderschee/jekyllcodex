@@ -1,0 +1,26 @@
+I".<p>This has been on my wish-list for almost two years now: building a simple webshop in Jekyll without paying a monthly fee to a third party. And I have finally succeeded! To see how it works, please visit my <a href="/donate">donate page</a>. The webshop requires just two settings, the email address for the confirmation and your Plink payment link. Setup can be done in minutes and only requires a Mollie account. There are no limitations on the layout of the product pages. It uses HTML API, a principle on which Lea Verou from MIT has done a decent amount of research and is proven to be easy to implement. In the donate page I have shown how this can work for product variants.</p>
+
+<p>The webshop accepts all payment methods from Mollie:</p>
+
+<ul>
+  <li>Mastercard</li>
+  <li>Visa</li>
+  <li>American Express</li>
+  <li>PayPal</li>
+  <li>SEPA Bank Transfer</li>
+  <li>SEPA Direct Debit</li>
+  <li>Bitcoin</li>
+  <li>SOFORT Banking</li>
+  <li>iDEAL</li>
+  <li>Bancontact</li>
+  <li>KBC/CBC Payment Button</li>
+  <li>Belfius Pay Button</li>
+  <li>paysafecard</li>
+  <li>CartaSi</li>
+  <li>Cartes Bancaires</li>
+  <li>Gift cards</li>
+</ul>
+
+<p>This webshop is far from perfect. It has no stock keeping, no VAT calculations and no automated invoices. However, this webshop does allow you to sell products in almost any country for a very small fee. All fields in the checkout form are automagically added to your confirmation email and when you add radio buttons with a price and description, these values will be added to the order (i.e. gift wrapping or shipping method).</p>
+
+:ET

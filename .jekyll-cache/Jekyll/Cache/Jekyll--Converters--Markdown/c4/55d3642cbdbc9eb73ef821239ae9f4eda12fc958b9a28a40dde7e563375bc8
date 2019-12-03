@@ -1,0 +1,28 @@
+I"P<h3 id="introduction">Introduction</h3>
+
+<p>You can see them in action on the right side of the screen.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>This content is coming soon…</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Step 1. Download the file <a href="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/follow-buttons.html">follow-buttons.html</a>
+<br />Step 2. Save the file in the ‘_includes’ directory of your project
+<br />Step 3. Make sure the bottom of your layout document looks like this:</p>
+
+<pre><code>...
+{% include follow-buttons.html %}
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Step 4. Add the following variables to your ‘_config.yml’ file (with value’s):</p>
+<pre><code>facebook_url: 
+twitter_url: 
+linkedin_url: 
+googleplus_url:
+pinterest_url:
+instagram_url:
+</code></pre>
+:ET
