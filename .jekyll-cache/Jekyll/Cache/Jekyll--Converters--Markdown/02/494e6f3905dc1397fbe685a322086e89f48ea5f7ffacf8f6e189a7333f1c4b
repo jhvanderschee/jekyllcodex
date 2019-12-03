@@ -1,4 +1,0 @@
-I"ã<h2 id="simple-site-search">Simple site search</h2>
-
-<p>Below you can search this site, using <a href="/without-plugin/search-lunr">Lunr.js</a>. This uses a local index file. Alternatively you can use the very simple <a href="/without-plugin/search-google" class="gray">Google search box</a>, that uses the Google index to find its pages (which requires an <a href="/without-plugin/sitemap" class="gray">XML sitemap</a> to help Google find the latest additions to your website).</p>
-:ET

@@ -1,7 +1,0 @@
-I"&<p>Happy New Year! As a present from me to you I have improved the lightbox. I hope you like it.</p>
-
-<p>I updated some style rules with an ‘!important’ tag, to prevent lightbox styles accidentally being overruled by the theme. Additionally the lightbox now has keyboard support. The arrow keys (left and right) can be used to loop over the images. Pressing the ‘escape’ key (Esc) will close the lightbox. Finally I added swipe support through <a href="https://www.cssscript.com/detect-swipe-events-vanilla-javascript-swipe/">a lightweight vanilla-js swipe script</a> I found online. The swipe detection also works on desktop (tested in Firefox).</p>
-
-<p>Want to test the improved lightbox? You can do that at the <a href="/without-plugin/lightbox">lightbox page</a> by clicking on the links.</p>
-
-:ET

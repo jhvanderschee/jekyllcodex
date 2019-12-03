@@ -1,8 +1,0 @@
-I"<h2 id="about-this-page">About this page</h2>
-
-<p>Although the primary function of this page/form is to illustrate how the <a href="/without-plugin/form-builder" class="gray">form builder</a> and <a href="/without-plugin/better-forms" class="gray">better forms</a> work, it will actually send an email to my inbox. It uses <a href="https://formspree.io" class="gray">Formspree</a> to do so, as this website is hosted on GitHub.</p>
-
-<h2 id="contact-form">Contact form</h2>
-
-<p>Feel free to leave me a (nice) message. Have a nice day!</p>
-:ET
