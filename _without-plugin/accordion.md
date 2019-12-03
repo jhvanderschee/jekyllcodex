@@ -10,9 +10,7 @@ accordion:
 
 ### Introduction
 
-Sometimes you have a lot of information you want to disclose gradually. This is often the case with Frequently Asked Questions. An accordion is a perfect solution for this. Clicking on the title of the accordion expands the content area. This looks like this:
-
-{% include accordion.html %}
+Sometimes you have a lot of information you want to disclose gradually. This is often the case with Frequently Asked Questions. An accordion is a perfect solution for this. Clicking on the title of the accordion expands the content area. You can see a demo on [this web award website](https://webawardz.com/contact/).
 
 ### How it works
 
