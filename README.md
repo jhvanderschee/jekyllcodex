@@ -6,7 +6,7 @@ Jekyll Codex is created by Joost van der Schee ([@jhvanderschee](https://twitter
 
 Why Jekyll? Jekyll is the most popular static site generator. Static sites are better for performance, they’re cheaper to build and maintain, and they’re much more secure than traditional database driven websites. Thus they offer a great added value to front-end developers and their clients.
 
-Feel free to use all code presented on this website. The code of the website itself may also be used, as this website is a demo of the code it presents. However, respect the copyright of the used trademarks and the licenses of the open-source software used, as their rights belong to their respective owners. All images are CC0 images from Unsplash.
+Feel free to use all code presented on this website under the MIT License (see below). The code of the website itself may also be used, as this website is a demo of the code it presents. However, respect the copyright of the used trademarks and the licenses of the open-source software used, as their rights belong to their respective owners. All images are CC0 images from Unsplash.
 
 ## MIT License
 
