@@ -2,7 +2,7 @@
 title: Instafeed.js alternative (for Instagram)
 ---
 
-To show a users Instagram account pictures I used Instafeed.js. Instafeed.js was not only non-trivial to set up, but it also relied on the legacy API from Instagram that will be discontinued on March 2nd 2020 or [March 31 2020](https://developers.facebook.com/blog/post/2020/01/14/instagram-basic-display-api-long-lived-access-tokens-available/){:.gray}. Either way, time for a change. The developers behind Instafeed.js came to the conclusion that the new Instagram Basic Display API [requires server-side scripts](https://github.com/stevenschobert/instafeed.js/issues/635#issuecomment-576473432){:.gray}. A pure Javascript solution, like Instafeed.js, that directly gets content from Instagram, is no longer possible. 
+To show a users Instagram account pictures I have been using Instafeed.js. However, Instafeed.js was not only non-trivial to set up, but it also relied on the legacy API from Instagram that will be discontinued on March 2nd 2020 or [March 31 2020](https://developers.facebook.com/blog/post/2020/01/14/instagram-basic-display-api-long-lived-access-tokens-available/){:.gray}. Therefore, it was time for a change. The developers behind Instafeed.js came to the conclusion that the new Instagram Basic Display API [requires server-side scripts](https://github.com/stevenschobert/instafeed.js/issues/635#issuecomment-576473432){:.gray}. A pure Javascript solution, like Instafeed.js, that directly gets content from Instagram, is no longer possible. 
 
 ### The solution
 
