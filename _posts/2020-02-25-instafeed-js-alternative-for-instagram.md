@@ -35,3 +35,5 @@ $.get('https://zapier.com/engine/rss/2502510/jhvanderschee', function (data) {
     #instafeed a img {width: 100%;}
 </style>
 ```
+
+Keep it simple!
