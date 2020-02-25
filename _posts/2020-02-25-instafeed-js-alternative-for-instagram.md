@@ -13,11 +13,6 @@ The solution I came up with is quite simple: fully split the server-side and cli
 You can find the code below. Please read the [installation manual](https://jekyllcodex.org/without-plugin/instagram/). Note that using Jekyll is not a requirement.
 
 ```
-<style>
-    #instafeed {overflow: auto; margin-left: -1%;}
-    #instafeed a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-    #instafeed a img {width: 100%;}
-</style>
 <p id="instafeed"></p>
 
 <script src="/js/jquery.min.js"></script>
@@ -33,4 +28,10 @@ $.get('https://zapier.com/engine/rss/2502510/jhvanderschee', function (data) {
     });
 });
 </script>
+
+<style>
+    #instafeed {overflow: auto; margin-left: -1%;}
+    #instafeed a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
+    #instafeed a img {width: 100%;}
+</style>
 ```
