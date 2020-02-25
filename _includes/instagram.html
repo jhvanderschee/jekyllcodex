@@ -14,7 +14,7 @@ $.get('https://zapier.com/engine/rss/2502510/jhvanderschee', function (data) {
         var link = el.find("link").text();
         var image = el.find("enclosure").attr('url');
         var description = el.find("description").text();
-        $('#instafeed').append('<a href="'+encodeURI(link)+'" target="_blank"><img src="'+encodeURI(image)+'" alt="'+title+'" /></a>');
+        $('#instafeed').append('<a href="'+encodeURI(link)+'" target="_blank" title="'+title.replace('Caption: ','')+'"><img src="'+encodeURI(image)+'" alt="'+title.replace('Caption: ','')+'" /></a>');
     });
 });
 </script>
