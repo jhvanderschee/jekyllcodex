@@ -7,7 +7,7 @@
 
 <script src="/js/jquery.min.js"></script>
 <script type="text/javascript">
-$.get('https://zapier.com/engine/rss/2502510/jhvanderschee', function (data) {
+$.get('{{ include.feedUrl }}', function (data) {
     $(data).find("item").each(function () { // or "item" or whatever suits your feed
         var el = $(this);
         var title = el.find("title").text();
