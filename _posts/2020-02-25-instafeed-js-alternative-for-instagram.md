@@ -6,11 +6,11 @@ To show a users Instagram account pictures I have been using Instafeed.js. Howev
 
 ### The solution
 
-The solution I came up with is actually quite simple: fully split the server-side and client-side part and use XML(RSS) as an intermediate. For the server-side part I used Zapier (free). Zapier authenticates with Instagram and gets the required long lived access token. Using this token it listens to the users feed on a five minute interval. When it discovers a new post/image, it adds this to a Zapier RSS feed that has nothing to do with Instagram. Zapier has taken care of the CORS policy. Therefore, we only have to visualize the RSS feed. This requires just a few lines of Javascript and a touch of CSS.
+The solution I came up with is actually quite simple: fully split the server-side and client-side part and use XML(RSS) as an intermediate. For the server-side part I used Zapier (free). Zapier authenticates with Instagram and gets the required long lived access token. Using this token it listens to the users feed on a five minute interval. When it discovers a new post/image, it adds this to a Zapier RSS feed that has nothing to do with Instagram. Zapier takes care of the CORS policy on the RSS. Therefore, we only have to visualize the RSS feed. This requires just a few lines of Javascript and a touch of CSS.
 
 ### The code
 
-You can find the code below. Please read the [installation manual](https://jekyllcodex.org/without-plugin/instagram/). Note that using Jekyll is not a requirement.
+You can find the code below. Please read the [installation manual](https://jekyllcodex.org/without-plugin/instagram/) on how to set Zapier up. Note that using Jekyll is not a requirement.
 
 ```
 <p id="instafeed"></p>
