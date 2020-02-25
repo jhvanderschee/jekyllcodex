@@ -4,7 +4,7 @@ title: Instagram
 
 ### Introduction
 
-This script creates an instagram feed of a user. The script reads an RSS feed of your instagram account, provided by [Zapier](https://zapier.com).
+This script displays the instagram feed of a user. The script reads an RSS feed of your instagram account, provided by [Zapier](https://zapier.com).
 
 {% include instagram.html feedUrl="https://zapier.com/engine/rss/2502510/jhvanderschee" %}
 
