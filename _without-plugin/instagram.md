@@ -24,7 +24,7 @@ This script loads loads an RSS feed from Zapier and requires just one variable: 
 
 Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/instagram.html)
 <br />Step 2. Save the file in the '_includes' directory of your project
-<br />Step 3. Add the following line to your layout on the place where you want the share buttons to appear:
+<br />Step 3. Add the following line to your layout on the place where you want your instagram pictures to appear:
 
 ```
 {% raw %}{% include instagram.html feedUrl="https://zapier.com/engine/rss/2502510/jhvanderschee" %}{% endraw %}
