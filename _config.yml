@@ -37,8 +37,8 @@ defaults:
     type: products
   values:
     layout: product
-description: 'Jekyll Codex wants to make it easier for front-end developers to choose
-  Jekyll in their next project.'
+description: Jekyll Codex wants to make it easier for front-end developers to choose
+  Jekyll in their next project.
 url: https://jekyllcodex.org
 permalink: "/blog/:title/"
 facebook_url: https://www.facebook.com/jhvanderschee
