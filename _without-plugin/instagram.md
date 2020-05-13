@@ -14,11 +14,12 @@ This script loads loads an RSS feed from Zapier and requires just one variable: 
 
 - Feed Title: {username}
 - Max Records: 5
-- Item Title: Caption: {caption text}
-- Source URL: {link}
-- Content: Tags: {tags}
-- Media URL: {images standard resolution url}
+- Item Title: Caption: {Caption}
+- Source URL: {Permalink}
+- Content: Tags:
+- Media URL: {Media URL}
 - Media MIME Type: image/jpeg
+- Pubdate: {Timestamp}
 
 ### Installation
 
