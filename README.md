@@ -12,7 +12,7 @@ Feel free to use all code presented on this website under the MIT License (see b
 
 ### MIT License
 
-Copyright (c) 2018 Usecue BV
+Copyright (c) 2020 Usecue BV
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

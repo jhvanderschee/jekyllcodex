@@ -6,7 +6,7 @@ title: Instagram
 
 This script displays the instagram feed of a user. The script reads an RSS feed of your instagram account, provided by [Zapier](https://zapier.com).
 
-{% include instagram.html feedUrl="https://zapier.com/engine/rss/2502510/jhvanderschee" %}
+{% include instagram.html feedUrl="https://zapier.com/engine/rss/2502510/instagramnew" %}
 
 ### How it works
 
@@ -14,11 +14,12 @@ This script loads loads an RSS feed from Zapier and requires just one variable: 
 
 - Feed Title: {username}
 - Max Records: 5
-- Item Title: Caption: {caption text}
-- Source URL: {link}
-- Content: Tags: {tags}
-- Media URL: {images standard resolution url}
+- Item Title: Caption: {Caption}
+- Source URL: {Permalink}
+- Content: Tags:
+- Media URL: {Media URL}
 - Media MIME Type: image/jpeg
+- Pubdate: {Timestamp}
 
 ### Installation
 
@@ -27,5 +28,5 @@ Step 1. Download the file [instagram.html](https://raw.githubusercontent.com/jhv
 <br />Step 3. Add the following line to your layout on the place where you want your instagram pictures to appear:
 
 ```
-{% raw %}{% include instagram.html feedUrl="https://zapier.com/engine/rss/2502510/jhvanderschee" %}{% endraw %}
+{% raw %}{% include instagram.html feedUrl="https://zapier.com/engine/rss/2502510/instagramnew" %}{% endraw %}
 ```
