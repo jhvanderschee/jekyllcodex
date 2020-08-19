@@ -206,6 +206,7 @@
             }
         }
   }
+  {% if include.duration %}
   setInterval(function(){
     var j=0;
     var elements = document.querySelectorAll('.carousel__control--forward');
@@ -214,4 +215,5 @@
     }
     elements[j].click();
   },{{ include.duration }}000);
+  {% endif %}
 </script>
