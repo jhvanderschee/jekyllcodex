@@ -3,6 +3,9 @@ title: Instafeed.js alternative (for Instagram)
 date: 2020-02-25 00:00:00 Z
 ---
 
+WARNING: THIS NO LONGER WORKS!  
+Still want [Instagram on your website without API](/blog/instagram-on-your-website-without-api/)? Check my [new post](/blog/instagram-on-your-website-without-api/).
+
 To show a users Instagram account pictures I have been using Instafeed.js. However, Instafeed.js was not only non-trivial to set up, but it also relied on the legacy API from Instagram that will be discontinued on March 2nd 2020 or [March 31 2020](https://developers.facebook.com/blog/post/2020/01/14/instagram-basic-display-api-long-lived-access-tokens-available/){:.gray}. Therefore, it was time for a change. The new Instagram Basic Display API [requires server-side scripts](https://github.com/stevenschobert/instafeed.js/issues/635#issuecomment-576473432){:.gray}. A pure Javascript solution, like Instafeed.js, that directly gets content from Instagram, is no longer possible. I looked at skipping the authentication by scraping a users public profile page, but came to the conclusion that cross-origin resource sharing (CORS) and potential IP-blocking from Instagram would make that a difficult and unreliable route.
 
 ### The solution
@@ -38,3 +41,6 @@ $.get('https://zapier.com/engine/rss/2502510/jhvanderschee', function (data) {
 ```
 
 Keep it simple!
+
+WARNING: THIS NO LONGER WORKS!  
+Still want [Instagram on your website without API](/blog/instagram-on-your-website-without-api/)? Check my [new post](/blog/instagram-on-your-website-without-api/).
