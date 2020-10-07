@@ -3,11 +3,11 @@ title: Instagram on your website without API
 date: 2020-02-25 00:00:00 Z
 ---
 
-I have created a new version of the instagram include to show instagram images on your Jekyll website.
+I have created a [new version of the instagram include](/without-plugin/instagram) to show instagram images on your Jekyll website.
 
 ### Problem
 
-My previous version was an [alternative to instafeed.js](/blog/instafeed-js-alternative-for-instagram/), which used to work without API calls. The new version of instafeed required running your own server to keep your API tokens fresh. I found a  relatively easy way to circumvent this, by letting Zapier do the heavy lifting. However, there were some downsides to this approach. When, a few months ago, Instagram started to change the URL's of the static images every few hours, this solution no longer worked.
+My previous version was an [instafeed.js alternative](/blog/instafeed-js-alternative-for-instagram/), which used to work without API calls. The new version of instafeed required running your own server to keep your API tokens fresh. I found a  relatively easy way to circumvent this, by letting Zapier do the heavy lifting. However, there were some downsides to this approach. When, a few months ago, Instagram started to change the URL's of the static images every few hours, this solution no longer worked.
 
 ### Solution
 
