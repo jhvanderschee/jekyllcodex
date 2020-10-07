@@ -10,7 +10,7 @@ This script displays the first few images from the instagram homepage of a user.
 
 ### How it works
 
-I do not want to share how this exactly works, as that might start a cat and mouse game with Instagram... but I think this is absolutely awesome in its simplicity. Please use this to your advantage and keep it quiet. Once your images are showing up (which might take a few seconds and one or two refreshes) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
+I do not want to share how this exactly works, as that might start a cat and mouse game with Instagram. Please use this to your advantage and keep it quiet. Once your images are showing up (which might take a few seconds and one or two refreshes) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
 
 ### Installation
 
