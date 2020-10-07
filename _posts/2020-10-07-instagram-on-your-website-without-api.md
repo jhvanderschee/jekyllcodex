@@ -1,6 +1,6 @@
 ---
 title: Instagram on your website without API
-date: 2020-02-25 00:00:00 Z
+date: 2020-10-07 00:00:00 Z
 ---
 
 I have created a [new version of the instagram include](/without-plugin/instagram) to show instagram images on your Jekyll website.
