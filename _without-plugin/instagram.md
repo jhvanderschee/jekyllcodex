@@ -4,13 +4,13 @@ title: Instagram
 
 ### Introduction
 
-This script displays the first few images from the instagram homepage of a user.
+You have to put the word 'instafeed.io' in your Instagram 'bio'. After you have done this, this script displays the first few images from the instagram homepage of a user:
 
 {% include instagram.html username="jhvanderschee" %}
 
 ### How it works
 
-I do not want to share how this exactly works, as that might start a cat and mouse game with Instagram. Please use this to your advantage and keep it quiet. Once your images are showing up (which might take a few seconds and one or two refreshes) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
+For information on how this works, visit [instafeed.io](https://www.instafeed.io). When your images are showing up (which might take a few seconds and a refresh) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
 
 ### Installation
 
