@@ -1,6 +1,5 @@
 ---
 title: Jekyll Codex
-timezone: UTC
 collections:
   posts:
     title: Posts
