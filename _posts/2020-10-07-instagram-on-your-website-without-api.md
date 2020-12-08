@@ -11,7 +11,7 @@ My previous version was an [instafeed.js alternative](/blog/instafeed-js-alterna
 
 ### Solution
 
-Fortunately I found an alternative solution that is even easier. Just add the following line to your code and you will find your instagram images in a nice 5 by 2 grid. You can view an [example](/without-plugin/instagram). I am not going into too many detail on how and why this works, as that might infuse a cat and mouse game with Instagram, but use it to your advantage!
+Fortunately I found an alternative solution that is even easier. Just add the following line to your code and you will find your instagram images in a nice 5 by 2 grid. You can view an [example](/without-plugin/instagram). More information about this solution can be found on the [PPI Loader website](https://profilepageimages.usecue.com/).
 
 ```
 {% raw %}{% include instagram.html username="jhvanderschee" %}{% endraw %}
