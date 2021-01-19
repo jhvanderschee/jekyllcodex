@@ -1,5 +1,5 @@
 ---
-title: Instagram without API - part 2
+title: Instagram without API
 date: 2021-01-19 00:00:00 Z
 ---
 
