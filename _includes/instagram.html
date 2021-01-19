@@ -4,5 +4,5 @@
     #instafeed li img {width: 100%; height: 100%; object-fit: cover; position: absolute;}
 </style>
 <ul id="instafeed">
-    {% for i in (0..9) %}<li><a href="https://www.instagram.com/{{ include.username }}/"><img src="https://www.instafeed.io/{{ include.username }}/{{ i }}.jpg" alt="Instagram picture {{ i | plus:1 }}" /></a></li>{% endfor %}
+    {% for i in (0..9) %}<li><a href="https://www.instagram.com/{{ include.username }}/"><img src="https://profilepageimages.usecue.com/images/{{ include.username }}/small/{{ i }}.jpg" alt="Instagram picture {{ i | plus:1 }}" /></a></li>{% endfor %}
 </ul>
