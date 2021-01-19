@@ -4,13 +4,13 @@ title: Instagram
 
 ### Introduction
 
-You have to put the word 'instafeed.io' in your Instagram 'bio'. After you have done this, this script displays the first few images from the instagram homepage of a user:
+You have to register at [PPI Loader](https://profilepageimages.usecue.com) and grant us access to your Instagram account. After you have done this, this script displays your last Instagram profile images:
 
 {% include instagram.html username="jhvanderschee" %}
 
 ### How it works
 
-For information on how this works, visit [instafeed.io](https://www.instafeed.io). When your images are showing up (which might take a few seconds and a refresh) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
+For information on how this works, visit [PPI Loader](https://profilepageimages.usecue.com). When your images are showing up (which might take a few seconds and a refresh) they are no longer fetched from Instagram. Do you like it? [Buy me something!](/donate/)
 
 ### Installation
 
