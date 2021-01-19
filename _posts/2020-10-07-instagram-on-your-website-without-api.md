@@ -7,7 +7,7 @@ I have created a [new version of the instagram include](/without-plugin/instagra
 
 ### Problem
 
-My previous version was an [instafeed.js alternative](/blog/instafeed-js-alternative-for-instagram/). Instafeed.js used to work without API calls. The new version of instafeed.js, however, required running your own server to keep your API tokens fresh. I thought that was a bit cumbersome and found a relatively easy way to circumvent this, by letting Zapier do the heavy lifting. However, there were some downsides to this approach. When, a few months ago, Instagram started to change the URL's of the static images every few hours, this solution no longer worked (as I was storing only the URL's).
+My previous version was an [instafeed.js alternative](/blog/instafeed-js-alternative-for-instagram/). Instafeed.js used to work without API calls. The new version of instafeed.js, however, required running your own server to keep your API tokens fresh. I thought that was a bit cumbersome and found a relatively easy way to circumvent this, by letting Zapier do the heavy lifting. However, there were some downsides to this approach. When, a few months ago, Instagram started to change the URL's of the static images, this solution no longer worked (as I was storing only the URL's).
 
 ### Solution
 
