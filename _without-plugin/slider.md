@@ -8,7 +8,7 @@ A lot of websites have a slider (or carousel). Most of them in the header. The b
 
 ### How it works
 
-The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define if you want the transition to be a 'slide' or a 'fade'. And finally how long each slide should stay on the screen (in seconds). An interesting feature, is the option to make the slider responsive. If you set the height to '50' and the unit to '%', the dimensions will always be 2:1, but the height will vary. If you set the height to '300' and the unit to 'px' the height will always be the same, but the dimensions will vary. Note that the CSS in this script replaces the default icons for big HTML arrows and uses background images to ensure that the slider maintains the same height. Click the 'read more' link for a demo.
+The code allows you to set the height of the slider as an integer (number), and the unit in as '%' or 'px'. You can define how long each slide should stay on the screen (in seconds). An interesting feature, is the option to make the slider responsive. If you set the height to '50' and the unit to '%', the dimensions will always be 2:1, but the height will vary. If you set the height to '300' and the unit to 'px' the height will always be the same, but the dimensions will vary. Note that the CSS in this script replaces the default icons for big HTML arrows and uses background images to ensure that the slider maintains the same height. Click the 'read more' link for a demo.
 
 [expand]
 
