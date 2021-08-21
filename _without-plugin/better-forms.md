@@ -1,6 +1,5 @@
 ---
 title: Better forms
-inactive: true
 ---
 
 ### Introduction
