@@ -4,7 +4,7 @@ title: Live chat
 
 ### Introduction
 
-Live Chat is one of the most important features a website can offer. This live chat solution should be free or freemium and it should be very simple for visitors to engage in real time. Also, it should be easy to operate, manage and customize and it should have an mobile app for the operator. I have found these things in [Crisp](http://crisp.chat){:.gray}, thanks to some extensive research by [Appernetic](https://blog.appernetic.io/2016/07/14/use-live-chat-to-beat-the-competition/){:.gray}.
+Live Chat is one of the most important features a website can offer. This live chat solution should be free or freemium and it should be very simple for visitors to engage in real time. Also, it should be easy to operate, manage and customize and it should have an mobile app for the operator. I have found these things in [Crisp](https://crisp.chat/en/livechat/){:.gray}, thanks to some extensive research by [Appernetic](https://blog.appernetic.io/2016/07/14/use-live-chat-to-beat-the-competition/){:.gray}.
 
 ### How it works
 
