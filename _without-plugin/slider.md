@@ -38,6 +38,8 @@ Step 1. Download the file [carousel.html](https://raw.githubusercontent.com/jhva
 ```
 {% raw %}
   {% include carousel.html height="50" unit="%" duration="7" number="1" %}
+
+  {% include carousel.html height="50" unit="%" duration="7" number="2" %}
 {% endraw %}
 ```
 Step 4. Create a YML array called 'carousels' in your front matter with this content:
