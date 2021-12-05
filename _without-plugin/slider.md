@@ -1,5 +1,16 @@
 ---
 title: Slider/Carousel
+carousels:
+  - images:
+    - image: "/uploads/slider/ganapathy-kumar-93498_scaled.jpg"
+    - image: "/uploads/slider/samuel-zeller-356272_scaled.jpg"
+    - image: "/uploads/slider/samuel-zeller-356338_scaled.jpg"
+    - image: "/uploads/slider/ricardo-gomez-angel-180819_scaled.jpg"
+  - images:
+    - image: "/uploads/slider/ricardo-gomez-angel-180819_scaled.jpg"
+    - image: "/uploads/slider/ganapathy-kumar-93498_scaled.jpg"
+    - image: "/uploads/slider/samuel-zeller-356272_scaled.jpg"
+    - image: "/uploads/slider/samuel-zeller-356338_scaled.jpg"
 ---
 
 ### Introduction
@@ -12,7 +23,9 @@ The code allows you to set the height of the slider as an integer (number), and 
 
 [expand]
 
-{% include carousel.html height="50" unit="%" duration="7" %}
+{% include carousel.html height="50" unit="%" duration="7" number="1" %}
+
+{% include carousel.html height="50" unit="%" duration="7" number="2" %}
 
 [/expand]
 
@@ -24,15 +37,21 @@ Step 1. Download the file [carousel.html](https://raw.githubusercontent.com/jhva
 
 ```
 {% raw %}
-  {% include carousel.html height="50" unit="%" duration="7" %}
+  {% include carousel.html height="50" unit="%" duration="7" number="1" %}
 {% endraw %}
 ```
-Step 4. Create a YML file called 'carousel' in your data directory with this content:
+Step 4. Create a YML array called 'carousels' in your front matter with this content:
 
 ```
-images: 
-  - image: /uploads/slider/image1.jpg
-  - image: /uploads/slider/image2.jpg
-  - image: /uploads/slider/image3.jpg
-  - image: /uploads/slider/image4.jpg
+carousels:
+  - images: 
+    - image: /uploads/slider/image1.jpg
+    - image: /uploads/slider/image2.jpg
+    - image: /uploads/slider/image3.jpg
+    - image: /uploads/slider/image4.jpg
+  - images: 
+    - image: /uploads/slider/image5.jpg
+    - image: /uploads/slider/image6.jpg
+    - image: /uploads/slider/image7.jpg
+    - image: /uploads/slider/image8.jpg
 ```
