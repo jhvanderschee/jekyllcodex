@@ -1,16 +1,16 @@
 ---
 title: Slider/Carousel
 carousels:
-  - images:
-    - image: "/uploads/slider/ganapathy-kumar-93498_scaled.jpg"
-    - image: "/uploads/slider/samuel-zeller-356272_scaled.jpg"
-    - image: "/uploads/slider/samuel-zeller-356338_scaled.jpg"
-    - image: "/uploads/slider/ricardo-gomez-angel-180819_scaled.jpg"
-  - images:
-    - image: "/uploads/slider/ricardo-gomez-angel-180819_scaled.jpg"
-    - image: "/uploads/slider/ganapathy-kumar-93498_scaled.jpg"
-    - image: "/uploads/slider/samuel-zeller-356272_scaled.jpg"
-    - image: "/uploads/slider/samuel-zeller-356338_scaled.jpg"
+- images:
+  - image: "/uploads/slider/ganapathy-kumar-93498_scaled.jpg"
+  - image: "/uploads/slider/samuel-zeller-356272_scaled.jpg"
+  - image: "/uploads/slider/samuel-zeller-356338_scaled.jpg"
+  - image: "/uploads/slider/ricardo-gomez-angel-180819_scaled.jpg"
+- images:
+  - image: "/uploads/slider/ricardo-gomez-angel-180819_scaled.jpg"
+  - image: "/uploads/slider/ganapathy-kumar-93498_scaled.jpg"
+  - image: "/uploads/slider/samuel-zeller-356272_scaled.jpg"
+  - image: "/uploads/slider/samuel-zeller-356338_scaled.jpg"
 ---
 
 ### Introduction
