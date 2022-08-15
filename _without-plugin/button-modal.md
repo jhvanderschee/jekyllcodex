@@ -4,11 +4,11 @@ title: Button modal
 
 ### Introduction
 
-I got a [request](https://github.com/jhvanderschee/jekyllcodex/issues/18), asking for a modal window when you click on a link. Quite a strange request... but nothing I cannot build.
+I got a [request](https://github.com/jhvanderschee/jekyllcodex/issues/18), asking for a modal window that interceps a click on a link. Click [this link](#){:.buttonmodal} for a demo. You can find the code below.
 
 ### How it works
 
-This code looks for any link that contains the class 'buttonmodal'. This link toggles a modal window that lives the footer of your page. Clicking outside the modal closes the modal throught some javascript.
+This code looks for any link that contains the class 'buttonmodal'. This link toggles a modal window that lives the footer of your page. Clicking outside the modal closes the modal throught some javascript. The modal has a title, some text and a few links. This data comes from the data folder where it is stored in a file with a yaml extension.
 
 ### Installation
 
