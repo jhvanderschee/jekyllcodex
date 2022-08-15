@@ -30,4 +30,5 @@ linkedin_url:
 googleplus_url:
 pinterest_url:
 instagram_url:
+rss_url:
 ```
