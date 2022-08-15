@@ -1,0 +1,35 @@
+<div id="buttonmodal">
+    <div class="modal">
+        <h3>{{ site.data.buttonmodal.title }}</h3>
+        <p>{{ site.data.buttonmodal.text }}</p>
+        <ul>
+            {% for item in site.data.buttonmodal.items %}
+                <li><a href="{{ item.url }}" class="btn">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script>
+    var elements = document.querySelectorAll('a.buttonmodal');
+    elements.forEach(element => {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById('buttonmodal').style.display = 'flex';
+        });
+    });
+    document.getElementById('buttonmodal').addEventListener('click', function(event) {
+        if(event.target.closest('.modal')) return; 
+        document.getElementById('buttonmodal').style.display = 'none';
+    });
+</script>
+
+<style>
+    #buttonmodal {display: none; position: fixed; background: rgba(0,0,0,0.7); left: 0; top: 0; width: 100%; height: 100vh; justify-content: center; align-items: center; z-index: 99999;}
+    #buttonmodal .modal {max-width: 20rem; width: 100%; background: white; padding: 1.75rem 1.25rem;}
+    #buttonmodal .modal h3 {padding: 0 0 0.5rem;}
+    #buttonmodal .modal ul {margin: 0;}
+    #buttonmodal .modal ul li {list-style: none; display: block; margin: 0.25rem 0;}
+    #buttonmodal .modal ul li a {display: block;}
+</style>
