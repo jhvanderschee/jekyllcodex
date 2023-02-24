@@ -27,7 +27,6 @@ Step 4. Add the following variables to your '_config.yml' file (with value's):
 facebook_url: 
 twitter_url: 
 linkedin_url: 
-googleplus_url:
 pinterest_url:
 instagram_url:
 rss_url:
