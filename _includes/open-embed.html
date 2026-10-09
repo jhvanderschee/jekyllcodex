@@ -33,7 +33,7 @@ function vimeo_embed(url,el) {
           var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
           if(autoplay==1) theInnerHTML += '&autoplay=1';
           if(loop==1) theInnerHTML += '&loop=1';
-          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
+          theInnerHTML += '" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'; 
           el.innerHTML = theInnerHTML;
         }
       }
