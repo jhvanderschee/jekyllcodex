@@ -28,6 +28,7 @@ Step 1. Download the file [lightbox.js](https://raw.githubusercontent.com/jhvand
 
 ```
 {% raw %}...
+<script type="text/javascript" src="https://player.vimeo.com/api/player.js"></script>
 <script type="text/javascript" src="/js/lightbox.js"></script>
 <link rel="stylesheet" href="/css/lightbox.css">
 </body>
